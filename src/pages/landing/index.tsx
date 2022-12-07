@@ -1,13 +1,24 @@
-import { Button, TextField } from '@mui/material'
-import clsx from 'clsx'
-import luka from 'styles/luka.module.css'
+import Footer from 'components/footer'
+import Gateway from './gateway'
+import Home from './home'
+import OurProducts from './ourProducts'
+import PaymentLink from './paymentLink'
+import Ready from './ready'
+import VPOS from './VPOS'
+import WhyUs from './whyUs'
 
 const Landing = (): JSX.Element => {
   return (
-    <div className={clsx(luka['flex-column'], luka.prueba)}>
-      <Button variant="contained">{'Hello World'}</Button>
-      <TextField id="standard-basic" label="Standard" variant="standard" />
-    </div>
+    <>
+      <Home />
+      <OurProducts />
+      <Gateway />
+      <PaymentLink />
+      <VPOS />
+      <WhyUs />
+      <Ready />
+      <Footer />
+    </>
   )
 }
 
