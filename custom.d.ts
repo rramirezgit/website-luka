@@ -5,8 +5,6 @@ declare module '*.svg' {
   export default src
 }
 
-declare module 'styled-components'
-
 declare module '*.png' {
   const value: any
   export default value
@@ -14,4 +12,9 @@ declare module '*.png' {
 declare module '*.webp' {
   const value: string
   export default value
+}
+
+declare module '*.module.css' {
+  const classes: { [key: string]: string }
+  export default classes
 }
