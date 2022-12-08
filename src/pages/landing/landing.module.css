@@ -1,3 +1,9 @@
 .prueba {
   color: aqua;
 }
+
+.title {
+  font-size: 40px;
+  color: var(--dark-gray-text);
+  font-weight: 600;
+}

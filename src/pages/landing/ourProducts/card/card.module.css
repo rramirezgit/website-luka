@@ -1,0 +1,26 @@
+.container {
+    min-height: 285px;
+    min-width: 322px;
+    height: 285px;
+    width: 322px;
+    padding: 25px 37px;
+    background-color: var(--white);
+    margin: 0 8px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 13px;
+    margin-bottom: 8px;
+}
+
+.paragraph {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.paragraph--blue {
+    color: var(--primary-buttons);
+}

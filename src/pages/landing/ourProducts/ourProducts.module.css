@@ -1,0 +1,13 @@
+.ourproducts-container {
+    height: 628px;
+    background-color: var(--bg-gray);
+    width: 100vw;
+    align-items: center;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 32px;
+    color: var(--dark-gray-text);
+    font-weight: 600;
+}

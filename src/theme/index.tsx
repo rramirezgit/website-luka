@@ -41,9 +41,9 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
     },
     palette: {
       primary: {
-        light: getCssVar('--primary-buttoms'),
-        main: getCssVar('--primary-buttoms'),
-        dark: getCssVar('--primary-buttoms'),
+        light: getCssVar('--primary-buttons'),
+        main: getCssVar('--primary-buttons'),
+        dark: getCssVar('--primary-buttons'),
         contrastText: '#fff'
       },
       secondary: {

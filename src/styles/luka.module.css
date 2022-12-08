@@ -3,6 +3,19 @@
   flex-direction: column;
 }
 
+.flex-row {
+  display: flex;
+}
+
+.vertical-horizontal-center {
+  align-items: center;
+  justify-content: center;
+}
+
 .prueba {
   width: 50%;
+}
+
+.pointer {
+  cursor: pointer;
 }

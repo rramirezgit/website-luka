@@ -1,0 +1,45 @@
+.container {
+    margin-top: 60px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    width: 100vw;
+    padding: 0 8px;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.button-container {
+    margin-top: 60px;
+}
+
+.figure {
+    height: 41px;
+    width: 41px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+}
+
+.img--invert {
+    height: 100%;
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+.carousel-selector {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--gray-text);
+    margin: 0 5px;
+}
+
+.carousel-selector--active {
+    background-color: var(--gray-text-dark) !important;
+}

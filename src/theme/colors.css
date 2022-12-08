@@ -1,7 +1,11 @@
 :root {
-  --primary-buttoms: #0878ff;
+  --primary-buttons: #0878ff;
   --secondary: #09d5e5;
   --green-luka: #91e02b;
   --aqua-blue: #5ae1e2;
   --bg-gray: #f6f7fb;
+  --dark-gray-text: #2F363E;
+  --gray-text: #ACB9C9;
+  --gray-text-dark: #616F81;
+  --white: #FFFFFF;
 }
