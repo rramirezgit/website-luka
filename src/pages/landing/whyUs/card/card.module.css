@@ -1,9 +1,10 @@
 .card-container {
     background-color: var(--white);
-    border-radius: 8px;
+    border-radius: 14px;
     padding: 30px;
     margin: 0 8px;
     scroll-snap-align: center;
+    box-shadow: 3.6139px 3.6139px 13.5521px 1.80695px rgba(0, 0, 0, 0.04)
 }
 
 .title {
