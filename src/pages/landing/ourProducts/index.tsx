@@ -3,7 +3,7 @@ import Card from './card'
 import clsx from 'clsx'
 import ourProductsCSS from './ourProducts.module.css'
 import lukaCSS from 'styles/luka.module.css'
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 interface CardInterface {
   key: string
@@ -30,18 +30,34 @@ const OurProducts = (): JSX.Element => {
     }
   ]
   return (
-    <div className={clsx(ourProductsCSS['ourproducts-container'], lukaCSS['flex-column'], lukaCSS['vertical-horizontal-center'])}>
-      <Typography className={ourProductsCSS.title}>Our Products</Typography>
+    <Box
+      className={
+        clsx(ourProductsCSS['ourproducts-container'],
+          lukaCSS['flex-column'],
+          lukaCSS['vertical-horizontal-center']
+        )
+      }
+    >
+      <Typography
+        className={ourProductsCSS.title}
+      >
+        Our Products
+      </Typography>
       <Carousel>
         {
           cardsInfo.map((card) => {
             return (
-              <Card id={card.key} key={card.key} title={card.title} text={card.text} />
+              <Card
+                id={card.key}
+                key={card.key}
+                title={card.title}
+                text={card.text}
+              />
             )
           })
         }
       </Carousel>
-    </div>
+    </Box>
   )
 }
 
