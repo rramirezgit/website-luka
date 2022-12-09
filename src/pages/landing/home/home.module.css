@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  padding-top: 30px;
+}
+
+.text {
+  font-weight: 600 !important;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  margin-top: 20px !important;
+}
+
+.content-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: none;
+  object-position: top;
+  min-height: 526px;
+  max-width: 575px;
+}
+
+.content-info {
+  padding: 0px 35.13px 65px;
+  max-width: 603px;
+}

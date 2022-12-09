@@ -23,8 +23,7 @@ module.exports = {
   settings: {
     react: {
       version: 'detect',
-      '@typescript-eslint/explicit-function-return-type': 'warn',
-      '@typescript-eslint/restrict-template-expressions': 'error'
+      '@typescript-eslint/explicit-function-return-type': 'warn'
     }
   }
 }
