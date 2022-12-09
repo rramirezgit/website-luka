@@ -2,7 +2,8 @@ import Carousel from 'components/carousel'
 import Card from './card'
 import clsx from 'clsx'
 import ourProductsCSS from './ourProducts.module.css'
-import luka from 'styles/luka.module.css'
+import lukaCSS from 'styles/luka.module.css'
+import { Typography } from '@mui/material'
 
 interface CardInterface {
   key: string
@@ -29,8 +30,8 @@ const OurProducts = (): JSX.Element => {
     }
   ]
   return (
-    <div className={clsx(ourProductsCSS['ourproducts-container'], luka['flex-column'], luka['vertical-horizontal-center'])}>
-      <h1 className={ourProductsCSS.title}>Our Products</h1>
+    <div className={clsx(ourProductsCSS['ourproducts-container'], lukaCSS['flex-column'], lukaCSS['vertical-horizontal-center'])}>
+      <Typography className={ourProductsCSS.title}>Our Products</Typography>
       <Carousel>
         {
           cardsInfo.map((card) => {

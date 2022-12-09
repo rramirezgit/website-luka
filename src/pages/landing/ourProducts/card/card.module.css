@@ -9,18 +9,18 @@
 }
 
 .title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-top: 13px;
-    margin-bottom: 8px;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    margin-top: 13px !important;
+    margin-bottom: 8px !important;
 }
 
 .paragraph {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px !important;
 }
 
 .paragraph--blue {
-    color: var(--primary-buttons);
+    color: var(--primary-buttons) !important;
 }
