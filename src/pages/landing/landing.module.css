@@ -1,3 +1,10 @@
 .prueba {
   color: aqua;
 }
+
+.title {
+  font-size: 40px !important;
+  color: var(--dark-gray-text) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
