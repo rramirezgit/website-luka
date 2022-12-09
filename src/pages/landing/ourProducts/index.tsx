@@ -42,6 +42,12 @@ const OurProducts = (): JSX.Element => {
           lukaCSS['vertical-horizontal-center']
         )
       }
+      sx={{
+        height: {
+          xs: '628px',
+          md: '716px'
+        }
+      }}
     >
       <Typography
         className={ourProductsCSS.title}
