@@ -1,5 +1,4 @@
 import { Typography } from '@mui/material'
-import placeholder from 'assets/placeholder.svg'
 import cardCSS from './card.module.css'
 import clsx from 'clsx'
 import lukaCSS from 'styles/luka.module.css'
@@ -22,7 +21,7 @@ const Card = ({ text, imageUrl, title, id }: Props): JSX.Element => {
         component={'figure'}
         className={cardCSS.figure}
       >
-        <img className={cardCSS.img} src={ imageUrl ?? placeholder } alt='Placeholder'/>
+        <img id={`image-${id}`} className={cardCSS.img} src={ imageUrl } alt={title}/>
       </Box>
       <Typography
         className={cardCSS.title}
