@@ -75,7 +75,8 @@ const WhyUs = (): JSX.Element => {
             md: '54px'
           },
           padding: {
-            xs: '0 50px',
+            xs: '0 25px',
+            sm: '0 50px',
             md: '0 105px'
           }
         }}
@@ -90,7 +91,8 @@ const WhyUs = (): JSX.Element => {
             md: '24px'
           },
           padding: {
-            xs: '0 50px',
+            xs: '0 25px',
+            sm: '0 50px',
             md: '0 105px'
           }
         }}

@@ -19,7 +19,7 @@ const Card = ({ id, title, tags, text, imageUrl }: Props): JSX.Element => {
       sx={{
         height: {
           xs: '350px',
-          lg: '300px'
+          lg: '310px'
         },
         width: {
           xs: '322px',
