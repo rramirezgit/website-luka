@@ -3,6 +3,7 @@
     overflow-x: scroll;
     scroll-behavior: smooth;
     padding: 0 8px;
+    scroll-snap-type: x mandatory;
 }
 
 .container::-webkit-scrollbar {

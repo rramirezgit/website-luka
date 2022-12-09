@@ -1,0 +1,16 @@
+.text {
+    color: var(--aqua-blue) !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+}
+
+.tags-container {
+    display: flex;
+    margin: 8px 0px 8px 0px
+}
+
+.tag-container {
+    padding: 10px;
+    background-color: var(--aqua-blue-a);
+    margin-right: 20px;
+}

@@ -3,4 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif !important;
+  letter-spacing: -0.01em !important;
+  line-height: 150% !important;
 }

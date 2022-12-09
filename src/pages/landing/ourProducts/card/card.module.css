@@ -6,6 +6,7 @@
     padding: 25px 37px;
     background-color: var(--white);
     margin: 0 8px;
+    scroll-snap-align: center;
 }
 
 .title {

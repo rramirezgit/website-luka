@@ -1,0 +1,35 @@
+.card-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    margin: 0 8px;
+    scroll-snap-align: center;
+}
+
+.title {
+    color: var(--gray-blue-text) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+.text {
+    color: var(--gray-blue-text) !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+}
+
+.figure {
+    height: 75px;
+    width: 75px;
+    position: relative;
+    z-index: 99999;
+}
+
+.img {
+    width: 140px;
+    height: 140px;
+}
+
+.list-element {
+    margin-left: 20px;
+}

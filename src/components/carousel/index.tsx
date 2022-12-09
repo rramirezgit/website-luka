@@ -7,9 +7,10 @@ import { Box } from '@mui/material'
 
 interface CarouselProps {
   children: JSX.Element[]
+  id: string
 }
 
-const Carousel = ({ children }: CarouselProps): JSX.Element => {
+const Carousel = ({ children, id }: CarouselProps): JSX.Element => {
   const checkViewPort = (): void => {
     for (let index = 0; index < children.length; index++) {
       const card = document
@@ -35,7 +36,7 @@ const Carousel = ({ children }: CarouselProps): JSX.Element => {
     }
   }
   const clickLeft = (): void => {
-    const carousel = document.getElementById('carousel')
+    const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
       left: -330
     })
@@ -44,7 +45,7 @@ const Carousel = ({ children }: CarouselProps): JSX.Element => {
     }, 400)
   }
   const clickRight = (): void => {
-    const carousel = document.getElementById('carousel')
+    const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
       left: 330
     })
@@ -62,7 +63,7 @@ const Carousel = ({ children }: CarouselProps): JSX.Element => {
       <Box
         onScroll={() => checkViewPort()}
         draggable={false}
-        id="carousel"
+        id={`carousel-${id}`}
         className={clsx(lukaCSS['flex-row'], carouselCSS.container)}
         sx={{
           alignItems: {
