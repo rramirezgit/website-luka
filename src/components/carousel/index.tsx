@@ -12,14 +12,20 @@ interface CarouselProps {
 const Carousel = ({ children }: CarouselProps): JSX.Element => {
   const checkViewPort = (): void => {
     for (let index = 0; index < children.length; index++) {
-      const card = document.getElementById(`${children[index].key ?? ''}`)?.getBoundingClientRect()
+      const card = document
+        .getElementById(`${children[index].key ?? ''}`)
+        ?.getBoundingClientRect()
       if (card) {
-        const selector = document.getElementById(`selector-${children[index].key ?? ''}`)
+        const selector = document.getElementById(
+          `selector-${children[index].key ?? ''}`
+        )
         if (
           card.top >= 0 &&
           card.left >= 0 &&
-          card.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          card.right <= (window.innerWidth || document.documentElement.clientWidth)
+          card.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          card.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
         ) {
           selector?.classList.add(carouselCSS['carousel-selector--active'])
         } else {
@@ -48,13 +54,15 @@ const Carousel = ({ children }: CarouselProps): JSX.Element => {
   }
   useEffect(() => {
     checkViewPort()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
   return (
     <Box>
       <Box
         onScroll={() => checkViewPort()}
         draggable={false}
-        id='carousel'
+        id="carousel"
         className={clsx(lukaCSS['flex-row'], carouselCSS.container)}
         sx={{
           alignItems: {
@@ -74,7 +82,11 @@ const Carousel = ({ children }: CarouselProps): JSX.Element => {
         {children}
       </Box>
       <Box
-        className={clsx(lukaCSS['flex-row'], lukaCSS['vertical-horizontal-center'], carouselCSS['button-container'])}
+        className={clsx(
+          lukaCSS['flex-row'],
+          lukaCSS['vertical-horizontal-center'],
+          carouselCSS['button-container']
+        )}
         sx={{
           display: {
             md: 'none'
@@ -92,22 +104,19 @@ const Carousel = ({ children }: CarouselProps): JSX.Element => {
             alt={'Back'}
           />
         </Box>
-        {
-          children.map((child) => {
-            return (
-                <Box
-                  key={child.key}
-                  id={`selector-${child.key ?? ''}`}
-                  className={clsx(carouselCSS['carousel-selector'], lukaCSS.pointer)}
-                >
-                </Box>
-            )
-          })
-        }
-        <Box
-          component={'figure'}
-          className={carouselCSS.figure}
-        >
+        {children.map(child => {
+          return (
+            <Box
+              key={child.key}
+              id={`selector-${child.key ?? ''}`}
+              className={clsx(
+                carouselCSS['carousel-selector'],
+                lukaCSS.pointer
+              )}
+            ></Box>
+          )
+        })}
+        <Box component={'figure'} className={carouselCSS.figure}>
           <img
             className={clsx(carouselCSS['img--invert'], lukaCSS.pointer)}
             src={carouselArrow}
