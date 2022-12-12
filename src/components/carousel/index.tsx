@@ -7,8 +7,8 @@ import { Box } from '@mui/material'
 interface CarouselProps {
   children: JSX.Element[]
   id: string
-  height: string
   width: string
+  height?: string
   buttonsMargin?: number
 }
 
@@ -68,7 +68,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
             xs: 'center',
             md: 'center'
           },
-          height: `${height}`,
+          height: height !== 'auto' ? `${height}px` : height,
           justifyContent: {
             md: 'space-evenly'
           },

@@ -119,7 +119,7 @@ const WhyUs = (): JSX.Element => {
           justifyContent: 'center'
         }}
       >
-        <Carousel width='300' height='520px' id={crypto.randomUUID()}>
+        <Carousel width='300' height='520' id={crypto.randomUUID()}>
           {
             cardsInfo.map((card) => {
               return (
