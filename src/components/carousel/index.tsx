@@ -9,9 +9,10 @@ interface CarouselProps {
   id: string
   height: string
   width: string
+  buttonsMargin?: number
 }
 
-const Carousel = ({ children, id, width, height = 'auto' }: CarouselProps): JSX.Element => {
+const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: CarouselProps): JSX.Element => {
   const checkViewPort = (): void => {
     for (let index = 0; index < children.length; index++) {
       const card = document
@@ -64,7 +65,7 @@ const Carousel = ({ children, id, width, height = 'auto' }: CarouselProps): JSX.
         className={clsx(lukaCSS['flex-row'], carouselCSS.container)}
         sx={{
           alignItems: {
-            xs: 'flex-end',
+            xs: 'center',
             md: 'center'
           },
           height: `${height}`,
@@ -90,7 +91,8 @@ const Carousel = ({ children, id, width, height = 'auto' }: CarouselProps): JSX.
         sx={{
           display: {
             md: 'none'
-          }
+          },
+          marginTop: `${buttonsMargin}px`
         }}
       >
         <Box

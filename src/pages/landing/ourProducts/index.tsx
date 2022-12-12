@@ -38,8 +38,12 @@ const OurProducts = (): JSX.Element => {
       }
       sx={{
         padding: {
-          xs: '53px 0 25px 0',
+          xs: '53px 0 75px 0',
           md: '60px 0 150px 0'
+        },
+        height: {
+          xs: '628px',
+          md: '716px'
         }
       }}
     >
@@ -54,7 +58,7 @@ const OurProducts = (): JSX.Element => {
       >
         Our Products
       </Typography>
-      <Carousel width='300' height='auto' id={crypto.randomUUID()}>
+      <Carousel buttonsMargin={60} width='300' height='auto' id={crypto.randomUUID()}>
         {
           cardsInfo.map((card) => {
             return (

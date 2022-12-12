@@ -103,7 +103,7 @@ const WhyUs = (): JSX.Element => {
         className={whyUsCSS['small-container']}
         sx={{
           height: {
-            xs: '620px',
+            xs: '650px',
             md: '620px'
           },
           width: {
@@ -113,12 +113,13 @@ const WhyUs = (): JSX.Element => {
           maxWidth: {
             md: '1100px'
           },
+          padding: '30px 0',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
         }}
       >
-        <Carousel width='300' height='500px' id={crypto.randomUUID()}>
+        <Carousel width='300' height='520px' id={crypto.randomUUID()}>
           {
             cardsInfo.map((card) => {
               return (
