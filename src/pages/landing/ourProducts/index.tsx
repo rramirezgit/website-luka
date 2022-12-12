@@ -33,17 +33,28 @@ const OurProducts = (): JSX.Element => {
     <Box
       className={
         clsx(ourProductsCSS['ourproducts-container'],
-          lukaCSS['flex-column'],
-          lukaCSS['vertical-horizontal-center']
+          lukaCSS['flex-column']
         )
       }
+      sx={{
+        padding: {
+          xs: '53px 0 25px 0',
+          md: '60px 0 150px 0'
+        }
+      }}
     >
       <Typography
         className={ourProductsCSS.title}
+        sx={{
+          fontSize: {
+            xs: '40px',
+            md: '54px'
+          }
+        }}
       >
         Our Products
       </Typography>
-      <Carousel id={crypto.randomUUID()}>
+      <Carousel height='auto' id={crypto.randomUUID()}>
         {
           cardsInfo.map((card) => {
             return (

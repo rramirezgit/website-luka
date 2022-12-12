@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import clsx from 'clsx'
 import lukaCSS from 'styles/luka.module.css'
 import carouselCSS from './carousel.module.css'
@@ -8,9 +7,10 @@ import { Box } from '@mui/material'
 interface CarouselProps {
   children: JSX.Element[]
   id: string
+  height: string
 }
 
-const Carousel = ({ children, id }: CarouselProps): JSX.Element => {
+const Carousel = ({ children, id, height }: CarouselProps): JSX.Element => {
   const checkViewPort = (): void => {
     for (let index = 0; index < children.length; index++) {
       const card = document
@@ -53,10 +53,6 @@ const Carousel = ({ children, id }: CarouselProps): JSX.Element => {
       checkViewPort()
     }, 400)
   }
-  useEffect(() => {
-    checkViewPort()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
 
   return (
     <Box>
@@ -67,8 +63,10 @@ const Carousel = ({ children, id }: CarouselProps): JSX.Element => {
         className={clsx(lukaCSS['flex-row'], carouselCSS.container)}
         sx={{
           alignItems: {
+            xs: 'flex-end',
             md: 'center'
           },
+          height: `${height}`,
           justifyContent: {
             md: 'space-evenly'
           },

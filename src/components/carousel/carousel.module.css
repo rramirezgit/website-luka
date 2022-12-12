@@ -1,5 +1,4 @@
 .container {
-    margin-top: 60px;
     overflow-x: scroll;
     scroll-behavior: smooth;
     padding: 0 8px;
@@ -11,7 +10,8 @@
 }
 
 .button-container {
-    margin-top: 60px;
+    margin-top: 45px;
+    margin-bottom: 55px;
 }
 
 .figure {

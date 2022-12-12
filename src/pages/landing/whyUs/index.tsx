@@ -111,14 +111,14 @@ const WhyUs = (): JSX.Element => {
             md: '75%'
           },
           maxWidth: {
-            md: '1035px'
+            md: '1100px'
           },
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
         }}
       >
-        <Carousel id={crypto.randomUUID()}>
+        <Carousel height='500px' id={crypto.randomUUID()}>
           {
             cardsInfo.map((card) => {
               return (
