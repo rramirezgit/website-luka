@@ -8,9 +8,10 @@ interface CarouselProps {
   children: JSX.Element[]
   id: string
   height: string
+  width: string
 }
 
-const Carousel = ({ children, id, height }: CarouselProps): JSX.Element => {
+const Carousel = ({ children, id, width, height = 'auto' }: CarouselProps): JSX.Element => {
   const checkViewPort = (): void => {
     for (let index = 0; index < children.length; index++) {
       const card = document
@@ -38,7 +39,7 @@ const Carousel = ({ children, id, height }: CarouselProps): JSX.Element => {
   const clickLeft = (): void => {
     const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: -330
+      left: -(parseInt(width)) - 30
     })
     setTimeout(() => {
       checkViewPort()
@@ -47,7 +48,7 @@ const Carousel = ({ children, id, height }: CarouselProps): JSX.Element => {
   const clickRight = (): void => {
     const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: 330
+      left: (parseInt(width)) + 30
     })
     setTimeout(() => {
       checkViewPort()

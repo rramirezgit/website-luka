@@ -54,7 +54,7 @@ const OurProducts = (): JSX.Element => {
       >
         Our Products
       </Typography>
-      <Carousel height='auto' id={crypto.randomUUID()}>
+      <Carousel width='300' height='auto' id={crypto.randomUUID()}>
         {
           cardsInfo.map((card) => {
             return (
