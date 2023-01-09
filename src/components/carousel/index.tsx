@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import clsx from 'clsx'
 import lukaCSS from 'styles/luka.module.css'
 import carouselCSS from './carousel.module.css'
@@ -7,9 +6,13 @@ import { Box } from '@mui/material'
 
 interface CarouselProps {
   children: JSX.Element[]
+  id: string
+  width: string
+  height?: string
+  buttonsMargin?: number
 }
 
-const Carousel = ({ children }: CarouselProps): JSX.Element => {
+const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: CarouselProps): JSX.Element => {
   const checkViewPort = (): void => {
     for (let index = 0; index < children.length; index++) {
       const card = document
@@ -35,39 +38,37 @@ const Carousel = ({ children }: CarouselProps): JSX.Element => {
     }
   }
   const clickLeft = (): void => {
-    const carousel = document.getElementById('carousel')
+    const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: -330
+      left: -(parseInt(width)) - 30
     })
     setTimeout(() => {
       checkViewPort()
     }, 400)
   }
   const clickRight = (): void => {
-    const carousel = document.getElementById('carousel')
+    const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: 330
+      left: (parseInt(width)) + 30
     })
     setTimeout(() => {
       checkViewPort()
     }, 400)
   }
-  useEffect(() => {
-    checkViewPort()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
 
   return (
     <Box>
       <Box
         onScroll={() => checkViewPort()}
         draggable={false}
-        id="carousel"
+        id={`carousel-${id}`}
         className={clsx(lukaCSS['flex-row'], carouselCSS.container)}
         sx={{
           alignItems: {
+            xs: 'center',
             md: 'center'
           },
+          height: height !== 'auto' ? `${height}px` : height,
           justifyContent: {
             md: 'space-evenly'
           },
@@ -90,7 +91,8 @@ const Carousel = ({ children }: CarouselProps): JSX.Element => {
         sx={{
           display: {
             md: 'none'
-          }
+          },
+          marginTop: `${buttonsMargin}px`
         }}
       >
         <Box

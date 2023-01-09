@@ -6,6 +6,9 @@
     padding: 25px 37px;
     background-color: var(--white);
     margin: 0 8px;
+    scroll-snap-align: center;
+    border-radius: 14px;
+    box-shadow: 3.6139px 3.6139px 13.5521px 1.80695px rgba(0, 0, 0, 0.04)
 }
 
 .title {
