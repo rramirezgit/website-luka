@@ -1,13 +1,12 @@
 .ourproducts-container {
-    height: 628px;
     background-color: var(--bg-gray);
     width: 100%;
     align-items: center;
+    justify-content: space-between;
     overflow: hidden;
 }
 
 .title {
-    font-size: 32px !important;
     color: var(--dark-gray-text) !important;
-    font-weight: 600 !important;
+    font-weight: bold !important;
 }
