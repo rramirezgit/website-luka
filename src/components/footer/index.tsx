@@ -28,7 +28,10 @@ const Footer = (): JSX.Element => {
       <Box
         sx={
           {
-            width: '100%',
+            width: {
+              xs: '100%',
+              lg: '1200px'
+            },
             display: 'flex',
             justifyContent: 'space-between',
             marginBottom: '50px',
@@ -111,8 +114,7 @@ const Footer = (): JSX.Element => {
             {
               display: 'flex',
               justifyContent: {
-                xs: 'space-between',
-                sm: 'space-evenly',
+                xs: 'space-evenly',
                 lg: 'center'
               },
               marginTop: {

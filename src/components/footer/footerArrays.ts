@@ -41,7 +41,7 @@ export const useCasesArray: FooterBoxProps[] = [
 export const forDevelopersArray: FooterBoxProps[] = [
   {
     title: true,
-    text: 'For Developers'
+    text: 'Resources'
   },
   {
     title: false,
