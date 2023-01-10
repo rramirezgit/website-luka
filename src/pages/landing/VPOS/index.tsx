@@ -4,6 +4,9 @@ import CustomListItem from './CustomListItem'
 import wifi from 'assets/img/wifi.png'
 import phone1 from 'assets/img/vpos-phone-1.png'
 import phone2 from 'assets/img/vpos-phone-2.png'
+import phone3 from 'assets/img/vpos-phone-3.png'
+import phone4 from 'assets/img/vpos-phone-4.png'
+import vposFish from 'assets/img/vpos-img.png'
 import Tags from 'components/tags'
 
 const VPOS = (): JSX.Element => {
@@ -11,7 +14,8 @@ const VPOS = (): JSX.Element => {
     <Box
       sx={
         {
-          padding: '235px 0'
+          padding: '235px 0',
+          width: '100%'
         }
       }
     >
@@ -109,7 +113,37 @@ const VPOS = (): JSX.Element => {
         <Box
           className={vposStyles['big-box']}
         >
-          Long Image
+          <Box
+            sx={
+              {
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column'
+              }
+            }
+          >
+            <Box
+              component={'figure'}
+            >
+              <img src={vposFish} alt='Demo' />
+            </Box>
+            <Typography
+              className={vposStyles['box-text']}
+              sx={
+                {
+                  textAlign: 'center'
+                }
+              }
+            >
+              Accept contactless and QR Code payments in just a blink.
+            </Typography>
+          </Box>
+          <Box
+            component={'figure'}
+          >
+            <img src={phone4} alt='Demo' />
+          </Box>
         </Box>
         <Box
           sx={
@@ -124,15 +158,35 @@ const VPOS = (): JSX.Element => {
             className={vposStyles['small-box']}
           >
             <Typography
-              className={vposStyles['small-box-text']}
+              className={vposStyles['box-text']}
             >
               Empower your business, enable your consumer to pay conveniently simple.
             </Typography>
           </Box>
           <Box
             className={vposStyles['small-box']}
+            sx={
+              {
+                flexDirection: 'column',
+                justifyContent: 'space-between !important'
+              }
+            }
           >
-            Small Image
+            <Typography
+              className={vposStyles['box-text-2']}
+            >
+              Enable onsite multicurrency payments beyond the use of credit/debit cards
+            </Typography>
+            <Box
+              component={'figure'}
+              sx={
+                {
+                  height: '197px'
+                }
+              }
+            >
+              <img src={phone3} alt='Demo' />
+            </Box>
           </Box>
         </Box>
       </Box>

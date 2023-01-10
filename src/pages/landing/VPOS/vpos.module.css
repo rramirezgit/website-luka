@@ -1,7 +1,8 @@
 .container {
     display: flex;
     align-items: flex-start;
-    width: 1350px;
+    width: 95%;
+    max-width: 1350px;
     justify-content: space-between;
     margin: 0 auto;
 }
@@ -30,6 +31,9 @@
     height: 290px;
     background-color: var(--bg-gray);
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .small-box {
@@ -42,9 +46,18 @@
     border-radius: 8px;
 }
 
-.small-box-text {
+.box-text {
     font-size: 20px !important;
     color: var(--gray-text-dark) !important;
     font-weight: 600 !important;
     width: 230px !important;
+}
+
+.box-text-2 {
+    font-size: 14px !important;
+    color: var(--gray-text-dark) !important;
+    font-weight: 600 !important;
+    width: 230px !important;
+    text-align: center;
+    margin-top: 20px;
 }
