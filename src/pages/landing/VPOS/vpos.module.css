@@ -8,13 +8,11 @@
 }
 
 .title {
-    font-size: 54px !important;
     color: var(--dark-gray-text) !important;
     font-weight: bold !important;
 }
 
 .title-blue {
-    font-size: 54px !important;
     color: var(--title-blue) !important;
     font-weight: bold !important;
     margin-right: 12px !important;
@@ -27,8 +25,6 @@
 }
 
 .big-box {
-    width: 620px;
-    height: 290px;
     background-color: var(--bg-gray);
     border-radius: 8px;
     display: flex;
@@ -37,8 +33,6 @@
 }
 
 .small-box {
-    width: 290px;
-    height: 290px;
     background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
@@ -47,17 +41,16 @@
 }
 
 .box-text {
-    font-size: 20px !important;
     color: var(--gray-text-dark) !important;
     font-weight: 600 !important;
-    width: 230px !important;
+    width: 90% !important;
+    max-width: 230px !important;
 }
 
 .box-text-2 {
-    font-size: 14px !important;
     color: var(--gray-text-dark) !important;
     font-weight: 600 !important;
-    width: 230px !important;
+    width: 90% !important;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 20px !important;
 }

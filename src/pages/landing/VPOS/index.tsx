@@ -1,20 +1,21 @@
 import { Box, List, Typography } from '@mui/material'
 import vposStyles from './vpos.module.css'
 import CustomListItem from './CustomListItem'
-import wifi from 'assets/img/wifi.png'
-import phone1 from 'assets/img/vpos-phone-1.png'
-import phone2 from 'assets/img/vpos-phone-2.png'
-import phone3 from 'assets/img/vpos-phone-3.png'
-import phone4 from 'assets/img/vpos-phone-4.png'
-import vposFish from 'assets/img/vpos-img.png'
+import phone3 from 'assets/vpos/vpos-phone-3.png'
+import phone4 from 'assets/vpos/vpos-phone-4.png'
+import vposFish from 'assets/vpos/vpos-img.png'
 import Tags from 'components/tags'
+import PhoneBox from './PhoneBox'
 
 const VPOS = (): JSX.Element => {
   return (
     <Box
       sx={
         {
-          padding: '235px 0',
+          padding: {
+            xs: '125px 25px',
+            lg: '235px 105px'
+          },
           width: '100%'
         }
       }
@@ -23,14 +24,25 @@ const VPOS = (): JSX.Element => {
         className={vposStyles.container}
         sx={
           {
-            marginBottom: '120px !important'
+            marginBottom: {
+              xs: '60px !important',
+              lg: '120px !important'
+            },
+            justifyContent: {
+              xs: 'center !important',
+              lg: 'space-between !important'
+            }
           }
         }
       >
         <Box
           sx={
             {
-              width: '570px'
+              width: {
+                xs: '85%',
+                lg: '400px',
+                xl: '570px'
+              }
             }
           }
         >
@@ -38,20 +50,58 @@ const VPOS = (): JSX.Element => {
             sx={
               {
                 display: 'flex',
-                marginBottom: '10px'
+                marginBottom: '10px',
+                flexDirection: {
+                  xs: 'column',
+                  xl: 'row'
+                }
               }
             }
           >
-            <Typography className={vposStyles['title-blue']}>
+            <Typography
+              className={vposStyles['title-blue']}
+              sx={
+                {
+                  fontSize: {
+                    xs: '40px',
+                    xl: '54px'
+                  }
+                }
+              }
+            >
               VPOS
             </Typography>
-            <Typography className={vposStyles.title}>
+            <Typography
+              className={vposStyles.title}
+              sx={
+                {
+                  fontSize: {
+                    xs: '40px',
+                    xl: '54px'
+                  }
+                }
+              }
+            >
               Hardware Free
             </Typography>
           </Box>
           <Typography className={vposStyles.subtitle}>
             Download, sign up, receive payments, that’s it!
           </Typography>
+          <Box
+            sx={
+              {
+                width: '100%',
+                marginTop: '100px',
+                display: {
+                  xs: 'block',
+                  lg: 'none'
+                }
+              }
+            }
+          >
+            <PhoneBox />
+          </Box>
           <List
             sx={
               {
@@ -80,38 +130,52 @@ const VPOS = (): JSX.Element => {
         <Box
           sx={
             {
-              display: 'flex',
-              position: 'relative',
               width: '645px',
-              justifyContent: 'space-between'
+              display: {
+                xs: 'none',
+                lg: 'block'
+              }
             }
           }
         >
-          <Box component={'figure'}>
-            <img src={phone1} alt={'Demo'} />
-          </Box>
-          <Box component={'figure'}>
-            <img src={phone2} alt={'Demo'} />
-          </Box>
-          <Box
-            component={'figure'}
-            sx={
-              {
-                position: 'absolute',
-                right: '280px',
-                top: '-80px'
-              }
-            }
-          >
-            <img src={wifi} alt={'Demo'} />
-          </Box>
+          <PhoneBox />
         </Box>
       </Box>
       <Box
         className={vposStyles.container}
+        sx={
+          {
+            flexDirection: {
+              xs: 'column !important',
+              lg: 'row !important'
+            },
+            alignItems: {
+              xs: 'center !important',
+              lg: 'flex-start !important'
+            }
+          }
+        }
       >
         <Box
           className={vposStyles['big-box']}
+          sx={
+            {
+              width: {
+                xs: '100%',
+                lg: '49%',
+                xl: '620px'
+              },
+              marginBottom: {
+                xs: '35px',
+                xl: '0'
+              },
+              height: {
+                xs: '200px',
+                lg: '290px'
+              },
+              maxWidth: '620px'
+            }
+          }
         >
           <Box
             sx={
@@ -119,20 +183,34 @@ const VPOS = (): JSX.Element => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                width: '45%',
+                height: '100%'
               }
             }
           >
             <Box
               component={'figure'}
+              sx={
+                {
+                  width: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }
+              }
             >
-              <img src={vposFish} alt='Demo' />
+              <img src={vposFish} alt='Demo' style={{ maxHeight: '100%', maxWidth: '100%' }}/>
             </Box>
             <Typography
               className={vposStyles['box-text']}
               sx={
                 {
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  fontSize: {
+                    xs: '14px',
+                    xl: '20px'
+                  }
                 }
               }
             >
@@ -141,24 +219,53 @@ const VPOS = (): JSX.Element => {
           </Box>
           <Box
             component={'figure'}
+            sx={
+              {
+                width: '45%',
+                height: '100%'
+              }
+            }
           >
-            <img src={phone4} alt='Demo' />
+            <img src={phone4} alt='Demo' style={{ height: '100%', maxWidth: '100%' }}/>
           </Box>
         </Box>
         <Box
           sx={
             {
-              width: '620px',
               display: 'flex',
-              justifyContent: 'space-between'
+              justifyContent: 'space-between',
+              width: {
+                xs: '100%',
+                lg: '49%',
+                xl: '620px'
+              },
+              maxWidth: '620px'
             }
           }
         >
           <Box
             className={vposStyles['small-box']}
+            sx={
+              {
+                width: '49%',
+                height: {
+                  xs: '200px',
+                  sm: '290px'
+                }
+              }
+            }
           >
             <Typography
               className={vposStyles['box-text']}
+              sx={
+                {
+                  fontSize: {
+                    xs: '14px',
+                    xl: '20px',
+                    padding: '0 15px'
+                  }
+                }
+              }
             >
               Empower your business, enable your consumer to pay conveniently simple.
             </Typography>
@@ -167,6 +274,11 @@ const VPOS = (): JSX.Element => {
             className={vposStyles['small-box']}
             sx={
               {
+                width: '49%',
+                height: {
+                  xs: '200px',
+                  sm: '290px'
+                },
                 flexDirection: 'column',
                 justifyContent: 'space-between !important'
               }
@@ -174,6 +286,14 @@ const VPOS = (): JSX.Element => {
           >
             <Typography
               className={vposStyles['box-text-2']}
+              sx={
+                {
+                  fontSize: {
+                    xs: '10px !important',
+                    sm: '14px !important'
+                  }
+                }
+              }
             >
               Enable onsite multicurrency payments beyond the use of credit/debit cards
             </Typography>
@@ -181,11 +301,14 @@ const VPOS = (): JSX.Element => {
               component={'figure'}
               sx={
                 {
-                  height: '197px'
+                  height: '50%',
+                  display: 'flex',
+                  alignItems: 'flex-end',
+                  justifyContent: 'center'
                 }
               }
             >
-              <img src={phone3} alt='Demo' />
+              <img src={phone3} alt='Demo' style={{ maxWidth: '90%', maxHeight: '100%' }}/>
             </Box>
           </Box>
         </Box>

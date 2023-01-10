@@ -8,7 +8,17 @@ interface CustomInterface {
 
 const CustomListItem = ({ text }: CustomInterface): JSX.Element => {
   return (
-    <ListItem className={customlistStyles['list-item']}>
+    <ListItem
+      className={customlistStyles['list-item']}
+      sx={
+        {
+          fontWeight: {
+            xs: 'bold',
+            lg: '400'
+          }
+        }
+      }
+    >
       <CircleIcon className={customlistStyles['list-decorator']}/>
       {text}
     </ListItem>
