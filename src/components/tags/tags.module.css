@@ -8,10 +8,12 @@
     display: flex;
     margin: 8px 0px 8px 0px;
     border-radius: 8px;
+    flex-wrap: wrap;
 }
 
 .tag-container {
     padding: 10px;
     background-color: var(--aqua-blue-a);
     margin-right: 20px;
+    max-height: 40px;
 }

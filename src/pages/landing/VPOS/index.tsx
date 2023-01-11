@@ -170,8 +170,9 @@ const VPOS = (): JSX.Element => {
                 xl: '0'
               },
               height: {
-                xs: '200px',
-                lg: '290px'
+                xs: '155px',
+                md: '200px',
+                xl: '290px'
               },
               maxWidth: '620px'
             }
@@ -193,7 +194,10 @@ const VPOS = (): JSX.Element => {
               component={'figure'}
               sx={
                 {
-                  width: '50%',
+                  height: {
+                    xs: '35%',
+                    sm: '50%'
+                  },
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -208,7 +212,8 @@ const VPOS = (): JSX.Element => {
                 {
                   textAlign: 'center',
                   fontSize: {
-                    xs: '14px',
+                    xs: '12px',
+                    sm: '14px',
                     xl: '20px'
                   }
                 }
@@ -222,7 +227,10 @@ const VPOS = (): JSX.Element => {
             sx={
               {
                 width: '45%',
-                height: '100%'
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }
             }
           >
@@ -249,8 +257,9 @@ const VPOS = (): JSX.Element => {
               {
                 width: '49%',
                 height: {
-                  xs: '200px',
-                  sm: '290px'
+                  xs: '155px',
+                  md: '200px',
+                  xl: '290px'
                 }
               }
             }
@@ -260,7 +269,8 @@ const VPOS = (): JSX.Element => {
               sx={
                 {
                   fontSize: {
-                    xs: '14px',
+                    xs: '12px',
+                    sm: '14px',
                     xl: '20px',
                     padding: '0 15px'
                   }
@@ -276,8 +286,9 @@ const VPOS = (): JSX.Element => {
               {
                 width: '49%',
                 height: {
-                  xs: '200px',
-                  sm: '290px'
+                  xs: '155px',
+                  md: '200px',
+                  xl: '290px'
                 },
                 flexDirection: 'column',
                 justifyContent: 'space-between !important'
@@ -301,7 +312,7 @@ const VPOS = (): JSX.Element => {
               component={'figure'}
               sx={
                 {
-                  height: '50%',
+                  height: '60%',
                   display: 'flex',
                   alignItems: 'flex-end',
                   justifyContent: 'center'
