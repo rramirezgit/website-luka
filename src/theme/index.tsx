@@ -10,11 +10,13 @@ declare module '@mui/material/styles' {
     green_luka?: Palette['primary']
     aqua_blue?: Palette['primary']
     primary_a?: Palette['primary']
+    white?: Palette['primary']
   }
   interface PaletteOptions {
     green_luka?: Palette['primary']
     aqua_blue?: Palette['primary']
     primary_a?: Palette['primary']
+    white?: Palette['primary']
   }
 }
 
@@ -24,6 +26,7 @@ declare module '@mui/material' {
     green_luka: true
     aqua_blue: true
     primary_a: true
+    white: true
   }
 }
 
@@ -51,7 +54,13 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
         styleOverrides: {
           root: {
             [theme.breakpoints.down('sm')]: {
-              padding: '0 33.10px'
+              padding: '20px 33.10px'
+            },
+            [theme.breakpoints.down('md')]: {
+              padding: '30px 33.10px'
+            },
+            [theme.breakpoints.up('md')]: {
+              padding: '40px 33.10px'
             }
           }
         }
@@ -103,6 +112,12 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
         main: getCssVar('--aqua-blue'),
         dark: getCssVar('--aqua-blue'),
         contrastText: '#fff'
+      },
+      white: {
+        light: getCssVar('--white'),
+        main: getCssVar('--white'),
+        dark: getCssVar('--white'),
+        contrastText: getCssVar('--primary-buttons')
       }
     },
     typography: {

@@ -57,12 +57,13 @@ const Nav = (props: Props): JSX.Element => {
     window !== undefined ? () => window().document.body : undefined
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box>
       <AppBar
         component="nav"
         color="inherit"
-        position="static"
+        position="sticky"
         sx={{ alignItems: 'center' }}
+        classes={{ root: nav.content }}
       >
         <Toolbar
           sx={{
@@ -79,8 +80,8 @@ const Nav = (props: Props): JSX.Element => {
           >
             <img
               className={nav.logo}
-              src={`${config.UrlBaseImg}logo.png`}
-              alt="menu"
+              src={`${config.UrlBaseImg}Logo-white.png`}
+              alt="Logo-Luka"
             />
           </Box>
           <IconButton
@@ -99,7 +100,7 @@ const Nav = (props: Props): JSX.Element => {
             {routes.map(({ id = '' }) => {
               if (!id) return null
               return (
-                <Button key={id} sx={{ color: '#000', margin: '0px 10px' }}>
+                <Button key={id} sx={{ margin: '0px 10px', color: 'white ' }}>
                   {id}
                 </Button>
               )
@@ -107,11 +108,13 @@ const Nav = (props: Props): JSX.Element => {
           </Box>
           <Button
             variant="contained"
-            color="primary_a"
+            color="white"
             className={nav.button}
-            sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
+            sx={{
+              display: { xs: 'none', sm: 'none', md: 'block' }
+            }}
           >
-            {'Join >'}
+            {'Sing in'}
           </Button>
         </Toolbar>
       </AppBar>
