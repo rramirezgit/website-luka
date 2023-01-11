@@ -83,7 +83,7 @@ const Home = (): JSX.Element => {
           className={home.boxInfo}
           sx={{
             padding: {
-              md: '0px 10%'
+              md: '0px 30px'
             }
           }}
         >

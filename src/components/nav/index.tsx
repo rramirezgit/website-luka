@@ -67,10 +67,6 @@ const Nav = (props: Props): JSX.Element => {
       >
         <Toolbar
           sx={{
-            maxWidth: {
-              xs: '100%',
-              sm: '1287px'
-            },
             width: '100%'
           }}
         >
@@ -91,7 +87,7 @@ const Nav = (props: Props): JSX.Element => {
             onClick={handleDrawerToggle}
             sx={{ display: { md: 'none' } }}
           >
-            <img src={`${config.UrlBaseImg}menu.svg`} alt="menu" />
+            <img src={`${config.UrlBaseImg}menu.png`} alt="menu" />
           </IconButton>
           <Box
             className={nav['content-menu']}
