@@ -1,4 +1,19 @@
-.container {
+.content {
+  width: 100%;
+  background: linear-gradient(
+    107.56deg,
+    #0516b1 9.9%,
+    #0878ff 42.71%,
+    #09d5e5 90.1%
+  );
+  background-size: cover;
+  position: relative;
+}
+
+.rentangles {
+  width: 100%;
+  position: relative;
+  background-size: fill;
   display: flex;
   flex-direction: column;
 }
@@ -10,6 +25,7 @@
 .text {
   font-weight: 600 !important;
   line-height: 150%;
+  color: var(--white) !important;
   letter-spacing: -0.02em;
   margin-top: 20px !important;
 }
@@ -24,6 +40,37 @@
 }
 
 .content-info {
-  padding: 0px 35.13px 65px;
+  padding: 111px 35.13px 65px;
   max-width: 603px;
+}
+
+.animation {
+  height: auto;
+  position: absolute;
+
+  bottom: -8px;
+
+  right: auto;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.boxLottie {
+  position: relative;
+  height: 100%;
+}
+
+.boxInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+}
+
+@media (max-width: 600px) {
+  .animation {
+    top: 0;
+    left: -90px;
+    bottom: 0;
+  }
 }
