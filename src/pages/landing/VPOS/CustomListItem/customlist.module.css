@@ -1,0 +1,14 @@
+.list-decorator {
+    font-size: 8px !important;
+    color: var(--gray-text-dark) !important;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.list-item {
+    font-size: 16px !important;
+    color: var(--gray-text-dark) !important;
+    padding: 12px 16px !important;
+    display: flex;
+    align-items: flex-start;
+}

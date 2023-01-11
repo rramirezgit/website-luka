@@ -16,6 +16,14 @@ const Tags = ({ tags }: Props): JSX.Element => {
             <Box
               key={tag}
               className={tagsCSS['tag-container']}
+              sx={
+                {
+                  marginBottom: {
+                    xs: '10px',
+                    sm: '0'
+                  }
+                }
+              }
             >
               <Typography
                 className={tagsCSS.text}

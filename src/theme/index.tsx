@@ -80,6 +80,13 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
             textTransform: 'none'
           }
         }
+      },
+      MuiListItem: {
+        styleOverrides: {
+          root: {
+            alignItems: 'flex-start'
+          }
+        }
       }
     },
     palette: {

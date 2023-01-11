@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import cardCSS from './card.module.css'
 import placeholder from 'assets/placeholder.svg'
-import Tags from './tags'
+import Tags from 'components/tags'
 
 interface Props {
   id: string
