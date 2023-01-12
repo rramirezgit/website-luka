@@ -3,7 +3,7 @@ import Gateway from './gateway'
 import Home from './home'
 import OurProducts from './ourProducts'
 import PaymentLink from './paymentLink'
-import Ready from './ready'
+import World from './world'
 import VPOS from './VPOS'
 import WhyUs from './whyUs'
 
@@ -16,7 +16,7 @@ const Landing = (): JSX.Element => {
       <PaymentLink />
       <VPOS />
       <WhyUs />
-      <Ready />
+      <World />
       <Footer />
     </>
   )
