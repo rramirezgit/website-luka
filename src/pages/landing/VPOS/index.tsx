@@ -92,7 +92,9 @@ const VPOS = (): JSX.Element => {
             sx={
               {
                 width: '100%',
-                marginTop: '100px',
+                maxWidth: '400px',
+                margin: '0 auto',
+                marginTop: '80px',
                 display: {
                   xs: 'block',
                   lg: 'none'
@@ -130,7 +132,7 @@ const VPOS = (): JSX.Element => {
         <Box
           sx={
             {
-              width: '645px',
+              width: '600px',
               display: {
                 xs: 'none',
                 lg: 'block'
