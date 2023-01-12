@@ -4,31 +4,10 @@ import clsx from 'clsx'
 import ourProductsCSS from './ourProducts.module.css'
 import lukaCSS from 'styles/luka.module.css'
 import { Box, Typography } from '@mui/material'
-
-interface CardInterface {
-  key: string
-  title: string
-  text: string
-}
+import cardsArray from './ourProductsArray'
 
 const OurProducts = (): JSX.Element => {
-  const cardsInfo: CardInterface[] = [
-    {
-      key: crypto.randomUUID(),
-      title: 'Gateway',
-      text: 'B2B Payment gateway embedded solution. Manages multi currency and multi payment methods with an online conciliation dashboard.'
-    },
-    {
-      key: crypto.randomUUID(),
-      title: 'Pay Link',
-      text: 'B2B electronic pay-in and pay-out management system. Links are enabled through multiple messaging services.'
-    },
-    {
-      key: crypto.randomUUID(),
-      title: 'VPOS',
-      text: 'Hardware-free point of sales that enables QR payments and contactless transactions. Scalable multi-device integration.'
-    }
-  ]
+  const cardsInfo = cardsArray
   return (
     <Box
       className={
@@ -38,12 +17,12 @@ const OurProducts = (): JSX.Element => {
       }
       sx={{
         padding: {
-          xs: '53px 0 75px 0',
-          md: '80px 0 170px 0'
+          xs: '75px 0',
+          md: '150px 0'
         },
         height: {
-          xs: '628px',
-          md: '716px'
+          xs: '750px',
+          md: '800px'
         }
       }}
     >
@@ -67,6 +46,7 @@ const OurProducts = (): JSX.Element => {
                 key={card.key}
                 title={card.title}
                 text={card.text}
+                imageUrl={card.imageUrl}
               />
             )
           })
