@@ -1,0 +1,14 @@
+.laptop {
+  background: url(./../../../../assets/paymentLink/laptop.png) no-repeat;
+  left: -500px;
+  top: -345px;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  height: 650px;
+  width: 1097.72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
