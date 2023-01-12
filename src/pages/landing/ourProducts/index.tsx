@@ -23,7 +23,8 @@ const OurProducts = (): JSX.Element => {
         height: {
           xs: '750px',
           md: '800px'
-        }
+        },
+        position: 'relative'
       }}
     >
       <Typography
@@ -52,6 +53,19 @@ const OurProducts = (): JSX.Element => {
           })
         }
       </Carousel>
+      <Box
+        sx={
+          {
+            position: 'absolute',
+            width: '140px',
+            height: '200px',
+            backgroundColor: '#5AE1E230',
+            top: '0',
+            right: '0',
+            zIndex: '5'
+          }
+        }
+      ></Box>
     </Box>
   )
 }
