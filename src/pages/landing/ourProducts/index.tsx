@@ -57,12 +57,20 @@ const OurProducts = (): JSX.Element => {
         sx={
           {
             position: 'absolute',
-            width: '140px',
-            height: '200px',
             backgroundColor: '#5AE1E230',
             top: '0',
             right: '0',
-            zIndex: '5'
+            zIndex: '5',
+            width: {
+              xs: '50px',
+              sm: '100px',
+              md: '130px'
+            },
+            height: {
+              xs: '80px',
+              sm: '120px',
+              md: '180px'
+            }
           }
         }
       ></Box>

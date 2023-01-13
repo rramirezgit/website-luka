@@ -62,7 +62,7 @@ const WhyUs = (): JSX.Element => {
       }
       sx={{
         height: {
-          xs: '958px',
+          xs: '1050px',
           md: '1110px'
         },
         position: 'relative'
@@ -139,26 +139,42 @@ const WhyUs = (): JSX.Element => {
       <Box
         sx={
           {
-            position: 'absolute',
-            width: '140px',
-            height: '140px',
             backgroundColor: '#5AE1E230',
             top: '0',
             left: '0',
-            zIndex: '5'
+            zIndex: '5',
+            position: 'absolute',
+            width: {
+              xs: '50px',
+              sm: '100px',
+              md: '130px'
+            },
+            height: {
+              xs: '80px',
+              sm: '120px',
+              md: '180px'
+            }
           }
         }
       ></Box>
       <Box
         sx={
           {
-            position: 'absolute',
-            width: '140px',
-            height: '140px',
             backgroundColor: '#0878FF25',
             bottom: '0',
             right: '0',
-            zIndex: '5'
+            zIndex: '5',
+            position: 'absolute',
+            width: {
+              xs: '50px',
+              sm: '100px',
+              md: '130px'
+            },
+            height: {
+              xs: '60px',
+              sm: '100px',
+              md: '160px'
+            }
           }
         }
       ></Box>

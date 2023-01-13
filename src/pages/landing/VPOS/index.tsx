@@ -331,12 +331,20 @@ const VPOS = (): JSX.Element => {
         sx={
           {
             position: 'absolute',
-            width: '140px',
-            height: '140px',
             backgroundColor: '#5AE1E230',
             bottom: '0',
             left: '0',
-            zIndex: '5'
+            zIndex: '5',
+            width: {
+              xs: '50px',
+              sm: '100px',
+              md: '130px'
+            },
+            height: {
+              xs: '80px',
+              sm: '120px',
+              md: '180px'
+            }
           }
         }
       ></Box>
@@ -344,12 +352,20 @@ const VPOS = (): JSX.Element => {
         sx={
           {
             position: 'absolute',
-            width: '140px',
-            height: '180px',
             backgroundColor: '#0878FF20',
             top: '0',
             right: '0',
-            zIndex: '5'
+            zIndex: '5',
+            width: {
+              xs: '50px',
+              sm: '100px',
+              md: '130px'
+            },
+            height: {
+              xs: '80px',
+              sm: '120px',
+              md: '180px'
+            }
           }
         }
       ></Box>

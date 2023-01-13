@@ -16,7 +16,10 @@ const Footer = (): JSX.Element => {
     <Box
       sx={
         {
-          padding: '240px 0px',
+          padding: {
+            xs: '120px 0px 80px 0',
+            md: '240px 0px 120px 0'
+          },
           margin: '0 auto',
           display: 'flex',
           alignItems: 'center',
