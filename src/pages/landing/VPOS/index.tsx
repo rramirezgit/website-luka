@@ -41,6 +41,15 @@ const VPOS = (): JSX.Element => {
               xs: '85%',
               lg: '400px',
               xl: '570px'
+            },
+            minWidth: {
+              xs: 'none',
+              md: '400px'
+            },
+            marginRight: {
+              xs: '0',
+              lg: '20px',
+              xl: '0'
             }
           }}
         >
@@ -59,7 +68,7 @@ const VPOS = (): JSX.Element => {
               sx={{
                 fontSize: {
                   xs: '40px',
-                  xl: '54px'
+                  lg: '54px'
                 }
               }}
             >
@@ -70,7 +79,7 @@ const VPOS = (): JSX.Element => {
               sx={{
                 fontSize: {
                   xs: '40px',
-                  xl: '54px'
+                  lg: '54px'
                 }
               }}
             >
