@@ -8,6 +8,7 @@ import animation from 'assets/animation.json'
 import Lottie from 'lottie-react'
 import Nav from 'components/nav'
 import bgRectangles from 'assets/bg-home_rectangles.png'
+import Square from 'components/square'
 
 const BoxInfo = (): JSX.Element => {
   return (
@@ -61,7 +62,8 @@ const Home = (): JSX.Element => {
           xs: '700px',
           sm: '762px',
           md: '1017px'
-        }
+        },
+        position: 'relative'
       }}
     >
       <Nav />
@@ -116,6 +118,7 @@ const Home = (): JSX.Element => {
           />
         </Box>
       </Box>
+      <Square color='#5AE1E230' bottom={'0'} right={'0'} maxHeight={120} maxWidth={120}/>
     </Box>
   )
 }

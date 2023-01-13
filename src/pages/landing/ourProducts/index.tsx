@@ -54,7 +54,7 @@ const OurProducts = (): JSX.Element => {
           })
         }
       </Carousel>
-      <Square color='#5AE1E230' top={'0'} right={'0'} maxHeight={180} maxWidth={130}/>
+      <Square color='#5AE1E230' top={'0'} right={'0'} maxHeight={180} maxWidth={120}/>
     </Box>
   )
 }
