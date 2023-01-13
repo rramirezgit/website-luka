@@ -5,6 +5,7 @@ import whyUsCSS from './whyUs.module.css'
 import { Box, Typography } from '@mui/material'
 import placeholder from 'assets/placeholder.svg'
 import Card from './card'
+import Square from 'components/square'
 
 interface CardInterface {
   key: string
@@ -136,48 +137,8 @@ const WhyUs = (): JSX.Element => {
           }
         </Carousel>
       </Box>
-      <Box
-        sx={
-          {
-            backgroundColor: '#5AE1E230',
-            top: '0',
-            left: '0',
-            zIndex: '5',
-            position: 'absolute',
-            width: {
-              xs: '50px',
-              sm: '100px',
-              md: '130px'
-            },
-            height: {
-              xs: '80px',
-              sm: '120px',
-              md: '180px'
-            }
-          }
-        }
-      ></Box>
-      <Box
-        sx={
-          {
-            backgroundColor: '#0878FF25',
-            bottom: '0',
-            right: '0',
-            zIndex: '5',
-            position: 'absolute',
-            width: {
-              xs: '50px',
-              sm: '100px',
-              md: '130px'
-            },
-            height: {
-              xs: '60px',
-              sm: '100px',
-              md: '160px'
-            }
-          }
-        }
-      ></Box>
+      <Square color='#5AE1E230' top={'0'} left={'0'} maxHeight={180} maxWidth={130}/>
+      <Square color='#0878FF25' bottom={'0'} right={'0'} maxHeight={160} maxWidth={130}/>
     </Box>
   )
 }
