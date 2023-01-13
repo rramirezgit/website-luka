@@ -7,6 +7,10 @@
   line-height: 150% !important;
 }
 
+body {
+  min-width: 390px;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }

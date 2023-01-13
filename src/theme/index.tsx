@@ -61,7 +61,8 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
             },
             [theme.breakpoints.up('md')]: {
               padding: '40px 33.10px'
-            }
+            },
+            maxWidth: '1400px'
           }
         }
       },
