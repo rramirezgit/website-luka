@@ -5,6 +5,7 @@ import ourProductsCSS from './ourProducts.module.css'
 import lukaCSS from 'styles/luka.module.css'
 import { Box, Typography } from '@mui/material'
 import cardsArray from './ourProductsArray'
+import Square from 'components/square'
 
 const OurProducts = (): JSX.Element => {
   const cardsInfo = cardsArray
@@ -53,19 +54,7 @@ const OurProducts = (): JSX.Element => {
           })
         }
       </Carousel>
-      <Box
-        sx={
-          {
-            position: 'absolute',
-            width: '140px',
-            height: '200px',
-            backgroundColor: '#5AE1E230',
-            top: '0',
-            right: '0',
-            zIndex: '5'
-          }
-        }
-      ></Box>
+      <Square color='#5AE1E230' top={'0'} right={'0'} maxHeight={180} maxWidth={120}/>
     </Box>
   )
 }

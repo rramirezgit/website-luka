@@ -3,7 +3,6 @@
     width: 100%;
     align-items: center;
     overflow: hidden;
-    padding-top: 60px;
 }
 
 .small-container {
@@ -14,14 +13,14 @@
     color: var(--dark-gray-text) !important;
     font-weight: bold !important;
     align-self: flex-start;
-    margin-bottom: 12px !important;
+    margin-bottom: 24px !important;
 }
 
 .text {
     color: var(--dark-gray-text) !important;
     font-weight: 500 !important;
     align-self: flex-start;
-    margin-bottom: 31px !important;
+    margin-bottom: 80px !important;
 }
 
 .title-box {

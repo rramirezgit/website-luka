@@ -5,6 +5,7 @@ import whyUsCSS from './whyUs.module.css'
 import { Box, Typography } from '@mui/material'
 import placeholder from 'assets/placeholder.svg'
 import Card from './card'
+import Square from 'components/square'
 
 interface CardInterface {
   key: string
@@ -61,11 +62,11 @@ const WhyUs = (): JSX.Element => {
         )
       }
       sx={{
-        height: {
-          xs: '958px',
-          md: '1110px'
-        },
-        position: 'relative'
+        position: 'relative',
+        padding: {
+          xs: '125px 25px',
+          lg: '235px 105px'
+        }
       }}
     >
       <Box
@@ -82,7 +83,8 @@ const WhyUs = (): JSX.Element => {
             fontSize: {
               xs: '40px',
               md: '54px'
-            }
+            },
+            textAlign: 'center'
           }}
         >
           Why Us
@@ -93,7 +95,10 @@ const WhyUs = (): JSX.Element => {
             fontSize: {
               xs: '14px',
               md: '24px'
-            }
+            },
+            textAlign: 'center',
+            maxWidth: '1100px',
+            margin: '0 auto'
           }}
         >
           We make sure we understand each other. We focus to ease your payments capability so you concentrate on growing your business
@@ -136,32 +141,8 @@ const WhyUs = (): JSX.Element => {
           }
         </Carousel>
       </Box>
-      <Box
-        sx={
-          {
-            position: 'absolute',
-            width: '140px',
-            height: '140px',
-            backgroundColor: '#5AE1E230',
-            top: '0',
-            left: '0',
-            zIndex: '5'
-          }
-        }
-      ></Box>
-      <Box
-        sx={
-          {
-            position: 'absolute',
-            width: '140px',
-            height: '140px',
-            backgroundColor: '#0878FF25',
-            bottom: '0',
-            right: '0',
-            zIndex: '5'
-          }
-        }
-      ></Box>
+      <Square color='#5AE1E230' top={'0'} left={'0'} maxHeight={180} maxWidth={130}/>
+      <Square color='#0878FF25' bottom={'0'} right={'0'} maxHeight={160} maxWidth={130}/>
     </Box>
   )
 }

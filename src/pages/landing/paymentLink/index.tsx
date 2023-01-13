@@ -4,6 +4,7 @@ import Laptop from './laptop'
 import style from './paymentLink.module.css'
 import { Box } from '@mui/material'
 import Button from '@mui/material/Button'
+import Square from 'components/square'
 
 const PaymentLink = (): JSX.Element => {
   return (
@@ -94,6 +95,8 @@ const PaymentLink = (): JSX.Element => {
           </Box>
         }
       </TextAndImg>
+      <Square color='#0878FF20' bottom={'0'} right={'0'} maxHeight={180} maxWidth={130}/>
+      <Square color='#5AE1E230' top={'0'} left={'0'} maxHeight={160} maxWidth={130}/>
     </Box>
   )
 }

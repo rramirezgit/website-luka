@@ -1,6 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import Ready from 'components/ready'
 import style from './world.module.css'
+import Square from 'components/square'
+
 const World = (): JSX.Element => {
   return (
     <>
@@ -47,7 +49,8 @@ const World = (): JSX.Element => {
                 fontSize: {
                   xs: '37.5882px',
                   lg: '56.6667px'
-                }
+                },
+                margin: '0 12px'
               }}
               className={style['title-blue']}
             >
@@ -55,7 +58,6 @@ const World = (): JSX.Element => {
             </Box>
             as it gets!
           </Typography>
-
           <Typography
             classes={{ root: style.subtitle }}
             sx={{
@@ -80,6 +82,7 @@ const World = (): JSX.Element => {
         <Box className={style.contentReady}>
           <Ready />
         </Box>
+        <Square color='#0878FF25' top={'0'} right={'0'} maxHeight={160} maxWidth={130}/>
       </Box>
     </>
   )
