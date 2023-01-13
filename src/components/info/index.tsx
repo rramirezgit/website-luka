@@ -14,6 +14,7 @@ interface InfoProps {
     color: 'primary' | 'secondary'
     variant: 'contained' | 'outlined'
     onclick: () => void
+    sx?: any
   } | null
   size?: {
     xs: string
@@ -94,6 +95,7 @@ const Info = ({
       {button && (
         <Button
           sx={{
+            ...button.sx,
             marginTop: '30px'
           }}
           color={button.color}

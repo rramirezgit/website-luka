@@ -1,0 +1,26 @@
+.content {
+  width: 100%;
+  background: linear-gradient(107.56deg, #0516b1 41.67%, #0878ff 88.02%);
+  border-radius: 11.9776px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  text-align: center;
+}
+.title {
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 150% !important;
+  letter-spacing: -0.02em !important;
+  color: #ffffff !important;
+}
+
+.subtitle {
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 150% !important;
+  text-align: center !important;
+  letter-spacing: -0.02em !important;
+  color: #ffffff !important;
+}

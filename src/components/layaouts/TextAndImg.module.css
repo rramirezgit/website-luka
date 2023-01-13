@@ -1,7 +1,6 @@
 .content {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -9,5 +8,4 @@
   max-width: 1292px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }

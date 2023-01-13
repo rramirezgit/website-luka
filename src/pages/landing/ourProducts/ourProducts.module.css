@@ -1,13 +1,13 @@
 .ourproducts-container {
-    background-color: var(--bg-gray);
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
+  background-color: var(--bg-gray);
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .title {
-    color: var(--dark-gray-text) !important;
-    font-weight: bold !important;
-    margin-bottom: 60px !important;
+  color: var(--dark-gray-text) !important;
+  font-weight: bold !important;
+  margin-bottom: 60px !important;
 }

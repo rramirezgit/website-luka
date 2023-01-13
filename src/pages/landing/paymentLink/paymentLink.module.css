@@ -1,3 +1,56 @@
 .layout {
   background-color: var(--bg-gray);
 }
+
+.laptop {
+  position: relative;
+  left: -300px;
+  top: -345px;
+}
+
+.laptopXS {
+  position: absolute;
+  left: -30%;
+}
+
+@media (max-width: 1200px) {
+  .laptopXS {
+    left: 10%;
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 900px) {
+  .laptopXS {
+    left: 0%;
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 770px) {
+  .laptopXS {
+    left: -5%;
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 591px) {
+  .laptopXS {
+    left: -200px;
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 500px) {
+  .laptopXS {
+    left: -150px;
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 445px) {
+  .laptopXS {
+    left: -200px;
+    bottom: 5%;
+  }
+}
