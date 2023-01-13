@@ -4,25 +4,39 @@ import style from './TextAndImg.module.css'
 interface TextAndImgProps {
   children: JSX.Element[]
   className?: string
+  sxOne?: any
+  sxTwo?: any
+  flDirectionSx?: string
+  heightSx: any
 }
 
 const TextAndImg = ({
   children,
-  className = ''
+  className = '',
+  sxOne = {},
+  sxTwo = {},
+  heightSx,
+  flDirectionSx = 'column'
 }: TextAndImgProps): JSX.Element => {
   return (
     <Box
       className={`${style.content} ${className}`}
       sx={{
-        height: {
-          xs: '100%',
-          md: '1159px'
-        }
+        height: heightSx
       }}
     >
-      <Box className={style.box}>
-        <Box>{children[0]}</Box>
-        <Box>{children[1]}</Box>
+      <Box
+        className={style.box}
+        sx={{
+          flexDirection: {
+            xs: flDirectionSx,
+            lg: 'row'
+          }
+        }}
+      >
+        <Box sx={sxOne}>{children[0]}</Box>
+        <Box sx={sxTwo}>{children[1]}</Box>
+        {children[2] && children[2]}
       </Box>
     </Box>
   )

@@ -16,7 +16,7 @@ const BoxInfo = (): JSX.Element => {
       sx={{
         padding: {
           xs: '100px 35.13px 0px;',
-          sm: '100px 35.13px 0px;'
+          sm: '100px 0px 0px 63px'
         },
         width: {
           xs: '100%'
@@ -75,8 +75,9 @@ const Home = (): JSX.Element => {
           },
           background: {
             xs: `url(${bgRectangles}) no-repeat -537px 195px`,
-            md: `url(${bgRectangles}) no-repeat bottom left`
-          }
+            xl: `url(${bgRectangles}) no-repeat center`
+          },
+          backgroundSize: 'cover !important'
         }}
       >
         <Box
@@ -87,9 +88,27 @@ const Home = (): JSX.Element => {
             }
           }}
         >
-          <BoxInfo />
+          <Box
+            sx={{
+              width: '1400px'
+            }}
+          >
+            <BoxInfo />
+          </Box>
         </Box>
         <Box className={home.boxLottie}>
+          <Box
+            className={home.triangle}
+            sx={{
+              clipPath: {
+                xs: 'polygon(-34% 48%, 216% 4%, 801% 39%)',
+                sm: 'polygon(-34% 62%, 215% -15%, 801% 67%)',
+                md: 'polygon(-70% 125%, 208% 2%, 138% 100%)',
+                lg: 'polygon(-54% 113%, 162% 2%, 138% 100%)',
+                xl: 'polygon(-39% 114%, 106% 2%, 138% 100%)'
+              }
+            }}
+          ></Box>
           <Lottie
             className={home.animation}
             animationData={animation}
