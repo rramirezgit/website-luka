@@ -1,0 +1,15 @@
+.title-blue {
+  color: var(--title-blue);
+  font-weight: bold !important;
+}
+
+.title {
+  color: var(--dark-gray-text) !important;
+  font-weight: bold !important;
+}
+
+.subtitle {
+  font-size: 24px !important;
+  color: var(--dark-gray-text) !important;
+  font-weight: bold !important;
+}

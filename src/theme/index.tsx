@@ -30,7 +30,7 @@ declare module '@mui/material' {
   }
 }
 
-const getCssVar = (name: string): string => {
+export const getCssVar = (name: string): string => {
   return getComputedStyle(document.documentElement)
     .getPropertyValue(name)
     .trim()

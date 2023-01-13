@@ -10,16 +10,15 @@ const CustomListItem = ({ text }: CustomInterface): JSX.Element => {
   return (
     <ListItem
       className={customlistStyles['list-item']}
-      sx={
-        {
-          fontWeight: {
-            xs: 'bold',
-            lg: '400'
-          }
-        }
-      }
+      sx={{
+        fontWeight: {
+          xs: 'bold',
+          lg: '400'
+        },
+        textAlign: 'justify'
+      }}
     >
-      <CircleIcon className={customlistStyles['list-decorator']}/>
+      <CircleIcon className={customlistStyles['list-decorator']} />
       {text}
     </ListItem>
   )
