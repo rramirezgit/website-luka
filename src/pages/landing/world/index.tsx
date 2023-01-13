@@ -1,6 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import Ready from 'components/ready'
 import style from './world.module.css'
+import Square from 'components/square'
+
 const World = (): JSX.Element => {
   return (
     <>
@@ -80,6 +82,7 @@ const World = (): JSX.Element => {
         <Box className={style.contentReady}>
           <Ready />
         </Box>
+        <Square color='#0878FF25' top={'0'} right={'0'} maxHeight={160} maxWidth={130}/>
       </Box>
     </>
   )
