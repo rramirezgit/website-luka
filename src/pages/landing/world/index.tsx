@@ -73,7 +73,7 @@ const World = (): JSX.Element => {
           sx={{
             backgroundSize: {
               xs: 'contain',
-              md: 'cover'
+              md: 'contain'
             }
           }}
         ></Box>
