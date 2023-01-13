@@ -4,3 +4,7 @@
   font-weight: 700 !important;
   letter-spacing: -0.02em !important;
 }
+
+.landing {
+  overflow-x: hidden;
+}
