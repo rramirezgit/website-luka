@@ -6,6 +6,7 @@ import phone4 from 'assets/vpos/vpos-phone-4.png'
 import vposFish from 'assets/vpos/vpos-img.png'
 import Tags from 'components/tags'
 import PhoneBox from './PhoneBox'
+import Square from 'components/square'
 
 const VPOS = (): JSX.Element => {
   return (
@@ -311,48 +312,8 @@ const VPOS = (): JSX.Element => {
           </Box>
         </Box>
       </Box>
-      <Box
-        sx={
-          {
-            position: 'absolute',
-            backgroundColor: '#5AE1E230',
-            bottom: '0',
-            left: '0',
-            zIndex: '5',
-            width: {
-              xs: '50px',
-              sm: '100px',
-              md: '130px'
-            },
-            height: {
-              xs: '80px',
-              sm: '120px',
-              md: '180px'
-            }
-          }
-        }
-      ></Box>
-      <Box
-        sx={
-          {
-            position: 'absolute',
-            backgroundColor: '#0878FF20',
-            top: '0',
-            right: '0',
-            zIndex: '5',
-            width: {
-              xs: '50px',
-              sm: '100px',
-              md: '130px'
-            },
-            height: {
-              xs: '80px',
-              sm: '120px',
-              md: '180px'
-            }
-          }
-        }
-      ></Box>
+      <Square color='#5AE1E230' bottom={'0'} left={'0'} maxHeight={180} maxWidth={130}/>
+      <Square color='#0878FF20' top={'0'} right={'0'} maxHeight={180} maxWidth={130}/>
     </Box>
   )
 }
