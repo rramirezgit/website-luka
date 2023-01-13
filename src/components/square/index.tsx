@@ -26,10 +26,10 @@ const Square = (
         {
           position: 'absolute',
           backgroundColor: color,
-          top,
-          bottom,
-          left,
-          right,
+          top: top === 'initial' ? top : `${top}px`,
+          bottom: bottom === 'initial' ? bottom : `${bottom}px`,
+          left: left === 'initial' ? left : `${left}px`,
+          right: right === 'initial' ? right : `${right}px`,
           zIndex: '5',
           width: {
             xs: `${maxWidth - 80}px`,
