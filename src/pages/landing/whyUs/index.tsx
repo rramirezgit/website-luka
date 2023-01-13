@@ -64,41 +64,41 @@ const WhyUs = (): JSX.Element => {
         height: {
           xs: '958px',
           md: '1110px'
-        }
+        },
+        position: 'relative'
       }}
     >
-      <Typography
-        className={whyUsCSS.title}
-        sx={{
-          fontSize: {
-            xs: '40px',
-            md: '54px'
-          },
-          padding: {
-            xs: '0 25px',
-            sm: '0 50px',
-            md: '0 105px'
+      <Box
+        className={whyUsCSS['title-box']}
+        sx={
+          {
+            padding: '0 50px'
           }
-        }}
+        }
       >
-        Why Us
-      </Typography>
-      <Typography
-        className={whyUsCSS.text}
-        sx={{
-          fontSize: {
-            xs: '14px',
-            md: '24px'
-          },
-          padding: {
-            xs: '0 25px',
-            sm: '0 50px',
-            md: '0 105px'
-          }
-        }}
-      >
-        We make sure we understand each other. We focus to ease your payments capability so you concentrate on growing your business
-      </Typography>
+        <Typography
+          className={whyUsCSS.title}
+          sx={{
+            fontSize: {
+              xs: '40px',
+              md: '54px'
+            }
+          }}
+        >
+          Why Us
+        </Typography>
+        <Typography
+          className={whyUsCSS.text}
+          sx={{
+            fontSize: {
+              xs: '14px',
+              md: '24px'
+            }
+          }}
+        >
+          We make sure we understand each other. We focus to ease your payments capability so you concentrate on growing your business
+        </Typography>
+      </Box>
       <Box
         className={whyUsCSS['small-container']}
         sx={{
@@ -136,6 +136,32 @@ const WhyUs = (): JSX.Element => {
           }
         </Carousel>
       </Box>
+      <Box
+        sx={
+          {
+            position: 'absolute',
+            width: '140px',
+            height: '140px',
+            backgroundColor: '#5AE1E230',
+            top: '0',
+            left: '0',
+            zIndex: '5'
+          }
+        }
+      ></Box>
+      <Box
+        sx={
+          {
+            position: 'absolute',
+            width: '140px',
+            height: '140px',
+            backgroundColor: '#0878FF25',
+            bottom: '0',
+            right: '0',
+            zIndex: '5'
+          }
+        }
+      ></Box>
     </Box>
   )
 }
