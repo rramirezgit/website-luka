@@ -121,7 +121,8 @@ const WhyUs = (): JSX.Element => {
           padding: '30px 0',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          position: 'relative'
         }}
       >
         <Carousel width='300' height='520' id={crypto.randomUUID()}>
@@ -140,6 +141,30 @@ const WhyUs = (): JSX.Element => {
             })
           }
         </Carousel>
+        <Box
+          sx={
+            {
+              display: {
+                xs: 'none',
+                xl: 'block'
+              }
+            }
+          }
+        >
+          <Square color='#5AE1E230' top={'-180'} left={'-180'} maxHeight={280} maxWidth={220}/>
+        </Box>
+      </Box>
+      <Box
+        sx={
+          {
+            display: {
+              xs: 'none',
+              xl: 'block'
+            }
+          }
+        }
+      >
+        <Square color='#5AE1E230' top={'400'} right={'0'} maxHeight={300} maxWidth={160}/>
       </Box>
       <Square color='#5AE1E230' top={'0'} left={'0'} maxHeight={180} maxWidth={130}/>
       <Square color='#0878FF25' bottom={'0'} right={'0'} maxHeight={160} maxWidth={130}/>
