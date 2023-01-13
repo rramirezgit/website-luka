@@ -62,11 +62,11 @@ const WhyUs = (): JSX.Element => {
         )
       }
       sx={{
-        height: {
-          xs: '1050px',
-          md: '1110px'
-        },
-        position: 'relative'
+        position: 'relative',
+        padding: {
+          xs: '125px 25px',
+          lg: '235px 105px'
+        }
       }}
     >
       <Box
@@ -83,7 +83,8 @@ const WhyUs = (): JSX.Element => {
             fontSize: {
               xs: '40px',
               md: '54px'
-            }
+            },
+            textAlign: 'center'
           }}
         >
           Why Us
@@ -94,7 +95,10 @@ const WhyUs = (): JSX.Element => {
             fontSize: {
               xs: '14px',
               md: '24px'
-            }
+            },
+            textAlign: 'center',
+            maxWidth: '1100px',
+            margin: '0 auto'
           }}
         >
           We make sure we understand each other. We focus to ease your payments capability so you concentrate on growing your business

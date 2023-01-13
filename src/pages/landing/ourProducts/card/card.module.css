@@ -16,6 +16,7 @@
     font-weight: 500 !important;
     margin-top: 13px !important;
     margin-bottom: 8px !important;
+    color: var(--gray-blue-text) !important;
 }
 
 .figure {
@@ -33,6 +34,7 @@
     font-size: 14px !important;
     font-weight: 500 !important;
     margin-bottom: 8px !important;
+    color: var(--gray-text-dark) !important;
 }
 
 .paragraph--blue {

@@ -49,7 +49,8 @@ const World = (): JSX.Element => {
                 fontSize: {
                   xs: '37.5882px',
                   lg: '56.6667px'
-                }
+                },
+                margin: '0 12px'
               }}
               className={style['title-blue']}
             >
@@ -57,7 +58,6 @@ const World = (): JSX.Element => {
             </Box>
             as it gets!
           </Typography>
-
           <Typography
             classes={{ root: style.subtitle }}
             sx={{
