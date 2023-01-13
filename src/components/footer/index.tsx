@@ -17,7 +17,7 @@ const Footer = (): JSX.Element => {
       sx={
         {
           padding: {
-            xs: '120px 0px 80px 0',
+            xs: '240px 0px 80px 0',
             md: '240px 0px 120px 0'
           },
           margin: '0 auto',
