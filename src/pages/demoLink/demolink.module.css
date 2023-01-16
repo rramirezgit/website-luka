@@ -1,0 +1,9 @@
+.demolink {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.content-container {
+    background-color: var(--bg-gray);
+}

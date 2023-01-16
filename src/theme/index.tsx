@@ -1,4 +1,5 @@
 import { createTheme, ThemeProvider, useTheme } from '@mui/material'
+import inImage from 'assets/demoLink/in.png'
 import { ReactElement } from 'react'
 
 interface ThemeProps {
@@ -86,6 +87,94 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
         styleOverrides: {
           root: {
             alignItems: 'flex-start'
+          }
+        }
+      },
+      MuiSwitch: {
+        styleOverrides: {
+          root: {
+          },
+          track: {
+          },
+          switchBase: {
+          },
+          thumb: {
+            backgroundImage: `url(${inImage})`,
+            backgroundColor: getCssVar('--primary-buttons'),
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          }
+        }
+      },
+      MuiInputBase: {
+        styleOverrides: {
+          root: {
+            fontSize: '14px'
+          }
+        }
+      },
+      MuiInput: {
+        styleOverrides: {
+          underline: {
+            '&.Mui-focused:before': {
+              borderColor: `${getCssVar('--primary-buttons')} !important`,
+              transition: 'none'
+            },
+            '&.Mui-focused:after': {
+              borderColor: `${getCssVar('--primary-buttons')} !important`,
+              transition: 'none'
+            },
+            '&:before': {
+              borderColor: getCssVar('--gray-text-dark'),
+              transition: 'none'
+            },
+            '&:after': {
+              borderColor: getCssVar('--gray-text-dark'),
+              transition: 'none'
+            },
+            '&:hover:not(.Mui-disabled):before': {
+              borderColor: getCssVar('--primary-buttons'),
+              transition: 'none'
+            },
+            '&:hover:not(.Mui-disabled, .Mui-error):before': {
+              borderColor: getCssVar('--primary-buttons'),
+              transition: 'none'
+            }
+          }
+        }
+      },
+      MuiSelect: {
+        styleOverrides: {
+          select: {
+            fontSize: '14px',
+            backgroundColor: 'transparent',
+            '&:focus': { backgroundColor: 'transparent' }
+          }
+        }
+      },
+      MuiSlider: {
+        styleOverrides: {
+          track: {
+            backgroundColor: getCssVar('--gray-text')
+          },
+          rail: {
+            backgroundColor: getCssVar('--bg-gray')
+          },
+          root: {
+            height: '10px'
+          },
+          thumb: {
+            height: '22px',
+            width: '22px',
+            '&:hover': {
+              boxShadow: 'none'
+            },
+            '&.Mui-active': {
+              boxShadow: 'none'
+            },
+            '&.Mui-focusVisible': {
+              boxShadow: 'none'
+            }
           }
         }
       }
