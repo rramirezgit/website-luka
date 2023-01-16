@@ -81,8 +81,8 @@ const WhyUs = (): JSX.Element => {
           className={whyUsCSS.title}
           sx={{
             fontSize: {
-              xs: '40px',
-              md: '54px'
+              xs: '40px !important',
+              lg: '54px !important'
             },
             textAlign: 'center'
           }}
@@ -93,8 +93,8 @@ const WhyUs = (): JSX.Element => {
           className={whyUsCSS.text}
           sx={{
             fontSize: {
-              xs: '14px',
-              md: '24px'
+              xs: '20px !important',
+              md: '24px !important'
             },
             textAlign: 'center',
             maxWidth: '1100px',

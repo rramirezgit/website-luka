@@ -32,8 +32,8 @@ const OurProducts = (): JSX.Element => {
         className={ourProductsCSS.title}
         sx={{
           fontSize: {
-            xs: '40px',
-            md: '54px'
+            xs: '40px !important',
+            lg: '54px !important'
           }
         }}
       >
