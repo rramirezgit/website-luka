@@ -93,16 +93,30 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
       MuiSwitch: {
         styleOverrides: {
           root: {
+            height: '45px',
+            width: '85px'
           },
           track: {
+            borderRadius: '10px'
           },
           switchBase: {
+            '&.Mui-checked': {
+              transform: 'translateX(40px)'
+            },
+            backgroundColor: 'transparent',
+            padding: '7px 9px 9px 9px',
+            '&:hover': {
+              backgroundColor: 'transparent'
+            }
           },
           thumb: {
             backgroundImage: `url(${inImage})`,
             backgroundColor: getCssVar('--primary-buttons'),
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center',
+            height: '30px',
+            width: '30px',
+            boxShadow: '1.5px 1.5px 1.5px rgba(51, 51, 51, 0.25)'
           }
         }
       },

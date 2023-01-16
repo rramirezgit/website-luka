@@ -38,19 +38,28 @@ const DemoMenu = (): JSX.Element => {
         Customize your link
       </Typography>
       <Box
-        className={styles['overflow-container']}
+        sx={
+          {
+            padding: '0 30px'
+          }
+        }
       >
         <Description />
-        <Box
-          sx={
-            {
-              marginTop: '18px',
-              marginBottom: '28px'
-            }
+      </Box>
+      <Box
+        sx={
+          {
+            marginTop: '18px',
+            marginBottom: '28px',
+            paddingLeft: '20px'
           }
-        >
-          <Switch />
-        </Box>
+        }
+      >
+        <Switch />
+      </Box>
+      <Box
+        className={styles['overflow-container']}
+      >
         <Box
           sx={
             {
