@@ -11,6 +11,21 @@ body {
   min-width: 390px;
 }
 
+/* Scrollbar */
 body::-webkit-scrollbar {
   display: none;
+}
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  background: inherit;
+  border-radius: 8px;
+  margin: 0 10px;
+}
+:hover::-webkit-scrollbar-thumb {
+  background: var(--gray-text);
+  transition: all .8s;
 }

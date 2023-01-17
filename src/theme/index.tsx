@@ -18,6 +18,14 @@ declare module '@mui/material/styles' {
     primary_a?: Palette['primary']
     white?: Palette['primary']
   }
+  interface BreakpointOverrides {
+    xs: true
+    sm: true
+    md: true
+    lg: true
+    xl: true
+    xxl: true
+  }
 }
 
 // Update the Button's color prop options
@@ -130,6 +138,16 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
     },
     typography: {
       fontFamily: 'Open SansVariable'
+    },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+        xxl: 1900
+      }
     }
   })
   return <ThemeProvider theme={themenew}>{children}</ThemeProvider>
