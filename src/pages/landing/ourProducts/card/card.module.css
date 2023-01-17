@@ -1,9 +1,8 @@
 .container {
-    min-height: 350px;
-    min-width: 322px;
-    height: 350px;
+    height: 390px;
     width: 322px;
-    padding: 25px 37px;
+    min-width: 322px;
+    padding: 37px;
     background-color: var(--white);
     margin: 0 8px;
     scroll-snap-align: center;
@@ -14,13 +13,13 @@
 .title {
     font-size: 20px !important;
     font-weight: 500 !important;
-    margin-top: 13px !important;
-    margin-bottom: 8px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
     color: var(--gray-blue-text) !important;
 }
 
 .figure {
-    height: 120px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
