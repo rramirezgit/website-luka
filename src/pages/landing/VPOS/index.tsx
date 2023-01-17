@@ -12,8 +12,8 @@ const VPOS = (): JSX.Element => {
       sx={
         {
           padding: {
-            xs: '125px 0',
-            lg: '235px 0'
+            xs: '70px 0 70px 0',
+            lg: '150px 0 100px 0'
           },
           width: '100%',
           position: 'relative',
@@ -152,7 +152,7 @@ const VPOS = (): JSX.Element => {
         </Box>
       </Box>
       <ScrollBoxes />
-      <Square color='#5AE1E230' bottom={'0'} left={'0'} maxHeight={120} maxWidth={130}/>
+      <Square color='#5AE1E230' bottom={'0'} left={'0'} maxHeight={90} maxWidth={130}/>
       <Square color='#0878FF20' top={'0'} right={'0'} maxHeight={180} maxWidth={130}/>
     </Box>
   )

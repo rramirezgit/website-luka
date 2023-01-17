@@ -13,13 +13,13 @@
 .title {
     font-size: 20px !important;
     font-weight: 500 !important;
-    margin-top: 25px !important;
-    margin-bottom: 14px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
     color: var(--gray-blue-text) !important;
 }
 
 .figure {
-    height: 120px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@
 .paragraph {
     font-size: 14px !important;
     font-weight: 500 !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 8px !important;
     color: var(--gray-text-dark) !important;
 }
 
