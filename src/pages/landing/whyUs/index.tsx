@@ -64,18 +64,13 @@ const WhyUs = (): JSX.Element => {
       sx={{
         position: 'relative',
         padding: {
-          xs: '70px 25px',
-          lg: '100px 105px'
+          xs: '70px 50px',
+          md: '100px 100px'
         }
       }}
     >
       <Box
         className={whyUsCSS['title-box']}
-        sx={
-          {
-            padding: '0 50px'
-          }
-        }
       >
         <Typography
           className={whyUsCSS.title}

@@ -32,16 +32,17 @@ const VPOS = (): JSX.Element => {
             xs: 'center !important',
             lg: 'space-between !important'
           },
+          maxWidth: '1500px',
           padding: {
-            xs: '0 25px',
-            lg: '0 105px'
+            xs: '0 50px',
+            md: '0 100px'
           }
         }}
       >
         <Box
           sx={{
             width: {
-              xs: '85%',
+              xs: '100%',
               lg: '400px',
               xl: '570px'
             },
@@ -141,7 +142,7 @@ const VPOS = (): JSX.Element => {
         </Box>
         <Box
           sx={{
-            width: '645px',
+            width: '640px',
             display: {
               xs: 'none',
               lg: 'block'

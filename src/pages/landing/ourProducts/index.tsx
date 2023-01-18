@@ -21,10 +21,6 @@ const OurProducts = (): JSX.Element => {
           xs: '70px 0',
           md: '100px 0'
         },
-        // height: {
-        //   xs: '750px',
-        //   md: '800px'
-        // },
         position: 'relative'
       }}
     >

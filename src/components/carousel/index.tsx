@@ -70,13 +70,13 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
           },
           height: height !== 'auto' ? `${height}px` : height,
           justifyContent: {
-            md: 'space-evenly'
+            md: 'space-between'
           },
           width: {
             xs: '100vw'
           },
           maxWidth: {
-            md: '1400px'
+            md: '1300px'
           }
         }}
       >
@@ -90,7 +90,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
         )}
         sx={{
           display: {
-            md: 'none'
+            carousel: 'none'
           },
           marginTop: `${buttonsMargin}px`
         }}

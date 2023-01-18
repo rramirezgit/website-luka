@@ -5,23 +5,36 @@ import Typography from '@mui/material/Typography'
 import desktop from 'assets/demoLink/monitor.svg'
 import mobile from 'assets/demoLink/mobile.svg'
 
-const DemoHeader = (): JSX.Element => {
+interface DemoHeaderProps {
+  mobileState: boolean
+  desktopState: boolean
+  handleMobile: () => void
+  handleDesktop: () => void
+}
+
+const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: DemoHeaderProps): JSX.Element => {
   return (
     <Box
       sx={
         {
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '30px 60px'
+          padding: '30px 60px',
+          justifyContent: {
+            xs: 'center',
+            md: 'space-between'
+          }
         }
       }
     >
       <Box
         sx={
           {
-            display: 'flex',
-            alignItems: 'center'
+            alignItems: 'center',
+            display: {
+              xs: 'none',
+              md: 'flex'
+            }
           }
         }
       >
@@ -57,21 +70,45 @@ const DemoHeader = (): JSX.Element => {
           component={'figure'}
           sx={
             {
-              height: '30px'
+              height: '30px',
+              cursor: 'pointer'
             }
           }
+          onClick={handleMobile}
         >
-          <img src={mobile} alt='Mobile' style={{ maxHeight: '100%' }} />
+          <img
+            src={mobile}
+            alt='Mobile'
+            style={
+              {
+                maxHeight: '100%',
+                fill: mobileState ? '#0878ff' : getCssVar('--gray-text'),
+                stroke: mobileState ? '#0878ff' : getCssVar('--gray-text')
+              }
+            }
+          />
         </Box>
         <Box
           component={'figure'}
           sx={
             {
-              height: '30px'
+              height: '30px',
+              cursor: 'pointer'
             }
           }
+          onClick={handleDesktop}
         >
-          <img src={desktop} alt='Desktop' style={{ maxHeight: '100%' }} />
+          <img
+            src={desktop}
+            alt='Mobile'
+            style={
+              {
+                maxHeight: '100%',
+                fill: desktopState ? getCssVar('--primary-buttons') : getCssVar('--gray-text'),
+                stroke: desktopState ? getCssVar('--primary-buttons') : getCssVar('--gray-text')
+              }
+            }
+          />
         </Box>
       </Box>
       <Box
@@ -80,7 +117,11 @@ const DemoHeader = (): JSX.Element => {
             width: '180px',
             height: '45px',
             backgroundColor: getCssVar('--gray-text-dark'),
-            borderRadius: '8px'
+            borderRadius: '8px',
+            display: {
+              xs: 'none',
+              md: 'block'
+            }
           }
         }
       ></Box>
