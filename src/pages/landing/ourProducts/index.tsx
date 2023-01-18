@@ -18,13 +18,13 @@ const OurProducts = (): JSX.Element => {
       }
       sx={{
         padding: {
-          xs: '75px 0',
-          md: '150px 0'
+          xs: '70px 0',
+          md: '100px 0'
         },
-        height: {
-          xs: '750px',
-          md: '800px'
-        },
+        // height: {
+        //   xs: '750px',
+        //   md: '800px'
+        // },
         position: 'relative'
       }}
     >

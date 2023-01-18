@@ -64,8 +64,8 @@ const WhyUs = (): JSX.Element => {
       sx={{
         position: 'relative',
         padding: {
-          xs: '125px 25px',
-          lg: '235px 105px'
+          xs: '70px 25px',
+          lg: '100px 105px'
         }
       }}
     >
