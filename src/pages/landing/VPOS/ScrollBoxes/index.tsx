@@ -8,8 +8,30 @@ import phone5 from 'assets/vpos/vpos-phone-5.png'
 import vposFish from 'assets/vpos/vpos-img.png'
 import checkImg from 'assets/vpos/vpos-img-2.png'
 import { getCssVar } from 'theme'
+import { useState } from 'react'
 
 const ScrollBoxes = (): JSX.Element => {
+  const [displayLeft, setDisplayLeft] = useState(false)
+  const [displayRight, setDisplayRight] = useState(false)
+  const handleDisplayOver = (): void => {
+    const element = document.getElementById('vpos-scroll-container')
+    if (element) {
+      if (element.scrollLeft <= (element.scrollWidth - window.innerWidth) - 5) {
+        setDisplayRight(true)
+      } else {
+        setDisplayRight(false)
+      }
+      if (element.scrollLeft >= 5) {
+        setDisplayLeft(true)
+      } else {
+        setDisplayLeft(false)
+      }
+    }
+  }
+  const handleDisplayLeave = (): void => {
+    setDisplayRight(false)
+    setDisplayLeft(false)
+  }
   const handleLeftScroll = (): void => {
     const element = document.getElementById('vpos-scroll-container')
     if (element) {
@@ -44,6 +66,7 @@ const ScrollBoxes = (): JSX.Element => {
           behavior: 'smooth'
         }
       )
+      handleDisplayOver()
     }
   }
   return (
@@ -55,6 +78,8 @@ const ScrollBoxes = (): JSX.Element => {
           position: 'relative'
         }
       }
+      onMouseOver={handleDisplayOver}
+      onMouseLeave={handleDisplayLeave}
     >
       <Box
         sx={
@@ -67,7 +92,7 @@ const ScrollBoxes = (): JSX.Element => {
             left: '0px',
             cursor: 'pointer',
             display: {
-              xs: 'block',
+              xs: displayLeft ? 'block' : 'none',
               xxl: 'none'
             }
           }
@@ -79,7 +104,7 @@ const ScrollBoxes = (): JSX.Element => {
           sx={
             {
               fontSize: '100px',
-              color: getCssVar('--primary-buttons'),
+              color: getCssVar('--gray-text-dark'),
               opacity: '0.4'
             }
           }
@@ -96,7 +121,7 @@ const ScrollBoxes = (): JSX.Element => {
             right: '0px',
             cursor: 'pointer',
             display: {
-              xs: 'block',
+              xs: displayRight ? 'block' : 'none',
               xxl: 'none'
             }
           }
@@ -108,7 +133,7 @@ const ScrollBoxes = (): JSX.Element => {
           sx={
             {
               fontSize: '100px',
-              color: getCssVar('--primary-buttons'),
+              color: getCssVar('--gray-text-dark'),
               opacity: '0.4'
             }
           }
