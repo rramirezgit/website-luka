@@ -2,12 +2,15 @@
     height: 390px;
     width: 322px;
     min-width: 322px;
-    padding: 37px;
+    padding: 30px;
     background-color: var(--white);
     margin: 0 8px;
     scroll-snap-align: center;
     border-radius: 14px;
-    box-shadow: 3.6139px 3.6139px 13.5521px 1.80695px rgba(0, 0, 0, 0.04)
+    box-shadow: 3.6139px 3.6139px 13.5521px 1.80695px rgba(0, 0, 0, 0.04);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .title {
@@ -38,4 +41,6 @@
 
 .paragraph--blue {
     color: var(--primary-buttons) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
 }

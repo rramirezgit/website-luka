@@ -14,8 +14,8 @@ const CustomListItem = ({ text }: CustomInterface): JSX.Element => {
         fontWeight: {
           xs: 'bold',
           lg: '400'
-        },
-        textAlign: 'justify'
+        }
+        // textAlign: 'justify'
       }}
     >
       <CircleIcon className={customlistStyles['list-decorator']} />

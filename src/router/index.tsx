@@ -34,8 +34,7 @@ export const routes = [
   },
   {
     path: '/demo-link',
-    element: <DemoLink />,
-    id: 'Demo Link'
+    element: <DemoLink />
   },
   {
     path: '*',
