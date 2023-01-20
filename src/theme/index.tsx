@@ -1,4 +1,5 @@
 import { createTheme, ThemeProvider, useTheme } from '@mui/material'
+import inImage from 'assets/demoLink/in.png'
 import { ReactElement } from 'react'
 
 interface ThemeProps {
@@ -25,6 +26,7 @@ declare module '@mui/material/styles' {
     lg: true
     xl: true
     xxl: true
+    carousel: true
   }
 }
 
@@ -96,6 +98,108 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
             alignItems: 'flex-start'
           }
         }
+      },
+      MuiSwitch: {
+        styleOverrides: {
+          root: {
+            height: '45px',
+            width: '85px'
+          },
+          track: {
+            borderRadius: '10px'
+          },
+          switchBase: {
+            '&.Mui-checked': {
+              transform: 'translateX(40px)'
+            },
+            backgroundColor: 'transparent',
+            padding: '7px 9px 9px 9px',
+            '&:hover': {
+              backgroundColor: 'transparent'
+            }
+          },
+          thumb: {
+            backgroundImage: `url(${inImage})`,
+            backgroundColor: getCssVar('--primary-buttons'),
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            height: '30px',
+            width: '30px',
+            boxShadow: '1.5px 1.5px 1.5px rgba(51, 51, 51, 0.25)'
+          }
+        }
+      },
+      MuiInputBase: {
+        styleOverrides: {
+          root: {
+            fontSize: '14px'
+          }
+        }
+      },
+      MuiInput: {
+        styleOverrides: {
+          underline: {
+            '&.Mui-focused:before': {
+              borderColor: `${getCssVar('--primary-buttons')} !important`,
+              transition: 'none'
+            },
+            '&.Mui-focused:after': {
+              borderColor: `${getCssVar('--primary-buttons')} !important`,
+              transition: 'none'
+            },
+            '&:before': {
+              borderColor: getCssVar('--gray-text-dark'),
+              transition: 'none'
+            },
+            '&:after': {
+              borderColor: getCssVar('--gray-text-dark'),
+              transition: 'none'
+            },
+            '&:hover:not(.Mui-disabled):before': {
+              borderColor: getCssVar('--primary-buttons'),
+              transition: 'none'
+            },
+            '&:hover:not(.Mui-disabled, .Mui-error):before': {
+              borderColor: getCssVar('--primary-buttons'),
+              transition: 'none'
+            }
+          }
+        }
+      },
+      MuiSelect: {
+        styleOverrides: {
+          select: {
+            fontSize: '14px',
+            backgroundColor: 'transparent',
+            '&:focus': { backgroundColor: 'transparent' }
+          }
+        }
+      },
+      MuiSlider: {
+        styleOverrides: {
+          track: {
+            backgroundColor: getCssVar('--gray-text')
+          },
+          rail: {
+            backgroundColor: getCssVar('--bg-gray')
+          },
+          root: {
+            height: '10px'
+          },
+          thumb: {
+            height: '22px',
+            width: '22px',
+            '&:hover': {
+              boxShadow: 'none'
+            },
+            '&.Mui-active': {
+              boxShadow: 'none'
+            },
+            '&.Mui-focusVisible': {
+              boxShadow: 'none'
+            }
+          }
+        }
       }
     },
     palette: {
@@ -146,7 +250,8 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
         md: 900,
         lg: 1200,
         xl: 1536,
-        xxl: 1900
+        xxl: 1900,
+        carousel: 1030
       }
     }
   })

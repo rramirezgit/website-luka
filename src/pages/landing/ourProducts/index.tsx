@@ -21,10 +21,6 @@ const OurProducts = (): JSX.Element => {
           xs: '70px 0',
           md: '100px 0'
         },
-        // height: {
-        //   xs: '750px',
-        //   md: '800px'
-        // },
         position: 'relative'
       }}
     >
@@ -39,7 +35,7 @@ const OurProducts = (): JSX.Element => {
       >
         Our Products
       </Typography>
-      <Carousel buttonsMargin={60} width='300' id={crypto.randomUUID()}>
+      <Carousel buttonsMargin={60} height='410' width='300' id={crypto.randomUUID()}>
         {
           cardsInfo.map((card) => {
             return (

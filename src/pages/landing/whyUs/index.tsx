@@ -3,9 +3,12 @@ import clsx from 'clsx'
 import lukaCSS from 'styles/luka.module.css'
 import whyUsCSS from './whyUs.module.css'
 import { Box, Typography } from '@mui/material'
-import placeholder from 'assets/placeholder.svg'
+import whyus1 from 'assets/whyus/whyus-1.svg'
+import whyus2 from 'assets/whyus/whyus-2.svg'
+import whyus3 from 'assets/whyus/whyus-3.svg'
 import Card from './card'
 import Square from 'components/square'
+import { getCssVar } from 'theme'
 
 interface CardInterface {
   key: string
@@ -26,7 +29,7 @@ const WhyUs = (): JSX.Element => {
       text: [
         'One integration to empower your access to currencies and payment methods to process your payment transactions'
       ],
-      imageUrl: placeholder
+      imageUrl: whyus1
     },
     {
       key: crypto.randomUUID(),
@@ -38,7 +41,7 @@ const WhyUs = (): JSX.Element => {
       text: [
         'Hassle free payment management web interface'
       ],
-      imageUrl: placeholder
+      imageUrl: whyus2
     },
     {
       key: crypto.randomUUID(),
@@ -51,7 +54,7 @@ const WhyUs = (): JSX.Element => {
         'Scalable solution, from a single VPOS to a bespoke cluster of point of sales',
         'Device friendly but not required.'
       ],
-      imageUrl: placeholder
+      imageUrl: whyus3
     }
   ]
   return (
@@ -64,18 +67,13 @@ const WhyUs = (): JSX.Element => {
       sx={{
         position: 'relative',
         padding: {
-          xs: '70px 25px',
-          lg: '100px 105px'
+          xs: '70px 50px',
+          md: '100px 100px'
         }
       }}
     >
       <Box
         className={whyUsCSS['title-box']}
-        sx={
-          {
-            padding: '0 50px'
-          }
-        }
       >
         <Typography
           className={whyUsCSS.title}
@@ -125,7 +123,7 @@ const WhyUs = (): JSX.Element => {
           position: 'relative'
         }}
       >
-        <Carousel width='300' height='520' id={crypto.randomUUID()}>
+        <Carousel width='300' height='650' id={crypto.randomUUID()}>
           {
             cardsInfo.map((card) => {
               return (
@@ -153,6 +151,18 @@ const WhyUs = (): JSX.Element => {
         >
           <Square color='#5AE1E230' top={'-180'} left={'-180'} maxHeight={280} maxWidth={220}/>
         </Box>
+        <Box
+          sx={
+            {
+              position: 'absolute',
+              backgroundColor: getCssVar('--light-blue'),
+              width: '130%',
+              height: '260px',
+              top: '30%',
+              zIndex: 0
+            }
+          }
+        ></Box>
       </Box>
       <Box
         sx={

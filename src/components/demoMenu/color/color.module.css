@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.typography {
+    font-size: 14px !important;
+    color: var(--dark-gray-text) !important;
+}

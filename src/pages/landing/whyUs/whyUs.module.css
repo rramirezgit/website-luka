@@ -5,10 +5,6 @@
     overflow: hidden;
 }
 
-.small-container {
-    background-color: var(--light-blue);
-}
-
 .title {
     color: var(--dark-gray-text) !important;
     font-weight: bold !important;
@@ -25,5 +21,5 @@
 
 .title-box {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
 }

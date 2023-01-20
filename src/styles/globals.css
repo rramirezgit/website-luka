@@ -7,9 +7,9 @@
   line-height: 150% !important;
 }
 
-body {
+/* body {
   min-width: 390px;
-}
+} */
 
 /* Scrollbar */
 body::-webkit-scrollbar {
