@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import styles from './demolink.module.css'
-import { Box } from '@mui/material'
+import { Box, Typography, Switch } from '@mui/material'
 import DemoMenu from 'components/demoMenu'
 import DemoHeader from 'components/demoHeader'
 import DemoContent from './demoContent'
 import DemoCustomHeader from 'components/demoCustomHeader'
 import DemoMenuResponsive from 'components/demoMenu/demoMenuResponsive'
+import Description from 'components/demoMenu/description'
+import Customization from 'components/demoMenu/customization'
 
 const DemoLink = (): JSX.Element => {
   const [demoMobile, setDemoMobile] = useState(false)
@@ -106,7 +108,56 @@ const DemoLink = (): JSX.Element => {
       </Box>
       {
         openModal &&
-          <DemoMenuResponsive close={handleModal} />
+          <DemoMenuResponsive close={handleModal}>
+            <Box>
+              <Box
+                sx={
+                  {
+                    padding: '0 40px'
+                  }
+                }
+              >
+                <Typography
+                  classes={
+                    {
+                      root: styles.title
+                    }
+                  }
+                >
+                  Customize your link
+                </Typography>
+                <Box
+                  sx={
+                    {
+                      marginBottom: '30px'
+                    }
+                  }
+                >
+                  <Description />
+                </Box>
+              </Box>
+              <Box
+                sx={
+                  {
+                    marginTop: '18px',
+                    marginBottom: '28px',
+                    paddingLeft: '30px'
+                  }
+                }
+              >
+                <Switch />
+              </Box>
+              <Box
+                sx={
+                  {
+                    padding: '0 40px'
+                  }
+                }
+              >
+                <Customization />
+              </Box>
+            </Box>
+          </DemoMenuResponsive>
       }
     </Box>
   )

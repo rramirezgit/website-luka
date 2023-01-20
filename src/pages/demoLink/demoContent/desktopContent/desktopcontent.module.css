@@ -1,10 +1,10 @@
 .container {
     width: 80%;
     max-width: 1000px;
-    min-width: 360px;
-    height: 80%;
+    min-width: 250px;
+    height: 100%;
     max-height: 800px;
-    min-height: 580px;
+    min-height: 500px;
     border-radius: 8px;
 }
 
@@ -42,10 +42,9 @@
 .product {
     background-color: var(--white);
     height: 85%;
-    min-height: 500px;
     max-height: 540px;
     width: 35%;
-    min-width: 330px;
+    min-width: 220px;
     box-shadow: 4.19902px 4.19902px 15.7463px 2.09951px rgba(0, 0, 0, 0.04);
     border-radius: 8px;
     display: flex;
