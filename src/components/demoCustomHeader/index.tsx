@@ -2,7 +2,7 @@ import brush from 'assets/demoLink/brush.png'
 import logoLuka from 'assets/footer/luka.png'
 import tooltip from 'assets/demoLink/tooltip.png'
 import { Box } from '@mui/material'
-import { getCssVar } from 'theme'
+import styles from './customheader.module.css'
 
 interface Props {
   customization: () => void
@@ -11,59 +11,21 @@ interface Props {
 const DemoCustomHeader = ({ customization }: Props): JSX.Element => {
   return (
     <Box
-      sx={
-        {
-          width: '80%',
-          padding: '45px 0 25px 0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          margin: '0 auto'
-        }
-      }
+      className={styles.container}
     >
       <Box
         component={'figure'}
-        sx={
-          {
-            width: '85px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }
-        }
+        className={styles.figure}
       >
         <img src={logoLuka} alt='Logo' style={{ maxWidth: '100%' }} />
       </Box>
       <Box
-        sx={
-          {
-            width: '50px',
-            height: '50px',
-            borderRadius: '50%',
-            background: getCssVar('--primary-buttons'),
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            position: 'relative'
-          }
-        }
+        className={styles['custom-box']}
         onClick={customization}
       >
         <img src={brush} alt='Logo' style={{ width: '29px', height: '29px' }} />
         <Box
-          sx={
-            {
-              position: 'absolute',
-              width: '110px',
-              height: '80px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              top: '25px',
-              left: '-75px'
-            }
-          }
+          className={styles['tooltip-box']}
         >
           <img src={tooltip} alt={'Personaliza'} style={{ maxWidth: '100%', maxHeight: '100%' }} />
         </Box>

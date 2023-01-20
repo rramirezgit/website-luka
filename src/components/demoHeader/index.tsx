@@ -4,6 +4,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import Typography from '@mui/material/Typography'
 import desktop from 'assets/demoLink/monitor.svg'
 import mobile from 'assets/demoLink/mobile.svg'
+import styles from './demoheader.module.css'
 
 interface DemoHeaderProps {
   mobileState: boolean
@@ -15,11 +16,9 @@ interface DemoHeaderProps {
 const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: DemoHeaderProps): JSX.Element => {
   return (
     <Box
+      className={styles.container}
       sx={
         {
-          display: 'flex',
-          alignItems: 'center',
-          padding: '30px 60px',
           justifyContent: {
             xs: 'center',
             md: 'space-between'
@@ -57,23 +56,11 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
         </Typography>
       </Box>
       <Box
-        sx={
-          {
-            display: 'flex',
-            alignItems: 'center',
-            width: '100px',
-            justifyContent: 'space-between'
-          }
-        }
+          className={styles['desktop-mobile']}
       >
         <Box
           component={'figure'}
-          sx={
-            {
-              height: '30px',
-              cursor: 'pointer'
-            }
-          }
+          className={styles.figure}
           onClick={handleMobile}
         >
           <img
@@ -90,12 +77,7 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
         </Box>
         <Box
           component={'figure'}
-          sx={
-            {
-              height: '30px',
-              cursor: 'pointer'
-            }
-          }
+          className={styles.figure}
           onClick={handleDesktop}
         >
           <img
@@ -112,6 +94,7 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
         </Box>
       </Box>
       <Box
+        className={styles['gray-box']}
         sx={
           {
             width: '180px',

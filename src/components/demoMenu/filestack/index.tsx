@@ -37,14 +37,7 @@ const Filestack = (): JSX.Element => {
     >
       <Box
         component={'figure'}
-        sx={
-          {
-            marginRight: '10px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }
-        }
+        className={styles.figure}
       >
         <img src={plusImg} alt='Add' />
       </Box>

@@ -3,6 +3,13 @@
     align-items: center;
 }
 
+.figure {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .title {
     font-size: 16px !important;
     color: var(--dark-gray-text) !important;

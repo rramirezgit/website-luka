@@ -46,11 +46,8 @@ const DemoLink = (): JSX.Element => {
           {
             width: {
               xs: '100%',
-              md: 'calc(100% - 400px)',
-              display: 'flex',
-              flexDirection: 'column'
-            },
-            height: '100%'
+              md: 'calc(100% - 400px)'
+            }
           }
         }
       >
@@ -111,11 +108,7 @@ const DemoLink = (): JSX.Element => {
           <DemoMenuResponsive close={handleModal}>
             <Box>
               <Box
-                sx={
-                  {
-                    padding: '0 40px'
-                  }
-                }
+                className={ styles.padding }
               >
                 <Typography
                   classes={
@@ -137,22 +130,12 @@ const DemoLink = (): JSX.Element => {
                 </Box>
               </Box>
               <Box
-                sx={
-                  {
-                    marginTop: '18px',
-                    marginBottom: '28px',
-                    paddingLeft: '30px'
-                  }
-                }
+                className={ styles.switch }
               >
                 <Switch />
               </Box>
               <Box
-                sx={
-                  {
-                    padding: '0 40px'
-                  }
-                }
+                className={ styles.padding }
               >
                 <Customization />
               </Box>

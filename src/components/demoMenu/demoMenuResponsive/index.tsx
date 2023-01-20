@@ -22,26 +22,11 @@ const DemoMenuResponsive = ({ close, children }: Props): React.ReactPortal => {
   }
   return ReactDOM.createPortal(
     <Box
-      component={'div'}
       id={'modal-display-container'}
       className={clsx(styles['modal-container'], styles['slide-in'])}
-      sx={
-        {
-          width: '100%',
-          height: '100%'
-        }
-      }
     >
       <Box
-        sx={
-          {
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-end',
-            width: '100%',
-            padding: '40px 30px 10px 30px'
-          }
-        }
+        className={styles.close}
       >
         <CloseIcon
           sx={
@@ -53,14 +38,7 @@ const DemoMenuResponsive = ({ close, children }: Props): React.ReactPortal => {
         />
       </Box>
       <Box
-        sx={
-          {
-            width: '100%',
-            height: 'calc(100% - 80px)',
-            overflow: 'hidden',
-            overflowY: 'auto'
-          }
-        }
+        className={styles.wrapper}
       >
         {children}
       </Box>
