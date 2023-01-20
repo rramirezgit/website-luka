@@ -1,7 +1,6 @@
 import { Box } from '@mui/material'
 import wifi from 'assets/vpos/wifi.png'
-import phone1 from 'assets/vpos/vpos-phone-1.png'
-import phone2 from 'assets/vpos/vpos-phone-2.png'
+import phone1 from 'assets/vpos/vpos-phone.svg'
 
 const PhoneBox = (): JSX.Element => {
   return (
@@ -19,9 +18,10 @@ const PhoneBox = (): JSX.Element => {
         component={'figure'}
         sx={
           {
-            width: '45%',
+            width: '100%',
             display: 'flex',
-            justifyContent: 'right'
+            alignItems: 'center',
+            justifyContent: 'center'
           }
         }
       >
@@ -31,19 +31,9 @@ const PhoneBox = (): JSX.Element => {
         component={'figure'}
         sx={
           {
-            width: '45%'
-          }
-        }
-      >
-        <img src={phone2} alt={'Demo'} style={{ maxWidth: '100%' }}/>
-      </Box>
-      <Box
-        component={'figure'}
-        sx={
-          {
             position: 'absolute',
             right: '43%',
-            top: '-11%',
+            top: '-9%',
             width: '15%'
           }
         }

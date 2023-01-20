@@ -12,7 +12,7 @@ const CustomListItem = ({ text }: CustomInterface): JSX.Element => {
       className={customlistStyles['list-item']}
       sx={{
         fontWeight: {
-          xs: 'bold',
+          xs: '400',
           lg: '400'
         }
         // textAlign: 'justify'

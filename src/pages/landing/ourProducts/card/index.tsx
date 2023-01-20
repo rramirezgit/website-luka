@@ -17,6 +17,19 @@ const Card = ({ text, imageUrl, title, id }: Props): JSX.Element => {
     <Box
       id={id}
       className={cardCSS.container}
+      sx={
+        {
+          height: '390px',
+          width: {
+            xs: '322px',
+            lg: '350px'
+          },
+          minWidth: {
+            xs: '322px',
+            lg: '350px'
+          }
+        }
+      }
     >
       <Box>
         <Box

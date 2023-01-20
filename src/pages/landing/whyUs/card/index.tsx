@@ -25,7 +25,8 @@ const Card = ({ id, title, tags, text, imageUrl }: Props): JSX.Element => {
           xs: '322px',
           lg: '400px'
         },
-        minWidth: '322px'
+        minWidth: '322px',
+        zIndex: '99'
       }}
     >
       <Box
@@ -33,13 +34,26 @@ const Card = ({ id, title, tags, text, imageUrl }: Props): JSX.Element => {
         className={cardCSS.figure}
         sx={{
           top: {
-            xs: '-100px',
-            lg: '-100px'
+            xs: '-30%',
+            lg: '-40%'
           },
-          left: {
-            xs: '70px',
-            lg: '100px'
+          left: '12%',
+          height: {
+            xs: '160px',
+            lg: '200px'
+          },
+          width: {
+            xs: '250px',
+            lg: '300px'
           }
+          // top: {
+          //   xs: '-100px',
+          //   lg: '-100px'
+          // },
+          // left: {
+          //   xs: '70px',
+          //   lg: '100px'
+          // }
         }}
       >
         <img className={cardCSS.img} src={ imageUrl ?? placeholder } alt={title} />
