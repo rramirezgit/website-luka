@@ -1,15 +1,15 @@
+import styles from './demogateway.module.css'
+import { Box, Typography } from '@mui/material'
+import MenuGateway from 'components/demo/demoMenu/menuGateway'
 import { useState } from 'react'
-import styles from './demolink.module.css'
-import { Box, Typography, Switch } from '@mui/material'
-import DemoHeader from 'components/demo/demoHeader'
-import DemoContent from './demoContent'
 import DemoCustomHeader from 'components/demo/demoCustomHeader'
+import DemoHeader from 'components/demo/demoHeader'
 import DemoMenuResponsive from 'components/demo/demoMenu/demoMenuResponsive'
-import MenuLink from 'components/demo/demoMenu/menuLink'
-import DescriptionLink from 'components/demo/demoMenu/description/descriptionLink'
-import CustomizationLink from 'components/demo/demoMenu/customization/customizationLink'
+import DescriptionGateway from 'components/demo/demoMenu/description/descriptionGateway'
+import CustomizationGateway from 'components/demo/demoMenu/customization/customizationGateway'
+import DemoContent from './demoContent'
 
-const DemoLink = (): JSX.Element => {
+const DemoGateway = (): JSX.Element => {
   const [demoMobile, setDemoMobile] = useState(false)
   const [demoDesktop, setDemoDesktop] = useState(true)
   const [openModal, setOpenModal] = useState(false)
@@ -26,7 +26,7 @@ const DemoLink = (): JSX.Element => {
   }
   return (
     <Box
-      className={styles.demolink}
+      className={styles.demogateway}
     >
       <Box
         sx={
@@ -38,7 +38,7 @@ const DemoLink = (): JSX.Element => {
           }
         }
       >
-        <MenuLink />
+        <MenuGateway />
       </Box>
       <Box
         className={styles['content-container']}
@@ -126,18 +126,13 @@ const DemoLink = (): JSX.Element => {
                     }
                   }
                 >
-                  <DescriptionLink />
+                  <DescriptionGateway />
                 </Box>
-              </Box>
-              <Box
-                className={ styles.switch }
-              >
-                <Switch />
               </Box>
               <Box
                 className={ styles.padding }
               >
-                <CustomizationLink />
+                <CustomizationGateway />
               </Box>
             </Box>
           </DemoMenuResponsive>
@@ -146,4 +141,4 @@ const DemoLink = (): JSX.Element => {
   )
 }
 
-export default DemoLink
+export default DemoGateway

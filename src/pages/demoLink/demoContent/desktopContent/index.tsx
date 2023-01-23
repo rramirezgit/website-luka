@@ -1,7 +1,7 @@
 import { Box, Typography, Button } from '@mui/material'
 import placeholder from 'assets/placeholder.svg'
 import { getCssVar } from 'theme'
-import PaymentBox from '../paymentBox'
+import PaymentBox from './paymentBox'
 import styles from './desktopcontent.module.css'
 import zelle from 'assets/demoLink/payment/zelle.png'
 import paypal from 'assets/demoLink/payment/paypal.png'

@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import styles from './description.module.css'
 
-const Description = (): JSX.Element => {
+const DescriptionLink = (): JSX.Element => {
   return (
     <Box
       className={styles.container}
@@ -33,4 +33,4 @@ const Description = (): JSX.Element => {
   )
 }
 
-export default Description
+export default DescriptionLink

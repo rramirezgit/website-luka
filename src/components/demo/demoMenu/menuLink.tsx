@@ -1,10 +1,10 @@
 import { Box, Typography, Switch } from '@mui/material'
 import logoLuka from 'assets/footer/luka.png'
-import Customization from './customization'
+import CustomizationLink from './customization/customizationLink'
 import styles from './demomenu.module.css'
-import Description from './description'
+import DescriptionLink from './description/descriptionLink'
 
-const DemoMenu = (): JSX.Element => {
+const MenuLink = (): JSX.Element => {
   return (
     <Box
       className={styles.container}
@@ -42,7 +42,7 @@ const DemoMenu = (): JSX.Element => {
           }
         }
       >
-        <Description />
+        <DescriptionLink />
       </Box>
       <Box
         sx={
@@ -58,10 +58,10 @@ const DemoMenu = (): JSX.Element => {
       <Box
         className={styles['overflow-container']}
       >
-        <Customization />
+        <CustomizationLink />
       </Box>
     </Box>
   )
 }
 
-export default DemoMenu
+export default MenuLink
