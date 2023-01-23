@@ -18,15 +18,15 @@
 
 .header-flex {
     display: flex;
-    width: 60px;
+    width: 50px;
     align-items: center;
     justify-content: space-between;
 }
 
 .circle {
     border-radius: 8px;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 }
 
 .content {
