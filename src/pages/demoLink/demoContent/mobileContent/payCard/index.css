@@ -1,0 +1,11 @@
+@media (max-height: 900px) {
+    #paycard-container {
+        height: 70px !important;
+        min-height: 70px !important;
+        width: 120px !important;
+        min-width: 120px !important;
+    }
+    #paycard-text {
+        font-size: 8px !important;
+    }
+}

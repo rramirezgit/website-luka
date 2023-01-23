@@ -14,10 +14,7 @@ const Tags = ({ tags }: Props): JSX.Element => {
             key={tag}
             className={tagsCSS['tag-container']}
             sx={{
-              marginBottom: {
-                xs: '10px',
-                sm: '0'
-              }
+              marginBottom: '20px'
             }}
           >
             <Typography className={tagsCSS.text}>{tag}</Typography>

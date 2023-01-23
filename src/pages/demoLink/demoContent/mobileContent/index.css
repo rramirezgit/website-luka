@@ -1,0 +1,21 @@
+@media (max-height: 900px) {
+    #mobilecontent-container {
+        height: 400px !important;
+    }
+    #mobilecontent-custom-container {
+        height: 45% !important;
+        bottom: 2.5% !important;
+    }
+    #mobilecontent-button {
+        height: 25px !important;
+    }
+    #mobilecontent-business {
+        font-size: 7px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 5px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 12px !important;
+    }
+}

@@ -7,7 +7,6 @@
 }
 
 .close {
-    padding-right: 12px;
     text-align: end;
 }
 
@@ -16,6 +15,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 8px;
+    margin-bottom: 5px;
 }
 
 .logo {

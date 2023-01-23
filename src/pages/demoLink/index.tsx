@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import styles from './demolink.module.css'
 import { Box, Typography, Switch } from '@mui/material'
-import DemoMenu from 'components/demoMenu'
-import DemoHeader from 'components/demoHeader'
+import DemoMenu from 'components/demo/demoMenu'
+import DemoHeader from 'components/demo/demoHeader'
 import DemoContent from './demoContent'
-import DemoCustomHeader from 'components/demoCustomHeader'
-import DemoMenuResponsive from 'components/demoMenu/demoMenuResponsive'
-import Description from 'components/demoMenu/description'
-import Customization from 'components/demoMenu/customization'
+import DemoCustomHeader from 'components/demo/demoCustomHeader'
+import DemoMenuResponsive from 'components/demo/demoMenu/demoMenuResponsive'
+import Description from 'components/demo/demoMenu/description'
+import Customization from 'components/demo/demoMenu/customization'
 
 const DemoLink = (): JSX.Element => {
   const [demoMobile, setDemoMobile] = useState(false)

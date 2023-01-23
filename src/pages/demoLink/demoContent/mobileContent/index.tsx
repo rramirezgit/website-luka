@@ -5,6 +5,8 @@ import placeholder from 'assets/placeholder.svg'
 import { getCssVar } from 'theme'
 import styles from './mobilecontent.module.css'
 import PayCard from './payCard'
+import CloseIcon from '@mui/icons-material/Close'
+import './index.css'
 
 const MobileContent = (): JSX.Element => {
   return (
@@ -16,10 +18,11 @@ const MobileContent = (): JSX.Element => {
       }
     >
       <Box
+        id={'mobilecontent-container'}
         sx={
           {
             height: {
-              xs: '500px',
+              xs: '400px',
               md: '650px'
             }
           }
@@ -29,12 +32,16 @@ const MobileContent = (): JSX.Element => {
       </Box>
       <Box
         className={styles['custom-view']}
+        id={'mobilecontent-custom-container'}
         sx={
           {
-            bottom: '2%',
+            bottom: {
+              xs: '2.5%',
+              md: '2%'
+            },
             left: '5%',
             height: {
-              xs: '55%',
+              xs: '45%',
               md: '50%'
             }
           }
@@ -42,7 +49,27 @@ const MobileContent = (): JSX.Element => {
       >
         <Box
           className={styles.close}
-        >x</Box>
+          sx={
+            {
+              margin: {
+                xs: '3px 3px 3px 0',
+                md: '5px 5px 5px 0'
+              }
+            }
+          }
+        >
+          <CloseIcon
+            sx={
+              {
+                fontSize: {
+                  xs: '12px',
+                  md: '18px',
+                  color: getCssVar('--dark-gray-text')
+                }
+              }
+            }
+          />
+        </Box>
         <Box
           className={styles['text-box']}
         >
@@ -62,9 +89,13 @@ const MobileContent = (): JSX.Element => {
             </Box>
             <Box>
               <Typography
+                id={'mobilecontent-business'}
                 sx={
                   {
-                    fontSize: '10px',
+                    fontSize: {
+                      xs: '8px',
+                      md: '10px'
+                    },
                     fontWeigth: '400',
                     color: getCssVar('--demo-mobile-gray')
                   }
@@ -73,9 +104,13 @@ const MobileContent = (): JSX.Element => {
                 My business
               </Typography>
               <Typography
+                id={'mobilecontent-receipt'}
                 sx={
                   {
-                    fontSize: '7px',
+                    fontSize: {
+                      xs: '5px',
+                      md: '7px'
+                    },
                     fontWeigth: '400',
                     color: getCssVar('--demo-mobile-gray-l')
                   }
@@ -87,9 +122,13 @@ const MobileContent = (): JSX.Element => {
           </Box>
           <Box>
             <Typography
+              id={'mobilecontent-amount'}
               sx={
                 {
-                  fontSize: '15px',
+                  fontSize: {
+                    xs: '12px',
+                    md: '15px'
+                  },
                   fontWeigth: '700',
                   color: getCssVar('--demo-mobile-gray-d')
                 }
@@ -98,9 +137,13 @@ const MobileContent = (): JSX.Element => {
               $55,57 USD
             </Typography>
             <Typography
+              id={'mobilecontent-currency'}
               sx={
                 {
-                  fontSize: '10px',
+                  fontSize: {
+                    xs: '8px',
+                    md: '10px'
+                  },
                   fontWeigth: '400',
                   color: getCssVar('--primary-buttons')
                 }
@@ -128,10 +171,15 @@ const MobileContent = (): JSX.Element => {
           <Box>
             <Button
               className={styles.button}
+              id={'mobilecontent-button'}
               sx={
                 {
                   backgroundColor: `${getCssVar('--primary-buttons')} !important`,
-                  color: `${getCssVar('--white')} !important`
+                  color: `${getCssVar('--white')} !important`,
+                  height: {
+                    xs: '25px !important',
+                    md: '40px !important'
+                  }
                 }
               }
             >
