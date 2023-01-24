@@ -1,6 +1,5 @@
-import { Box } from '@mui/material'
-// import Typography from '@mui/material/Typography'
-// import { getCssVar } from 'theme'
+import { Box, Typography } from '@mui/material'
+import { getCssVar } from 'theme'
 import styles from './paycard.module.css'
 import './index.css'
 
@@ -40,21 +39,31 @@ const PayCard = (): JSX.Element => {
             width: '100%',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            flexDirection: 'column'
           }
         }
       >
-        {/* <Typography
+        <Box
+          id={'card-line'}
+          sx={
+            {
+              height: '25px',
+              width: '100%',
+              backgroundColor: getCssVar('--gray-text-dark')
+            }
+          }
+        ></Box>
+        <Typography
           id={'paycard-text'}
           sx={
             {
-              fontweigth: 'bold',
-              color: getCssVar('--white')
+              color: getCssVar('--gray-text-dark')
             }
           }
         >
-          + Agregar nueva tarjeta
-        </Typography> */}
+          Seleccione tarjeta de crédito/débito
+        </Typography>
       </Box>
     </Box>
   )

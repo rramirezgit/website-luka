@@ -1,7 +1,7 @@
 .container {
-    background: linear-gradient(180deg, rgba(78, 163, 242, 0.85) 0%, rgba(65, 163, 255, 0.357) 100%);
+    background: var(--white);
+    border: 1px solid var(--demo-mobile-gray);
     border-radius: 8px;
-    padding: 5px;
     margin-right: 20px;
     position: relative;
 }

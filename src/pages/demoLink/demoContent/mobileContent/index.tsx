@@ -27,7 +27,8 @@ const MobileContent = (): JSX.Element => {
         id={'mobilecontent-custom-container'}
         sx={
           {
-            left: '5%'
+            left: '4.5%',
+            height: '45%'
           }
         }
       >

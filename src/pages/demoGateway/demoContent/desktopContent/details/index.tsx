@@ -4,13 +4,37 @@ import Product from './product'
 
 const Details = (): JSX.Element => {
   return (
-    <Box>
+    <Box
+      sx={
+        {
+          display: {
+            xs: 'flex',
+            lg: 'block'
+          },
+          alignItems: {
+            xs: 'center',
+            lg: 'unset'
+          },
+          justifyContent: {
+            xs: 'space-between',
+            lg: 'unset'
+          }
+        }
+      }
+    >
       <Typography
         className={styles.title}
         sx={
           {
-            fontSize: '20px',
-            marginBottom: '20px'
+            fontSize: {
+              xs: '12px',
+              sm: '16px',
+              lg: '20px'
+            },
+            marginBottom: {
+              xs: '0',
+              lg: '20px'
+            }
           }
         }
       >
@@ -18,6 +42,14 @@ const Details = (): JSX.Element => {
       </Typography>
       <Box
         className={styles.underline}
+        sx={
+          {
+            display: {
+              xs: 'none',
+              lg: 'block'
+            }
+          }
+        }
       >
         <Typography
           className={styles.title}
@@ -30,12 +62,52 @@ const Details = (): JSX.Element => {
           Order Summary
         </Typography>
       </Box>
-      <Box>
-        <Product />
-        <Product />
+      <Box
+        sx={
+          {
+            display: {
+              xs: 'flex',
+              lg: 'block'
+            },
+            alignItems: {
+              xs: 'center',
+              lg: 'unset'
+            },
+            justifyContent: {
+              xs: 'space-between',
+              lg: 'unset'
+            }
+          }
+        }
+      >
+        <Box
+          sx={
+            {
+              marginRight: {
+                xs: '10px',
+                sm: '20px',
+                md: '20px',
+                lg: '0'
+              }
+            }
+          }
+        >
+          <Product />
+        </Box>
+        <Box>
+          <Product />
+        </Box>
       </Box>
       <Box
         className={styles.underline}
+        sx={
+          {
+            display: {
+              xs: 'none',
+              lg: 'block'
+            }
+          }
+        }
       >
         <Typography
           className={styles.title}
@@ -50,6 +122,14 @@ const Details = (): JSX.Element => {
       </Box>
       <Box
         className={styles['price-container']}
+        sx={
+          {
+            display: {
+              xs: 'none',
+              lg: 'flex'
+            }
+          }
+        }
       >
         <Typography
           className={styles.text}
@@ -64,6 +144,14 @@ const Details = (): JSX.Element => {
       </Box>
       <Box
         className={styles['price-container']}
+        sx={
+          {
+            display: {
+              xs: 'none',
+              lg: 'flex'
+            }
+          }
+        }
       >
         <Typography
           className={styles.text}
@@ -78,6 +166,14 @@ const Details = (): JSX.Element => {
       </Box>
       <Box
         className={styles['price-container']}
+        sx={
+          {
+            display: {
+              xs: 'none',
+              lg: 'flex'
+            }
+          }
+        }
       >
         <Typography
           className={styles.text}
@@ -92,6 +188,14 @@ const Details = (): JSX.Element => {
       </Box>
       <Box
         className={styles['price-container']}
+        sx={
+          {
+            display: {
+              xs: 'none',
+              lg: 'flex'
+            }
+          }
+        }
       >
         <Typography
           className={styles.text}

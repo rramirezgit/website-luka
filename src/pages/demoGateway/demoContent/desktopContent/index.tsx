@@ -58,11 +58,26 @@ const DesktopContent = (): JSX.Element => {
         </Box>
         <Box
           className={styles.product}
+          sx={
+            {
+              flexDirection: {
+                xs: 'column',
+                lg: 'row'
+              }
+            }
+          }
         >
           <Box
             sx={
               {
-                width: 'calc(100% - 430px)'
+                width: {
+                  xs: '100%',
+                  lg: 'calc(100% - 430px)'
+                },
+                maxWidth: {
+                  xs: 'none',
+                  lg: '320px'
+                }
               }
             }
           >
@@ -71,7 +86,10 @@ const DesktopContent = (): JSX.Element => {
           <Box
             sx={
               {
-                width: '400px'
+                width: {
+                  xs: '100%',
+                  lg: '400px'
+                }
               }
             }
           >

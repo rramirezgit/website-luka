@@ -15,8 +15,8 @@ const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text }: BoxPro
           border: `2px solid ${borderColor}`,
           width: '30%',
           height: {
-            xs: '55px',
-            xl: '60px'
+            xs: '45px',
+            xl: '55px'
           },
           display: 'flex',
           flexDirection: 'column',
@@ -30,7 +30,14 @@ const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text }: BoxPro
         component={'figure'}
         sx={
           {
-            height: '25px'
+            height: {
+              xs: '15px',
+              sm: '25px'
+            },
+            marginBottom: {
+              xs: '5px',
+              sm: '0px'
+            }
           }
         }
       >

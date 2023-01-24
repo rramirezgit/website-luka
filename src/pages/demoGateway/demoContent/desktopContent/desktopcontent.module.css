@@ -3,7 +3,7 @@
     max-width: 900px;
     min-width: 250px;
     height: 100%;
-    max-height: 500px;
+    max-height: 550px;
     min-height: 400px;
     border-radius: 8px;
 }
@@ -41,7 +41,7 @@
     font-size: 15px !important;
     font-weight: 600 !important;
     color: var(--gray-text) !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 20px !important;
 }
 
 .product {

@@ -1,12 +1,9 @@
 .container {
-    height: 50px;
     display: flex;
     margin: 20px auto;
 }
 
 .image {
-    height: 50px;
-    width: 50px;
     background-color: var(--bg-gray);
     margin-right: 10px;
 }
@@ -20,5 +17,4 @@
 .text {
     font-weight: 400 !important;
     color: var(--gray-text) !important;
-    font-size: 10px !important;
 }
