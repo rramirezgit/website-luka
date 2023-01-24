@@ -19,14 +19,6 @@ const MobileContent = (): JSX.Element => {
     >
       <Box
         id={'mobilecontent-container'}
-        sx={
-          {
-            height: {
-              xs: '400px',
-              md: '650px'
-            }
-          }
-        }
       >
         <img src={ phone } alt='Phone' style={{ height: '100%' }} />
       </Box>
@@ -35,15 +27,7 @@ const MobileContent = (): JSX.Element => {
         id={'mobilecontent-custom-container'}
         sx={
           {
-            bottom: {
-              xs: '2.5%',
-              md: '2%'
-            },
-            left: '5%',
-            height: {
-              xs: '45%',
-              md: '50%'
-            }
+            left: '5%'
           }
         }
       >
@@ -62,8 +46,8 @@ const MobileContent = (): JSX.Element => {
             sx={
               {
                 fontSize: {
-                  xs: '12px',
-                  md: '18px',
+                  xs: '12px !important',
+                  md: '18px !important',
                   color: getCssVar('--dark-gray-text')
                 }
               }
@@ -92,11 +76,7 @@ const MobileContent = (): JSX.Element => {
                 id={'mobilecontent-business'}
                 sx={
                   {
-                    fontSize: {
-                      xs: '8px',
-                      md: '10px'
-                    },
-                    fontWeigth: '400',
+                    fontWeigth: '400 !important',
                     color: getCssVar('--demo-mobile-gray')
                   }
                 }
@@ -107,11 +87,7 @@ const MobileContent = (): JSX.Element => {
                 id={'mobilecontent-receipt'}
                 sx={
                   {
-                    fontSize: {
-                      xs: '5px',
-                      md: '7px'
-                    },
-                    fontWeigth: '400',
+                    fontWeigth: '400 !important',
                     color: getCssVar('--demo-mobile-gray-l')
                   }
                 }
@@ -125,11 +101,7 @@ const MobileContent = (): JSX.Element => {
               id={'mobilecontent-amount'}
               sx={
                 {
-                  fontSize: {
-                    xs: '12px',
-                    md: '15px'
-                  },
-                  fontWeigth: '700',
+                  fontWeigth: '700 !important',
                   color: getCssVar('--demo-mobile-gray-d')
                 }
               }
@@ -140,11 +112,7 @@ const MobileContent = (): JSX.Element => {
               id={'mobilecontent-currency'}
               sx={
                 {
-                  fontSize: {
-                    xs: '8px',
-                    md: '10px'
-                  },
-                  fontWeigth: '400',
+                  fontWeigth: '400 !important',
                   color: getCssVar('--primary-buttons')
                 }
               }
@@ -175,11 +143,7 @@ const MobileContent = (): JSX.Element => {
               sx={
                 {
                   backgroundColor: `${getCssVar('--primary-buttons')} !important`,
-                  color: `${getCssVar('--white')} !important`,
-                  height: {
-                    xs: '25px !important',
-                    md: '40px !important'
-                  }
+                  color: `${getCssVar('--white')} !important`
                 }
               }
             >

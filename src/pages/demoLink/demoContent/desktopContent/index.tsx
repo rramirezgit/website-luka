@@ -1,7 +1,7 @@
 import { Box, Typography, Button } from '@mui/material'
 import placeholder from 'assets/placeholder.svg'
 import { getCssVar } from 'theme'
-import PaymentBox from './paymentBox'
+import PaymentBox from '../../../../components/demo/paymentBox'
 import styles from './desktopcontent.module.css'
 import zelle from 'assets/demoLink/payment/zelle.png'
 import paypal from 'assets/demoLink/payment/paypal.png'
@@ -134,7 +134,7 @@ const DesktopContent = (): JSX.Element => {
           >
             <PaymentBox
               borderColor={getCssVar('--primary-buttons')}
-              text='Crédito / Débito'
+              text='Crédito'
               img={card}
             />
             <PaymentBox

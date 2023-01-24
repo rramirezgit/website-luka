@@ -1,4 +1,4 @@
-@media (max-height: 900px) {
+@media screen and (max-height: 849px) {
     #mobilecontent-container {
         height: 400px !important;
     }
@@ -17,5 +17,58 @@
     }
     #mobilecontent-amount {
         font-size: 12px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 5px !important;
+    }
+}
+
+@media screen and (min-height: 850px) and (max-height: 1000px) {
+    #mobilecontent-container {
+        height: 500px !important;
+    }
+    #mobilecontent-custom-container {
+        height: 45% !important;
+        bottom: 2.5% !important;
+    }
+    #mobilecontent-button {
+        height: 25px !important;
+    }
+    #mobilecontent-business {
+        font-size: 7px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 5px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 12px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 7px !important;
+    }
+}
+
+@media screen and (min-height: 1001px) {
+    #mobilecontent-container {
+        height: 650px !important;
+    }
+    #mobilecontent-custom-container {
+        height: 50% !important;
+        bottom: 2% !important;
+    }
+    #mobilecontent-button {
+        height: 40px !important;
+    }
+    #mobilecontent-business {
+        font-size: 10px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 7px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 15px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 10px !important;
     }
 }

@@ -1,5 +1,10 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, Button } from '@mui/material'
+import PaymentBox from 'components/demo/paymentBox'
+import { getCssVar } from 'theme'
 import styles from './custom.module.css'
+import zelle from 'assets/demoLink/payment/zelle.png'
+import paypal from 'assets/demoLink/payment/paypal.png'
+import card from 'assets/demoLink/payment/card.png'
 
 const Custom = (): JSX.Element => {
   return (
@@ -10,6 +15,47 @@ const Custom = (): JSX.Element => {
             >
               Payments
             </Typography>
+        </Box>
+        <Box
+          className={styles.container}
+        >
+          <Box
+            className={styles.paybox}
+          >
+            <PaymentBox
+              borderColor={getCssVar('--primary-buttons')}
+              text='Crédito'
+              img={card}
+            />
+            <PaymentBox
+              text='Paypal'
+              img={paypal}
+            />
+            <PaymentBox
+              text='Zelle'
+              img={zelle}
+            />
+          </Box>
+          <Box
+            className={styles['gray-box']}
+          ></Box>
+          <Box
+            className={styles['gray-box']}
+          ></Box>
+          <Box
+            className={styles['gray-box']}
+          ></Box>
+          <Button
+            className={styles.button}
+            sx={
+              {
+                backgroundColor: `${getCssVar('--primary-buttons')} !important`,
+                color: `${getCssVar('--white')} !important`
+              }
+            }
+          >
+            Pagar
+          </Button>
         </Box>
     </Box>
   )

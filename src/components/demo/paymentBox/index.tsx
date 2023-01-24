@@ -30,7 +30,7 @@ const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text }: BoxPro
         component={'figure'}
         sx={
           {
-            height: '20px'
+            height: '25px'
           }
         }
       >

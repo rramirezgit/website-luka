@@ -62,7 +62,7 @@ const DesktopContent = (): JSX.Element => {
           <Box
             sx={
               {
-                width: '320px'
+                width: 'calc(100% - 430px)'
               }
             }
           >
@@ -71,7 +71,7 @@ const DesktopContent = (): JSX.Element => {
           <Box
             sx={
               {
-                width: 'calc(100% - 370px)'
+                width: '400px'
               }
             }
           >

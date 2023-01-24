@@ -1,4 +1,4 @@
-@media (max-height: 900px) {
+@media screen and (max-height: 849px) {
     #paycard-container {
         height: 70px !important;
         min-height: 70px !important;
@@ -7,5 +7,77 @@
     }
     #paycard-text {
         font-size: 8px !important;
+    }
+    #check-container {
+        top: 6px;
+        right: 6px;
+    }
+    #big-circle {
+        height: 8px;
+        width: 8px;
+    }
+    #medium-circle {
+        height: 7px;
+        width: 7px;
+    }
+    #small-circle {
+        height: 4px;
+        width: 4px;
+    }
+}
+
+@media screen and (min-height: 850px) and (max-height: 1000px) {
+    #paycard-container {
+        height: 90px !important;
+        min-height: 90px !important;
+        width: 150px !important;
+        min-width: 150px !important;
+    }
+    #paycard-text {
+        font-size: 10px !important;
+    }
+    #check-container {
+        top: 8px;
+        right: 8px;
+    }
+    #big-circle {
+        height: 10px;
+        width: 10px;
+    }
+    #medium-circle {
+        height: 9px;
+        width: 9px;
+    }
+    #small-circle {
+        height: 6px;
+        width: 6px;
+    }
+}
+
+@media screen and (min-height: 1001px) {
+    #paycard-container {
+        height: 130px !important;
+        min-height: 130px !important;
+        width: 200px !important;
+        min-width: 200px !important;
+    }
+    #paycard-text {
+        font-size: 12px !important;
+    }
+    #check-container {
+        top: 10px;
+        right: 10px;
+    }
+    #big-circle {
+        height: 12px;
+        width: 12px;
+    }
+    #medium-circle {
+        height: 11px;
+        width: 11px;
+    }
+    #small-circle {
+        height: 8px;
+        width: 8px;
     }
 }
