@@ -46,7 +46,7 @@ const MenuGateway = (): JSX.Element => {
         <DescriptionGateway />
       </Box>
       <Box
-        className={styles['overflow-container']}
+        className={styles['overflow-container-gateway']}
       >
         <CustomizationGateway />
       </Box>

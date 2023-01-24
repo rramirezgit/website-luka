@@ -8,7 +8,11 @@ import PayCard from './payCard'
 import CloseIcon from '@mui/icons-material/Close'
 import './index.css'
 
-const MobileContent = (): JSX.Element => {
+interface Props {
+  type: 'gateway' | 'link'
+}
+
+const MobileContent = ({ type }: Props): JSX.Element => {
   return (
     <Box
       sx={
@@ -58,45 +62,56 @@ const MobileContent = (): JSX.Element => {
         <Box
           className={styles['text-box']}
         >
-          <Box
-            sx={
-              {
-                display: 'flex',
-                alignItems: 'center'
+          {
+            type === 'link'
+              ? <Box
+              sx={
+                {
+                  display: 'flex',
+                  alignItems: 'center'
+                }
               }
-            }
-          >
-            <Box
-              component={'figure'}
-              className={styles.logo}
             >
-              <img src={placeholder} alt='Logo' style={{ maxWidth: '100%', maxHeight: '100%' }} />
-            </Box>
-            <Box>
-              <Typography
-                id={'mobilecontent-business'}
-                sx={
-                  {
-                    fontWeigth: '400 !important',
-                    color: getCssVar('--demo-mobile-gray')
-                  }
-                }
+              <Box
+                component={'figure'}
+                className={styles.logo}
               >
-                My business
-              </Typography>
-              <Typography
-                id={'mobilecontent-receipt'}
-                sx={
-                  {
-                    fontWeigth: '400 !important',
-                    color: getCssVar('--demo-mobile-gray-l')
+                <img src={placeholder} alt='Logo' style={{ maxWidth: '100%', maxHeight: '100%' }} />
+              </Box>
+              <Box>
+                <Typography
+                  id={'mobilecontent-business'}
+                  sx={
+                    {
+                      fontWeigth: '400 !important',
+                      color: getCssVar('--demo-mobile-gray')
+                    }
                   }
-                }
-              >
-                Receipt 123
-              </Typography>
-            </Box>
-          </Box>
+                >
+                  My business
+                </Typography>
+                <Typography
+                  id={'mobilecontent-receipt'}
+                  sx={
+                    {
+                      fontWeigth: '400 !important',
+                      color: getCssVar('--demo-mobile-gray-l')
+                    }
+                  }
+                >
+                  Receipt 123
+                </Typography>
+              </Box>
+                </Box>
+              : <Box>
+                  <Typography
+                    className={styles.text}
+                    id={'mobilecontent-text'}
+                  >
+                    Seleccione un método de pago
+                  </Typography>
+                </Box>
+          }
           <Box>
             <Typography
               id={'mobilecontent-amount'}
@@ -130,7 +145,8 @@ const MobileContent = (): JSX.Element => {
               {
                 width: '100%',
                 display: 'flex',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                paddingLeft: '5px'
               }
             }
           >

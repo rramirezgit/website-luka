@@ -20,6 +20,9 @@
     #mobilecontent-currency {
         font-size: 5px !important;
     }
+    #mobilecontent-text {
+        font-size: 6px !important;
+    }
 }
 
 @media screen and (min-height: 850px) and (max-height: 920px) {
@@ -43,6 +46,9 @@
     }
     #mobilecontent-currency {
         font-size: 7px !important;
+    }
+    #mobilecontent-text {
+        font-size: 8px !important;
     }
 }
 
@@ -68,6 +74,9 @@
     #mobilecontent-currency {
         font-size: 7px !important;
     }
+    #mobilecontent-text {
+        font-size: 11px !important;
+    }
 }
 
 @media screen and (min-height: 1001px) {
@@ -91,5 +100,8 @@
     }
     #mobilecontent-currency {
         font-size: 10px !important;
+    }
+    #mobilecontent-text {
+        font-size: 12px !important;
     }
 }

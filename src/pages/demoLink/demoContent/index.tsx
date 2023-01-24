@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
-import DemoContentLayout from '../../../components/demo/demoContentLayout'
+import DemoContentLayout from 'components/demo/demoContentLayout'
 import DesktopContent from './desktopContent'
-import MobileContent from './mobileContent'
+import MobileContent from 'components/demo/mobileContent'
 
 interface DemoContentProps {
   mobileState: boolean
@@ -12,7 +12,7 @@ const DemoContent = ({ mobileState, desktopState }: DemoContentProps): JSX.Eleme
   if (mobileState && !desktopState) {
     return (
       <DemoContentLayout>
-        <MobileContent />
+        <MobileContent type='link' />
       </DemoContentLayout>
     )
   } else if (!mobileState && desktopState) {

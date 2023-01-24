@@ -22,6 +22,10 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
           justifyContent: {
             xs: 'center',
             md: 'space-between'
+          },
+          width: {
+            xs: '100%',
+            md: 'calc(50% + 110px)'
           }
         }
       }
@@ -93,21 +97,6 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
           />
         </Box>
       </Box>
-      <Box
-        className={styles['gray-box']}
-        sx={
-          {
-            width: '180px',
-            height: '45px',
-            backgroundColor: getCssVar('--gray-text-dark'),
-            borderRadius: '8px',
-            display: {
-              xs: 'none',
-              md: 'block'
-            }
-          }
-        }
-      ></Box>
     </Box>
   )
 }

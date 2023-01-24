@@ -38,6 +38,9 @@
     justify-content: space-evenly;
 }
 
+.text {
+    color: var(--dark-gray-text);
+}
 
 .button {
     height: 40px !important;
