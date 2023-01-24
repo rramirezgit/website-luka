@@ -48,13 +48,14 @@ const MobileContent = ({ type }: Props): JSX.Element => {
           }
         >
           <CloseIcon
+            id={'mobilecontent-close'}
             sx={
               {
-                fontSize: {
-                  xs: '12px !important',
-                  md: '18px !important',
-                  color: getCssVar('--dark-gray-text')
-                }
+                // fontSize: {
+                //   xs: '12px !important',
+                //   md: '18px !important'
+                // },
+                color: getCssVar('--dark-gray-text')
               }
             }
           />
