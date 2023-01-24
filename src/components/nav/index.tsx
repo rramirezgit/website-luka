@@ -110,7 +110,7 @@ const Nav = (props: Props): JSX.Element => {
               display: { xs: 'none', sm: 'none', md: 'block' }
             }}
           >
-            {'Sing in'}
+            {'Sign in'}
           </Button>
         </Toolbar>
       </AppBar>

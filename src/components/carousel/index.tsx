@@ -40,7 +40,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
   const clickLeft = (): void => {
     const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: -(parseInt(width)) - 30
+      left: -(parseInt(width))
     })
     setTimeout(() => {
       checkViewPort()
@@ -49,7 +49,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
   const clickRight = (): void => {
     const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: (parseInt(width)) + 30
+      left: (parseInt(width))
     })
     setTimeout(() => {
       checkViewPort()
@@ -70,14 +70,16 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
           },
           height: height !== 'auto' ? `${height}px` : height,
           justifyContent: {
-            md: 'space-evenly'
+            md: 'space-evenly',
+            lg: 'space-between'
           },
           width: {
             xs: '100vw'
           },
           maxWidth: {
-            md: '1400px'
-          }
+            md: '1300px'
+          },
+          zIndex: '99'
         }}
       >
         {children}
@@ -90,7 +92,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
         )}
         sx={{
           display: {
-            md: 'none'
+            carousel: 'none'
           },
           marginTop: `${buttonsMargin}px`
         }}

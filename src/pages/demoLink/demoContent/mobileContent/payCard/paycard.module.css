@@ -1,0 +1,51 @@
+.container {
+    width: 180px;
+    height: 120px;
+    min-width: 180px;
+    min-height: 120px;
+    background: linear-gradient(180deg, rgba(78, 163, 242, 0.85) 0%, rgba(65, 163, 255, 0.357) 100%);
+    border-radius: 8px;
+    padding: 5px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.check-container {
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.small-circle {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-buttons);
+    z-index: 3;
+}
+
+.medium-circle {
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    background-color: var(--white);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: var(--bg-gray);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -18,12 +18,8 @@ const OurProducts = (): JSX.Element => {
       }
       sx={{
         padding: {
-          xs: '75px 0',
-          md: '150px 0'
-        },
-        height: {
-          xs: '750px',
-          md: '800px'
+          xs: '70px 0',
+          md: '100px 0'
         },
         position: 'relative'
       }}
@@ -32,14 +28,14 @@ const OurProducts = (): JSX.Element => {
         className={ourProductsCSS.title}
         sx={{
           fontSize: {
-            xs: '40px',
-            md: '54px'
+            xs: '40px !important',
+            lg: '54px !important'
           }
         }}
       >
         Our Products
       </Typography>
-      <Carousel buttonsMargin={60} width='300' id={crypto.randomUUID()}>
+      <Carousel buttonsMargin={60} height='410' width='300' id={crypto.randomUUID()}>
         {
           cardsInfo.map((card) => {
             return (

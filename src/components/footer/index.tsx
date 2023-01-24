@@ -17,8 +17,8 @@ const Footer = (): JSX.Element => {
       sx={
         {
           padding: {
-            xs: '240px 0px 80px 0',
-            md: '240px 0px 120px 0'
+            xs: '310px 0px 80px 0',
+            md: '310px 0px 120px 0'
           },
           margin: '0 auto',
           display: 'flex',
@@ -33,7 +33,7 @@ const Footer = (): JSX.Element => {
           {
             width: {
               xs: '100%',
-              lg: '1200px'
+              xl: '1400px'
             },
             display: 'flex',
             justifyContent: 'space-between',
