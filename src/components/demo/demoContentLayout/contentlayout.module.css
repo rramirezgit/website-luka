@@ -8,7 +8,7 @@
 }
 
 .content {
-    height: calc(90% - 55px);
+    height: calc(90% - 75px);
     overflow: hidden;
     overflow-y: auto;
     width: 100%;
@@ -17,9 +17,17 @@
     justify-content: center;
 }
 
+.text-box {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
 .text {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--gray-text-dark);
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: var(--gray-text-dark) !important;
     cursor: pointer;
 }

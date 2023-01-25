@@ -4,8 +4,26 @@
     }
 }
 
-@media screen and (max-height: 620px) and (min-width: 901px) {
+@media screen and (max-height: 700px) and (min-width: 901px) and (max-width: 900px) {
     #demo-content {
         align-items: flex-start !important;
+    }
+}
+
+@media screen and (max-height: 849px) and (max-width: 900px) {
+    #contentlayout-text {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (min-height: 850px) and (max-height: 920px) and (max-width: 900px) {
+    #contentlayout-text {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (min-height: 920px) and (max-width: 900px) {
+    #contentlayout-text {
+        font-size: 20px !important;
     }
 }

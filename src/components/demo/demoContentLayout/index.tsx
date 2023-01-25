@@ -18,13 +18,10 @@ const DemoContentLayout = ({ children }: LayoutProps): JSX.Element => {
         {children}
       </Box>
       <Box
-        sx={
-          {
-            marginTop: '25px'
-          }
-        }
+        className={styles['text-box']}
       >
         <Typography
+          id={'contentlayout-text'}
           className={styles.text}
         >
           Clear All

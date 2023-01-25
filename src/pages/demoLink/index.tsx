@@ -88,7 +88,7 @@ const DemoLink = (): JSX.Element => {
             {
               height: {
                 xs: 'calc(100% - 210px)',
-                md: 'calc(100% - 105px)'
+                md: 'calc(100% - 90px)'
               },
               order: {
                 xs: 2,
