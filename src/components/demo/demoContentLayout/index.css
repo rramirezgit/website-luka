@@ -1,11 +1,11 @@
 @media screen and (max-height: 730px) and (max-width: 900px) {
-    .demo-content {
+    #demo-content {
         align-items: flex-start !important;
     }
 }
 
 @media screen and (max-height: 620px) and (min-width: 901px) {
-    .demo-content {
+    #demo-content {
         align-items: flex-start !important;
     }
 }

@@ -43,19 +43,10 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
         }
       >
         <ArrowBackIosIcon
-          sx={
-            {
-              fontSize: '18px'
-            }
-          }
+          className={styles.back}
         />
         <Typography
-          sx={
-            {
-              fontSize: '20px',
-              fontWeight: '500'
-            }
-          }
+          className={styles['back-text']}
         >
           Back
         </Typography>

@@ -16,9 +16,11 @@
     cursor: pointer;
 }
 
-.gray-box {
-    width: 150px;
-    height: 45px;
-    background-color: var(--gray-text-dark);
-    border-radius: 8px;
+.back-text {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.back {
+    font-size: 18px;
 }

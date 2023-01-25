@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import { getCssVar } from 'theme'
+import styles from './contentlayout.module.css'
 import './index.css'
 
 interface LayoutProps {
@@ -9,30 +9,11 @@ interface LayoutProps {
 const DemoContentLayout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <Box
-      sx={
-        {
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }
-      }
+      className={styles.container}
     >
       <Box
-        className='demo-content'
-        sx={
-          {
-            height: 'calc(90% - 55px)',
-            overflow: 'hidden',
-            overflowY: 'auto',
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }
-        }
+        className={styles.content}
+        id={'demo-content'}
       >
         {children}
       </Box>
@@ -44,14 +25,7 @@ const DemoContentLayout = ({ children }: LayoutProps): JSX.Element => {
         }
       >
         <Typography
-          sx={
-            {
-              fontSize: '20px',
-              fontWeight: '600',
-              color: getCssVar('--gray-text-dark'),
-              cursor: 'pointer'
-            }
-          }
+          className={styles.text}
         >
           Clear All
         </Typography>
