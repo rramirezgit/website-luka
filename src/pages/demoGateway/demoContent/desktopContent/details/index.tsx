@@ -28,7 +28,7 @@ const Details = (): JSX.Element => {
           {
             fontSize: {
               xs: '12px',
-              sm: '16px',
+              sm: '14px',
               lg: '20px'
             },
             marginBottom: {
