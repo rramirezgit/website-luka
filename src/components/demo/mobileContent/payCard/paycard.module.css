@@ -1,19 +1,15 @@
 .container {
     background: var(--white);
-    border: 1px solid var(--demo-mobile-gray);
     border-radius: 8px;
     margin-right: 20px;
-    position: relative;
 }
 
-.check-container {
+.float-container {
     width: 100%;
     display: flex;
-    align-items:center;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
     position: absolute;
-    top: 12px;
-    right: 12px;
 }
 
 .small-circle {
@@ -44,4 +40,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pay-text {
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paypal-text {
+    color: var(--dark-gray-text) !important;
+    font-weight: 400 !important;
+}
+
+.paypal-title {
+    font-weight: 600 !important;
+    margin-top: 10px !important;
 }

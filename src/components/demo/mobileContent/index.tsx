@@ -6,6 +6,7 @@ import { getCssVar } from 'theme'
 import styles from './mobilecontent.module.css'
 import PayCard from './payCard'
 import CloseIcon from '@mui/icons-material/Close'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import './index.css'
 
 interface Props {
@@ -51,10 +52,6 @@ const MobileContent = ({ type }: Props): JSX.Element => {
             id={'mobilecontent-close'}
             sx={
               {
-                // fontSize: {
-                //   xs: '12px !important',
-                //   md: '18px !important'
-                // },
                 color: getCssVar('--dark-gray-text')
               }
             }
@@ -142,6 +139,21 @@ const MobileContent = ({ type }: Props): JSX.Element => {
           className={styles['custom-payment']}
         >
           <Box
+            className={styles['arrow-box']}
+            id={'mobilecontent-arrow-box'}
+            sx={
+              {
+                top: '-10px',
+                left: '50%'
+              }
+            }
+          >
+            <KeyboardArrowUpIcon
+              id={'mobilecontent-arrow'}
+              className={styles.arrow}
+            />
+          </Box>
+          <Box
             sx={
               {
                 width: '100%',
@@ -151,8 +163,8 @@ const MobileContent = ({ type }: Props): JSX.Element => {
               }
             }
           >
-            <PayCard />
-            <PayCard />
+            <PayCard type='card' />
+            <PayCard type='paypal' />
           </Box>
           <Box>
             <Button

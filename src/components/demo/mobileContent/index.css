@@ -26,6 +26,13 @@
     #mobilecontent-close {
         font-size: 12px !important;
     }
+    #mobilecontent-arrow-box {
+        height: 12px;
+        width: 12px;
+    }
+    #mobilecontent-arrow {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-height: 850px) and (max-height: 920px) {
@@ -55,6 +62,13 @@
     }
     #mobilecontent-close {
         font-size: 12px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 14px;
+        width: 14px;
+    }
+    #mobilecontent-arrow {
+        font-size: 16px;
     }
 }
 
@@ -86,6 +100,13 @@
     #mobilecontent-close {
         font-size: 16px !important;
     }
+    #mobilecontent-arrow-box {
+        height: 18px;
+        width: 18px;
+    }
+    #mobilecontent-arrow {
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-height: 1001px) {
@@ -115,5 +136,12 @@
     }
     #mobilecontent-close {
         font-size: 18px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 18px;
+        width: 18px;
+    }
+    #mobilecontent-arrow {
+        font-size: 20px;
     }
 }

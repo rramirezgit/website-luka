@@ -38,6 +38,19 @@
     justify-content: space-evenly;
 }
 
+.arrow-box {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--arrow-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    color: var(--arrow-up-gray);
+}
+
 .text {
     color: var(--dark-gray-text);
 }

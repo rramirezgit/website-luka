@@ -1,70 +1,137 @@
-import { Box, Typography } from '@mui/material'
-import { getCssVar } from 'theme'
+import { Box } from '@mui/material'
 import styles from './paycard.module.css'
+import card from 'assets/demoLink/card/card.svg'
+import wifi from 'assets/demoLink/card/wifi.svg'
+import star from 'assets/demoLink/card/star.svg'
+import visa from 'assets/demoLink/card/visa.svg'
+import paypal from 'assets/demoLink/card/paypal.svg'
 import './index.css'
+import Typography from '@mui/material/Typography'
+import clsx from 'clsx'
 
-// interface Props {
-//   type: 'card' | 'paypal'
-// }
+interface Props {
+  type: 'card' | 'paypal'
+}
 
-const PayCard = (): JSX.Element => {
+const PayCard = ({ type }: Props): JSX.Element => {
   return (
     <Box
       className={styles.container}
       id={'paycard-container'}
-    >
-      <Box
-        className={styles['check-container']}
-        id={'check-container'}
-      >
-        <Box
-          className={styles['big-circle']}
-          id={'big-circle'}
-        >
-          <Box
-            className={styles['medium-circle']}
-            id={'medium-circle'}
-          >
-            <Box
-              className={styles['small-circle']}
-              id={'small-circle'}
-            ></Box>
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        sx={
-          {
-            height: '100%',
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column'
-          }
+      sx={
+        {
+          backgroundImage: type === 'card' ? `url(${card})` : 'none',
+          backgroundRepeat: type === 'card' ? 'no-repeat' : 'none',
+          backgroundPosition: type === 'card' ? 'center' : 'none',
+          backgroundSize: type === 'card' ? '100% 100%' : 'none'
         }
-      >
-        <Box
-          id={'card-line'}
-          sx={
-            {
-              height: '25px',
-              width: '100%',
-              backgroundColor: getCssVar('--gray-text-dark')
-            }
-          }
-        ></Box>
-        <Typography
-          id={'paycard-text'}
-          sx={
-            {
-              color: getCssVar('--gray-text-dark')
-            }
-          }
-        >
-          Seleccione tarjeta de crédito/débito
-        </Typography>
-      </Box>
+      }
+    >
+      {
+        type === 'card'
+          ? <Box
+              id={'paycard-container'}
+              sx={
+                {
+                  position: 'relative'
+                }
+              }
+            >
+              <Box
+                className={styles['float-container']}
+                id={'check-container'}
+              >
+                <Box
+                  component={'figure'}
+                  className={styles.icons}
+                  id={'small-icon'}
+                >
+                  <img src={wifi} alt='Wireless' style={{ height: '100%', width: '100%' }} />
+                </Box>
+                <Box
+                  className={styles['big-circle']}
+                  id={'big-circle'}
+                >
+                  <Box
+                    className={styles['medium-circle']}
+                    id={'medium-circle'}
+                  >
+                    <Box
+                      className={styles['small-circle']}
+                      id={'small-circle'}
+                    ></Box>
+                  </Box>
+                </Box>
+              </Box>
+              <Box
+                className={styles.content}
+              >
+                <Typography
+                  className={styles['pay-text']}
+                  id={'paycard-text'}
+                >
+                  **** 3507
+                </Typography>
+              </Box>
+              <Box
+                className={styles['float-container']}
+                id={'icons-container'}
+                sx={
+                  {
+                    bottom: '0px'
+                  }
+                }
+              >
+                <Box
+                  component={'figure'}
+                  className={styles.icons}
+                  id={'small-icon'}
+                >
+                  <img src={star} alt='Favorite' style={{ height: '100%', width: '100%' }} />
+                </Box>
+                <Box
+                  component={'figure'}
+                  className={styles.icons}
+                  id={'big-icon'}
+                >
+                  <img src={visa} alt='Visa' style={{ height: '100%', width: '100%' }} />
+                </Box>
+              </Box>
+            </Box>
+          : <Box
+              id={'paycard-container'}
+            >
+              <Box
+                sx={
+                  {
+                    padding: '10px 15px'
+                  }
+                }
+              >
+                <Box
+                  component={'figure'}
+                  className={styles.icons}
+                  id={'paypal-icon'}
+                >
+                  <img src={paypal} alt='Paypal' style={{ height: '100%', width: '100%' }} />
+                </Box>
+                <Box>
+                  <Typography
+                    className={clsx(styles['paypal-text'], styles['paypal-title'])}
+                    id={'paypal-title'}
+                  >
+                    Paypal
+                  </Typography>
+                  <Typography
+                    className={styles['paypal-text']}
+                    id={'paypal-text'}
+                  >
+                    Add User
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+      }
     </Box>
   )
 }
