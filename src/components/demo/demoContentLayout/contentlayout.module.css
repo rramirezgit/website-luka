@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    height: calc(90% - 55px);
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gray-text-dark);
+    cursor: pointer;
+}

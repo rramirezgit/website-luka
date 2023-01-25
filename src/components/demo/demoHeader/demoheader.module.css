@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.desktop-mobile {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.figure {
+    height: 30px;
+    cursor: pointer;
+}
+
+.back-text {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.back {
+    font-size: 18px;
+}

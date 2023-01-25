@@ -18,15 +18,15 @@
 
 .header-flex {
     display: flex;
-    width: 60px;
+    width: 50px;
     align-items: center;
     justify-content: space-between;
 }
 
 .circle {
     border-radius: 8px;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 }
 
 .content {
@@ -44,7 +44,7 @@
     height: 85%;
     max-height: 540px;
     width: 35%;
-    min-width: 220px;
+    min-width: 250px;
     box-shadow: 4.19902px 4.19902px 15.7463px 2.09951px rgba(0, 0, 0, 0.04);
     border-radius: 8px;
     display: flex;

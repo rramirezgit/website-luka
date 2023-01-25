@@ -1,0 +1,75 @@
+.modal-container {
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    width: 1005;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 40px 30px 10px 30px;
+}
+
+.slide-in {
+    animation: slideIn .5s linear;
+}
+  
+.slide-out {
+    animation: fadeOut 0.5s, slideOut .5s linear;
+}
+  
+@keyframes slideIn {
+    0% {
+        transform: translateY(600px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(600px);
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    75% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0;
+    }
+}

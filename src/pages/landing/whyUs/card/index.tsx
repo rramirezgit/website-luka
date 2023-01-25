@@ -46,14 +46,6 @@ const Card = ({ id, title, tags, text, imageUrl }: Props): JSX.Element => {
             xs: '250px',
             lg: '300px'
           }
-          // top: {
-          //   xs: '-100px',
-          //   lg: '-100px'
-          // },
-          // left: {
-          //   xs: '70px',
-          //   lg: '100px'
-          // }
         }}
       >
         <img className={cardCSS.img} src={ imageUrl ?? placeholder } alt={title} />
