@@ -7,9 +7,17 @@
   line-height: 150% !important;
 }
 
-/* body {
-  min-width: 390px;
-} */
+body {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
 
 /* Scrollbar */
 body::-webkit-scrollbar {

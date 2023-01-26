@@ -123,7 +123,7 @@ const WhyUs = (): JSX.Element => {
           position: 'relative'
         }}
       >
-        <Carousel width='300' height='650' id={crypto.randomUUID()}>
+        <Carousel width='300' height='560' id={crypto.randomUUID()}>
           {
             cardsInfo.map((card) => {
               return (

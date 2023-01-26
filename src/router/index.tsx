@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom'
 import Landing from 'pages/landing'
 import DemoLink from 'pages/demoLink'
+import DemoGateway from 'pages/demoGateway'
 
 /**
  * routes.id is used to set menu items
@@ -35,6 +36,10 @@ export const routes = [
   {
     path: '/demo-link',
     element: <DemoLink />
+  },
+  {
+    path: '/demo-gateway',
+    element: <DemoGateway />
   },
   {
     path: '*',

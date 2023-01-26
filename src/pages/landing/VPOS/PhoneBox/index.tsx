@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import wifi from 'assets/vpos/wifi.png'
+import wifi from 'assets/vpos/wifi.svg'
 import phone1 from 'assets/vpos/vpos-phone.svg'
 
 const PhoneBox = (): JSX.Element => {

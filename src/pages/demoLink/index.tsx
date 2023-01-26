@@ -1,17 +1,17 @@
 import { useState } from 'react'
 import styles from './demolink.module.css'
 import { Box, Typography, Switch } from '@mui/material'
-import DemoMenu from 'components/demoMenu'
-import DemoHeader from 'components/demoHeader'
+import DemoHeader from 'components/demo/demoHeader'
 import DemoContent from './demoContent'
-import DemoCustomHeader from 'components/demoCustomHeader'
-import DemoMenuResponsive from 'components/demoMenu/demoMenuResponsive'
-import Description from 'components/demoMenu/description'
-import Customization from 'components/demoMenu/customization'
+import DemoCustomHeader from 'components/demo/demoCustomHeader'
+import DemoMenuResponsive from 'components/demo/demoMenu/demoMenuResponsive'
+import MenuLink from 'components/demo/demoMenu/menuLink'
+import DescriptionLink from 'components/demo/demoMenu/description/descriptionLink'
+import CustomizationLink from 'components/demo/demoMenu/customization/customizationLink'
 
 const DemoLink = (): JSX.Element => {
-  const [demoMobile, setDemoMobile] = useState(false)
-  const [demoDesktop, setDemoDesktop] = useState(true)
+  const [demoMobile, setDemoMobile] = useState(true)
+  const [demoDesktop, setDemoDesktop] = useState(false)
   const [openModal, setOpenModal] = useState(false)
   const handleMobile = (): void => {
     setDemoMobile(true)
@@ -38,7 +38,7 @@ const DemoLink = (): JSX.Element => {
           }
         }
       >
-        <DemoMenu />
+        <MenuLink />
       </Box>
       <Box
         className={styles['content-container']}
@@ -88,7 +88,7 @@ const DemoLink = (): JSX.Element => {
             {
               height: {
                 xs: 'calc(100% - 210px)',
-                md: 'calc(100% - 105px)'
+                md: 'calc(100% - 90px)'
               },
               order: {
                 xs: 2,
@@ -126,7 +126,7 @@ const DemoLink = (): JSX.Element => {
                     }
                   }
                 >
-                  <Description />
+                  <DescriptionLink />
                 </Box>
               </Box>
               <Box
@@ -137,7 +137,7 @@ const DemoLink = (): JSX.Element => {
               <Box
                 className={ styles.padding }
               >
-                <Customization />
+                <CustomizationLink />
               </Box>
             </Box>
           </DemoMenuResponsive>

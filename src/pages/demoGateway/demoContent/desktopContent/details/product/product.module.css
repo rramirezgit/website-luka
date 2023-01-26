@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    margin: 20px auto;
+}
+
+.image {
+    background-color: var(--bg-gray);
+    margin-right: 10px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text {
+    font-weight: 400 !important;
+    color: var(--gray-text) !important;
+}

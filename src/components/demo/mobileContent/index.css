@@ -1,0 +1,297 @@
+/* Desktop */
+@media screen and (max-height: 749px) and (min-width: 901px) {
+    #mobilecontent-container {
+        height: 400px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 2.5% !important;
+    }
+    #mobilecontent-button {
+        height: 25px !important;
+    }
+    #mobilecontent-business {
+        font-size: 7px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 5px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 12px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 5px !important;
+    }
+    #mobilecontent-text {
+        font-size: 6px !important;
+    }
+    #mobilecontent-close {
+        font-size: 12px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 12px;
+        width: 12px;
+    }
+    #mobilecontent-arrow {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-height: 750px) and (max-height: 820px) and (min-width: 901px) {
+    #mobilecontent-container {
+        height: 500px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 2.5% !important;
+    }
+    #mobilecontent-button {
+        height: 25px !important;
+    }
+    #mobilecontent-business {
+        font-size: 7px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 5px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 12px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 7px !important;
+    }
+    #mobilecontent-text {
+        font-size: 8px !important;
+    }
+    #mobilecontent-close {
+        font-size: 12px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 14px;
+        width: 14px;
+    }
+    #mobilecontent-arrow {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-height: 821px) and (max-height: 1000px) and (min-width: 901px) {
+    #mobilecontent-container {
+        height: 570px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 2% !important;
+    }
+    #mobilecontent-button {
+        height: 25px !important;
+    }
+    #mobilecontent-business {
+        font-size: 7px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 5px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 12px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 7px !important;
+    }
+    #mobilecontent-text {
+        font-size: 11px !important;
+    }
+    #mobilecontent-close {
+        font-size: 16px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 18px;
+        width: 18px;
+    }
+    #mobilecontent-arrow {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-height: 1001px) and (min-width: 901px) {
+    #mobilecontent-container {
+        height: 650px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 2% !important;
+    }
+    #mobilecontent-button {
+        height: 40px !important;
+    }
+    #mobilecontent-business {
+        font-size: 10px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 7px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 15px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 10px !important;
+    }
+    #mobilecontent-text {
+        font-size: 12px !important;
+    }
+    #mobilecontent-close {
+        font-size: 18px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 18px;
+        width: 18px;
+    }
+    #mobilecontent-arrow {
+        font-size: 20px;
+    }
+}
+
+/* Responsive */
+@media screen and (max-height: 849px) and (max-width: 900px) {
+    #mobilecontent-container {
+        height: 400px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 2.5% !important;
+    }
+    #mobilecontent-button {
+        height: 25px !important;
+    }
+    #mobilecontent-business {
+        font-size: 7px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 5px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 12px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 5px !important;
+    }
+    #mobilecontent-text {
+        font-size: 6px !important;
+    }
+    #mobilecontent-close {
+        font-size: 12px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 12px;
+        width: 12px;
+    }
+    #mobilecontent-arrow {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-height: 850px) and (max-height: 920px) and (max-width: 900px) {
+    #mobilecontent-container {
+        height: 500px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 2.5% !important;
+    }
+    #mobilecontent-button {
+        height: 25px !important;
+    }
+    #mobilecontent-business {
+        font-size: 7px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 5px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 12px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 7px !important;
+    }
+    #mobilecontent-text {
+        font-size: 8px !important;
+    }
+    #mobilecontent-close {
+        font-size: 12px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 14px;
+        width: 14px;
+    }
+    #mobilecontent-arrow {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-height: 920px) and (max-height: 1000px) and (max-width: 900px) {
+    #mobilecontent-container {
+        height: 570px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 2% !important;
+    }
+    #mobilecontent-button {
+        height: 25px !important;
+    }
+    #mobilecontent-business {
+        font-size: 7px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 5px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 12px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 7px !important;
+    }
+    #mobilecontent-text {
+        font-size: 11px !important;
+    }
+    #mobilecontent-close {
+        font-size: 16px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 18px;
+        width: 18px;
+    }
+    #mobilecontent-arrow {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-height: 1001px) and (max-width: 900px) {
+    #mobilecontent-container {
+        height: 650px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 2% !important;
+    }
+    #mobilecontent-button {
+        height: 40px !important;
+    }
+    #mobilecontent-business {
+        font-size: 10px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 7px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 15px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 10px !important;
+    }
+    #mobilecontent-text {
+        font-size: 12px !important;
+    }
+    #mobilecontent-close {
+        font-size: 18px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 18px;
+        width: 18px;
+    }
+    #mobilecontent-arrow {
+        font-size: 20px;
+    }
+}
