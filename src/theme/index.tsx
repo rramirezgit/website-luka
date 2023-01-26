@@ -72,7 +72,7 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
             [theme.breakpoints.up('md')]: {
               padding: '40px 33.10px'
             },
-            maxWidth: '1400px'
+            maxWidth: '1267.09px'
           }
         }
       },
@@ -225,7 +225,7 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
         light: getCssVar('--primary-buttons-a'),
         main: getCssVar('--primary-buttons-a'),
         dark: getCssVar('--primary-buttons-a'),
-        contrastText: getCssVar('--primary-buttoms')
+        contrastText: getCssVar('--primary-buttons')
       },
       aqua_blue: {
         light: getCssVar('--aqua-blue'),

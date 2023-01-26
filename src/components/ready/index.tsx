@@ -20,7 +20,7 @@ const Ready = (): JSX.Element => {
         classes={{ root: styles.title }}
         sx={{
           fontSize: {
-            xs: '37.5882px',
+            xs: '30.153px',
             sm: '50.6667px',
             md: '56.6667px'
           }
@@ -32,7 +32,7 @@ const Ready = (): JSX.Element => {
         classes={{ root: styles.subtitle }}
         sx={{
           fontSize: {
-            xs: '15.9197px',
+            xs: '12px',
             sm: '21.3333px',
             md: '24px'
           }
