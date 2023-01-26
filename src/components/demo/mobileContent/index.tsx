@@ -1,6 +1,7 @@
 import { Box, Button } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import phone from 'assets/demoLink/demo-link-phone.svg'
+import linkPhone from 'assets/demoLink/demo-link-phone.svg'
+import gatewayPhone from 'assets/demoLink/demo-gateway-phone.svg'
 import placeholder from 'assets/placeholder.svg'
 import { getCssVar } from 'theme'
 import styles from './mobilecontent.module.css'
@@ -25,7 +26,7 @@ const MobileContent = ({ type }: Props): JSX.Element => {
       <Box
         id={'mobilecontent-container'}
       >
-        <img src={ phone } alt='Phone' style={{ height: '100%' }} />
+        <img src={ type === 'link' ? linkPhone : gatewayPhone } alt='Phone' style={{ height: '100%' }} />
       </Box>
       <Box
         className={styles['custom-view']}
@@ -33,7 +34,8 @@ const MobileContent = ({ type }: Props): JSX.Element => {
         sx={
           {
             left: '4.5%',
-            height: '45%'
+            height: '50%',
+            boxShadow: '0px -3.3448px 6.68961px rgba(0, 0, 0, 0.12)'
           }
         }
       >
