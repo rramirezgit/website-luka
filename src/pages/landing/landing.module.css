@@ -7,4 +7,5 @@
 
 .landing {
   overflow-x: hidden;
+  min-width: 390px;
 }

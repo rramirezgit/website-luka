@@ -13,14 +13,12 @@
 .rentangles {
   width: 100%;
   position: relative;
-  background-size: fill;
   display: flex;
   flex-direction: column;
-  background-size: cover;
 }
 
 .title {
-  padding-top: 30px;
+  padding-top: 13px;
 }
 
 .text {
@@ -42,18 +40,16 @@
 
 .content-info {
   padding: 111px 35.13px 65px;
-  max-width: 603px;
+  max-width: 750px;
 }
 
 .animation {
-  height: auto;
   position: absolute;
-
   bottom: -8px;
-
-  right: auto;
   object-fit: cover;
   z-index: 1;
+  max-width: 1512px;
+  max-height: 851px;
 }
 
 .boxLottie {
@@ -82,19 +78,40 @@
   height: 643px;
 }
 
+@media (max-width: 1224px) {
+  .animation {
+    min-width: 1224px;
+    min-height: 688px;
+  }
+}
+
+@media (max-width: 900px) {
+  .animation {
+    min-width: 1100px;
+    min-height: 588px;
+    bottom: 10px;
+  }
+}
+
 @media (max-width: 600px) {
   .animation {
-    left: -90px;
-    bottom: 93px;
+    min-width: 900px;
+    min-height: 488px;
+    bottom: 81px;
   }
 
   .triangle {
-    clip-path: polygon(-36% 61%, 216% 4%, 801% 48%) !important;
+    clip-path: polygon(-79% 65%, 134% 12%, 797% 48%) !important;
   }
 }
 
 @media (max-width: 440px) {
+  .animation {
+    min-width: 806.57px;
+    min-height: 354px;
+    bottom: 81px;
+  }
   .triangle {
-    clip-path: polygon(-36% 47%, 216% 4%, 801% 48%) !important;
+    clip-path: polygon(-159% 77%, 119% 12%, 801% 48%) !important;
   }
 }
