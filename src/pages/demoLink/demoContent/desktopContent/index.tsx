@@ -6,11 +6,13 @@ import styles from './desktopcontent.module.css'
 import zelle from 'assets/demoLink/payment/zelle.png'
 import paypal from 'assets/demoLink/payment/paypal.png'
 import card from 'assets/demoLink/payment/card.png'
+import './index.css'
 
 const DesktopContent = (): JSX.Element => {
   return (
     <Box
       className={styles.container}
+      id={'demolink-desktop-container'}
       sx={
         {
           backgroundColor: getCssVar('--primary-buttons-a')
@@ -63,6 +65,7 @@ const DesktopContent = (): JSX.Element => {
           }
         >
           <Box
+            id={'demolink-desktop-logo'}
             className={styles.logo}
             sx={
               {
@@ -148,11 +151,14 @@ const DesktopContent = (): JSX.Element => {
           </Box>
           <Box
             className={styles['gray-box']}
+            id={'demolink-desktop-gray-1'}
           ></Box>
           <Box
             className={styles['gray-box']}
+            id={'demolink-desktop-gray-2'}
           ></Box>
           <Button
+            id={'demolink-desktop-button'}
             className={styles.button}
             sx={
               {
