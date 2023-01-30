@@ -70,10 +70,7 @@ const VPOS = (): JSX.Element => {
             <Typography
               className={vposStyles['title-blue']}
               sx={{
-                fontSize: {
-                  xs: '40px',
-                  lg: '54px'
-                }
+                fontSize: '40px'
               }}
             >
               VPOS
@@ -81,10 +78,7 @@ const VPOS = (): JSX.Element => {
             <Typography
               className={vposStyles.title}
               sx={{
-                fontSize: {
-                  xs: '40px',
-                  lg: '54px'
-                }
+                fontSize: '40px'
               }}
             >
               Hardware Free

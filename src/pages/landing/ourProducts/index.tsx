@@ -27,10 +27,7 @@ const OurProducts = (): JSX.Element => {
       <Typography
         className={ourProductsCSS.title}
         sx={{
-          fontSize: {
-            xs: '40px !important',
-            lg: '54px !important'
-          }
+          fontSize: '40px !important'
         }}
       >
         Our Products

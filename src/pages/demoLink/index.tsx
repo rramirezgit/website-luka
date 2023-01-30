@@ -38,7 +38,7 @@ const DemoLink = (): JSX.Element => {
           }
         }
       >
-        <MenuLink />
+        <MenuLink type={demoMobile ? 'mobile' : 'desktop'} />
       </Box>
       <Box
         className={styles['content-container']}
@@ -137,7 +137,7 @@ const DemoLink = (): JSX.Element => {
               <Box
                 className={ styles.padding }
               >
-                <CustomizationLink />
+                <CustomizationLink type={demoMobile ? 'mobile' : 'desktop'} />
               </Box>
             </Box>
           </DemoMenuResponsive>
