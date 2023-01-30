@@ -3,7 +3,11 @@ import Color from '../color'
 import styles from './customization.module.css'
 import SliderInput from '../sliderInput'
 
-const CustomizationGateway = (): JSX.Element => {
+interface Props {
+  type: 'mobile' | 'desktop'
+}
+
+const CustomizationGateway = ({ type }: Props): JSX.Element => {
   return (
     <Box
     >
@@ -44,6 +48,11 @@ const CustomizationGateway = (): JSX.Element => {
         </Box>
         <Box
           className={styles['input-container']}
+          sx={
+            {
+              display: type === 'mobile' ? 'none' : 'block'
+            }
+          }
         >
           <SliderInput />
         </Box>

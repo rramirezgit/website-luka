@@ -4,7 +4,11 @@ import CustomizationLink from './customization/customizationLink'
 import styles from './demomenu.module.css'
 import DescriptionLink from './description/descriptionLink'
 
-const MenuLink = (): JSX.Element => {
+interface Props {
+  type: 'mobile' | 'desktop'
+}
+
+const MenuLink = ({ type }: Props): JSX.Element => {
   return (
     <Box
       className={styles.container}
@@ -36,29 +40,23 @@ const MenuLink = (): JSX.Element => {
         Customize your link
       </Typography>
       <Box
-        sx={
-          {
-            padding: '0 30px'
-          }
-        }
-      >
-        <DescriptionLink />
-      </Box>
-      <Box
-        sx={
-          {
-            marginTop: '18px',
-            marginBottom: '28px',
-            paddingLeft: '20px'
-          }
-        }
-      >
-        <Switch />
-      </Box>
-      <Box
         className={styles['overflow-container']}
       >
-        <CustomizationLink />
+        <Box
+        >
+          <DescriptionLink />
+        </Box>
+        <Box
+          sx={
+            {
+              marginTop: '18px',
+              marginBottom: '28px'
+            }
+          }
+        >
+          <Switch />
+        </Box>
+        <CustomizationLink type={type} />
       </Box>
     </Box>
   )
