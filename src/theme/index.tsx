@@ -103,7 +103,8 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
         styleOverrides: {
           root: {
             height: '45px',
-            width: '85px'
+            width: '85px',
+            padding: '12px 24px 12px 0'
           },
           track: {
             borderRadius: '10px'
@@ -113,7 +114,7 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
               transform: 'translateX(40px)'
             },
             backgroundColor: 'transparent',
-            padding: '7px 9px 9px 9px',
+            padding: '7px 18px 9px 0px',
             '&:hover': {
               backgroundColor: 'transparent'
             }

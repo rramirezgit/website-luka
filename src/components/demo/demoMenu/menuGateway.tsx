@@ -4,7 +4,11 @@ import CustomizationGateway from './customization/customizationGateway'
 import styles from './demomenu.module.css'
 import DescriptionGateway from './description/descriptionGateway'
 
-const MenuGateway = (): JSX.Element => {
+interface Props {
+  type: 'mobile' | 'desktop'
+}
+
+const MenuGateway = ({ type }: Props): JSX.Element => {
   return (
     <Box
       className={styles.container}
@@ -36,19 +40,18 @@ const MenuGateway = (): JSX.Element => {
         Customize your gateway
       </Typography>
       <Box
-        sx={
-          {
-            padding: '0 30px',
-            marginBottom: '28px'
-          }
-        }
-      >
-        <DescriptionGateway />
-      </Box>
-      <Box
         className={styles['overflow-container-gateway']}
       >
-        <CustomizationGateway />
+        <Box
+          sx={
+            {
+              marginBottom: '28px'
+            }
+          }
+        >
+          <DescriptionGateway />
+        </Box>
+        <CustomizationGateway type={type} />
       </Box>
     </Box>
   )

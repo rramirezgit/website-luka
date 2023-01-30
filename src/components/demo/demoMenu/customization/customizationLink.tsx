@@ -4,7 +4,11 @@ import styles from './customization.module.css'
 import Filestack from '../filestack'
 import SliderInput from '../sliderInput'
 
-const CustomizationLink = (): JSX.Element => {
+interface Props {
+  type: 'mobile' | 'desktop'
+}
+
+const CustomizationLink = ({ type }: Props): JSX.Element => {
   return (
     <Box
     >
@@ -79,6 +83,11 @@ const CustomizationLink = (): JSX.Element => {
         </Box>
         <Box
           className={styles['input-container']}
+          sx={
+            {
+              display: type === 'mobile' ? 'none' : 'block'
+            }
+          }
         >
           <SliderInput />
         </Box>
