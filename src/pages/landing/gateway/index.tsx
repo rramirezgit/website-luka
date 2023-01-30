@@ -1,5 +1,5 @@
 import TextAndImg from 'components/layaouts/TextAndImg'
-import imgGateway from 'assets/gateway/gateway.png'
+import imgGateway from 'assets/gateway/gateway.svg'
 import Info from 'components/info'
 import style from './gateway.module.css'
 import { Button } from '@mui/material'
@@ -38,7 +38,7 @@ const Gateway = (): JSX.Element => {
           titleBlue="Gateway"
           title="Multi Currency"
           button={{
-            text: 'view demo',
+            text: 'View Demo',
             color: 'primary_a',
             variant: 'contained',
             onclick: () => {},

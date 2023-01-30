@@ -45,6 +45,18 @@ const BoxInfo = (): JSX.Element => {
           marginTop: {
             xs: '26px',
             sm: '24px'
+          },
+          width: {
+            xs: '148px',
+            sm: '126px'
+          },
+          height: {
+            xs: '45px',
+            sm: '47.16px'
+          },
+          fontSize: {
+            xs: '20px',
+            sm: '14px'
           }
         }}
       >
