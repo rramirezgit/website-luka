@@ -1,5 +1,5 @@
 import TextAndImg from 'components/layaouts/TextAndImg'
-import imgGateway from 'assets/gateway/gateway.png'
+import imgGateway from 'assets/gateway/gateway.svg'
 import Info from 'components/info'
 import style from './gateway.module.css'
 import { Button } from '@mui/material'
@@ -9,16 +9,15 @@ import { Box } from '@mui/system'
 const Gateway = (): JSX.Element => {
   return (
     <Box
-      sx={
-        {
-          position: 'relative'
-        }
-      }
+      sx={{
+        position: 'relative'
+      }}
     >
       <TextAndImg
         heightSx={{
-          xs: '1514px',
-          lg: '1159px'
+          xs: 'auto',
+          sm: '1530px',
+          lg: '1000px'
         }}
         sxOne={{
           padding: {
@@ -39,15 +38,18 @@ const Gateway = (): JSX.Element => {
           titleBlue="Gateway"
           title="Multi Currency"
           button={{
-            text: 'view demo',
-            color: 'primary',
-            variant: 'outlined',
+            text: 'View Demo',
+            color: 'primary_a',
+            variant: 'contained',
             onclick: () => {},
             sx: {
               display: {
                 xs: 'none',
                 lg: 'block'
-              }
+              },
+              width: '178px',
+              height: '55px',
+              fontSize: '23px'
             }
           }}
           size={{
@@ -61,7 +63,7 @@ const Gateway = (): JSX.Element => {
           variant="contained"
           color="secondary"
           sx={{
-            marginTop: '30px',
+            margin: '20px 0px 40px 0px',
             display: {
               xs: 'block',
               lg: 'none'
@@ -72,7 +74,13 @@ const Gateway = (): JSX.Element => {
           view demo
         </Button>
       </TextAndImg>
-      <Square color='#5AE1E230' bottom={'0'} left={'0'} maxHeight={160} maxWidth={130}/>
+      <Square
+        color="#5AE1E230"
+        bottom={'0'}
+        left={'0'}
+        maxHeight={160}
+        maxWidth={130}
+      />
     </Box>
   )
 }

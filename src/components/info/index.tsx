@@ -11,7 +11,7 @@ interface InfoProps {
   title: string
   button?: {
     text: string
-    color: 'primary' | 'secondary'
+    color: any
     variant: 'contained' | 'outlined'
     onclick: () => void
     sx?: any

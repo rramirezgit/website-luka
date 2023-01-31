@@ -17,7 +17,7 @@ const BoxInfo = (): JSX.Element => {
       sx={{
         padding: {
           xs: '100px 35.13px 0px;',
-          sm: '100px 0px 0px 63px'
+          sm: '100px 0px 0px 33px'
         },
         width: {
           xs: '100%'
@@ -40,10 +40,23 @@ const BoxInfo = (): JSX.Element => {
       </Typography>
       <Button
         variant="contained"
+        color="white"
         sx={{
           marginTop: {
             xs: '26px',
-            sm: '61px'
+            sm: '24px'
+          },
+          width: {
+            xs: '148px',
+            sm: '126px'
+          },
+          height: {
+            xs: '45px',
+            sm: '47.16px'
+          },
+          fontSize: {
+            xs: '20px',
+            sm: '14px'
           }
         }}
       >
@@ -60,8 +73,8 @@ const Home = (): JSX.Element => {
       sx={{
         height: {
           xs: '700px',
-          sm: '762px',
-          md: '1017px'
+          sm: '739px',
+          md: '851px'
         },
         position: 'relative'
       }}
@@ -73,10 +86,10 @@ const Home = (): JSX.Element => {
           height: {
             xs: '800px',
             sm: '762px',
-            md: '1017px'
+            md: '851px'
           },
           background: {
-            xs: `url(${bgRectangles}) no-repeat -537px 195px`,
+            xs: `url(${bgRectangles}) no-repeat`,
             xl: `url(${bgRectangles}) no-repeat center`
           },
           backgroundSize: 'cover !important'
@@ -92,7 +105,7 @@ const Home = (): JSX.Element => {
         >
           <Box
             sx={{
-              width: '1400px'
+              width: '1267.09px'
             }}
           >
             <BoxInfo />
@@ -104,10 +117,10 @@ const Home = (): JSX.Element => {
             sx={{
               clipPath: {
                 xs: 'polygon(-34% 48%, 216% 4%, 801% 39%)',
-                sm: 'polygon(-34% 62%, 215% -15%, 801% 67%)',
-                md: 'polygon(-70% 125%, 208% 2%, 138% 100%)',
-                lg: 'polygon(-54% 113%, 162% 2%, 138% 100%)',
-                xl: 'polygon(-39% 114%, 106% 2%, 138% 100%)'
+                sm: 'polygon(-27% 65%, 143% -5%, 801% 67%)',
+                md: 'polygon(-135% 127%, 124% 3%, 146% 112%)',
+                lg: 'polygon(-78% 99%, 107% 1%, 135% 112%);',
+                xl: 'polygon(-90% 114%, 106% 2%, 138% 100%)'
               }
             }}
           ></Box>
@@ -118,7 +131,13 @@ const Home = (): JSX.Element => {
           />
         </Box>
       </Box>
-      <Square color='#5AE1E230' bottom={'0'} right={'0'} maxHeight={120} maxWidth={120}/>
+      <Square
+        color="#5AE1E230"
+        bottom={'0'}
+        right={'0'}
+        maxHeight={120}
+        maxWidth={120}
+      />
     </Box>
   )
 }

@@ -50,14 +50,17 @@ const PaymentLink = (): JSX.Element => {
           title="In&Out"
           button={{
             text: 'View Demo',
-            color: 'secondary',
-            variant: 'outlined',
+            color: 'primary_a',
+            variant: 'contained',
             onclick: () => {},
             sx: {
               display: {
                 xs: 'none',
                 lg: 'block'
-              }
+              },
+              width: '178px',
+              height: '55px',
+              fontSize: '23px'
             }
           }}
           size={{
@@ -95,8 +98,20 @@ const PaymentLink = (): JSX.Element => {
           </Box>
         }
       </TextAndImg>
-      <Square color='#0878FF20' bottom={'0'} right={'0'} maxHeight={180} maxWidth={130}/>
-      <Square color='#5AE1E230' top={'0'} left={'0'} maxHeight={160} maxWidth={130}/>
+      <Square
+        color="#0878FF20"
+        bottom={'0'}
+        right={'0'}
+        maxHeight={180}
+        maxWidth={130}
+      />
+      <Square
+        color="#5AE1E230"
+        top={'0'}
+        left={'0'}
+        maxHeight={160}
+        maxWidth={130}
+      />
     </Box>
   )
 }

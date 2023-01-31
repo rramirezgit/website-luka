@@ -12,11 +12,15 @@ const World = (): JSX.Element => {
         sx={{
           height: {
             xs: '1102px',
-            md: '1698px'
+            md: '1537px'
           },
           padding: {
             xs: '0 0 0 0',
             md: '129px 0 0 0'
+          },
+          gap: {
+            xs: '20px',
+            md: '80px'
           }
         }}
       >
@@ -76,13 +80,29 @@ const World = (): JSX.Element => {
             backgroundSize: {
               xs: 'contain',
               md: 'contain'
+            },
+            width: {
+              xs: '478.75px',
+              md: '100%',
+              lg: '910.84px'
+            },
+            height: {
+              xs: '478.75px',
+              md: '100%',
+              lg: '910.84px'
             }
           }}
         ></Box>
         <Box className={style.contentReady}>
           <Ready />
         </Box>
-        <Square color='#0878FF25' top={'0'} right={'0'} maxHeight={160} maxWidth={130}/>
+        <Square
+          color="#0878FF25"
+          top={'0'}
+          right={'0'}
+          maxHeight={160}
+          maxWidth={130}
+        />
       </Box>
     </>
   )

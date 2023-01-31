@@ -72,7 +72,14 @@ const Nav = (props: Props): JSX.Element => {
         >
           <Box
             component="div"
-            sx={{ flexGrow: 1, height: { xs: '29.46px', sm: '40px' } }}
+            sx={{
+              flexGrow: 1,
+              height: { xs: '29.46px', sm: '56px' },
+              width: {
+                xs: '100px',
+                sm: '122px'
+              }
+            }}
           >
             <img
               className={nav.logo}
@@ -96,7 +103,10 @@ const Nav = (props: Props): JSX.Element => {
             {routes.map(({ id = '' }) => {
               if (!id) return null
               return (
-                <Button key={id} sx={{ margin: '0px 10px', color: 'white ' }}>
+                <Button
+                  key={id}
+                  sx={{ margin: '0px 10px', color: 'white ', fontSize: '16px' }}
+                >
                   {id}
                 </Button>
               )
@@ -107,7 +117,9 @@ const Nav = (props: Props): JSX.Element => {
             color="white"
             className={nav.button}
             sx={{
-              display: { xs: 'none', sm: 'none', md: 'block' }
+              display: { xs: 'none', sm: 'none', md: 'block' },
+              width: '196px',
+              height: '46px'
             }}
           >
             {'Sign in'}
