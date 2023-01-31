@@ -15,7 +15,17 @@
 /* Responsive */
 @media screen and (max-height: 849px) and (max-width: 900px) {
     #demogateway-container {
-        max-height: 550px;
+        max-height: 410px;
+        min-height: 410px;
+    }
+    #demogateway-desktop-graybox-1 {
+        display: none;
+    }
+    #demogateway-desktop-graybox-2 {
+        display: none;
+    }
+    #demogateway-desktop-custom-container {
+        height: 150px !important;
     }
 }
 

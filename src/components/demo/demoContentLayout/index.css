@@ -1,4 +1,4 @@
-@media screen and (max-height: 830px) and (max-width: 900px) {
+@media screen and (max-height: 740px) and (max-width: 900px) {
     #demo-content {
         align-items: flex-start !important;
     }

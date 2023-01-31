@@ -17,6 +17,7 @@ const Custom = (): JSX.Element => {
             </Typography>
         </Box>
         <Box
+          id={'demogateway-desktop-custom-container'}
           className={styles.container}
         >
           <Box
@@ -37,12 +38,15 @@ const Custom = (): JSX.Element => {
             />
           </Box>
           <Box
+            id={'demogateway-desktop-graybox-1'}
             className={styles['gray-box']}
           ></Box>
           <Box
+            id={'demogateway-desktop-graybox-2'}
             className={styles['gray-box']}
           ></Box>
           <Box
+            id={'demogateway-desktop-graybox-3'}
             className={styles['gray-box']}
           ></Box>
           <Button
