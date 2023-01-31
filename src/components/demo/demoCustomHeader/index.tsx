@@ -1,4 +1,4 @@
-import brush from 'assets/demoLink/brush.png'
+import brush from 'assets/demoLink/brush.svg'
 import logoLuka from 'assets/footer/luka.png'
 import tooltip from 'assets/demoLink/tooltip.png'
 import { Box, Typography } from '@mui/material'
