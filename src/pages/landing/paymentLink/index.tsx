@@ -5,8 +5,13 @@ import style from './paymentLink.module.css'
 import { Box } from '@mui/material'
 import Button from '@mui/material/Button'
 import Square from 'components/square'
+import { useNavigate } from 'react-router-dom'
 
 const PaymentLink = (): JSX.Element => {
+  const navigate = useNavigate()
+  const handleClick = (): void => {
+    navigate('demo-link')
+  }
   return (
     <Box position={'relative'}>
       <TextAndImg
@@ -52,7 +57,7 @@ const PaymentLink = (): JSX.Element => {
             text: 'View Demo',
             color: 'primary_a',
             variant: 'contained',
-            onclick: () => {},
+            onclick: handleClick,
             sx: {
               display: {
                 xs: 'none',
@@ -92,6 +97,7 @@ const PaymentLink = (): JSX.Element => {
                 width: '198px',
                 left: '27%'
               }}
+              onClick={handleClick}
             >
               demo
             </Button>

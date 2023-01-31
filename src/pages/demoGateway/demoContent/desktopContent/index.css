@@ -1,0 +1,26 @@
+/* Desktop */
+@media screen and (max-height: 729px) and (min-width: 1200px) {
+    #demogateway-product-1 {
+        display: none;
+    }
+    #demogateway-title {
+        display: none;
+    }
+    #demogateway-container {
+        min-height: 400px;
+        max-height: 400px;
+    }
+}
+
+/* Responsive */
+@media screen and (max-height: 849px) and (max-width: 900px) {
+    #demogateway-container {
+        max-height: 550px;
+    }
+}
+
+@media screen and (min-height: 850px) and (max-width: 900px) {
+    #demogateway-container {
+        max-height: 550px;
+    }
+}

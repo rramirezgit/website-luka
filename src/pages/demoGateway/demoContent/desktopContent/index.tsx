@@ -3,11 +3,13 @@ import styles from './desktopcontent.module.css'
 import { getCssVar } from 'theme'
 import Details from './details'
 import Custom from './custom'
+import './index.css'
 
 const DesktopContent = (): JSX.Element => {
   return (
     <Box
       className={styles.container}
+      id={'demogateway-container'}
       sx={
         {
           backgroundColor: getCssVar('--white')
@@ -51,6 +53,7 @@ const DesktopContent = (): JSX.Element => {
       >
         <Box>
           <Typography
+            id={'demogateway-title'}
             className={styles.title}
           >
             Your website

@@ -91,6 +91,7 @@ const Details = (): JSX.Element => {
               }
             }
           }
+          id={'demogateway-product-1'}
         >
           <Product />
         </Box>
