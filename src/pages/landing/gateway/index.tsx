@@ -5,8 +5,13 @@ import style from './gateway.module.css'
 import { Button } from '@mui/material'
 import Square from 'components/square'
 import { Box } from '@mui/system'
+import { useNavigate } from 'react-router-dom'
 
 const Gateway = (): JSX.Element => {
+  const navigate = useNavigate()
+  const handleClick = (): void => {
+    navigate('demo-gateway')
+  }
   return (
     <Box
       sx={{
@@ -41,7 +46,7 @@ const Gateway = (): JSX.Element => {
             text: 'View Demo',
             color: 'primary_a',
             variant: 'contained',
-            onclick: () => {},
+            onclick: handleClick,
             sx: {
               display: {
                 xs: 'none',
@@ -70,6 +75,7 @@ const Gateway = (): JSX.Element => {
             },
             width: '198px'
           }}
+          onClick={handleClick}
         >
           view demo
         </Button>
