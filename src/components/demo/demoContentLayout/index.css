@@ -4,7 +4,7 @@
     }
 }
 
-@media screen and (max-height: 700px) and (min-width: 901px){
+@media screen and (max-height: 650px) and (min-width: 901px){
     #demo-content {
         align-items: flex-start !important;
     }

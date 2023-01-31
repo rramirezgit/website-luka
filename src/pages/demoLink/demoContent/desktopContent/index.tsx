@@ -69,12 +69,8 @@ const DesktopContent = (): JSX.Element => {
             className={styles.logo}
             sx={
               {
-                height: {
-                  xs: '55px'
-                },
-                width: {
-                  xs: '55px'
-                }
+                height: '55px',
+                width: '55px'
               }
             }
           >
@@ -84,6 +80,7 @@ const DesktopContent = (): JSX.Element => {
             className={styles['text-box']}
           >
             <Typography
+              id={'demolink-desktop-title'}
               className={styles.title}
               sx={
                 {
@@ -96,6 +93,7 @@ const DesktopContent = (): JSX.Element => {
               Invoice
             </Typography>
             <Typography
+              id={'demolink-desktop-text'}
               className={styles.message}
               sx={
                 {
@@ -109,6 +107,7 @@ const DesktopContent = (): JSX.Element => {
             </Typography>
           </Box>
           <Typography
+            id={'demolink-desktop-amount'}
             className={styles.amount}
             sx={
               {
@@ -118,9 +117,10 @@ const DesktopContent = (): JSX.Element => {
               }
             }
           >
-            100 <span className={styles.span}>USD</span>
+            100 <span id={'demolink-desktop-span'} className={styles.span}>USD</span>
           </Typography>
           <Typography
+            id={'demolink-desktop-title'}
             className={styles.currency}
             sx={
               {
