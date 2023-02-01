@@ -12,7 +12,7 @@
 
 .text-box {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 0 8px;
     margin-bottom: 5px;

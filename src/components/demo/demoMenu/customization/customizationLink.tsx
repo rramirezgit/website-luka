@@ -3,6 +3,9 @@ import Color from '../color'
 import styles from './customization.module.css'
 import Filestack from '../filestack'
 import SliderInput from '../sliderInput'
+import gallery from 'assets/demoLink/menu/gallery.svg'
+import brush from 'assets/demoLink/menu/brush.svg'
+import setting from 'assets/demoLink/menu/setting.svg'
 
 interface Props {
   type: 'mobile' | 'desktop'
@@ -19,29 +22,49 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
           }
         }
       >
-        <Typography
-          classes={
-            {
-              root: styles.title
-            }
-          }
+        <Box
+          className={styles['title-icon']}
         >
-          Tu Logo
-        </Typography>
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={gallery} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Tu Logo
+          </Typography>
+        </Box>
         <Box>
             <Filestack />
         </Box>
       </Box>
       <Box>
-        <Typography
-          classes={
-            {
-              root: styles.title
-            }
-          }
+        <Box
+          className={styles['title-icon']}
         >
-          Formato
-        </Typography>
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={brush} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Formato
+          </Typography>
+        </Box>
         <Box
           className={styles['input-container']}
         >
@@ -91,15 +114,25 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
         >
           <SliderInput />
         </Box>
-        <Typography
-          classes={
-            {
-              root: styles.title
-            }
-          }
+        <Box
+          className={styles['title-icon']}
         >
-          Configuración
-        </Typography>
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={setting} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Configuración
+          </Typography>
+        </Box>
         <Box
           className={styles['input-container']}
         >
