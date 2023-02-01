@@ -4,6 +4,7 @@ export interface DemoState {
   background: string
   button: string
   font: string
+  language: { label: string, value: string } | null
   border: number
   imgUrl: string
   title: string
@@ -12,9 +13,10 @@ export interface DemoState {
 const initialState: DemoState = {
   background: '0878ff26',
   button: '0878ff',
+  language: { label: 'Español', value: 'ES' },
   font: '',
   border: 0,
-  imgUrl: 'https://cdn.dribbble.com/users/113499/screenshots/14147543/media/2462401306aa800a3a5910d9c921956a.png?compress=1&resize=400x300',
+  imgUrl: '',
   title: 'Esto es una prueba'
 }
 
@@ -31,6 +33,9 @@ export const demoSlice = createSlice({
     changeFont: (state, action: PayloadAction<string>) => {
       state.font = action.payload
     },
+    changeLanguage: (state, action: PayloadAction<{ label: string, value: string } | null>) => {
+      state.language = action.payload
+    },
     changeBorder: (state, action: PayloadAction<number>) => {
       state.border = action.payload
     },
@@ -43,6 +48,6 @@ export const demoSlice = createSlice({
   }
 })
 
-export const { changeBackground, changeButton, changeFont, changeBorder, changeImg, changeTitle } = demoSlice.actions
+export const { changeBackground, changeButton, changeFont, changeLanguage, changeBorder, changeImg, changeTitle } = demoSlice.actions
 
 export default demoSlice.reducer

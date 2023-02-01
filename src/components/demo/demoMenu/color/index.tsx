@@ -1,12 +1,18 @@
 import { Box, Typography, TextField } from '@mui/material'
-import { getCssVar } from 'theme'
 import styles from './color.module.css'
 
 interface ColorProps {
   label: string
+  value: string
+  onChange: (e: string) => void
 }
 
-const Color = ({ label }: ColorProps): JSX.Element => {
+const Color = ({ label, value, onChange }: ColorProps): JSX.Element => {
+  const handleColor = (e: string): void => {
+    if (e.length <= 8) {
+      onChange(e)
+    }
+  }
   return (
     <Box
       className={styles.container}
@@ -34,15 +40,17 @@ const Color = ({ label }: ColorProps): JSX.Element => {
       <Box
         sx={
           {
-            width: '55px',
+            width: '65px',
             marginRight: '15px'
           }
         }
       >
         <TextField
           fullWidth
+          value={value}
           variant='standard'
           placeholder='FFFFFF'
+          onChange={(e) => handleColor(e.target.value)}
         />
       </Box>
       <Box
@@ -50,11 +58,12 @@ const Color = ({ label }: ColorProps): JSX.Element => {
           {
             width: '25px',
             height: '25px',
-            backgroundColor: getCssVar('--primary-buttons'),
+            background: `#${value}`,
             borderRadius: '50%'
           }
         }
-      ></Box>
+      >
+      </Box>
     </Box>
   )
 }
