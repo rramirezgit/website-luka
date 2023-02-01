@@ -5,9 +5,10 @@ interface BoxProps {
   borderColor?: string
   img: string
   text: string
+  borderRadius?: number
 }
 
-const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text }: BoxProps): JSX.Element => {
+const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text, borderRadius = 8 }: BoxProps): JSX.Element => {
   return (
     <Box
       sx={
@@ -22,7 +23,7 @@ const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text }: BoxPro
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          borderRadius: '8px'
+          borderRadius: `${borderRadius}px`
         }
       }
     >

@@ -5,12 +5,17 @@ import { Box, Typography } from '@mui/material'
 import styles from './customheader.module.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import './index.css'
+import { useNavigate } from 'react-router-dom'
 
 interface Props {
   customization: () => void
 }
 
 const DemoCustomHeader = ({ customization }: Props): JSX.Element => {
+  const navigate = useNavigate()
+  const handleClick = (): void => {
+    navigate('/')
+  }
   return (
     <Box
       className={styles.container}
@@ -18,6 +23,7 @@ const DemoCustomHeader = ({ customization }: Props): JSX.Element => {
       <Box
         className={styles['back-box']}
         id={'customheader-back-box'}
+        onClick={handleClick}
       >
         <ArrowBackIosIcon
           id={'customheader-back'}
