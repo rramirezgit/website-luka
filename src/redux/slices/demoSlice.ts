@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { languages, fonts, currency } from 'logic'
 
 export interface DemoState {
   background: string
@@ -14,9 +15,9 @@ export interface DemoState {
 const initialState: DemoState = {
   background: '0878FF26',
   button: '0878FF',
-  language: { label: 'Inglés', value: 'EN' },
-  font: { label: 'Open Sans', value: '2r565w54ar5' },
-  currency: { label: 'Dollars', value: '$' },
+  language: languages[0],
+  font: fonts[0],
+  currency: currency[0],
   border: 0,
   imgUrl: '',
   title: 'Esto es una prueba'
