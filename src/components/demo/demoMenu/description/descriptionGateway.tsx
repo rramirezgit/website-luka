@@ -8,6 +8,11 @@ const DescriptionGateway = (): JSX.Element => {
     >
       <Box
         className={styles['text-container']}
+        sx={
+          {
+            marginBottom: '0 !important'
+          }
+        }
       >
         <Typography
           className={styles.text}

@@ -1,6 +1,6 @@
 export const languages = [
-  { label: 'Español', value: 'ES' },
-  { label: 'Inglés', value: 'EN' }
+  { label: 'Inglés', value: 'EN' },
+  { label: 'Español', value: 'ES' }
 ]
 
 export const fonts = [

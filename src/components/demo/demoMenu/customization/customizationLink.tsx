@@ -11,6 +11,7 @@ import { RootState } from 'redux/store'
 import { changeBackground, changeBorder, changeButton, changeCurrency, changeFont, changeLanguage, changeTitle } from 'redux/slices/demoSlice'
 import Autocomplete from '@mui/material/Autocomplete'
 import { languages, fonts, currency } from 'logic'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 
 interface Props {
   type: 'mobile' | 'desktop'
@@ -110,9 +111,10 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
             disablePortal
             value={demo.font}
             disableClearable={true}
-            onChange={(e, newValue) => { dispatch(changeFont(newValue === null ? { label: 'Open Sans', value: '2r565w54ar5' } : newValue)) }}
+            onChange={(e, newValue) => { dispatch(changeFont(newValue === null ? fonts[0] : newValue)) }}
             options={fonts}
             renderInput={(params) => <TextField {...params} variant='standard' label="Font" />}
+            popupIcon={<KeyboardArrowDownIcon sx={{ fontSize: '15px' }} />}
           />
         </Box>
         <Box
@@ -122,9 +124,10 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
             disablePortal
             disableClearable={true}
             value={demo.language}
-            onChange={(e, newValue) => { dispatch(changeLanguage(newValue === null ? { label: 'Inglés', value: 'EN' } : newValue)) }}
+            onChange={(e, newValue) => { dispatch(changeLanguage(newValue === null ? languages[0] : newValue)) }}
             options={languages}
             renderInput={(params) => <TextField {...params} variant='standard' label="Language" />}
+            popupIcon={<KeyboardArrowDownIcon sx={{ fontSize: '15px' }} />}
           />
         </Box>
         <Box
@@ -163,9 +166,10 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
             disablePortal
             disableClearable={true}
             value={demo.currency}
-            onChange={(e, newValue) => { dispatch(changeCurrency(newValue === null ? { label: 'Dollars', value: '$' } : newValue)) }}
+            onChange={(e, newValue) => { dispatch(changeCurrency(newValue === null ? currency[0] : newValue)) }}
             options={currency}
             renderInput={(params) => <TextField {...params} variant='standard' label="Currency" />}
+            popupIcon={<KeyboardArrowDownIcon sx={{ fontSize: '15px' }} />}
           />
         </Box>
       </Box>
