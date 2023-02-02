@@ -5,6 +5,8 @@ import SliderInput from '../sliderInput'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'redux/store'
 import { changeButton } from 'redux/slices/demoSlice'
+import brush from 'assets/demoLink/menu/brush.svg'
+import setting from 'assets/demoLink/menu/setting.svg'
 
 interface Props {
   type: 'mobile' | 'desktop'
@@ -17,15 +19,25 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
     <Box
     >
       <Box>
-        <Typography
-          classes={
-            {
-              root: styles.title
-            }
-          }
+        <Box
+          className={styles['title-icon']}
         >
-          Formato
-        </Typography>
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={brush} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Formato
+          </Typography>
+        </Box>
         <Box
           className={styles['input-container']}
         >
@@ -61,15 +73,25 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
         >
           <SliderInput />
         </Box>
-        <Typography
-          classes={
-            {
-              root: styles.title
-            }
-          }
+        <Box
+          className={styles['title-icon']}
         >
-          Configuración
-        </Typography>
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={setting} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Configuración
+          </Typography>
+        </Box>
         <Box
           className={styles['input-container']}
         >
