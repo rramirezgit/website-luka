@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Switch, Typography } from '@mui/material'
 import styles from './description.module.css'
 
 const DescriptionLink = (): JSX.Element => {
@@ -8,16 +8,11 @@ const DescriptionLink = (): JSX.Element => {
     >
       <Box
         className={styles['text-container']}
-        sx={
-          {
-            marginBottom: '20px'
-          }
-        }
       >
         <Typography
           className={styles.text}
         >
-          <span className={styles['blue-text']}>IN</span> <b>Paylink:</b> Receive and send payments, conveniently simple to everyone!
+          <span className={styles['blue-text']}>Pay-IN</span><b>:</b> Receive payments, conveniently simple to everyone!
         </Typography>
       </Box>
       <Box
@@ -26,8 +21,12 @@ const DescriptionLink = (): JSX.Element => {
         <Typography
           className={styles.text}
         >
-          <span className={styles['blue-text']}>OUT</span> <b>Paylink:</b> Request and execute payments enabling local & international payments methods
+          <span className={styles['blue-text']}>Pay-OUT</span><b>:</b> Send payments enabling local & international payments methods.
         </Typography>
+      </Box>
+      <Box
+      >
+        <Switch />
       </Box>
     </Box>
   )

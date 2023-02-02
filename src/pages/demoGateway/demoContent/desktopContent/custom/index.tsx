@@ -15,8 +15,13 @@ const Custom = (): JSX.Element => {
         <Box>
             <Typography
               className={styles.title}
+              sx={
+                {
+                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+                }
+              }
             >
-              Payments
+              {demo.language?.value === 'EN' ? 'Payments' : 'Pagos'}
             </Typography>
         </Box>
         <Box
@@ -28,16 +33,19 @@ const Custom = (): JSX.Element => {
           >
             <PaymentBox
               borderColor={demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')}
-              text='Crédito'
+              text='Credit'
               img={card}
+              borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
             <PaymentBox
               text='Paypal'
               img={paypal}
+              borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
             <PaymentBox
               text='Zelle'
               img={zelle}
+              borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
           </Box>
           <Box
@@ -58,11 +66,12 @@ const Custom = (): JSX.Element => {
               {
                 backgroundColor: demo.button ? `#${demo.button} !important` : getCssVar('--primary-buttons'),
                 color: `${getCssVar('--white')} !important`,
-                borderRadius: `${demo.border}px !important`
+                borderRadius: `${typeof demo.border === 'number' ? demo.border : 8}px !important`,
+                fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
               }
             }
           >
-            Pagar
+            {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}
           </Button>
         </Box>
     </Box>

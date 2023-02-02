@@ -57,12 +57,17 @@ const Color = ({ label, value, onChange }: ColorProps): JSX.Element => {
         sx={
           {
             width: '25px',
-            height: '25px',
-            background: `#${value}`,
-            borderRadius: '50%'
+            height: '27px',
+            backgroundColor: 'white !important'
           }
         }
       >
+        <input
+          type={'color'}
+          value={`#${value}`}
+          onChange={(e) => handleColor(e.target.value.slice(1).toLocaleUpperCase())}
+          className={styles.input}
+        />
       </Box>
     </Box>
   )

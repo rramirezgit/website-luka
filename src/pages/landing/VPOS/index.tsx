@@ -23,8 +23,8 @@ const VPOS = (): JSX.Element => {
         className={vposStyles.container}
         sx={{
           marginBottom: {
-            xs: '60px !important',
-            lg: '120px !important'
+            xs: '40px !important',
+            lg: '60px !important'
           },
           justifyContent: {
             xs: 'center !important',

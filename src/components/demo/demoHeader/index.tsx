@@ -43,7 +43,8 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
             display: {
               xs: 'none',
               md: 'flex'
-            }
+            },
+            cursor: 'pointer'
           }
         }
         onClick={handleClick}
