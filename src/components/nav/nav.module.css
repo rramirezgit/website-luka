@@ -34,4 +34,10 @@
 .content-menu {
   width: 60%;
   text-align: end;
+  right: 60px;
+  position: relative;
+  gap: 20;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
 }
