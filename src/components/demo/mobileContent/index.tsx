@@ -9,12 +9,15 @@ import PayCard from './payCard'
 import CloseIcon from '@mui/icons-material/Close'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import './index.css'
+import { RootState } from 'redux/store'
+import { useSelector } from 'react-redux'
 
 interface Props {
   type: 'gateway' | 'link'
 }
 
 const MobileContent = ({ type }: Props): JSX.Element => {
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
       sx={
@@ -65,43 +68,44 @@ const MobileContent = ({ type }: Props): JSX.Element => {
           {
             type === 'link'
               ? <Box
-              sx={
-                {
-                  display: 'flex',
-                  alignItems: 'center'
-                }
-              }
-            >
-              <Box
-                component={'figure'}
-                className={styles.logo}
-              >
-                <img src={placeholder} alt='Logo' style={{ maxWidth: '100%', maxHeight: '100%' }} />
-              </Box>
-              <Box>
-                <Typography
-                  id={'mobilecontent-business'}
                   sx={
                     {
-                      fontWeigth: '400 !important',
-                      color: getCssVar('--demo-mobile-gray')
+                      display: 'flex',
+                      alignItems: 'center'
                     }
                   }
                 >
-                  My business
-                </Typography>
-                <Typography
-                  id={'mobilecontent-receipt'}
-                  sx={
-                    {
-                      fontWeigth: '400 !important',
-                      color: getCssVar('--demo-mobile-gray-l')
-                    }
-                  }
+                <Box
+                  component={'figure'}
+                  id={'mobilecontent-logo'}
+                  className={styles.logo}
                 >
-                  Receipt 123
-                </Typography>
-              </Box>
+                  <img src={demo.imgUrl ? demo.imgUrl : placeholder} alt='Logo' style={{ maxWidth: '100%', maxHeight: '100%' }} />
+                </Box>
+                <Box>
+                  <Typography
+                    id={'mobilecontent-business'}
+                    sx={
+                      {
+                        fontWeigth: '400 !important',
+                        color: getCssVar('--demo-mobile-gray')
+                      }
+                    }
+                  >
+                    My business
+                  </Typography>
+                  <Typography
+                    id={'mobilecontent-receipt'}
+                    sx={
+                      {
+                        fontWeigth: '400 !important',
+                        color: getCssVar('--demo-mobile-gray-l')
+                      }
+                    }
+                  >
+                    Receipt 123
+                  </Typography>
+                </Box>
                 </Box>
               : <Box>
                   <Typography
@@ -174,7 +178,7 @@ const MobileContent = ({ type }: Props): JSX.Element => {
               id={'mobilecontent-button'}
               sx={
                 {
-                  backgroundColor: `${getCssVar('--primary-buttons')} !important`,
+                  backgroundColor: `#${demo.button} !important`,
                   color: `${getCssVar('--white')} !important`
                 }
               }

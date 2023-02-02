@@ -2,12 +2,17 @@ import { Box, Typography, TextField } from '@mui/material'
 import Color from '../color'
 import styles from './customization.module.css'
 import SliderInput from '../sliderInput'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from 'redux/store'
+import { changeButton } from 'redux/slices/demoSlice'
 
 interface Props {
   type: 'mobile' | 'desktop'
 }
 
 const CustomizationGateway = ({ type }: Props): JSX.Element => {
+  const dispatch = useDispatch()
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
     >
@@ -24,7 +29,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
         <Box
           className={styles['input-container']}
         >
-          <Color label='Color del Botón' />
+          <Color label='Color del Botón' value={demo.button} onChange={(e: string) => { dispatch(changeButton(e)) }} />
         </Box>
         <Box
           className={styles['input-container']}

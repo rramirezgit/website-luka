@@ -5,8 +5,11 @@ import styles from './custom.module.css'
 import zelle from 'assets/demoLink/payment/zelle.png'
 import paypal from 'assets/demoLink/payment/paypal.png'
 import card from 'assets/demoLink/payment/card.png'
+import { RootState } from 'redux/store'
+import { useSelector } from 'react-redux'
 
 const Custom = (): JSX.Element => {
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box>
         <Box>
@@ -24,7 +27,7 @@ const Custom = (): JSX.Element => {
             className={styles.paybox}
           >
             <PaymentBox
-              borderColor={getCssVar('--primary-buttons')}
+              borderColor={demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')}
               text='Crédito'
               img={card}
             />
@@ -53,8 +56,9 @@ const Custom = (): JSX.Element => {
             className={styles.button}
             sx={
               {
-                backgroundColor: `${getCssVar('--primary-buttons')} !important`,
-                color: `${getCssVar('--white')} !important`
+                backgroundColor: demo.button ? `#${demo.button} !important` : getCssVar('--primary-buttons'),
+                color: `${getCssVar('--white')} !important`,
+                borderRadius: `${demo.border}px !important`
               }
             }
           >
