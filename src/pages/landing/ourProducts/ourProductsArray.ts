@@ -1,7 +1,7 @@
 import { CardInterface } from './ourProducts.interface'
-import gatewayImg from 'assets/ourProducts/image-1.png'
-import linkImg from 'assets/ourProducts/image-2.png'
-import vposImg from 'assets/ourProducts/image-3.png'
+import gatewayImg from 'assets/ourProducts/image-1.svg'
+import linkImg from 'assets/ourProducts/image-2.svg'
+import vposImg from 'assets/ourProducts/image-3.svg'
 
 const cardsArray: CardInterface[] = [
   {

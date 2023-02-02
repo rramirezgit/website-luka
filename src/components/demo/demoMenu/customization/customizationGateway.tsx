@@ -2,25 +2,46 @@ import { Box, Typography, TextField } from '@mui/material'
 import Color from '../color'
 import styles from './customization.module.css'
 import SliderInput from '../sliderInput'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from 'redux/store'
+import { changeButton } from 'redux/slices/demoSlice'
+import brush from 'assets/demoLink/menu/brush.svg'
+import setting from 'assets/demoLink/menu/setting.svg'
 
-const CustomizationGateway = (): JSX.Element => {
+interface Props {
+  type: 'mobile' | 'desktop'
+}
+
+const CustomizationGateway = ({ type }: Props): JSX.Element => {
+  const dispatch = useDispatch()
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
     >
       <Box>
-        <Typography
-          classes={
-            {
-              root: styles.title
-            }
-          }
+        <Box
+          className={styles['title-icon']}
         >
-          Formato
-        </Typography>
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={brush} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Formato
+          </Typography>
+        </Box>
         <Box
           className={styles['input-container']}
         >
-          <Color label='Color del Botón' />
+          <Color label='Color del Botón' value={demo.button} onChange={(e: string) => { dispatch(changeButton(e)) }} />
         </Box>
         <Box
           className={styles['input-container']}
@@ -44,18 +65,33 @@ const CustomizationGateway = (): JSX.Element => {
         </Box>
         <Box
           className={styles['input-container']}
-        >
-          <SliderInput />
-        </Box>
-        <Typography
-          classes={
+          sx={
             {
-              root: styles.title
+              display: type === 'mobile' ? 'none' : 'block'
             }
           }
         >
-          Configuración
-        </Typography>
+          <SliderInput />
+        </Box>
+        <Box
+          className={styles['title-icon']}
+        >
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={setting} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Configuración
+          </Typography>
+        </Box>
         <Box
           className={styles['input-container']}
         >

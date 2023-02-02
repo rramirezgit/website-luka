@@ -3,8 +3,29 @@ import Color from '../color'
 import styles from './customization.module.css'
 import Filestack from '../filestack'
 import SliderInput from '../sliderInput'
+import gallery from 'assets/demoLink/menu/gallery.svg'
+import brush from 'assets/demoLink/menu/brush.svg'
+import setting from 'assets/demoLink/menu/setting.svg'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from 'redux/store'
+import { changeBackground, changeButton, changeLanguage, changeTitle } from 'redux/slices/demoSlice'
+import Autocomplete from '@mui/material/Autocomplete'
 
-const CustomizationLink = (): JSX.Element => {
+interface Props {
+  type: 'mobile' | 'desktop'
+}
+
+const languages = [
+  { label: 'Español', value: 'ES' },
+  { label: 'Inglés', value: 'EN' },
+  { label: 'Alemán', value: 'AL' },
+  { label: 'Koreano', value: 'KR' },
+  { label: 'Japonés', value: 'JP' }
+]
+
+const CustomizationLink = ({ type }: Props): JSX.Element => {
+  const dispatch = useDispatch()
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
     >
@@ -15,38 +36,58 @@ const CustomizationLink = (): JSX.Element => {
           }
         }
       >
-        <Typography
-          classes={
-            {
-              root: styles.title
-            }
-          }
+        <Box
+          className={styles['title-icon']}
         >
-          Tu Logo
-        </Typography>
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={gallery} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Tu Logo
+          </Typography>
+        </Box>
         <Box>
             <Filestack />
         </Box>
       </Box>
       <Box>
-        <Typography
-          classes={
-            {
-              root: styles.title
-            }
-          }
-        >
-          Formato
-        </Typography>
         <Box
-          className={styles['input-container']}
+          className={styles['title-icon']}
         >
-          <Color label='Color de Fondo' />
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={brush} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Formato
+          </Typography>
         </Box>
         <Box
           className={styles['input-container']}
         >
-          <Color label='Color del Botón' />
+          <Color label='Color de Fondo' value={demo.background} onChange={(e: string) => { dispatch(changeBackground(e)) }} />
+        </Box>
+        <Box
+          className={styles['input-container']}
+        >
+          <Color label='Color del Botón' value={demo.button} onChange={(e: string) => { dispatch(changeButton(e)) }} />
         </Box>
         <Box
           className={styles['input-container']}
@@ -55,6 +96,8 @@ const CustomizationLink = (): JSX.Element => {
             fullWidth
             variant='standard'
             label={'Título'}
+            value={demo.title}
+            onChange={(e) => { dispatch(changeTitle(e.target.value)) }}
           />
         </Box>
         <Box
@@ -70,27 +113,44 @@ const CustomizationLink = (): JSX.Element => {
         <Box
           className={styles['input-container']}
         >
-          <TextField
-            select
-            fullWidth
-            variant='standard'
-            label={'Idioma'}
+          <Autocomplete
+            disablePortal
+            value={demo.language}
+            onChange={(e, newValue) => { dispatch(changeLanguage(newValue === null ? { label: 'Inglés', value: 'EN' } : newValue)) }}
+            options={languages}
+            defaultValue={{ label: 'Inglés', value: 'EN' }}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Idioma" />}
           />
         </Box>
         <Box
           className={styles['input-container']}
-        >
-          <SliderInput />
-        </Box>
-        <Typography
-          classes={
+          sx={
             {
-              root: styles.title
+              display: type === 'mobile' ? 'none' : 'block'
             }
           }
         >
-          Configuración
-        </Typography>
+          <SliderInput />
+        </Box>
+        <Box
+          className={styles['title-icon']}
+        >
+          <Box
+            component={'figure'}
+            className={styles['title-figure']}
+          >
+            <img src={setting} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+          </Box>
+          <Typography
+            classes={
+              {
+                root: styles.title
+              }
+            }
+          >
+            Configuración
+          </Typography>
+        </Box>
         <Box
           className={styles['input-container']}
         >

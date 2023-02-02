@@ -5,13 +5,13 @@
 }
 
 .overflow-container {
-    height: calc(100% - 398px);
+    height: calc(100% - 142px);
     overflow-y: auto;
     padding: 0 40px;
 }
 
 .overflow-container-gateway {
-    height: calc(100% - 294px);
+    height: calc(100% - 142px);
     overflow-y: auto;
     padding: 0 40px;
 }

@@ -41,12 +41,13 @@ const VPOS = (): JSX.Element => {
           sx={{
             width: {
               xs: '100%',
-              lg: '400px',
+              lg: '480px',
               xl: '570px'
             },
             minWidth: {
               xs: 'none',
-              md: '400px'
+              md: '400px',
+              lg: '480px'
             },
             marginRight: {
               xs: '0',

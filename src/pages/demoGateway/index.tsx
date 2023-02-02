@@ -38,7 +38,7 @@ const DemoGateway = (): JSX.Element => {
           }
         }
       >
-        <MenuGateway />
+        <MenuGateway type={demoMobile ? 'mobile' : 'desktop'} />
       </Box>
       <Box
         className={styles['content-container']}
@@ -132,7 +132,7 @@ const DemoGateway = (): JSX.Element => {
               <Box
                 className={ styles.padding }
               >
-                <CustomizationGateway />
+                <CustomizationGateway type={demoMobile ? 'mobile' : 'desktop'} />
               </Box>
             </Box>
           </DemoMenuResponsive>

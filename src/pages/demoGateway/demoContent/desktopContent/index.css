@@ -1,0 +1,36 @@
+/* Desktop */
+@media screen and (max-height: 729px) and (min-width: 1200px) {
+    #demogateway-product-1 {
+        display: none;
+    }
+    #demogateway-title {
+        display: none;
+    }
+    #demogateway-container {
+        min-height: 400px;
+        max-height: 400px;
+    }
+}
+
+/* Responsive */
+@media screen and (max-height: 849px) and (max-width: 900px) {
+    #demogateway-container {
+        max-height: 410px;
+        min-height: 410px;
+    }
+    #demogateway-desktop-graybox-1 {
+        display: none;
+    }
+    #demogateway-desktop-graybox-2 {
+        display: none;
+    }
+    #demogateway-desktop-custom-container {
+        height: 150px !important;
+    }
+}
+
+@media screen and (min-height: 850px) and (max-width: 900px) {
+    #demogateway-container {
+        max-height: 550px;
+    }
+}

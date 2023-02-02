@@ -6,14 +6,19 @@ import styles from './desktopcontent.module.css'
 import zelle from 'assets/demoLink/payment/zelle.png'
 import paypal from 'assets/demoLink/payment/paypal.png'
 import card from 'assets/demoLink/payment/card.png'
+import './index.css'
+import { RootState } from 'redux/store'
+import { useSelector } from 'react-redux'
 
 const DesktopContent = (): JSX.Element => {
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
       className={styles.container}
+      id={'demolink-desktop-container'}
       sx={
         {
-          backgroundColor: getCssVar('--primary-buttons-a')
+          backgroundColor: demo.background ? `#${demo.background}` : getCssVar('--primary-buttons-a')
         }
       }
     >
@@ -63,24 +68,22 @@ const DesktopContent = (): JSX.Element => {
           }
         >
           <Box
+            id={'demolink-desktop-logo'}
             className={styles.logo}
             sx={
               {
-                height: {
-                  xs: '55px'
-                },
-                width: {
-                  xs: '55px'
-                }
+                height: '55px',
+                width: '55px'
               }
             }
           >
-            <img src={placeholder} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+            <img src={demo.imgUrl ? demo.imgUrl : placeholder} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
           </Box>
           <Box
             className={styles['text-box']}
           >
             <Typography
+              id={'demolink-desktop-title'}
               className={styles.title}
               sx={
                 {
@@ -93,6 +96,7 @@ const DesktopContent = (): JSX.Element => {
               Invoice
             </Typography>
             <Typography
+              id={'demolink-desktop-text'}
               className={styles.message}
               sx={
                 {
@@ -102,10 +106,11 @@ const DesktopContent = (): JSX.Element => {
                 }
               }
             >
-              Luka te ha solicitado un pago
+              {demo.title}
             </Typography>
           </Box>
           <Typography
+            id={'demolink-desktop-amount'}
             className={styles.amount}
             sx={
               {
@@ -115,9 +120,10 @@ const DesktopContent = (): JSX.Element => {
               }
             }
           >
-            100 <span className={styles.span}>USD</span>
+            100 <span id={'demolink-desktop-span'} className={styles.span}>USD</span>
           </Typography>
           <Typography
+            id={'demolink-desktop-title'}
             className={styles.currency}
             sx={
               {
@@ -133,31 +139,38 @@ const DesktopContent = (): JSX.Element => {
             className={styles.payment}
           >
             <PaymentBox
-              borderColor={getCssVar('--primary-buttons')}
+              borderColor={demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')}
               text='Crédito'
               img={card}
+              borderRadius={demo.border}
             />
             <PaymentBox
               text='Paypal'
               img={paypal}
+              borderRadius={demo.border}
             />
             <PaymentBox
               text='Zelle'
               img={zelle}
+              borderRadius={demo.border}
             />
           </Box>
           <Box
             className={styles['gray-box']}
+            id={'demolink-desktop-gray-1'}
           ></Box>
           <Box
             className={styles['gray-box']}
+            id={'demolink-desktop-gray-2'}
           ></Box>
           <Button
+            id={'demolink-desktop-button'}
             className={styles.button}
             sx={
               {
-                backgroundColor: `${getCssVar('--primary-buttons')} !important`,
-                color: `${getCssVar('--white')} !important`
+                backgroundColor: demo.button ? `#${demo.button} !important` : getCssVar('--primary-buttons'),
+                color: `${getCssVar('--white')} !important`,
+                borderRadius: `${demo.border}px !important`
               }
             }
           >

@@ -5,8 +5,11 @@ import styles from './custom.module.css'
 import zelle from 'assets/demoLink/payment/zelle.png'
 import paypal from 'assets/demoLink/payment/paypal.png'
 import card from 'assets/demoLink/payment/card.png'
+import { RootState } from 'redux/store'
+import { useSelector } from 'react-redux'
 
 const Custom = (): JSX.Element => {
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box>
         <Box>
@@ -17,13 +20,14 @@ const Custom = (): JSX.Element => {
             </Typography>
         </Box>
         <Box
+          id={'demogateway-desktop-custom-container'}
           className={styles.container}
         >
           <Box
             className={styles.paybox}
           >
             <PaymentBox
-              borderColor={getCssVar('--primary-buttons')}
+              borderColor={demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')}
               text='Crédito'
               img={card}
             />
@@ -37,20 +41,24 @@ const Custom = (): JSX.Element => {
             />
           </Box>
           <Box
+            id={'demogateway-desktop-graybox-1'}
             className={styles['gray-box']}
           ></Box>
           <Box
+            id={'demogateway-desktop-graybox-2'}
             className={styles['gray-box']}
           ></Box>
           <Box
+            id={'demogateway-desktop-graybox-3'}
             className={styles['gray-box']}
           ></Box>
           <Button
             className={styles.button}
             sx={
               {
-                backgroundColor: `${getCssVar('--primary-buttons')} !important`,
-                color: `${getCssVar('--white')} !important`
+                backgroundColor: demo.button ? `#${demo.button} !important` : getCssVar('--primary-buttons'),
+                color: `${getCssVar('--white')} !important`,
+                borderRadius: `${demo.border}px !important`
               }
             }
           >

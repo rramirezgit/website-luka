@@ -1,0 +1,119 @@
+/* Desktop */
+@media screen and (max-height: 729px) and (min-width: 901px) {
+    #demolink-desktop-container {
+        max-width: 600px;
+        height: 400px;
+    }
+    #demolink-desktop-gray-1 {
+        display: none;
+    }
+    #demolink-desktop-gray-2 {
+        height: 20px !important;
+    }
+    #demolink-desktop-button {
+        height: 30px !important;
+    }
+    #demolink-desktop-logo {
+        height: 30px;
+        width: 30px;
+    }
+    #demolink-desktop-title {
+        font-size: 10px !important;
+    }
+    #demolink-desktop-text {
+        font-size: 8px !important;
+    }
+    #demolink-desktop-amount {
+        font-size: 20px !important;
+    }
+    #demolink-desktop-span {
+        font-size: 10px !important;
+    }
+}
+@media screen and (min-height: 730px) and (max-height: 839px) and (min-width: 901px) {
+    #demolink-desktop-container {
+        max-width: 700px;
+        height: 500px;
+    }
+    #demolink-desktop-gray-1 {
+        display: none;
+    }
+}
+
+@media screen and (min-height: 840px) and (max-height: 1079px) and (min-width: 901px) {
+    #demolink-desktop-container {
+        max-width: 800px;
+        height: 600px;
+    }
+}
+
+@media screen and (min-height: 1080px) and (min-width: 901px) {
+    #demolink-desktop-container {
+        max-width: 800px;
+        height: 600px;
+    }
+}
+
+/* Responsive */
+@media screen and (max-height: 849px) and (max-width: 900px) {
+    #demolink-desktop-container {
+        max-width: 600px;
+        height: 400px;
+    }
+    #demolink-desktop-gray-1 {
+        display: none;
+    }
+    #demolink-desktop-gray-2 {
+        height: 20px !important;
+    }
+    #demolink-desktop-button {
+        height: 30px !important;
+    }
+    #demolink-desktop-logo {
+        height: 30px;
+        width: 30px;
+    }
+    #demolink-desktop-title {
+        font-size: 10px !important;
+    }
+    #demolink-desktop-text {
+        font-size: 8px !important;
+    }
+    #demolink-desktop-amount {
+        font-size: 20px !important;
+    }
+    #demolink-desktop-span {
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (min-height: 850px) and (max-height: 959px) and (max-width: 900px) {
+    #demolink-desktop-logo {
+        height: 40px !important;
+        width: 40px !important;
+    }
+    #demolink-desktop-container {
+        max-width: 700px;
+        height: 500px;
+    }
+    #demolink-desktop-gray-1 {
+        display: none;
+    }
+    #demolink-desktop-button {
+        height: 30px !important;
+    }
+}
+
+@media screen and (min-height: 960px) and (max-height: 1199px) and (max-width: 900px) {
+    #demolink-desktop-container {
+        max-width: 800px;
+        height: 550px;
+    }
+}
+
+@media screen and (min-height: 1200px) and (max-width: 900px) {
+    #demolink-desktop-container {
+        max-width: 1000px;
+        height: 800px;
+    }
+}
