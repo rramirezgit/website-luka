@@ -21,11 +21,8 @@
     #demogateway-desktop-graybox-1 {
         display: none;
     }
-    #demogateway-desktop-graybox-2 {
-        display: none;
-    }
     #demogateway-desktop-custom-container {
-        height: 150px !important;
+        height: 210px !important;
     }
 }
 

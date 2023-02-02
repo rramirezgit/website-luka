@@ -8,20 +8,13 @@ import brush from 'assets/demoLink/menu/brush.svg'
 import setting from 'assets/demoLink/menu/setting.svg'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'redux/store'
-import { changeBackground, changeButton, changeLanguage, changeTitle } from 'redux/slices/demoSlice'
+import { changeBackground, changeBorder, changeButton, changeCurrency, changeFont, changeLanguage, changeTitle } from 'redux/slices/demoSlice'
 import Autocomplete from '@mui/material/Autocomplete'
+import { languages, fonts, currency } from 'logic'
 
 interface Props {
   type: 'mobile' | 'desktop'
 }
-
-const languages = [
-  { label: 'Español', value: 'ES' },
-  { label: 'Inglés', value: 'EN' },
-  { label: 'Alemán', value: 'AL' },
-  { label: 'Koreano', value: 'KR' },
-  { label: 'Japonés', value: 'JP' }
-]
 
 const CustomizationLink = ({ type }: Props): JSX.Element => {
   const dispatch = useDispatch()
@@ -52,7 +45,7 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
               }
             }
           >
-            Tu Logo
+            Your brand
           </Typography>
         </Box>
         <Box>
@@ -76,26 +69,36 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
               }
             }
           >
-            Formato
+            Format
           </Typography>
         </Box>
         <Box
           className={styles['input-container']}
+          sx={
+            {
+              display: type === 'mobile' ? 'none' : 'block'
+            }
+          }
         >
-          <Color label='Color de Fondo' value={demo.background} onChange={(e: string) => { dispatch(changeBackground(e)) }} />
+          <Color label='Background Color' value={demo.background} onChange={(e: string) => { dispatch(changeBackground(e.toLocaleUpperCase())) }} />
         </Box>
         <Box
           className={styles['input-container']}
         >
-          <Color label='Color del Botón' value={demo.button} onChange={(e: string) => { dispatch(changeButton(e)) }} />
+          <Color label='Button Color' value={demo.button} onChange={(e: string) => { dispatch(changeButton(e.toLocaleUpperCase())) }} />
         </Box>
         <Box
           className={styles['input-container']}
+          sx={
+            {
+              display: type === 'mobile' ? 'none' : 'block'
+            }
+          }
         >
           <TextField
             fullWidth
             variant='standard'
-            label={'Título'}
+            label={'Title'}
             value={demo.title}
             onChange={(e) => { dispatch(changeTitle(e.target.value)) }}
           />
@@ -103,11 +106,13 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
         <Box
           className={styles['input-container']}
         >
-          <TextField
-            select
-            fullWidth
-            variant='standard'
-            label={'Fuente'}
+          <Autocomplete
+            disablePortal
+            value={demo.font}
+            disableClearable={true}
+            onChange={(e, newValue) => { dispatch(changeFont(newValue === null ? { label: 'Open Sans', value: '2r565w54ar5' } : newValue)) }}
+            options={fonts}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Font" />}
           />
         </Box>
         <Box
@@ -115,11 +120,11 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
         >
           <Autocomplete
             disablePortal
+            disableClearable={true}
             value={demo.language}
             onChange={(e, newValue) => { dispatch(changeLanguage(newValue === null ? { label: 'Inglés', value: 'EN' } : newValue)) }}
             options={languages}
-            defaultValue={{ label: 'Inglés', value: 'EN' }}
-            renderInput={(params) => <TextField {...params} variant='standard' label="Idioma" />}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Language" />}
           />
         </Box>
         <Box
@@ -130,7 +135,7 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
             }
           }
         >
-          <SliderInput />
+          <SliderInput value={demo.border} onChange={(e) => { dispatch(changeBorder(e as number)) }} />
         </Box>
         <Box
           className={styles['title-icon']}
@@ -154,21 +159,13 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
         <Box
           className={styles['input-container']}
         >
-          <TextField
-            select
-            fullWidth
-            variant='standard'
-            label={'Tipo de Moneda'}
-          />
-        </Box>
-        <Box
-          className={styles['input-container']}
-        >
-          <TextField
-            select
-            fullWidth
-            variant='standard'
-            label={'Métodos de Pago'}
+          <Autocomplete
+            disablePortal
+            disableClearable={true}
+            value={demo.currency}
+            onChange={(e, newValue) => { dispatch(changeCurrency(newValue === null ? { label: 'Dollars', value: '$' } : newValue)) }}
+            options={currency}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Currency" />}
           />
         </Box>
       </Box>

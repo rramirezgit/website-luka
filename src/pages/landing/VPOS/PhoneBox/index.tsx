@@ -33,7 +33,7 @@ const PhoneBox = (): JSX.Element => {
           {
             position: 'absolute',
             right: '43%',
-            top: '-9%',
+            top: '-7%',
             width: '15%'
           }
         }

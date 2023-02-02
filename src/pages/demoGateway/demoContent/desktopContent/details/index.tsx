@@ -1,8 +1,11 @@
 import { Box, Typography } from '@mui/material'
 import styles from './details.module.css'
 import Product from './product'
+import { RootState } from 'redux/store'
+import { useSelector } from 'react-redux'
 
 const Details = (): JSX.Element => {
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
       sx={
@@ -34,11 +37,12 @@ const Details = (): JSX.Element => {
             marginBottom: {
               xs: '0',
               lg: '20px'
-            }
+            },
+            fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
           }
         }
       >
-        Checkout
+        {demo.language?.value === 'EN' ? 'Checkout' : 'Carrito'}
       </Typography>
       <Box
         className={styles.underline}
@@ -55,11 +59,12 @@ const Details = (): JSX.Element => {
           className={styles.title}
           sx={
             {
-              fontSize: '14px'
+              fontSize: '14px',
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
             }
           }
         >
-          Order Summary
+          {demo.language?.value === 'EN' ? 'Order Summary' : 'Resumen de la Orden'}
         </Typography>
       </Box>
       <Box
@@ -114,11 +119,12 @@ const Details = (): JSX.Element => {
           className={styles.title}
           sx={
             {
-              fontSize: '14px'
+              fontSize: '14px',
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
             }
           }
         >
-          Order Details
+          {demo.language?.value === 'EN' ? 'Order Details' : 'Detalles de la Orden'}
         </Typography>
       </Box>
       <Box
@@ -134,13 +140,23 @@ const Details = (): JSX.Element => {
       >
         <Typography
           className={styles.text}
+          sx={
+            {
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+            }
+          }
         >
-          Sub Total
+          {demo.language?.value === 'EN' ? 'Sub Total' : 'Sub Total'}
         </Typography>
         <Typography
           className={styles.text}
+          sx={
+            {
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+            }
+          }
         >
-          $119.69
+          {`${demo.currency?.value ? demo.currency?.value : '$'}119.69`}
         </Typography>
       </Box>
       <Box
@@ -156,13 +172,23 @@ const Details = (): JSX.Element => {
       >
         <Typography
           className={styles.text}
+          sx={
+            {
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+            }
+          }
         >
-          Discount
+          {demo.language?.value === 'EN' ? 'Discount' : 'Descuento'}
         </Typography>
         <Typography
           className={styles.text}
+          sx={
+            {
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+            }
+          }
         >
-          -$13.40
+          {`-${demo.currency?.value ? demo.currency?.value : '$'}13.40`}
         </Typography>
       </Box>
       <Box
@@ -178,13 +204,23 @@ const Details = (): JSX.Element => {
       >
         <Typography
           className={styles.text}
+          sx={
+            {
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+            }
+          }
         >
-          Delivery Fee
+          {demo.language?.value === 'EN' ? 'Delivery Fee' : 'Costo del envío'}
         </Typography>
         <Typography
           className={styles.text}
+          sx={
+            {
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+            }
+          }
         >
-          -$0.00
+          {`-${demo.currency?.value ? demo.currency?.value : '$'}0.00`}
         </Typography>
       </Box>
       <Box
@@ -200,13 +236,23 @@ const Details = (): JSX.Element => {
       >
         <Typography
           className={styles.text}
+          sx={
+            {
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+            }
+          }
         >
-          Grand Total
+          {demo.language?.value === 'EN' ? 'Grand Total' : 'Total'}
         </Typography>
         <Typography
           className={styles.text}
+          sx={
+            {
+              fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+            }
+          }
         >
-          $106.29
+          {`${demo.currency?.value ? demo.currency?.value : '$'}106,29`}
         </Typography>
       </Box>
     </Box>

@@ -19,6 +19,11 @@ html {
   height: 100%;
 }
 
+.fsp-button {
+  line-height: 38px !important;
+  font-family: Roboto-regular, Roboto, sans-serif !important;
+}
+
 /* Scrollbar */
 body::-webkit-scrollbar {
   display: none;

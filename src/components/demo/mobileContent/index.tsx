@@ -36,7 +36,6 @@ const MobileContent = ({ type }: Props): JSX.Element => {
         id={'mobilecontent-custom-container'}
         sx={
           {
-            left: '4.5%',
             height: '50%',
             boxShadow: '0px -3.3448px 6.68961px rgba(0, 0, 0, 0.12)'
           }
@@ -46,10 +45,7 @@ const MobileContent = ({ type }: Props): JSX.Element => {
           className={styles.close}
           sx={
             {
-              margin: {
-                xs: '3px 3px 3px 0',
-                md: '5px 5px 5px 0'
-              }
+              margin: '10px 8px 8px 8px'
             }
           }
         >
@@ -88,22 +84,24 @@ const MobileContent = ({ type }: Props): JSX.Element => {
                     sx={
                       {
                         fontWeigth: '400 !important',
-                        color: getCssVar('--demo-mobile-gray')
+                        color: getCssVar('--demo-mobile-gray'),
+                        fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
                       }
                     }
                   >
-                    My business
+                    {demo.language?.value === 'EN' ? 'My business' : 'Mi negocio'}
                   </Typography>
                   <Typography
                     id={'mobilecontent-receipt'}
                     sx={
                       {
                         fontWeigth: '400 !important',
-                        color: getCssVar('--demo-mobile-gray-l')
+                        color: getCssVar('--demo-mobile-gray-l'),
+                        fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
                       }
                     }
                   >
-                    Receipt 123
+                    {demo.language?.value === 'EN' ? 'Receipt 123' : 'Recibo 123'}
                   </Typography>
                 </Box>
                 </Box>
@@ -111,8 +109,13 @@ const MobileContent = ({ type }: Props): JSX.Element => {
                   <Typography
                     className={styles.text}
                     id={'mobilecontent-text'}
+                    sx={
+                      {
+                        fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+                      }
+                    }
                   >
-                    Seleccione un método de pago
+                    {demo.language?.value === 'EN' ? 'Select a payment method' : 'Seleccione un método'}
                   </Typography>
                 </Box>
           }
@@ -122,22 +125,24 @@ const MobileContent = ({ type }: Props): JSX.Element => {
               sx={
                 {
                   fontWeigth: '700 !important',
-                  color: getCssVar('--demo-mobile-gray-d')
+                  color: getCssVar('--demo-mobile-gray-d'),
+                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
                 }
               }
             >
-              $55,57 USD
+              {`${demo.currency?.value ? demo.currency?.value : '$'}55,57 ${demo.currency?.value === '$' ? 'USD' : 'EUR'}`}
             </Typography>
             <Typography
               id={'mobilecontent-currency'}
               sx={
                 {
                   fontWeigth: '400 !important',
-                  color: getCssVar('--primary-buttons')
+                  color: getCssVar('--primary-buttons'),
+                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
                 }
               }
             >
-              Cambiar moneda
+              {demo.language?.value === 'EN' ? 'Change currency' : 'Cambiar moneda'}
             </Typography>
           </Box>
         </Box>
@@ -165,25 +170,32 @@ const MobileContent = ({ type }: Props): JSX.Element => {
                 width: '100%',
                 display: 'flex',
                 overflow: 'hidden',
-                paddingLeft: '5px'
+                paddingLeft: '8px'
               }
             }
           >
             <PayCard type='card' />
             <PayCard type='paypal' />
           </Box>
-          <Box>
+          <Box
+            sx={
+              {
+                padding: '0 10px'
+              }
+            }
+          >
             <Button
               className={styles.button}
               id={'mobilecontent-button'}
               sx={
                 {
                   backgroundColor: `#${demo.button} !important`,
-                  color: `${getCssVar('--white')} !important`
+                  color: `${getCssVar('--white')} !important`,
+                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
                 }
               }
             >
-              Pagar
+              {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}
             </Button>
           </Box>
         </Box>

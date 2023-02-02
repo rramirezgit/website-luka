@@ -4,8 +4,11 @@ import { getCssVar } from 'theme'
 import Details from './details'
 import Custom from './custom'
 import './index.css'
+import { RootState } from 'redux/store'
+import { useSelector } from 'react-redux'
 
 const DesktopContent = (): JSX.Element => {
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
       className={styles.container}
@@ -55,8 +58,13 @@ const DesktopContent = (): JSX.Element => {
           <Typography
             id={'demogateway-title'}
             className={styles.title}
+            sx={
+              {
+                fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+              }
+            }
           >
-            Your website
+            {demo.language?.value === 'EN' ? 'Your website' : 'Tu sitio web'}
           </Typography>
         </Box>
         <Box
@@ -80,6 +88,10 @@ const DesktopContent = (): JSX.Element => {
                 maxWidth: {
                   xs: 'none',
                   lg: '320px'
+                },
+                display: {
+                  xs: 'none',
+                  lg: 'block'
                 }
               }
             }

@@ -4,9 +4,11 @@ import styles from './customization.module.css'
 import SliderInput from '../sliderInput'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'redux/store'
-import { changeButton } from 'redux/slices/demoSlice'
+import { changeBorder, changeButton, changeCurrency, changeFont, changeLanguage } from 'redux/slices/demoSlice'
 import brush from 'assets/demoLink/menu/brush.svg'
 import setting from 'assets/demoLink/menu/setting.svg'
+import Autocomplete from '@mui/material/Autocomplete'
+import { languages, fonts, currency } from 'logic'
 
 interface Props {
   type: 'mobile' | 'desktop'
@@ -16,8 +18,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
   const dispatch = useDispatch()
   const demo = useSelector((state: RootState) => state.demo)
   return (
-    <Box
-    >
+    <Box>
       <Box>
         <Box
           className={styles['title-icon']}
@@ -35,7 +36,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
               }
             }
           >
-            Formato
+            Format
           </Typography>
         </Box>
         <Box
@@ -46,21 +47,25 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
         <Box
           className={styles['input-container']}
         >
-          <TextField
-            select
-            fullWidth
-            variant='standard'
-            label={'Fuente'}
+          <Autocomplete
+            disablePortal
+            value={demo.font}
+            disableClearable={true}
+            onChange={(e, newValue) => { dispatch(changeFont(newValue === null ? { label: 'Open Sans', value: '2r565w54ar5' } : newValue)) }}
+            options={fonts}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Fuente" />}
           />
         </Box>
         <Box
           className={styles['input-container']}
         >
-          <TextField
-            select
-            fullWidth
-            variant='standard'
-            label={'Idioma'}
+          <Autocomplete
+            disablePortal
+            disableClearable={true}
+            value={demo.language}
+            onChange={(e, newValue) => { dispatch(changeLanguage(newValue === null ? { label: 'Inglés', value: 'EN' } : newValue)) }}
+            options={languages}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Idioma" />}
           />
         </Box>
         <Box
@@ -71,7 +76,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
             }
           }
         >
-          <SliderInput />
+          <SliderInput value={demo.border} onChange={(e) => { dispatch(changeBorder(e as number)) }} />
         </Box>
         <Box
           className={styles['title-icon']}
@@ -95,21 +100,13 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
         <Box
           className={styles['input-container']}
         >
-          <TextField
-            select
-            fullWidth
-            variant='standard'
-            label={'Tipo de Moneda'}
-          />
-        </Box>
-        <Box
-          className={styles['input-container']}
-        >
-          <TextField
-            select
-            fullWidth
-            variant='standard'
-            label={'Métodos de Pago'}
+          <Autocomplete
+            disablePortal
+            disableClearable={true}
+            value={demo.currency}
+            onChange={(e, newValue) => { dispatch(changeCurrency(newValue === null ? { label: 'Dollars', value: '$' } : newValue)) }}
+            options={currency}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Currency" />}
           />
         </Box>
       </Box>

@@ -25,23 +25,18 @@ const MenuGateway = ({ type }: Props): JSX.Element => {
       >
         <img src={logoLuka} style={{ maxWidth: '100%' }} alt='Luka' />
       </Box>
-      <Typography
-        classes={
-          {
-            root: styles.title
-          }
-        }
-        sx={
-          {
-            paddingLeft: '40px'
-          }
-        }
-      >
-        Customize your gateway
-      </Typography>
       <Box
         className={styles['overflow-container-gateway']}
       >
+        <Typography
+          classes={
+            {
+              root: styles.title
+            }
+          }
+        >
+          Customize your gateway
+        </Typography>
         <Box
           sx={
             {

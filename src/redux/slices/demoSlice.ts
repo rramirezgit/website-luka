@@ -3,18 +3,20 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 export interface DemoState {
   background: string
   button: string
-  font: string
-  language: { label: string, value: string } | null
-  border: number
+  font: { label: string, value: string } | undefined
+  language: { label: string, value: string } | undefined
+  currency: { label: string, value: string } | undefined
+  border: number | number[]
   imgUrl: string
   title: string
 }
 
 const initialState: DemoState = {
-  background: '0878ff26',
-  button: '0878ff',
-  language: { label: 'Español', value: 'ES' },
-  font: '',
+  background: '0878FF26',
+  button: '0878FF',
+  language: { label: 'Inglés', value: 'EN' },
+  font: { label: 'Open Sans', value: '2r565w54ar5' },
+  currency: { label: 'Dollars', value: '$' },
   border: 0,
   imgUrl: '',
   title: 'Esto es una prueba'
@@ -30,13 +32,16 @@ export const demoSlice = createSlice({
     changeButton: (state, action: PayloadAction<string>) => {
       state.button = action.payload
     },
-    changeFont: (state, action: PayloadAction<string>) => {
+    changeFont: (state, action: PayloadAction<{ label: string, value: string } | undefined>) => {
       state.font = action.payload
     },
-    changeLanguage: (state, action: PayloadAction<{ label: string, value: string } | null>) => {
+    changeLanguage: (state, action: PayloadAction<{ label: string, value: string } | undefined>) => {
       state.language = action.payload
     },
-    changeBorder: (state, action: PayloadAction<number>) => {
+    changeCurrency: (state, action: PayloadAction<{ label: string, value: string } | undefined>) => {
+      state.currency = action.payload
+    },
+    changeBorder: (state, action: PayloadAction<number | number[]>) => {
       state.border = action.payload
     },
     changeImg: (state, action: PayloadAction<string>) => {
@@ -48,6 +53,6 @@ export const demoSlice = createSlice({
   }
 })
 
-export const { changeBackground, changeButton, changeFont, changeLanguage, changeBorder, changeImg, changeTitle } = demoSlice.actions
+export const { changeBackground, changeButton, changeFont, changeLanguage, changeCurrency, changeBorder, changeImg, changeTitle } = demoSlice.actions
 
 export default demoSlice.reducer
