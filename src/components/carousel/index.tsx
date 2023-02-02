@@ -12,7 +12,13 @@ interface CarouselProps {
   buttonsMargin?: number
 }
 
-const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: CarouselProps): JSX.Element => {
+const Carousel = ({
+  children,
+  id,
+  width,
+  height = 'auto',
+  buttonsMargin = 0
+}: CarouselProps): JSX.Element => {
   const checkViewPort = (): void => {
     for (let index = 0; index < children.length; index++) {
       const card = document
@@ -40,7 +46,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
   const clickLeft = (): void => {
     const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: -(parseInt(width))
+      left: -parseInt(width)
     })
     setTimeout(() => {
       checkViewPort()
@@ -49,7 +55,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
   const clickRight = (): void => {
     const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: (parseInt(width))
+      left: parseInt(width)
     })
     setTimeout(() => {
       checkViewPort()

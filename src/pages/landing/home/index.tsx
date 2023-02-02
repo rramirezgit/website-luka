@@ -50,17 +50,16 @@ const BoxInfo = (): JSX.Element => {
             sm: '24px'
           },
           width: {
-            xs: '148px',
-            sm: '126px'
+            xs: '144px'
           },
           height: {
-            xs: '45px',
-            sm: '47px'
+            sm: '48px'
           },
           fontSize: {
-            xs: '20px',
-            sm: '14px'
-          }
+            xs: '16px'
+          },
+          color: 'rgba(5, 22, 177, 1) !important',
+          fontWeight: '600 !important'
         }}
       >
         Contact us
