@@ -2,7 +2,7 @@ import Carousel from 'components/carousel'
 import clsx from 'clsx'
 import lukaCSS from 'styles/luka.module.css'
 import whyUsCSS from './whyUs.module.css'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import whyus1 from 'assets/whyus/whyus-1.svg'
 import whyus2 from 'assets/whyus/whyus-2.svg'
 import whyus3 from 'assets/whyus/whyus-3.svg'
@@ -19,13 +19,12 @@ interface CardInterface {
 }
 
 const WhyUs = (): JSX.Element => {
+  const theme = useTheme()
   const cardsInfo: CardInterface[] = [
     {
       key: crypto.randomUUID(),
       title: 'Embedded solution',
-      tags: [
-        'GATEWAY'
-      ],
+      tags: ['GATEWAY'],
       text: [
         'One integration to empower your access to currencies and payment methods to process your payment transactions'
       ],
@@ -34,21 +33,14 @@ const WhyUs = (): JSX.Element => {
     {
       key: crypto.randomUUID(),
       title: 'Plug and play solution',
-      tags: [
-        'PAYMENT LINK',
-        'VPOS'
-      ],
-      text: [
-        'Hassle free payment management web interface'
-      ],
+      tags: ['PAYMENT LINK', 'VPOS'],
+      text: ['Hassle free payment management web interface'],
       imageUrl: whyus2
     },
     {
       key: crypto.randomUUID(),
       title: 'Hardwareless onsite payments',
-      tags: [
-        'VPOS'
-      ],
+      tags: ['VPOS'],
       text: [
         'Friendly and simple app',
         'Scalable solution, from a single VPOS to a bespoke cluster of point of sales',
@@ -59,11 +51,7 @@ const WhyUs = (): JSX.Element => {
   ]
   return (
     <Box
-      className={
-        clsx(whyUsCSS['whyus-container'],
-          lukaCSS['flex-column']
-        )
-      }
+      className={clsx(whyUsCSS['whyus-container'], lukaCSS['flex-column'])}
       sx={{
         position: 'relative',
         padding: {
@@ -72,15 +60,12 @@ const WhyUs = (): JSX.Element => {
         }
       }}
     >
-      <Box
-        className={whyUsCSS['title-box']}
-      >
+      <Box className={whyUsCSS['title-box']}>
         <Typography
           className={whyUsCSS.title}
           sx={{
             fontSize: {
-              xs: '40px !important',
-              lg: '54px !important'
+              xs: '45px !important'
             },
             textAlign: 'center'
           }}
@@ -99,7 +84,8 @@ const WhyUs = (): JSX.Element => {
             margin: '0 auto'
           }}
         >
-          We make sure we understand each other. We focus to ease your payments capability so you concentrate on growing your business
+          We make sure we understand each other. We focus to ease your payments
+          capability so you concentrate on growing your business
         </Typography>
       </Box>
       <Box
@@ -123,61 +109,81 @@ const WhyUs = (): JSX.Element => {
           position: 'relative'
         }}
       >
-        <Carousel width='300' height='560' id={crypto.randomUUID()}>
-          {
-            cardsInfo.map((card) => {
-              return (
-                <Card
-                  id={card.key}
-                  key={card.key}
-                  title={card.title}
-                  tags={card.tags}
-                  text={card.text}
-                  imageUrl={card.imageUrl}
-                />
-              )
-            })
-          }
+        <Carousel
+          width="300"
+          height={useMediaQuery(theme.breakpoints.down('lg')) ? '593' : '605'}
+          id={crypto.randomUUID()}
+        >
+          {cardsInfo.map(card => {
+            return (
+              <Card
+                id={card.key}
+                key={card.key}
+                title={card.title}
+                tags={card.tags}
+                text={card.text}
+                imageUrl={card.imageUrl}
+              />
+            )
+          })}
         </Carousel>
         <Box
-          sx={
-            {
-              display: {
-                xs: 'none',
-                xl: 'block'
-              }
-            }
-          }
-        >
-          <Square color='#5AE1E230' top={'-180'} left={'-180'} maxHeight={280} maxWidth={220}/>
-        </Box>
-        <Box
-          sx={
-            {
-              position: 'absolute',
-              backgroundColor: getCssVar('--light-blue'),
-              width: '130%',
-              height: '260px',
-              top: '30%',
-              zIndex: 0
-            }
-          }
-        ></Box>
-      </Box>
-      <Box
-        sx={
-          {
+          sx={{
             display: {
               xs: 'none',
               xl: 'block'
             }
-          }
-        }
-      >
-        <Square color='#5AE1E230' top={'400'} right={'0'} maxHeight={300} maxWidth={160}/>
+          }}
+        >
+          <Square
+            color="#5AE1E230"
+            top={'-180'}
+            left={'-180'}
+            maxHeight={280}
+            maxWidth={220}
+          />
+        </Box>
+        <Box
+          sx={{
+            position: 'absolute',
+            backgroundColor: getCssVar('--light-blue'),
+            width: '130%',
+            height: '260px',
+            top: '30%',
+            zIndex: 0
+          }}
+        ></Box>
       </Box>
-      <Square color='#5AE1E230' top={'0'} left={'0'} maxHeight={180} maxWidth={130}/>
-      <Square color='#0878FF25' bottom={'0'} right={'0'} maxHeight={160} maxWidth={130}/>
+      <Box
+        sx={{
+          display: {
+            xs: 'none',
+            xl: 'block'
+          }
+        }}
+      >
+        <Square
+          color="#5AE1E230"
+          top={'400'}
+          right={'0'}
+          maxHeight={300}
+          maxWidth={160}
+        />
+      </Box>
+      <Square
+        color="#5AE1E230"
+        top={'0'}
+        left={'0'}
+        maxHeight={180}
+        maxWidth={130}
+      />
+      <Square
+        color="#0878FF25"
+        bottom={'0'}
+        right={'0'}
+        maxHeight={160}
+        maxWidth={130}
+      />
     </Box>
   )
 }

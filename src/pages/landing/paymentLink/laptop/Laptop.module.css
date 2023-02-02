@@ -1,6 +1,5 @@
 .laptop {
   background: url(./../../../../assets/paymentLink/laptop.svg) no-repeat;
-
   background-size: contain;
   z-index: 1;
   height: 650px;

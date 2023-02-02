@@ -16,7 +16,7 @@ const ScrollBoxes = (): JSX.Element => {
   const handleDisplayOver = (): void => {
     const element = document.getElementById('vpos-scroll-container')
     if (element) {
-      if (element.scrollLeft <= (element.scrollWidth - window.innerWidth) - 5) {
+      if (element.scrollLeft <= element.scrollWidth - window.innerWidth - 5) {
         setDisplayRight(true)
       } else {
         setDisplayRight(false)
@@ -35,108 +35,92 @@ const ScrollBoxes = (): JSX.Element => {
   const handleLeftScroll = (): void => {
     const element = document.getElementById('vpos-scroll-container')
     if (element) {
-      element.scrollTo(
-        {
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        }
-      )
+      element.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
     }
   }
   const handleRightScroll = (): void => {
     const element = document.getElementById('vpos-scroll-container')
     if (element) {
-      element.scrollTo(
-        {
-          top: 0,
-          left: element.scrollWidth,
-          behavior: 'smooth'
-        }
-      )
+      element.scrollTo({
+        top: 0,
+        left: element.scrollWidth,
+        behavior: 'smooth'
+      })
     }
   }
   const handleStopScroll = (): void => {
     const element = document.getElementById('vpos-scroll-container')
     if (element) {
-      element.scrollTo(
-        {
-          top: 0,
-          left: element.scrollLeft,
-          behavior: 'smooth'
-        }
-      )
+      element.scrollTo({
+        top: 0,
+        left: element.scrollLeft,
+        behavior: 'smooth'
+      })
       handleDisplayOver()
     }
   }
   return (
     <Box
-      sx={
-        {
-          width: '100%',
-          overflow: 'hidden',
-          position: 'relative'
-        }
-      }
+      sx={{
+        width: '100%',
+        overflow: 'hidden',
+        position: 'relative'
+      }}
       onMouseOver={handleDisplayOver}
       onMouseLeave={handleDisplayLeave}
     >
       <Box
-        sx={
-          {
-            position: 'absolute',
-            top: {
-              xs: '25%',
-              lg: '35%'
-            },
-            left: '0px',
-            cursor: 'pointer',
-            display: {
-              xs: displayLeft ? 'block' : 'none',
-              xxl: 'none'
-            }
+        sx={{
+          position: 'absolute',
+          top: {
+            xs: '25%',
+            lg: '35%'
+          },
+          left: '0px',
+          cursor: 'pointer',
+          display: {
+            xs: displayLeft ? 'block' : 'none',
+            xxl: 'none'
           }
-        }
+        }}
         onPointerDown={handleLeftScroll}
         onPointerUp={handleStopScroll}
       >
         <ChevronLeftIcon
-          sx={
-            {
-              fontSize: '100px',
-              color: getCssVar('--gray-text-dark'),
-              opacity: '0.4'
-            }
-          }
+          sx={{
+            fontSize: '100px',
+            color: getCssVar('--gray-text-dark'),
+            opacity: '0.4'
+          }}
         />
       </Box>
       <Box
-        sx={
-          {
-            position: 'absolute',
-            top: {
-              xs: '25%',
-              lg: '35%'
-            },
-            right: '0px',
-            cursor: 'pointer',
-            display: {
-              xs: displayRight ? 'block' : 'none',
-              xxl: 'none'
-            }
+        sx={{
+          position: 'absolute',
+          top: {
+            xs: '25%',
+            lg: '35%'
+          },
+          right: '0px',
+          cursor: 'pointer',
+          display: {
+            xs: displayRight ? 'block' : 'none',
+            xxl: 'none'
           }
-        }
+        }}
         onPointerDown={handleRightScroll}
         onPointerUp={handleStopScroll}
       >
         <ChevronRightIcon
-          sx={
-            {
-              fontSize: '100px',
-              color: getCssVar('--gray-text-dark'),
-              opacity: '0.4'
-            }
-          }
+          sx={{
+            fontSize: '100px',
+            color: getCssVar('--gray-text-dark'),
+            opacity: '0.4'
+          }}
         />
       </Box>
       <Box
@@ -155,26 +139,28 @@ const ScrollBoxes = (): JSX.Element => {
           paddingBottom: '10px',
           '&::-webkit-scrollbar': {
             height: '0px'
+          },
+          height: {
+            xs: '254px',
+            lg: '316px'
           }
         }}
       >
         <Box
-          sx={
-            {
-              display: 'flex',
-              flexDirection: 'row !important',
-              alignItems: 'center !important',
-              justifyContent: 'space-evenly',
-              width: {
-                xs: '1450px',
-                lg: '1880px'
-              },
-              minWidth: {
-                xs: '1450px',
-                lg: '1880px'
-              }
+          sx={{
+            display: 'flex',
+            flexDirection: 'row !important',
+            alignItems: 'center !important',
+            justifyContent: 'space-evenly',
+            width: {
+              xs: '1450px',
+              lg: '1880px'
+            },
+            minWidth: {
+              xs: '1450px',
+              lg: '1880px'
             }
-          }
+          }}
         >
           <Box
             className={scrollStyles['big-box']}
@@ -338,8 +324,8 @@ const ScrollBoxes = (): JSX.Element => {
                   paddingTop: '0px !important'
                 }}
               >
-                Use your Android/iOS mobile or tablet as a point of sales.
-                No need to buy any hardware.
+                Use your Android/iOS mobile or tablet as a point of sales. No
+                need to buy any hardware.
               </Typography>
             </Box>
             <Box
@@ -433,7 +419,6 @@ const ScrollBoxes = (): JSX.Element => {
           </Box>
         </Box>
       </Box>
-
     </Box>
   )
 }

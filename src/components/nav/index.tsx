@@ -119,11 +119,14 @@ const Nav = (props: Props): JSX.Element => {
             className={nav.button}
             sx={{
               display: { xs: 'none', sm: 'none', md: 'block' },
-              width: '184px',
-              height: '40px'
+              width: '148px',
+              height: '48px',
+              color: 'rgba(5, 22, 177, 1) !important',
+              fontSize: '16px',
+              fontWeight: '600'
             }}
           >
-            {'Sign in'}
+            {'Sign up'}
           </Button>
         </Toolbar>
       </AppBar>

@@ -58,11 +58,32 @@ const Ready = (): JSX.Element => {
           }
         }}
       >
-        <Button variant={'contained'} color={'primary'} size={'large'}>
+        <Button
+          variant={'contained'}
+          color={'primary'}
+          size={'large'}
+          sx={{
+            width: '144px',
+            height: ' 48px',
+            fontSize: '16px'
+          }}
+        >
           Contact sales
         </Button>
-        <Button variant={'outlined'} color={'secondary'} size={'large'}>
-          Apply online
+        <Button
+          variant={'outlined'}
+          color={'secondary'}
+          size={'large'}
+          sx={{
+            width: '144px',
+            height: ' 48px',
+            border: '2px solid #5AE1E2',
+            fontWeight: '600',
+            fontSize: '16px',
+            letterSpacing: '-0.02em'
+          }}
+        >
+          Apply now
         </Button>
       </Box>
     </Box>
