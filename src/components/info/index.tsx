@@ -51,7 +51,7 @@ const Info = ({
           }}
           sx={{
             fontSize: {
-              xs: '40px'
+              xs: '45px'
             }
           }}
         >
@@ -63,7 +63,7 @@ const Info = ({
           }}
           sx={{
             fontSize: {
-              xs: '40px'
+              xs: '45px'
             }
           }}
         >
