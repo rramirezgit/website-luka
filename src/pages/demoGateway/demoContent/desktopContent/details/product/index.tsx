@@ -1,7 +1,10 @@
 import { Box, Typography } from '@mui/material'
 import styles from './product.module.css'
+import { RootState } from 'redux/store'
+import { useSelector } from 'react-redux'
 
 const Product = (): JSX.Element => {
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
       className={styles.container}
@@ -32,7 +35,8 @@ const Product = (): JSX.Element => {
                     xs: '4px !important',
                     sm: '8px !important',
                     lg: '10px !important'
-                  }
+                  },
+                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
                 }
               }
             >
@@ -46,7 +50,8 @@ const Product = (): JSX.Element => {
                     xs: '4px !important',
                     sm: '8px !important',
                     lg: '10px !important'
-                  }
+                  },
+                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
                 }
               }
             >
@@ -60,7 +65,8 @@ const Product = (): JSX.Element => {
                     xs: '4px !important',
                     sm: '8px !important',
                     lg: '10px !important'
-                  }
+                  },
+                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
                 }
               }
             >

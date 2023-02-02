@@ -5,15 +5,23 @@ import styles from './custom.module.css'
 import zelle from 'assets/demoLink/payment/zelle.png'
 import paypal from 'assets/demoLink/payment/paypal.png'
 import card from 'assets/demoLink/payment/card.png'
+import { RootState } from 'redux/store'
+import { useSelector } from 'react-redux'
 
 const Custom = (): JSX.Element => {
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box>
         <Box>
             <Typography
               className={styles.title}
+              sx={
+                {
+                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
+                }
+              }
             >
-              Payments
+              {demo.language?.value === 'EN' ? 'Payments' : 'Pagos'}
             </Typography>
         </Box>
         <Box
@@ -24,17 +32,20 @@ const Custom = (): JSX.Element => {
             className={styles.paybox}
           >
             <PaymentBox
-              borderColor={getCssVar('--primary-buttons')}
-              text='Crédito'
+              borderColor={demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')}
+              text='Credit'
               img={card}
+              borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
             <PaymentBox
               text='Paypal'
               img={paypal}
+              borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
             <PaymentBox
               text='Zelle'
               img={zelle}
+              borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
           </Box>
           <Box
@@ -53,12 +64,14 @@ const Custom = (): JSX.Element => {
             className={styles.button}
             sx={
               {
-                backgroundColor: `${getCssVar('--primary-buttons')} !important`,
-                color: `${getCssVar('--white')} !important`
+                backgroundColor: demo.button ? `#${demo.button} !important` : getCssVar('--primary-buttons'),
+                color: `${getCssVar('--white')} !important`,
+                borderRadius: `${typeof demo.border === 'number' ? demo.border : 8}px !important`,
+                fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
               }
             }
           >
-            Pagar
+            {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}
           </Button>
         </Box>
     </Box>

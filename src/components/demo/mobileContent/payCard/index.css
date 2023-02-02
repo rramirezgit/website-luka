@@ -1,10 +1,10 @@
-/* Responsive */
+/* Desktop */
 @media screen and (max-height: 749px) and (min-width: 901px) {
     #paycard-container {
-        height: 75px !important;
-        min-height: 75px !important;
-        width: 120px !important;
-        min-width: 120px !important;
+        height: 65px !important;
+        min-height: 65px !important;
+        width: 100px !important;
+        min-width: 100px !important;
     }
     #paycard-text {
         font-size: 8px !important;
@@ -52,10 +52,10 @@
 
 @media screen and (min-height: 750px) and (max-height: 820px) and (min-width: 901px) {
     #paycard-container {
-        height: 100px !important;
-        min-height: 100px !important;
-        width: 160px !important;
-        min-width: 160px !important;
+        height: 80px !important;
+        min-height: 80px !important;
+        width: 125px !important;
+        min-width: 125px !important;
     }
     #paycard-text {
         font-size: 10px !important;
@@ -103,10 +103,10 @@
 
 @media screen and (min-height: 821px) and (max-height: 1000px) and (min-width: 901px) {
     #paycard-container {
-        height: 120px !important;
-        min-height: 120px !important;
-        width: 190px !important;
-        min-width: 190px !important;
+        height: 100px !important;
+        min-height: 100px !important;
+        width: 150px !important;
+        min-width: 150px !important;
     }
     #paycard-text {
         font-size: 12px !important;
@@ -154,10 +154,10 @@
 
 @media screen and (min-height: 1001px) and (min-width: 901px) {
     #paycard-container {
-        height: 150px !important;
-        min-height: 150px !important;
-        width: 220px !important;
-        min-width: 220px !important;
+        height: 120px !important;
+        min-height: 120px !important;
+        width: 190px !important;
+        min-width: 190px !important;
     }
     #paycard-text {
         font-size: 15px !important;
@@ -206,10 +206,10 @@
 /* Responsive */
 @media screen and (max-height: 849px) and (max-width: 900px) {
     #paycard-container {
-        height: 75px !important;
-        min-height: 75px !important;
-        width: 120px !important;
-        min-width: 120px !important;
+        height: 65px !important;
+        min-height: 65px !important;
+        width: 100px !important;
+        min-width: 100px !important;
     }
     #paycard-text {
         font-size: 8px !important;
@@ -257,10 +257,10 @@
 
 @media screen and (min-height: 850px) and (max-height: 920px) and (max-width: 900px) {
     #paycard-container {
-        height: 100px !important;
-        min-height: 100px !important;
-        width: 160px !important;
-        min-width: 160px !important;
+        height: 80px !important;
+        min-height: 80px !important;
+        width: 125px !important;
+        min-width: 125px !important;
     }
     #paycard-text {
         font-size: 10px !important;
@@ -308,10 +308,10 @@
 
 @media screen and (min-height: 921px) and (max-height: 1000px) and (max-width: 900px) {
     #paycard-container {
-        height: 120px !important;
-        min-height: 120px !important;
-        width: 190px !important;
-        min-width: 190px !important;
+        height: 100px !important;
+        min-height: 100px !important;
+        width: 150px !important;
+        min-width: 150px !important;
     }
     #paycard-text {
         font-size: 12px !important;
@@ -359,10 +359,10 @@
 
 @media screen and (min-height: 1001px) and (max-width: 900px) {
     #paycard-container {
-        height: 150px !important;
-        min-height: 150px !important;
-        width: 220px !important;
-        min-width: 220px !important;
+        height: 120px !important;
+        min-height: 120px !important;
+        width: 190px !important;
+        min-width: 190px !important;
     }
     #paycard-text {
         font-size: 15px !important;

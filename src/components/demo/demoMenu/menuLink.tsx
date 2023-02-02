@@ -1,4 +1,4 @@
-import { Box, Typography, Switch } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import logoLuka from 'assets/footer/luka.png'
 import CustomizationLink from './customization/customizationLink'
 import styles from './demomenu.module.css'
@@ -25,36 +25,26 @@ const MenuLink = ({ type }: Props): JSX.Element => {
       >
         <img src={logoLuka} style={{ maxWidth: '100%' }} alt='Luka' />
       </Box>
-      <Typography
-        classes={
-          {
-            root: styles.title
-          }
-        }
-        sx={
-          {
-            paddingLeft: '40px'
-          }
-        }
-      >
-        Customize your link
-      </Typography>
       <Box
         className={styles['overflow-container']}
       >
-        <Box
-        >
-          <DescriptionLink />
-        </Box>
-        <Box
-          sx={
+        <Typography
+          classes={
             {
-              marginTop: '18px',
-              marginBottom: '28px'
+              root: styles.title
             }
           }
         >
-          <Switch />
+          Customize your link
+        </Typography>
+        <Box
+          sx={
+            {
+              marginBottom: '40px'
+            }
+          }
+        >
+          <DescriptionLink />
         </Box>
         <CustomizationLink type={type} />
       </Box>

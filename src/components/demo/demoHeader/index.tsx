@@ -6,6 +6,7 @@ import { ReactComponent as Desktop } from 'assets/demoLink/monitor.svg'
 import { ReactComponent as Mobile } from 'assets/demoLink/mobile.svg'
 import styles from './demoheader.module.css'
 import './index.css'
+import { useNavigate } from 'react-router-dom'
 
 interface DemoHeaderProps {
   mobileState: boolean
@@ -15,6 +16,10 @@ interface DemoHeaderProps {
 }
 
 const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: DemoHeaderProps): JSX.Element => {
+  const navigate = useNavigate()
+  const handleClick = (): void => {
+    navigate('/')
+  }
   return (
     <Box
       className={styles.container}
@@ -38,9 +43,11 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
             display: {
               xs: 'none',
               md: 'flex'
-            }
+            },
+            cursor: 'pointer'
           }
         }
+        onClick={handleClick}
       >
         <ArrowBackIosIcon
           className={styles.back}

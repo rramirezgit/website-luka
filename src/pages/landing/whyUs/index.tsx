@@ -78,10 +78,7 @@ const WhyUs = (): JSX.Element => {
         <Typography
           className={whyUsCSS.title}
           sx={{
-            fontSize: {
-              xs: '40px !important',
-              lg: '54px !important'
-            },
+            fontSize: '40px !important',
             textAlign: 'center'
           }}
         >

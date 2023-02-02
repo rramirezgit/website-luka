@@ -25,8 +25,8 @@ const VPOS = (): JSX.Element => {
         className={vposStyles.container}
         sx={{
           marginBottom: {
-            xs: '60px !important',
-            lg: '120px !important'
+            xs: '40px !important',
+            lg: '60px !important'
           },
           justifyContent: {
             xs: 'center !important',
@@ -43,12 +43,13 @@ const VPOS = (): JSX.Element => {
           sx={{
             width: {
               xs: '100%',
-              lg: '400px',
+              lg: '480px',
               xl: '570px'
             },
             minWidth: {
               xs: 'none',
-              md: '400px'
+              md: '400px',
+              lg: '480px'
             },
             marginRight: {
               xs: '0',
@@ -147,7 +148,7 @@ const VPOS = (): JSX.Element => {
         </Box>
       </Box>
       <ScrollBoxes />
-      <Square color='#5AE1E230' bottom={'0'} left={'0'} maxHeight={90} maxWidth={130}/>
+      <Square color='#5AE1E230' bottom={'0'} left={'0'} maxHeight={70} maxWidth={130}/>
       <Square color='#0878FF20' top={'0'} right={'0'} maxHeight={180} maxWidth={130}/>
     </Box>
   )
