@@ -17,10 +17,13 @@ const BoxInfo = (): JSX.Element => {
       sx={{
         padding: {
           xs: '100px 35.13px 0px;',
-          sm: '100px 0px 0px 33px'
+          sm: '150px 0px 0px 33px'
         },
         width: {
-          xs: '100%'
+          xs: '100%',
+          sm: '100%',
+          md: '100%',
+          lg: '50%'
         }
       }}
     >
@@ -47,17 +50,16 @@ const BoxInfo = (): JSX.Element => {
             sm: '24px'
           },
           width: {
-            xs: '148px',
-            sm: '126px'
+            xs: '144px'
           },
           height: {
-            xs: '45px',
-            sm: '47.16px'
+            sm: '48px'
           },
           fontSize: {
-            xs: '20px',
-            sm: '14px'
-          }
+            xs: '16px'
+          },
+          color: 'rgba(5, 22, 177, 1) !important',
+          fontWeight: '600 !important'
         }}
       >
         Contact us
@@ -117,7 +119,7 @@ const Home = (): JSX.Element => {
             sx={{
               clipPath: {
                 xs: 'polygon(-34% 48%, 216% 4%, 801% 39%)',
-                sm: 'polygon(-27% 65%, 143% -5%, 801% 67%)',
+                sm: 'polygon(-27% 55%, 143% -5%, 801% 67%)',
                 md: 'polygon(-135% 127%, 124% 3%, 146% 112%)',
                 lg: 'polygon(-78% 99%, 107% 1%, 135% 112%);',
                 xl: 'polygon(-90% 114%, 106% 2%, 138% 100%)'

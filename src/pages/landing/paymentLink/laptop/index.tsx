@@ -33,7 +33,7 @@ const Laptop = (): JSX.Element => {
           },
           height: {
             xs: '468px',
-            lg: '1097.72px'
+            lg: '699.72px'
           }
         }}
       ></Box>

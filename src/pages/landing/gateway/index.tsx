@@ -52,9 +52,9 @@ const Gateway = (): JSX.Element => {
                 xs: 'none',
                 lg: 'block'
               },
-              width: '178px',
-              height: '55px',
-              fontSize: '23px'
+              width: '144px',
+              height: '48px',
+              fontSize: '16px'
             }
           }}
           size={{

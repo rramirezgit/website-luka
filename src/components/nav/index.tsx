@@ -23,6 +23,8 @@ interface Props {
 
 const drawerWidth = 240
 
+const options = ['Products', 'Developer', 'About us']
+
 const Nav = (props: Props): JSX.Element => {
   const { window } = props
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -98,16 +100,15 @@ const Nav = (props: Props): JSX.Element => {
           </IconButton>
           <Box
             className={nav['content-menu']}
-            sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
+            sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}
           >
-            {routes.map(({ id = '' }) => {
-              if (!id) return null
+            {options.map(name => {
               return (
                 <Button
-                  key={id}
+                  key={name}
                   sx={{ margin: '0px 10px', color: 'white ', fontSize: '16px' }}
                 >
-                  {id}
+                  {name}
                 </Button>
               )
             })}
@@ -118,11 +119,14 @@ const Nav = (props: Props): JSX.Element => {
             className={nav.button}
             sx={{
               display: { xs: 'none', sm: 'none', md: 'block' },
-              width: '196px',
-              height: '46px'
+              width: '148px',
+              height: '48px',
+              color: 'rgba(5, 22, 177, 1) !important',
+              fontSize: '16px',
+              fontWeight: '600'
             }}
           >
-            {'Sign in'}
+            {'Sign up'}
           </Button>
         </Toolbar>
       </AppBar>
