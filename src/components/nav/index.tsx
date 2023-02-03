@@ -45,6 +45,8 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
   const location = useLocation()
   const navigate = useNavigate()
 
+  const navigate = useNavigate()
+
   const handleDrawerToggle = (): void => {
     setMobileOpen(!mobileOpen)
   }

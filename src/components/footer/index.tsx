@@ -16,10 +16,6 @@ const Footer = (): JSX.Element => {
     <Box
       sx={
         {
-          padding: {
-            xs: '310px 0px 80px 0',
-            md: '310px 0px 120px 0'
-          },
           margin: '0 auto',
           display: 'flex',
           alignItems: 'center',
@@ -33,7 +29,7 @@ const Footer = (): JSX.Element => {
           {
             width: {
               xs: '100%',
-              xl: '1400px'
+              xl: '1370px'
             },
             display: 'flex',
             justifyContent: 'space-between',
@@ -42,11 +38,7 @@ const Footer = (): JSX.Element => {
               xs: 'column',
               lg: 'row'
             },
-            padding: {
-              xs: '0 25px',
-              sm: '0 50px',
-              md: '0 105px'
-            }
+            padding: '0 35px'
           }
         }
       >
