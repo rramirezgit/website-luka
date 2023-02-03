@@ -1,12 +1,27 @@
 import { Box } from '@mui/material'
 import Footer from 'components/footer'
+import Nav from 'components/nav'
 import CurrencyBlock from './currencyBlock'
 import Description from './description'
 
 const Currency = (): JSX.Element => {
   return (
     <Box>
-      <Box sx={{ marginBottom: '100px' }} >
+      <Nav ButtonColor='primary' ButtonVariant='contained' />
+      <Box
+        sx={
+          {
+            marginBottom: {
+              xs: '60px',
+              sm: '100px'
+            },
+            marginTop: {
+              xs: '40px',
+              sm: '80px'
+            }
+          }
+        }
+      >
         <Description />
       </Box>
       <CurrencyBlock />

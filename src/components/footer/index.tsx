@@ -29,7 +29,7 @@ const Footer = (): JSX.Element => {
           {
             width: {
               xs: '100%',
-              xl: '1510px'
+              xl: '1370px'
             },
             display: 'flex',
             justifyContent: 'space-between',
@@ -38,11 +38,7 @@ const Footer = (): JSX.Element => {
               xs: 'column',
               lg: 'row'
             },
-            padding: {
-              xs: '0 25px',
-              sm: '0 50px',
-              md: '0 105px'
-            }
+            padding: '0 35px'
           }
         }
       >

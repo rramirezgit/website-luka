@@ -11,11 +11,7 @@ const CurrencyBlock = (): JSX.Element => {
       className={styles.container}
       sx={
         {
-          padding: {
-            xs: '0 25px',
-            sm: '0 50px',
-            md: '0 105px'
-          }
+          padding: '0 35px'
         }
       }
     >
