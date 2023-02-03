@@ -149,11 +149,11 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
               transition: 'none'
             },
             '&:before': {
-              borderColor: getCssVar('--gray-text-dark'),
+              borderColor: getCssVar('--light-gray'),
               transition: 'none'
             },
             '&:after': {
-              borderColor: getCssVar('--gray-text-dark'),
+              borderColor: getCssVar('--light-gray'),
               transition: 'none'
             },
             '&:hover:not(.Mui-disabled):before': {
