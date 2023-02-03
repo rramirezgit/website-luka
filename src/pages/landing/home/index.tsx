@@ -45,7 +45,7 @@ const BoxInfo = (): JSX.Element => {
       </Typography>
       <Button
         variant="contained"
-        color="white"
+        color="primary"
         sx={{
           marginTop: {
             xs: '26px',
@@ -60,7 +60,6 @@ const BoxInfo = (): JSX.Element => {
           fontSize: {
             xs: '16px'
           },
-          color: 'rgba(5, 22, 177, 1) !important',
           fontWeight: '600 !important'
         }}
       >
