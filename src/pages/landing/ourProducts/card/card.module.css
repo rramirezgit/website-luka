@@ -14,7 +14,8 @@
 }
 
 .container:hover {
-  transition: transform 0.2s ease-in-out;
+  /*  animacion cuando entra y sale del contenedor */
+  transition: transform 0.2s ease-in-out 0.2s;
   transform: scale(1.05);
 }
 
