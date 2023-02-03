@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
@@ -12,6 +13,7 @@ import nav from './nav.module.css'
 import { routes } from 'router'
 import { useState } from 'react'
 import config from 'const'
+import { useLocation } from 'react-router-dom'
 
 interface Props {
   /**
@@ -19,15 +21,33 @@ interface Props {
    * You won't need it on your project.
    */
   window?: () => Window
+  ButtonVariant?: 'text' | 'outlined' | 'contained'
+  ButtonColor: 'primary' | 'white' | 'secondary'
 }
 
 const drawerWidth = 240
 
-const options = ['Products', 'Developer', 'About us']
+/* ['Products', 'Developer', 'About us'] */
 
-const Nav = (props: Props): JSX.Element => {
-  const { window } = props
+const options = [
+  {
+    id: '/products',
+    name: 'Products'
+  },
+  {
+    id: '/developer',
+    name: 'Developer'
+  },
+  {
+    id: '/about-us',
+    name: 'About us'
+  }
+]
+
+const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
   const [mobileOpen, setMobileOpen] = useState(false)
+
+  const location = useLocation()
 
   const handleDrawerToggle = (): void => {
     setMobileOpen(!mobileOpen)
@@ -59,7 +79,7 @@ const Nav = (props: Props): JSX.Element => {
     window !== undefined ? () => window().document.body : undefined
 
   return (
-    <Box>
+    <Box padding="0px 34px">
       <AppBar
         component="nav"
         color="inherit"
@@ -85,7 +105,9 @@ const Nav = (props: Props): JSX.Element => {
           >
             <img
               className={nav.logo}
-              src={`${config.UrlBaseImg}Logo-white.png`}
+              src={`${config.UrlBaseImg}${
+                ButtonColor === 'white' ? 'Logo-white.png' : 'logo.png'
+              }`}
               alt="Logo-Luka"
             />
           </Box>
@@ -102,28 +124,39 @@ const Nav = (props: Props): JSX.Element => {
             className={nav['content-menu']}
             sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}
           >
-            {options.map(name => {
+            {options.map(op => {
               return (
                 <Button
-                  key={name}
-                  sx={{ margin: '0px 10px', color: 'white ', fontSize: '16px' }}
+                  key={op.id}
+                  variant="text"
+                  sx={{
+                    margin: '0px 10px',
+                    color:
+                      location.pathname === '/'
+                        ? 'white '
+                        : location.pathname === op.id
+                        ? 'primary'
+                        : 'black',
+                    fontSize: '16px'
+                  }}
                 >
-                  {name}
+                  {op.name}
                 </Button>
               )
             })}
           </Box>
           <Button
-            variant="contained"
-            color="white"
+            variant={ButtonVariant}
+            color={ButtonColor}
             className={nav.button}
             sx={{
               display: { xs: 'none', sm: 'none', md: 'block' },
               width: '148px',
               height: '48px',
-              color: 'rgba(5, 22, 177, 1) !important',
               fontSize: '16px',
-              fontWeight: '600'
+              fontWeight: '600',
+              border:
+                ButtonVariant === 'outlined' ? '2px solid #FFFFFF' : 'none'
             }}
           >
             {'Sign up'}

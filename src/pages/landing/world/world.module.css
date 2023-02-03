@@ -58,6 +58,8 @@
 }
 
 .contentReady {
+  display: flex;
+  justify-content: center;
   position: absolute;
   bottom: -228px;
   width: 100%;

@@ -1,5 +1,6 @@
 .content {
   width: 100%;
+  max-width: 1300px;
   background: linear-gradient(107.56deg, #0516b1 41.67%, #0878ff 88.02%);
   border-radius: 11.9776px;
   display: flex;

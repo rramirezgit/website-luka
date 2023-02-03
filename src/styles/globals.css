@@ -40,5 +40,5 @@ body::-webkit-scrollbar {
 }
 :hover::-webkit-scrollbar-thumb {
   background: var(--gray-text);
-  transition: all .8s;
+  transition: all 0.8s;
 }
