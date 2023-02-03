@@ -27,21 +27,16 @@ interface Props {
 
 const drawerWidth = 240
 
-/* ['Products', 'Developer', 'About us'] */
-
 const options = [
   {
-    id: '/products',
-    name: 'Products'
-  },
-  {
-    id: '/developer',
-    name: 'Developer'
+    id: '/support',
+    name: 'Support'
   },
   {
     id: '/about-us',
     name: 'About us'
-  }
+  },
+  { id: '/currency', name: 'Currency' }
 ]
 
 const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
