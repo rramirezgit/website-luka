@@ -16,8 +16,10 @@ const BoxInfo = (): JSX.Element => {
       className={home['content-info']}
       sx={{
         padding: {
-          xs: '100px 35.13px 0px;',
-          sm: '150px 0px 0px 33px'
+          xs: '57px 34px 0 34px',
+          sm: '57px 34px 0 34px',
+          md: '57px 0 0 0',
+          lg: '57px 0 0 0'
         },
         width: {
           xs: '100%',
@@ -43,7 +45,7 @@ const BoxInfo = (): JSX.Element => {
       </Typography>
       <Button
         variant="contained"
-        color="white"
+        color="primary"
         sx={{
           marginTop: {
             xs: '26px',
@@ -58,7 +60,6 @@ const BoxInfo = (): JSX.Element => {
           fontSize: {
             xs: '16px'
           },
-          color: 'rgba(5, 22, 177, 1) !important',
           fontWeight: '600 !important'
         }}
       >
@@ -74,14 +75,14 @@ const Home = (): JSX.Element => {
       className={home.content}
       sx={{
         height: {
-          xs: '700px',
-          sm: '739px',
-          md: '851px'
+          xs: '796px',
+          sm: '831px',
+          md: '884px'
         },
         position: 'relative'
       }}
     >
-      <Nav />
+      <Nav ButtonColor="white" ButtonVariant="outlined" />
       <Box
         className={home.rentangles}
         sx={{
@@ -101,13 +102,13 @@ const Home = (): JSX.Element => {
           className={home.boxInfo}
           sx={{
             padding: {
-              md: '0px 30px'
+              md: '0px 34px'
             }
           }}
         >
           <Box
             sx={{
-              width: '1267.09px'
+              width: '1300px'
             }}
           >
             <BoxInfo />
@@ -119,7 +120,7 @@ const Home = (): JSX.Element => {
             sx={{
               clipPath: {
                 xs: 'polygon(-34% 48%, 216% 4%, 801% 39%)',
-                sm: 'polygon(-27% 55%, 143% -5%, 801% 67%)',
+                sm: 'polygon(-36% 77%, 143% -5%, 801% 67%)',
                 md: 'polygon(-135% 127%, 124% 3%, 146% 112%)',
                 lg: 'polygon(-78% 99%, 107% 1%, 135% 112%);',
                 xl: 'polygon(-90% 114%, 106% 2%, 138% 100%)'

@@ -18,7 +18,7 @@
 }
 
 .title {
-  padding-top: 13px;
+  padding-top: 0px;
 }
 
 .text {
@@ -46,7 +46,7 @@
 
 .animation {
   position: absolute;
-  bottom: -8px;
+  bottom: 60px;
   object-fit: cover;
   z-index: 1;
   max-width: 1512px;
@@ -102,11 +102,11 @@
   }
 
   .triangle {
-    clip-path: polygon(-79% 65%, 134% 12%, 797% 48%) !important;
+    clip-path: polygon(-74% 76%, 135% 14%, 799% 68%) !important;
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 490px) {
   .animation {
     min-width: 806.57px;
     min-height: 354px;
