@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom'
 import Landing from 'pages/landing'
 import DemoLink from 'pages/demoLink'
 import DemoGateway from 'pages/demoGateway'
+import Currency from 'pages/currency'
 
 /**
  * routes.id is used to set menu items
@@ -20,7 +21,7 @@ export const routes = [
   },
   {
     path: '/currency',
-    element: <Landing />,
+    element: <Currency />,
     id: 'Currency'
   },
   {

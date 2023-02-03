@@ -33,7 +33,7 @@ const Footer = (): JSX.Element => {
           {
             width: {
               xs: '100%',
-              xl: '1400px'
+              xl: '1510px'
             },
             display: 'flex',
             justifyContent: 'space-between',
