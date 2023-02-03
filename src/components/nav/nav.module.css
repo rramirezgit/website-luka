@@ -1,7 +1,6 @@
 .content {
   width: 100%;
   display: flex;
-  position: absolute !important;
   background-color: transparent !important;
 }
 
