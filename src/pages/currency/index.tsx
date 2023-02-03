@@ -10,7 +10,18 @@ const Currency = (): JSX.Element => {
         <Description />
       </Box>
       <CurrencyBlock />
-      <Footer />
+      <Box
+        sx={
+          {
+            padding: {
+              xs: '170px 0px 80px 0',
+              md: '170px 0px 120px 0'
+            }
+          }
+        }
+      >
+        <Footer />
+      </Box>
     </Box>
   )
 }
