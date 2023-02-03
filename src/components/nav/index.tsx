@@ -13,7 +13,7 @@ import nav from './nav.module.css'
 import { routes } from 'router'
 import { useState } from 'react'
 import config from 'const'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 interface Props {
   /**
@@ -43,6 +43,7 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const location = useLocation()
+  const navigate = useNavigate()
 
   const handleDrawerToggle = (): void => {
     setMobileOpen(!mobileOpen)
@@ -134,6 +135,7 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
                         : 'black',
                     fontSize: '16px'
                   }}
+                  onClick={() => navigate(op.id)}
                 >
                   {op.name}
                 </Button>
