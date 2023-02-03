@@ -24,15 +24,15 @@
 
 .title {
     color: var(--dark-gray-text);
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 .text {
     color: var(--gray-text);
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 .text-small {
     color: var(--gray-text);
-    font-weight: 400;
+    font-weight: 400 !important;
 }
