@@ -306,7 +306,7 @@
     }
 }
 
-@media screen and (min-height: 921px) and (max-height: 1000px) and (max-width: 900px) {
+@media screen and (min-height: 921px) and (max-height: 1030px) and (max-width: 900px) {
     #paycard-container {
         height: 100px !important;
         min-height: 100px !important;
@@ -357,7 +357,7 @@
     }
 }
 
-@media screen and (min-height: 1001px) and (max-width: 900px) {
+@media screen and (min-height: 1031px) and (max-width: 900px) {
     #paycard-container {
         height: 120px !important;
         min-height: 120px !important;

@@ -67,7 +67,7 @@ const MobileContent = ({ type }: Props): JSX.Element => {
                   sx={
                     {
                       display: 'flex',
-                      alignItems: 'center'
+                      alignItems: 'flex-start'
                     }
                   }
                 >
