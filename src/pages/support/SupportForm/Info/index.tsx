@@ -297,8 +297,8 @@ const Info = (): JSX.Element => {
                   variant={'contained'}
                   color={'primary'}
                   sx={{
-                    width: '200px',
-                    height: '55px',
+                    width: '150px',
+                    height: '48px',
                     fontSize: '16px',
                     fontWeight: '600'
                   }}
