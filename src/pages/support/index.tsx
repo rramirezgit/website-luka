@@ -3,8 +3,12 @@ import Footer from 'components/footer'
 import Nav from 'components/nav'
 import Square from 'components/square'
 import SupportForm from './SupportForm'
+import { useEffect } from 'react'
 
 const Support = (): JSX.Element => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <Box
       sx={{

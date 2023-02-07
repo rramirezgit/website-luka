@@ -6,6 +6,7 @@ export interface OptionsProps {
 export interface FooterBoxProps {
   title: boolean
   text: string
+  id?: string
 }
 
 export interface FooterListProps {

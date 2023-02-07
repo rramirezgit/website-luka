@@ -35,8 +35,7 @@ const options = [
   {
     id: '/about-us',
     name: 'About us'
-  },
-  { id: '/currency', name: 'Currency' }
+  }
 ]
 
 const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
