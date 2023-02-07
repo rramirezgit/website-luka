@@ -6,7 +6,7 @@ import instagram from 'assets/footer/instagram.png'
 import twitter from 'assets/footer/twitter.png'
 import footerStyles from './footer.module.css'
 import IconBox from './IconBox'
-import { aboutUseArray, countryArray, forDevelopersArray, productsArray, useCasesArray } from './footerArrays'
+import { aboutUsArray, countryArray, forDevelopersArray } from './footerArrays'
 import FooterList from './FooterList'
 import FooterSelect from './FooterSelect'
 
@@ -118,34 +118,10 @@ const Footer = (): JSX.Element => {
           }
         >
           <Box>
-            <FooterList texts={productsArray} />
-          </Box>
-          <Box
-            sx={
-              {
-                display: {
-                  xs: 'none',
-                  sm: 'block'
-                }
-              }
-            }
-          >
-            <FooterList texts={useCasesArray} />
-          </Box>
-          <Box>
             <FooterList texts={forDevelopersArray} />
           </Box>
-          <Box
-            sx={
-              {
-                display: {
-                  xs: 'none',
-                  md: 'block'
-                }
-              }
-            }
-          >
-            <FooterList texts={aboutUseArray} />
+          <Box>
+            <FooterList texts={aboutUsArray} />
           </Box>
         </Box>
       </Box>
