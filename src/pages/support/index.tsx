@@ -19,7 +19,8 @@ const Support = (): JSX.Element => {
       <Box
         sx={
           {
-            marginTop: '160px'
+            marginTop: '160px',
+            paddingBottom: '50px'
           }
         }
       >

@@ -31,8 +31,8 @@ const SupportForm = (): JSX.Element => {
         sx={
           {
             marginBottom: {
-              xs: '50px',
-              ls: '0'
+              xs: '100px',
+              lg: '0'
             }
           }
         }

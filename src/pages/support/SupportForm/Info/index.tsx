@@ -169,7 +169,7 @@ const Info = (): JSX.Element => {
                 >
                   <Box
                     sx={{
-                      width: '25%'
+                      width: '115px'
                     }}
                   >
                     <Autocomplete
@@ -222,11 +222,11 @@ const Info = (): JSX.Element => {
                                 code={formik.values.country.code.toLowerCase()}
                                 style={{
                                   borderRadius: '8px',
-                                  maxWidth: '30px',
-                                  maxHeight: '22px',
+                                  maxWidth: '25px',
+                                  maxHeight: '17px',
                                   width: '100%',
                                   height: '100%',
-                                  marginRight: '10px',
+                                  marginRight: '5px',
                                   objectFit: 'cover'
                                 }}
                               />
@@ -246,7 +246,7 @@ const Info = (): JSX.Element => {
                   </Box>
                   <Box
                     sx={{
-                      width: '65%'
+                      width: 'calc(100% - 125px)'
                     }}
                   >
                     <TextField
