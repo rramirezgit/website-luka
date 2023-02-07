@@ -4,6 +4,11 @@
     margin: 0 auto;
 }
 
+.form-container {
+    z-index: 6;
+    background-color: var(--white);
+}
+
 .figure {
     width: 100%;
     max-width: 370px;
