@@ -1,0 +1,47 @@
+.image {
+  width: 61px;
+  height: 61px;
+  margin-left: 23px;
+}
+
+.title {
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  line-height: 150% !important;
+  /* identical to box height, or 30px */
+
+  text-align: justify !important;
+  letter-spacing: -0.02em !important;
+}
+
+.text {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 150% !important;
+  text-align: justify !important;
+  letter-spacing: -0.02em !important;
+  color: #616f81 !important;
+  margin-left: 26px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  width: 257px;
+}
+
+.contentTilte {
+  display: flex;
+  gap: 20px;
+}
+
+.line {
+  width: 0px;
+  height: 43px;
+  border: 1px solid #5ae1e2;
+  transform: rotate(0deg);
+  position: relative;
+  bottom: 5px;
+}

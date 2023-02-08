@@ -14,6 +14,8 @@ import { routes } from 'router'
 import { useState } from 'react'
 import config from 'const'
 import { useLocation, useNavigate } from 'react-router-dom'
+import menuIcon from 'assets/menu.svg'
+import menuIconWhite from 'assets/menu-white.svg'
 
 interface Props {
   /**
@@ -41,9 +43,7 @@ const options = [
 
 const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
   const [mobileOpen, setMobileOpen] = useState(false)
-
   const location = useLocation()
-  const navigate = useNavigate()
 
   const navigate = useNavigate()
 
@@ -116,7 +116,11 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
             onClick={handleDrawerToggle}
             sx={{ display: { md: 'none' } }}
           >
-            <img src={`${config.UrlBaseImg}menu.png`} alt="menu" />
+            <Box
+              component={'img'}
+              src={ButtonColor === 'white' ? menuIconWhite : menuIcon}
+              alt="menu"
+            />
           </IconButton>
           <Box
             className={nav['content-menu']}
