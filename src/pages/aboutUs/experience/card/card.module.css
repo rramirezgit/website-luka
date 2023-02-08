@@ -1,0 +1,33 @@
+.number {
+  font-weight: 700 !important;
+  line-height: 72px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  color: #ffffff !important;
+}
+
+.line {
+  width: 62.45px;
+}
+
+.text {
+  font-weight: 700 !important;
+  line-height: 30px !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.64) !important;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  column-gap: 41px;
+}
+
+@media (min-width: 400px) {
+  .content {
+    width: 140px;
+  }
+}
