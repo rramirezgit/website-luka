@@ -2,10 +2,9 @@ import { createBrowserRouter, Navigate } from 'react-router-dom'
 import Landing from 'pages/landing'
 import DemoLink from 'pages/demoLink'
 import DemoGateway from 'pages/demoGateway'
-
-/**
- * routes.id is used to set menu items
- */
+import Currency from 'pages/currency'
+import Support from 'pages/support'
+import AboutUs from 'pages/aboutUs'
 
 export const routes = [
   {
@@ -15,12 +14,12 @@ export const routes = [
   },
   {
     path: '/about-us',
-    element: <Landing />,
+    element: <AboutUs />,
     id: 'About Us'
   },
   {
     path: '/currency',
-    element: <Landing />,
+    element: <Currency />,
     id: 'Currency'
   },
   {
@@ -29,8 +28,8 @@ export const routes = [
     id: 'Products'
   },
   {
-    path: '/help',
-    element: <Landing />,
+    path: '/support',
+    element: <Support />,
     id: 'Help'
   },
   {

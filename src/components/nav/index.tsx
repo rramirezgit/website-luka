@@ -13,7 +13,9 @@ import nav from './nav.module.css'
 import { routes } from 'router'
 import { useState } from 'react'
 import config from 'const'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import menuIcon from 'assets/menu.svg'
+import menuIconWhite from 'assets/menu-white.svg'
 
 interface Props {
   /**
@@ -27,16 +29,10 @@ interface Props {
 
 const drawerWidth = 240
 
-/* ['Products', 'Developer', 'About us'] */
-
 const options = [
   {
-    id: '/products',
-    name: 'Products'
-  },
-  {
-    id: '/developer',
-    name: 'Developer'
+    id: '/support',
+    name: 'Support'
   },
   {
     id: '/about-us',
@@ -46,8 +42,9 @@ const options = [
 
 const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
   const [mobileOpen, setMobileOpen] = useState(false)
-
   const location = useLocation()
+
+  const navigate = useNavigate()
 
   const handleDrawerToggle = (): void => {
     setMobileOpen(!mobileOpen)
@@ -118,7 +115,11 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
             onClick={handleDrawerToggle}
             sx={{ display: { md: 'none' } }}
           >
-            <img src={`${config.UrlBaseImg}menu.png`} alt="menu" />
+            <Box
+              component={'img'}
+              src={ButtonColor === 'white' ? menuIconWhite : menuIcon}
+              alt="menu"
+            />
           </IconButton>
           <Box
             className={nav['content-menu']}
@@ -139,6 +140,7 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
                         : 'black',
                     fontSize: '16px'
                   }}
+                  onClick={() => navigate(op.id)}
                 >
                   {op.name}
                 </Button>

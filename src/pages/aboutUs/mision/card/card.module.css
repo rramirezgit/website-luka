@@ -1,0 +1,27 @@
+.image {
+  width: 348px;
+  height: 247px;
+}
+
+.text {
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  line-height: 150% !important;
+  letter-spacing: -0.02em !important;
+  color: #616f81 !important;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  width: 348px;
+}
+
+@media (max-width: 380px) {
+  .image {
+    width: 274.92px;
+    height: 230.11px;
+  }
+}

@@ -7,6 +7,7 @@ import World from './world'
 import VPOS from './VPOS'
 import WhyUs from './whyUs'
 import style from './landing.module.css'
+import { Box } from '@mui/material'
 
 const Landing = (): JSX.Element => {
   return (
@@ -18,7 +19,18 @@ const Landing = (): JSX.Element => {
       <VPOS />
       <WhyUs />
       <World />
-      <Footer />
+      <Box
+        sx={
+          {
+            padding: {
+              xs: '310px 0px 80px 0',
+              md: '310px 0px 120px 0'
+            }
+          }
+        }
+      >
+        <Footer />
+      </Box>
     </div>
   )
 }

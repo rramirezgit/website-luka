@@ -6,7 +6,7 @@ import instagram from 'assets/footer/instagram.png'
 import twitter from 'assets/footer/twitter.png'
 import footerStyles from './footer.module.css'
 import IconBox from './IconBox'
-import { aboutUseArray, countryArray, forDevelopersArray, productsArray, useCasesArray } from './footerArrays'
+import { aboutUsArray, countryArray, forDevelopersArray } from './footerArrays'
 import FooterList from './FooterList'
 import FooterSelect from './FooterSelect'
 
@@ -16,10 +16,6 @@ const Footer = (): JSX.Element => {
     <Box
       sx={
         {
-          padding: {
-            xs: '310px 0px 80px 0',
-            md: '310px 0px 120px 0'
-          },
           margin: '0 auto',
           display: 'flex',
           alignItems: 'center',
@@ -31,10 +27,8 @@ const Footer = (): JSX.Element => {
       <Box
         sx={
           {
-            width: {
-              xs: '100%',
-              xl: '1400px'
-            },
+            width: '100%',
+            maxWidth: '1370px',
             display: 'flex',
             justifyContent: 'space-between',
             marginBottom: '50px',
@@ -42,11 +36,7 @@ const Footer = (): JSX.Element => {
               xs: 'column',
               lg: 'row'
             },
-            padding: {
-              xs: '0 25px',
-              sm: '0 50px',
-              md: '0 105px'
-            }
+            padding: '0 35px'
           }
         }
       >
@@ -128,34 +118,10 @@ const Footer = (): JSX.Element => {
           }
         >
           <Box>
-            <FooterList texts={productsArray} />
-          </Box>
-          <Box
-            sx={
-              {
-                display: {
-                  xs: 'none',
-                  sm: 'block'
-                }
-              }
-            }
-          >
-            <FooterList texts={useCasesArray} />
-          </Box>
-          <Box>
             <FooterList texts={forDevelopersArray} />
           </Box>
-          <Box
-            sx={
-              {
-                display: {
-                  xs: 'none',
-                  md: 'block'
-                }
-              }
-            }
-          >
-            <FooterList texts={aboutUseArray} />
+          <Box>
+            <FooterList texts={aboutUsArray} />
           </Box>
         </Box>
       </Box>

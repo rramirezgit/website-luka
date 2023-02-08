@@ -6,7 +6,7 @@
 
 .logo {
   object-fit: cover;
-  height: 100%;
+  height: 45px;
 }
 
 .list {
@@ -39,4 +39,8 @@
   display: flex;
   justify-content: flex-end;
   gap: 40px;
+}
+
+.menu {
+  fill: aquamarine;
 }
