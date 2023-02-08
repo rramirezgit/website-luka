@@ -3,8 +3,12 @@ import Footer from 'components/footer'
 import Nav from 'components/nav'
 import CurrencyBlock from './currencyBlock'
 import Description from './description'
+import { useEffect } from 'react'
 
 const Currency = (): JSX.Element => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <Box>
       <Nav ButtonColor="primary" ButtonVariant="contained" />

@@ -30,11 +30,8 @@ const VPOS = (): JSX.Element => {
             xs: 'center !important',
             lg: 'space-between !important'
           },
-          maxWidth: '1500px',
-          padding: {
-            xs: '0 50px',
-            md: '0 100px'
-          }
+          maxWidth: '1370px',
+          padding: '0 35px'
         }}
       >
         <Box

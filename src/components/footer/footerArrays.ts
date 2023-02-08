@@ -53,15 +53,17 @@ export const forDevelopersArray: FooterBoxProps[] = [
   },
   {
     title: false,
-    text: 'Payment Link Demo'
+    text: 'Payment Link Demo',
+    id: 'demo-link'
   },
   {
     title: false,
-    text: 'Gateway Demo'
+    text: 'Gateway Demo',
+    id: 'demo-gateway'
   }
 ]
 
-export const aboutUseArray: FooterBoxProps[] = [
+export const aboutUsArray: FooterBoxProps[] = [
   {
     title: true,
     text: 'About Us'
@@ -72,7 +74,8 @@ export const aboutUseArray: FooterBoxProps[] = [
   },
   {
     title: false,
-    text: 'Acepted Currency'
+    text: 'Supported Currencies',
+    id: 'currency'
   },
   {
     title: false,
@@ -80,7 +83,8 @@ export const aboutUseArray: FooterBoxProps[] = [
   },
   {
     title: false,
-    text: 'Support'
+    text: 'Support',
+    id: 'support'
   },
   {
     title: false,
