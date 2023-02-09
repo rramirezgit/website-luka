@@ -11,33 +11,29 @@ const Currency = (): JSX.Element => {
   }, [])
   return (
     <Box>
-      <Nav ButtonColor='primary' ButtonVariant='contained' />
+      <Nav ButtonColor="primary" ButtonVariant="contained" />
       <Box
-        sx={
-          {
-            marginBottom: {
-              xs: '60px',
-              sm: '100px'
-            },
-            marginTop: {
-              xs: '40px',
-              sm: '80px'
-            }
+        sx={{
+          marginBottom: {
+            xs: '60px',
+            sm: '100px'
+          },
+          marginTop: {
+            xs: '40px',
+            sm: '80px'
           }
-        }
+        }}
       >
         <Description />
       </Box>
       <CurrencyBlock />
       <Box
-        sx={
-          {
-            padding: {
-              xs: '170px 0px 80px 0',
-              md: '170px 0px 120px 0'
-            }
+        sx={{
+          padding: {
+            xs: '170px 0px 80px 0',
+            md: '170px 0px 120px 0'
           }
-        }
+        }}
       >
         <Footer />
       </Box>
