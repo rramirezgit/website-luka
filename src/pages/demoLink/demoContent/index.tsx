@@ -42,7 +42,7 @@ const DemoContent = ({
           </Box>
         }
       >
-        <DemoContentLayoutLazy>
+        <DemoContentLayoutLazy support='mobile'>
           <MobileContent type="gateway" />
         </DemoContentLayoutLazy>
       </Suspense>

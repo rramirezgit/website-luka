@@ -33,13 +33,22 @@ export const demoSlice = createSlice({
     changeButton: (state, action: PayloadAction<string>) => {
       state.button = action.payload
     },
-    changeFont: (state, action: PayloadAction<{ label: string, value: string } | undefined>) => {
+    changeFont: (
+      state,
+      action: PayloadAction<{ label: string, value: string } | undefined>
+    ) => {
       state.font = action.payload
     },
-    changeLanguage: (state, action: PayloadAction<{ label: string, value: string } | undefined>) => {
+    changeLanguage: (
+      state,
+      action: PayloadAction<{ label: string, value: string } | undefined>
+    ) => {
       state.language = action.payload
     },
-    changeCurrency: (state, action: PayloadAction<{ label: string, value: string } | undefined>) => {
+    changeCurrency: (
+      state,
+      action: PayloadAction<{ label: string, value: string } | undefined>
+    ) => {
       state.currency = action.payload
     },
     changeBorder: (state, action: PayloadAction<number | number[]>) => {
@@ -50,10 +59,21 @@ export const demoSlice = createSlice({
     },
     changeTitle: (state, action: PayloadAction<string>) => {
       state.title = action.payload
-    }
+    },
+    resetState: () => initialState
   }
 })
 
-export const { changeBackground, changeButton, changeFont, changeLanguage, changeCurrency, changeBorder, changeImg, changeTitle } = demoSlice.actions
+export const {
+  changeBackground,
+  changeButton,
+  changeFont,
+  changeLanguage,
+  changeCurrency,
+  changeBorder,
+  changeImg,
+  changeTitle,
+  resetState
+} = demoSlice.actions
 
 export default demoSlice.reducer

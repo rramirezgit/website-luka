@@ -42,14 +42,14 @@ const DemoContent = ({
           </Box>
         }
       >
-        <DemoContentLayoutLazy>
+        <DemoContentLayoutLazy support='mobile'>
           <MobileContent type="gateway" />
         </DemoContentLayoutLazy>
       </Suspense>
     )
   } else if (!mobileState && desktopState) {
     return (
-      <DemoContentLayout>
+      <DemoContentLayout support='javascript'>
         <DesktopContent />
       </DemoContentLayout>
     )
