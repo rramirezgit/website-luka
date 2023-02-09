@@ -52,8 +52,8 @@ const OurProducts = (): JSX.Element => {
         })}
       </Carousel>
       <Square
-        color="#5AE1E230"
-        top={'0'}
+        color="#0878FF20"
+        bottom={'0'}
         right={'0'}
         maxHeight={180}
         maxWidth={120}

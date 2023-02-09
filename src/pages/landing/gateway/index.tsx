@@ -87,6 +87,13 @@ const Gateway = (): JSX.Element => {
         maxHeight={160}
         maxWidth={130}
       />
+      <Square
+        color="#0878FF20"
+        top={'0'}
+        right={'0'}
+        maxHeight={140}
+        maxWidth={120}
+      />
     </Box>
   )
 }
