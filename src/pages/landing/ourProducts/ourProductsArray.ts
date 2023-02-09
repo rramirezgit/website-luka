@@ -6,19 +6,19 @@ import vposImg from 'assets/ourProducts/image-3.svg'
 const cardsArray: CardInterface[] = [
   {
     key: crypto.randomUUID(),
-    title: 'Gateway',
+    title: 'Multi Currency Gateway',
     text: 'B2B Payment gateway embedded solution. Manages multi currency and multi payment methods with an online conciliation dashboard.',
     imageUrl: gatewayImg
   },
   {
     key: crypto.randomUUID(),
-    title: 'Pay Link',
+    title: 'In&Out Payment Link',
     text: 'B2B electronic pay-in and pay-out management system. Links are enabled through multiple messaging services.',
     imageUrl: linkImg
   },
   {
     key: crypto.randomUUID(),
-    title: 'VPOS',
+    title: 'Virtual Point of Sale',
     text: 'Hardware-free point of sales that enables QR payments and contactless transactions. Scalable multi-device integration.',
     imageUrl: vposImg
   }
