@@ -35,6 +35,10 @@ const SupportForm = (): JSX.Element => {
               xs: '80px',
               lg: '0'
             },
+            maxWidth: {
+              xs: '530px',
+              lg: '600px'
+            },
             position: 'relative'
           }
         }
@@ -51,10 +55,10 @@ const SupportForm = (): JSX.Element => {
         >
           <Square
             color="#0878FF20"
-            top={'400'}
-            left={'-180'}
-            maxHeight={320}
-            maxWidth={200}
+            top={'500'}
+            left={'-140'}
+            maxHeight={250}
+            maxWidth={150}
           />
         </Box>
         <img className={styles.image} src={support} alt='support' />
