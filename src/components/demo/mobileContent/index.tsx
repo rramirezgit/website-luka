@@ -14,9 +14,10 @@ import { useSelector } from 'react-redux'
 
 interface Props {
   type: 'gateway' | 'link'
+  onLoad: () => void
 }
 
-const MobileContent = ({ type }: Props): JSX.Element => {
+const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
@@ -29,7 +30,13 @@ const MobileContent = ({ type }: Props): JSX.Element => {
       <Box
         id={'mobilecontent-container'}
       >
-        <img loading='eager' src={ type === 'link' ? linkPhone : gatewayPhone } alt='Phone' style={{ height: '100%' }} />
+        <img
+          loading='lazy'
+          src={ type === 'link' ? linkPhone : gatewayPhone }
+          alt='Phone'
+          style={{ height: '100%' }}
+          onLoad={() => onLoad()}
+        />
       </Box>
       <Box
         className={styles['custom-view']}
