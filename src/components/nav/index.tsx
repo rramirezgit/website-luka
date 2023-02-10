@@ -10,7 +10,6 @@ import ListItemText from '@mui/material/ListItemText'
 import Toolbar from '@mui/material/Toolbar'
 import Button from '@mui/material/Button'
 import nav from './nav.module.css'
-import { routes } from 'router'
 import { useState } from 'react'
 import config from 'const'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -53,12 +52,11 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left' }}>
       <List className={nav.list}>
-        {routes.map(({ id = '' }) => {
-          if (!id) return null
+        {options.map(op => {
           return (
-            <ListItem key={id} disablePadding>
+            <ListItem key={op.id} disablePadding>
               <ListItemButton sx={{ textAlign: 'left' }}>
-                <ListItemText primary={id} />
+                <ListItemText primary={op.name} />
               </ListItemButton>
             </ListItem>
           )
@@ -102,10 +100,14 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
           >
             <img
               className={nav.logo}
+              style={{
+                cursor: 'pointer'
+              }}
               src={`${config.UrlBaseImg}${
-                ButtonColor === 'white' ? 'Logo-white.png' : 'logo.png'
+                ButtonColor === 'white' ? 'Logo-white.png' : 'Logo.svg'
               }`}
               alt="Logo-Luka"
+              onClick={() => navigate('/')}
             />
           </Box>
           <IconButton

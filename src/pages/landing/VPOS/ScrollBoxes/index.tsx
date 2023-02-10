@@ -47,7 +47,7 @@ const ScrollBoxes = (): JSX.Element => {
     if (element) {
       element.scrollTo({
         top: 0,
-        left: element.scrollWidth,
+        left: element.scrollWidth - window.innerWidth,
         behavior: 'smooth'
       })
     }
@@ -82,6 +82,8 @@ const ScrollBoxes = (): JSX.Element => {
           },
           left: '0px',
           cursor: 'pointer',
+          zIndex: 99,
+
           display: {
             xs: displayLeft ? 'block' : 'none',
             xxl: 'none'
@@ -105,6 +107,7 @@ const ScrollBoxes = (): JSX.Element => {
             xs: '25%',
             lg: '35%'
           },
+          zIndex: 99,
           right: '0px',
           cursor: 'pointer',
           display: {
@@ -359,8 +362,8 @@ const ScrollBoxes = (): JSX.Element => {
                 paddingTop: '0px !important'
               }}
             >
-              Use your Android/iOS mobile or tablet as a point of sales.
-              No need to buy any hardware.
+              Use your Android/iOS mobile or tablet as a point of sales. No need
+              to buy any hardware.
             </Typography>
           </Box>
           <Box

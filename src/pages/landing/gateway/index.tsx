@@ -6,6 +6,7 @@ import { Button } from '@mui/material'
 import Square from 'components/square'
 import { Box } from '@mui/system'
 import { useNavigate } from 'react-router-dom'
+import cardsArray from '../ourProducts/ourProductsArray'
 
 const Gateway = (): JSX.Element => {
   const navigate = useNavigate()
@@ -17,6 +18,7 @@ const Gateway = (): JSX.Element => {
       sx={{
         position: 'relative'
       }}
+      id={cardsArray[0].id}
     >
       <TextAndImg
         heightSx={{

@@ -14,22 +14,22 @@ const cards = [
   {
     title: 'Purpose-driven',
     image: people,
-    text: 'We focus on taking care of our clients, and team, and of course, on giving back to our communities'
+    text: 'We focus on taking care of our clients, consumers,  and of course, our team.'
   },
   {
     title: 'Passion for technology',
     image: lovely,
-    text: 'We love innovation and we are passionate about being part of creating new solutions. '
+    text: 'We love technology and we are passionate about generating value to people where we are present.'
   },
   {
     title: 'Early adopters',
     image: mobile,
-    text: 'We are early costumers on new products and technologies.'
+    text: 'We love innovation and we bring solutions built with new and proven technology.'
   },
   {
     title: 'Eco-friendly hands-on',
     image: leaf,
-    text: 'We follow sustainability principles and respect for the Earth'
+    text: 'We love our planet and we follow sustainability principles in everything we do.  Please do so too ;-).'
   }
 ]
 
