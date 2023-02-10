@@ -23,3 +23,8 @@ declare module '*.json' {
   const value: string
   export default value
 }
+
+declare module '*.svg?as=webp' {
+  const value: string
+  export default value
+}
