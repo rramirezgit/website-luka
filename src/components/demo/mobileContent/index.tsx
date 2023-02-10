@@ -29,7 +29,7 @@ const MobileContent = ({ type }: Props): JSX.Element => {
       <Box
         id={'mobilecontent-container'}
       >
-        <img src={ type === 'link' ? linkPhone : gatewayPhone } alt='Phone' style={{ height: '100%' }} />
+        <img loading='lazy' src={ type === 'link' ? linkPhone : gatewayPhone } alt='Phone' style={{ height: '100%' }} />
       </Box>
       <Box
         className={styles['custom-view']}
@@ -155,7 +155,7 @@ const MobileContent = ({ type }: Props): JSX.Element => {
             sx={
               {
                 top: '-10px',
-                left: '50%'
+                left: '48%'
               }
             }
           >

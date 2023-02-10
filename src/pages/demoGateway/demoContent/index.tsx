@@ -1,19 +1,19 @@
 import React, { Suspense } from 'react'
 import { Box } from '@mui/material'
-import MobileContent from 'components/demo/mobileContent'
 import DemoContentLayout from 'components/demo/demoContentLayout'
 import DesktopContent from './desktopContent'
-import LoadingIcon from 'components/loading'
+import './index.css'
+import Skeleton from '@mui/material/Skeleton'
 
 interface DemoContentProps {
   mobileState: boolean
   desktopState: boolean
 }
 
-const DemoContentLayoutLazy = React.lazy(async () => {
+const MobileContentLazy = React.lazy(async () => {
   return await Promise.all([
-    import('components/demo/demoContentLayout'),
-    new Promise(resolve => setTimeout(resolve, 2000))
+    import('components/demo/mobileContent'),
+    new Promise(resolve => setTimeout(resolve, 6000))
   ]).then(([moduleExports]) => moduleExports)
 })
 
@@ -23,29 +23,35 @@ const DemoContent = ({
 }: DemoContentProps): JSX.Element => {
   if (mobileState && !desktopState) {
     return (
-      <Suspense
-        fallback={
-          <Box
-            sx={{
-              height: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            <LoadingIcon
-              size={7}
-              border={0.6}
-              firstColor={'#0878ff'}
-              secondColor={'#0878ff'}
-            />
-          </Box>
-        }
-      >
-        <DemoContentLayoutLazy support='mobile'>
-          <MobileContent type="gateway" />
-        </DemoContentLayoutLazy>
-      </Suspense>
+      <DemoContentLayout support='mobile'>
+        <Suspense
+          fallback={
+            <Box
+              sx={{
+                height: '100%',
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <Box
+                id={'lazycontent-container'}
+              >
+                <Skeleton
+                  id={'lazycontent-skeleton'}
+                  variant='rounded'
+                  animation={'wave'}
+                  width={'100%'}
+                  height={'100%'}
+                />
+              </Box>
+            </Box>
+          }
+        >
+          <MobileContentLazy type="gateway" />
+        </Suspense>
+      </DemoContentLayout>
     )
   } else if (!mobileState && desktopState) {
     return (
