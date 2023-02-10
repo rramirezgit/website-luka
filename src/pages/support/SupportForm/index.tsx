@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import placeholder from 'assets/support/media-placeholder.svg'
+import support from 'assets/support/support.svg'
 import Square from 'components/square'
 import Info from './Info'
 import styles from './supportform.module.css'
@@ -32,7 +32,7 @@ const SupportForm = (): JSX.Element => {
         sx={
           {
             marginBottom: {
-              xs: '100px',
+              xs: '80px',
               lg: '0'
             },
             position: 'relative'
@@ -51,13 +51,13 @@ const SupportForm = (): JSX.Element => {
         >
           <Square
             color="#0878FF20"
-            top={'100'}
-            left={'-70'}
+            top={'400'}
+            left={'-180'}
             maxHeight={320}
             maxWidth={200}
           />
         </Box>
-        <img className={styles.image} src={placeholder} alt='Placeholder' />
+        <img className={styles.image} src={support} alt='support' />
       </Box>
       <Box
         className={styles['form-container']}

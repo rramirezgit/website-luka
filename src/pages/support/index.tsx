@@ -9,7 +9,11 @@ const Support = (): JSX.Element => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <Box>
+    <Box
+      sx={{
+        overflowX: 'hidden'
+      }}
+    >
       <Nav ButtonColor='primary' ButtonVariant='contained' />
       <Box
         sx={
