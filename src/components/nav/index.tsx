@@ -109,7 +109,9 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
             <img
               className={nav.logo}
               style={{
-                cursor: 'pointer'
+                cursor: 'pointer',
+                width: '121.81px',
+                height: '46px'
               }}
               src={`${config.UrlBaseImg}${
                 ButtonColor === 'white' ? 'Logo-white.png' : 'Logo.svg'
