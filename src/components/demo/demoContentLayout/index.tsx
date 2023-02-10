@@ -47,7 +47,7 @@ const DemoContentLayout = ({ children, support }: LayoutProps): JSX.Element => {
           right: '40px',
           bottom: {
             xs: '-85px',
-            md: '20px'
+            md: '15px'
           }
         }}
       >
