@@ -5,10 +5,12 @@ import Tags from 'components/tags'
 import PhoneBox from './PhoneBox'
 import Square from 'components/square'
 import ScrollBoxes from './ScrollBoxes'
+import cardsArray from '../ourProducts/ourProductsArray'
 
 const VPOS = (): JSX.Element => {
   return (
     <Box
+      id={cardsArray[2].id}
       sx={{
         padding: {
           xs: '70px 0 70px 0',

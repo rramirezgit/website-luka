@@ -42,7 +42,7 @@ const OurProducts = (): JSX.Element => {
         {cardsInfo.map(card => {
           return (
             <Card
-              id={card.key}
+              id={card.id}
               key={card.key}
               title={card.title}
               text={card.text}

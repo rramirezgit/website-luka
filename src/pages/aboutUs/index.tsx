@@ -19,7 +19,7 @@ const AboutUs = (): JSX.Element => {
         <Box className={styles.contentReadyFoter}>
           <Ready aboutUs />
         </Box>
-        <Footer />
+        <Footer disablePadding />
       </Layout>
     </Box>
   )

@@ -14,12 +14,6 @@
   z-index: 6;
 }
 
-.container:hover {
-  /*  animacion cuando entra y sale del contenedor */
-  transition: transform 0.2s ease-in-out 0.2s;
-  transform: scale(1.05);
-}
-
 .title {
   font-size: 20px !important;
   font-weight: 500 !important;

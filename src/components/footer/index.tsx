@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material'
-import lukaLogo from 'assets/footer/luka.png'
 import linkedin from 'assets/footer/linkedin.png'
 import youtube from 'assets/footer/youtube.png'
 import instagram from 'assets/footer/instagram.png'
@@ -9,113 +8,100 @@ import IconBox from './IconBox'
 import { aboutUsArray, countryArray, forDevelopersArray } from './footerArrays'
 import FooterList from './FooterList'
 import FooterSelect from './FooterSelect'
+import config from 'const'
 
-const Footer = (): JSX.Element => {
+interface FooterProps {
+  disablePadding?: boolean
+}
+
+const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
   const location: string = 'United States'
   return (
     <Box
-      sx={
-        {
-          margin: '0 auto',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'column'
-        }
-      }
+      sx={{
+        margin: '0 auto',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column'
+      }}
     >
       <Box
-        sx={
-          {
-            width: '100%',
-            maxWidth: '1370px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            marginBottom: '50px',
-            flexDirection: {
-              xs: 'column',
-              lg: 'row'
-            },
-            padding: '0 35px'
-          }
-        }
+        sx={{
+          width: '100%',
+          maxWidth: '1370px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          marginBottom: '50px',
+          flexDirection: {
+            xs: 'column',
+            lg: 'row'
+          },
+          padding: disablePadding ? '0 35px' : '0'
+        }}
       >
         <Box
-          sx={
-            {
-              display: 'flex',
-              flexDirection: 'column'
-            }
-          }
+          sx={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
         >
           <Box
             component={'figure'}
-            sx={
-              {
-                marginBottom: '35px'
-              }
-            }
+            sx={{
+              marginBottom: '35px'
+            }}
           >
-            <img src={lukaLogo} alt='Logo'/>
+            <img alt="Logo" src={`${config.UrlBaseImg}Logo.svg`} />
           </Box>
           <Typography
             className={footerStyles.regular}
-            sx={
-              {
-                width: {
-                  xs: '100%',
-                  lg: '350px'
-                },
-                marginBottom: '30px'
-              }
-            }
+            sx={{
+              width: {
+                xs: '100%',
+                lg: '350px'
+              },
+              marginBottom: '30px'
+            }}
           >
-            High level experience in web design and development knowledge, producing quality work
+            High level experience in web design and development knowledge,
+            producing quality work
           </Typography>
           <Box
-            sx={
-              {
-                display: 'flex',
-                alignItems: 'center',
-                marginBottom: '30px'
-              }
-            }
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '30px'
+            }}
           >
-            <IconBox src={instagram} alt='Instagram' />
-            <IconBox src={youtube} alt='Youtube' />
-            <IconBox src={twitter} alt='Twitter' />
-            <IconBox src={linkedin} alt='LinkedIn' />
+            <IconBox src={instagram} alt="Instagram" />
+            <IconBox src={youtube} alt="Youtube" />
+            <IconBox src={twitter} alt="Twitter" />
+            <IconBox src={linkedin} alt="LinkedIn" />
           </Box>
           <Box
-            sx={
-              {
-                display: {
-                  xs: 'none',
-                  sm: 'block'
-                }
+            sx={{
+              display: {
+                xs: 'none',
+                sm: 'block'
               }
-            }
+            }}
           >
-            <FooterSelect
-              options={countryArray}
-              value={location}
-            />
+            <FooterSelect options={countryArray} value={location} />
           </Box>
         </Box>
         <Box
-          sx={
-            {
-              display: 'flex',
-              justifyContent: {
-                xs: 'space-evenly',
-                lg: 'center'
-              },
-              marginTop: {
-                xs: '40px',
-                lg: '0'
-              }
+          sx={{
+            display: 'flex',
+            justifyContent: {
+              xs: 'space-evenly',
+              lg: 'center'
+            },
+            marginTop: {
+              xs: '40px',
+              lg: '0'
             }
-          }
+          }}
         >
           <Box>
             <FooterList texts={forDevelopersArray} />
