@@ -9,8 +9,6 @@
 }
 
 .worldImg {
-  background: url(./../../../assets/world/world.svg) no-repeat top center;
-  background-size: contain;
   width: 100%;
   height: inherit;
 }

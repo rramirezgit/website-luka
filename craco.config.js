@@ -11,13 +11,6 @@ module.exports = {
             options: {
               plugins: [['mozjpeg', { quality: 85 }]]
             }
-          },
-          generator: {
-            preset: 'webp',
-            implementation: ImageMinimizerPlugin.imageminGenerate,
-            options: {
-              plugins: ['imagemin-webp']
-            }
           }
         })
       )

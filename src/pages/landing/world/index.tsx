@@ -2,6 +2,8 @@ import { Box, Typography } from '@mui/material'
 import Ready from 'components/ready'
 import style from './world.module.css'
 import Square from 'components/square'
+import Lottie from 'lottie-react'
+import animation from 'assets/world/world.json'
 
 const World = (): JSX.Element => {
   return (
@@ -92,7 +94,9 @@ const World = (): JSX.Element => {
               lg: '910.84px'
             }
           }}
-        ></Box>
+        >
+          <Lottie animationData={animation} loop={true} />
+        </Box>
         <Box className={style.contentReady}>
           <Ready />
         </Box>
