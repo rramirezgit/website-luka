@@ -13,7 +13,7 @@ interface DemoContentProps {
 const MobileContentLazy = React.lazy(async () => {
   return await Promise.all([
     import('components/demo/mobileContent'),
-    new Promise(resolve => setTimeout(resolve, 6000))
+    new Promise(resolve => setTimeout(resolve, 2000))
   ]).then(([moduleExports]) => moduleExports)
 })
 
@@ -24,6 +24,31 @@ const DemoContent = ({
   if (mobileState && !desktopState) {
     return (
       <DemoContentLayout support='mobile'>
+        {/* {
+          MobileContentLazy
+            ? <MobileContentLazy type="gateway" />
+            : <Box
+                sx={{
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <Box
+                  id={'lazycontent-container'}
+                >
+                  <Skeleton
+                    id={'lazycontent-skeleton'}
+                    variant='rounded'
+                    animation={'wave'}
+                    width={'100%'}
+                    height={'100%'}
+                  />
+                </Box>
+              </Box>
+        } */}
         <Suspense
           fallback={
             <Box
