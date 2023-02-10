@@ -1,4 +1,5 @@
 import { Box, Typography, TextField } from '@mui/material'
+import { useEffect } from 'react'
 import styles from './color.module.css'
 
 interface ColorProps {
@@ -13,6 +14,9 @@ const Color = ({ label, value, onChange }: ColorProps): JSX.Element => {
       onChange(e)
     }
   }
+  useEffect(() => {
+    console.log(value)
+  }, [value])
   return (
     <Box
       className={styles.container}

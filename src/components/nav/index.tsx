@@ -45,6 +45,12 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
 
   const navigate = useNavigate()
 
+  const handleLogo = (): void => {
+    if (location.pathname !== '/') {
+      navigate('/')
+    }
+  }
+
   const handleDrawerToggle = (): void => {
     setMobileOpen(!mobileOpen)
   }
@@ -95,8 +101,10 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
               width: {
                 xs: '100px',
                 sm: '122px'
-              }
+              },
+              cursor: location.pathname !== '/' ? 'pointer' : 'default'
             }}
+            onClick={handleLogo}
           >
             <img
               className={nav.logo}
