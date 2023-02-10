@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import logoLuka from 'assets/footer/luka.png'
+import { useNavigate } from 'react-router-dom'
 import CustomizationGateway from './customization/customizationGateway'
 import styles from './demomenu.module.css'
 import DescriptionGateway from './description/descriptionGateway'
@@ -9,6 +10,10 @@ interface Props {
 }
 
 const MenuGateway = ({ type }: Props): JSX.Element => {
+  const navigate = useNavigate()
+  const handleLogo = (): void => {
+    navigate('/')
+  }
   return (
     <Box
       className={styles.container}
@@ -19,9 +24,11 @@ const MenuGateway = ({ type }: Props): JSX.Element => {
           {
             width: '165px',
             marginBottom: '50px',
-            padding: '0 40px'
+            padding: '0 40px',
+            cursor: 'pointer'
           }
         }
+        onClick={handleLogo}
       >
         <img src={logoLuka} style={{ maxWidth: '100%' }} alt='Luka' />
       </Box>

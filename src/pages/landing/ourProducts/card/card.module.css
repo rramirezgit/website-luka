@@ -11,12 +11,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-}
-
-.container:hover {
-  /*  animacion cuando entra y sale del contenedor */
-  transition: transform 0.2s ease-in-out 0.2s;
-  transform: scale(1.05);
+  z-index: 6;
 }
 
 .title {

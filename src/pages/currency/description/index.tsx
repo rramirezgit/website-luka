@@ -70,7 +70,7 @@ const Description = (): JSX.Element => {
               }
             }
           >
-            The following are the supported currencies. Currency availability may vary depending on your country of domicile or establishment terms & conditions.
+            We support a broad list of currencies considering international regulations, in particular following US, UK and EU compliance guidelines.
           </Typography>
         </Box>
       </Box>

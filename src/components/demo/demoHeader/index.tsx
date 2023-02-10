@@ -31,7 +31,7 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
           },
           width: {
             xs: '100%',
-            md: 'calc(50% + 110px)'
+            md: 'calc(50% + 105px)'
           }
         }
       }
