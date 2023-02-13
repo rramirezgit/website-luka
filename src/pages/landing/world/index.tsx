@@ -79,19 +79,17 @@ const World = (): JSX.Element => {
         <Box
           className={style.worldImg}
           sx={{
-            backgroundSize: {
-              xs: 'contain',
-              md: 'contain'
-            },
+            backgroundSize: 'contain',
             width: {
-              xs: '478.75px',
-              md: '100%',
-              lg: '910.84px'
+              xs: '691.84px',
+              sm: '910.84px',
+              xl: '1200px'
             },
             height: {
-              xs: '478.75px',
-              md: '100%',
-              lg: '910.84px'
+              xs: '691.84px',
+              sm: '910.84px',
+
+              xl: '1200px'
             }
           }}
         >

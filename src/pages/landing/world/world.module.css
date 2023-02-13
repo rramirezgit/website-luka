@@ -9,8 +9,9 @@
 }
 
 .worldImg {
-  width: 100%;
   height: inherit;
+  position: relative;
+  left: -19px;
 }
 
 .title {
