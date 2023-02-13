@@ -30,8 +30,8 @@ const Currency = (): JSX.Element => {
       <Box
         sx={{
           padding: {
-            xs: '170px 0px 80px 0',
-            md: '170px 0px 120px 0'
+            xs: '170px 35px 80px 35px',
+            md: '170px 35px 120px 35px'
           }
         }}
       >

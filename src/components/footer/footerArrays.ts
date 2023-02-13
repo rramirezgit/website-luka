@@ -88,11 +88,13 @@ export const aboutUsArray: FooterBoxProps[] = [
   },
   {
     title: false,
-    text: 'User privacy '
+    text: 'User privacy ',
+    id: 'user-privacy'
   },
   {
     title: false,
-    text: 'Terms and Conditions'
+    text: 'Terms and Conditions',
+    id: 'terms-conditions'
   }
 ]
 
