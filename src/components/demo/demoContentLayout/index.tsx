@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import styles from './contentlayout.module.css'
-import ios from 'assets/demoLink/support/ios.svg'
-import android from 'assets/demoLink/support/android.svg'
-import js from 'assets/demoLink/support/js.svg'
+import ios from 'assets/demoLink/support/ios.svg?as=webp'
+import android from 'assets/demoLink/support/android.svg?as=webp'
+import js from 'assets/demoLink/support/js.svg?as=webp'
 import { useDispatch } from 'react-redux'
 import './index.css'
 import { resetState } from 'redux/slices/demoSlice'
@@ -15,23 +15,15 @@ interface LayoutProps {
 const DemoContentLayout = ({ children, support }: LayoutProps): JSX.Element => {
   const dispatch = useDispatch()
   return (
-    <Box
-      className={styles.container}
-    >
-      <Box
-        className={styles.content}
-        id={'demo-content'}
-      >
+    <Box className={styles.container}>
+      <Box className={styles.content} id={'demo-content'}>
         {children}
       </Box>
       <Box
         className={styles['text-box']}
         onClick={() => dispatch(resetState())}
       >
-        <Typography
-          id={'contentlayout-text'}
-          className={styles.text}
-        >
+        <Typography id={'contentlayout-text'} className={styles.text}>
           Clear All
         </Typography>
       </Box>
@@ -51,31 +43,23 @@ const DemoContentLayout = ({ children, support }: LayoutProps): JSX.Element => {
           }
         }}
       >
-        {
-          support === 'mobile' &&
+        {support === 'mobile' && (
           <>
-            <Box
-              component={'figure'}
-            >
-              <img src={android} alt='Android' />
+            <Box component={'figure'}>
+              <img src={android} alt="Android" />
             </Box>
-            <Box
-              component={'figure'}
-            >
-              <img src={ios} alt='IOS' />
+            <Box component={'figure'}>
+              <img src={ios} alt="IOS" />
             </Box>
           </>
-        }
-        {
-          support === 'javascript' &&
+        )}
+        {support === 'javascript' && (
           <>
-            <Box
-              component={'figure'}
-            >
-              <img src={js} alt='Android' />
+            <Box component={'figure'}>
+              <img src={js} alt="Android" />
             </Box>
           </>
-        }
+        )}
       </Box>
     </Box>
   )

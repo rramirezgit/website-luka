@@ -6,6 +6,7 @@ import { Box } from '@mui/material'
 import Button from '@mui/material/Button'
 import Square from 'components/square'
 import { useNavigate } from 'react-router-dom'
+import cardsArray from '../ourProducts/ourProductsArray'
 
 const PaymentLink = (): JSX.Element => {
   const navigate = useNavigate()
@@ -13,7 +14,7 @@ const PaymentLink = (): JSX.Element => {
     navigate('demo-link')
   }
   return (
-    <Box position={'relative'}>
+    <Box position={'relative'} id={cardsArray[1].id}>
       <TextAndImg
         className={style.layout}
         heightSx={{

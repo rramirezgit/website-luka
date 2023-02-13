@@ -50,14 +50,14 @@ const Experience = (): JSX.Element => {
             },
             backgroundSize: 'cover !important',
             top: {
-              xs: '84px',
-              sm: '100px',
+              xs: '172px',
+              sm: '172px',
               md: '243px',
               lg: '243px'
             },
             left: {
-              xs: '-8px',
-              sm: '-8px',
+              xs: '-15px',
+              sm: '-15px',
               md: '-23px',
               lg: '-23px'
             }
@@ -79,9 +79,7 @@ const Experience = (): JSX.Element => {
                 className={styles.divCards}
                 sx={{
                   marginTop: {
-                    xs: '50px',
-                    sm: '50px',
-                    md: '50px',
+                    xs: '72px',
                     lg: '100px'
                   }
                 }}

@@ -19,7 +19,7 @@ const Landing = (): JSX.Element => {
       <VPOS />
       <WhyUs />
       <World />
-      <Box sx={{ padding: '310px 0px 50px 0' }}>
+      <Box sx={{ padding: '310px 35px 50px 35px' }}>
         <Footer />
       </Box>
     </div>
