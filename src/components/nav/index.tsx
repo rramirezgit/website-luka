@@ -21,7 +21,7 @@ interface Props {
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window?: () => Window
+  window_?: () => Window
   ButtonVariant?: 'text' | 'outlined' | 'contained'
   ButtonColor: 'primary' | 'white' | 'secondary'
 }
@@ -39,7 +39,7 @@ const options = [
   }
 ]
 
-const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
+const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
 
@@ -77,7 +77,7 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
   )
 
   const container =
-    window !== undefined ? () => window().document.body : undefined
+    window_ !== undefined ? () => window_().document.body : undefined
 
   return (
     <Box padding="0px 34px">
@@ -171,6 +171,9 @@ const Nav = ({ window, ButtonVariant, ButtonColor }: Props): JSX.Element => {
               fontWeight: '600',
               border:
                 ButtonVariant === 'outlined' ? '2px solid #FFFFFF' : 'none'
+            }}
+            onClick={() => {
+              window.open('http://login-qa.lukapay.io', '_blank')
             }}
           >
             {'Sign up'}

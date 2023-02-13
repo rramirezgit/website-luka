@@ -2,6 +2,8 @@ import { Box, Typography } from '@mui/material'
 import Ready from 'components/ready'
 import style from './world.module.css'
 import Square from 'components/square'
+import Lottie from 'lottie-react'
+import animation from 'assets/world/world.json'
 
 const World = (): JSX.Element => {
   return (
@@ -77,22 +79,22 @@ const World = (): JSX.Element => {
         <Box
           className={style.worldImg}
           sx={{
-            backgroundSize: {
-              xs: 'contain',
-              md: 'contain'
-            },
+            backgroundSize: 'contain',
             width: {
-              xs: '478.75px',
-              md: '100%',
-              lg: '910.84px'
+              xs: '691.84px',
+              sm: '910.84px',
+              xl: '1200px'
             },
             height: {
-              xs: '478.75px',
-              md: '100%',
-              lg: '910.84px'
+              xs: '691.84px',
+              sm: '910.84px',
+
+              xl: '1200px'
             }
           }}
-        ></Box>
+        >
+          <Lottie animationData={animation} loop={true} />
+        </Box>
         <Box className={style.contentReady}>
           <Ready />
         </Box>
