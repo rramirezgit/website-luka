@@ -14,24 +14,20 @@ const Support = (): JSX.Element => {
         overflowX: 'hidden'
       }}
     >
-      <Nav ButtonColor='primary' ButtonVariant='contained' />
+      <Nav ButtonColor="primary" ButtonVariant="contained" />
       <Box
-        sx={
-          {
-            marginTop: '110px'
-          }
-        }
+        sx={{
+          marginTop: '110px'
+        }}
       >
         <SupportForm />
       </Box>
       <Box
-        sx={
-          {
-            marginTop: '160px',
-            padding: '0 35px',
-            paddingBottom: '50px'
-          }
-        }
+        sx={{
+          marginTop: '160px',
+          padding: '0 35px',
+          paddingBottom: '50px'
+        }}
       >
         <Footer />
       </Box>
