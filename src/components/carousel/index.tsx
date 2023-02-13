@@ -29,10 +29,7 @@ const Carousel = ({
           `selector-${children[index].key ?? ''}`
         )
         if (
-          card.top >= 0 &&
           card.left >= 0 &&
-          card.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
           card.right <=
             (window.innerWidth || document.documentElement.clientWidth)
         ) {
@@ -66,6 +63,8 @@ const Carousel = ({
     <Box>
       <Box
         onScroll={() => checkViewPort()}
+        onMouseEnter={() => checkViewPort()}
+        onMouseLeave={() => checkViewPort()}
         draggable={false}
         id={`carousel-${id}`}
         className={clsx(lukaCSS['flex-row'], carouselCSS.container)}
@@ -76,8 +75,8 @@ const Carousel = ({
           },
           height: height !== 'auto' ? `${height}px` : height,
           justifyContent: {
-            md: 'space-evenly',
-            lg: 'space-between'
+            xs: 'flex-start',
+            carousel: 'space-between'
           },
           width: {
             xs: '100vw'
