@@ -1,13 +1,12 @@
 import { Box, Typography } from '@mui/material'
 import linkedin from 'assets/footer/linkedin.png'
-import youtube from 'assets/footer/youtube.png'
 import instagram from 'assets/footer/instagram.png'
 import twitter from 'assets/footer/twitter.png'
 import footerStyles from './footer.module.css'
 import IconBox from './IconBox'
-import { aboutUsArray, countryArray, forDevelopersArray } from './footerArrays'
+import { aboutUsArray, forDevelopersArray } from './footerArrays'
 import FooterList from './FooterList'
-import FooterSelect from './FooterSelect'
+// import FooterSelect from './FooterSelect'
 import config from 'const'
 
 interface FooterProps {
@@ -15,7 +14,7 @@ interface FooterProps {
 }
 
 const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
-  const location: string = 'United States'
+  // const location: string = 'United States'
   return (
     <Box
       sx={{
@@ -29,7 +28,7 @@ const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
       <Box
         sx={{
           width: '100%',
-          maxWidth: '1370px',
+          maxWidth: '1300px',
           display: 'flex',
           justifyContent: 'space-between',
           marginBottom: '50px',
@@ -74,12 +73,11 @@ const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
               marginBottom: '30px'
             }}
           >
-            <IconBox src={instagram} alt="Instagram" />
-            <IconBox src={youtube} alt="Youtube" />
-            <IconBox src={twitter} alt="Twitter" />
-            <IconBox src={linkedin} alt="LinkedIn" />
+            <IconBox src={instagram} alt="Instagram" url='https://www.instagram.com/lukapay/' />
+            <IconBox src={twitter} alt="Twitter" url='https://twitter.com/Lukapay_' />
+            <IconBox src={linkedin} alt="LinkedIn" url='https://www.linkedin.com/company/lukapay/' />
           </Box>
-          <Box
+          {/* <Box
             sx={{
               display: {
                 xs: 'none',
@@ -88,7 +86,7 @@ const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
             }}
           >
             <FooterSelect options={countryArray} value={location} />
-          </Box>
+          </Box> */}
         </Box>
         <Box
           sx={{

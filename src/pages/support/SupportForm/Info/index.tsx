@@ -5,6 +5,7 @@ import * as yup from 'yup'
 import { Formik, ErrorMessage } from 'formik'
 import { allCountries } from 'logic'
 import Flag from 'react-world-flags'
+import axios from 'axios'
 
 interface FormProps {
   subject: string
@@ -22,10 +23,9 @@ interface FormProps {
 
 export const subjects = [
   'Select a subject',
-  'Test 1',
-  'Test 2',
-  'Test 3',
-  'Test 4'
+  'Consulta',
+  'Incidente',
+  'Requerimiento'
 ]
 
 const validationSchema = yup.object({
@@ -71,9 +71,39 @@ const Info = (): JSX.Element => {
         <Formik
           initialValues={initialValue}
           validationSchema={validationSchema}
-          onSubmit={(values, actions) => {
-            console.log(values, actions)
-            actions.setSubmitting(false)
+          onSubmit={async (values, actions) => {
+            await axios
+              .post(
+                'https://bspaycoapi-qa.payco.net.ve/api/v1/email',
+                {
+                  From: 'noreply@lukapay.io',
+                  To: 'support@lukapay.io',
+                  Subject: `Contacto Landing - Cliente: ${values.name} ${values.lastName}`,
+                  Body: `
+                    El cliente ${values.name} ${values.lastName} ha enviado un mensaje de soporte con el siguiente contenido:<br/><br/>
+                    País: ${values.country.label},<br/>
+                    Correo ${values.email},<br/>
+                    Teléfono: ${values.country.phone}${values.phone},<br/>
+                    Titulo: ${values.subject},<br/>
+                    Mensaje: ${values.message}
+                  `
+                },
+                {
+                  auth: {
+                    username: 'admin',
+                    password: '12345678'
+                  }
+                }
+              )
+              .then(response => {
+                console.log(response)
+              })
+              .then(() => {
+                actions.resetForm()
+              })
+              .catch(error => {
+                console.log(error)
+              })
           }}
         >
           {formik => (

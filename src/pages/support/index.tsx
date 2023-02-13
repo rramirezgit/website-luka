@@ -9,24 +9,25 @@ const Support = (): JSX.Element => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <Box>
-      <Nav ButtonColor='primary' ButtonVariant='contained' />
+    <Box
+      sx={{
+        overflowX: 'hidden'
+      }}
+    >
+      <Nav ButtonColor="primary" ButtonVariant="contained" />
       <Box
-        sx={
-          {
-            marginTop: '110px'
-          }
-        }
+        sx={{
+          marginTop: '110px'
+        }}
       >
         <SupportForm />
       </Box>
       <Box
-        sx={
-          {
-            marginTop: '160px',
-            paddingBottom: '50px'
-          }
-        }
+        sx={{
+          marginTop: '160px',
+          padding: '0 35px',
+          paddingBottom: '50px'
+        }}
       >
         <Footer />
       </Box>
