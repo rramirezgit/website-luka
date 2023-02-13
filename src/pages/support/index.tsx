@@ -28,6 +28,7 @@ const Support = (): JSX.Element => {
         sx={
           {
             marginTop: '160px',
+            padding: '0 35px',
             paddingBottom: '50px'
           }
         }

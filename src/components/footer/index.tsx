@@ -29,7 +29,7 @@ const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
       <Box
         sx={{
           width: '100%',
-          maxWidth: '1370px',
+          maxWidth: '1300px',
           display: 'flex',
           justifyContent: 'space-between',
           marginBottom: '50px',

@@ -6,21 +6,24 @@ const FooterBox = ({ title, text, id }: FooterBoxProps): JSX.Element => {
   const navigate = useNavigate()
   return (
     <Box
-      sx={
-        {
-          marginBottom: title ? '35px' : '15px',
-          cursor: title ? 'auto' : 'pointer'
-        }
+      sx={{
+        marginBottom: title ? '35px' : '15px',
+        cursor: title ? 'auto' : 'pointer'
+      }}
+      onClick={
+        id
+          ? () => {
+              console.log(id)
+              navigate(`/${id}`)
+            }
+          : () => {}
       }
-      onClick={id ? () => navigate(id) : () => {}}
     >
       <Typography
-        sx={
-          {
-            fontSize: title ? '18px' : '14px',
-            fontWeight: title ? 'bold' : '400'
-          }
-        }
+        sx={{
+          fontSize: title ? '18px' : '14px',
+          fontWeight: title ? 'bold' : '400'
+        }}
       >
         {text}
       </Typography>

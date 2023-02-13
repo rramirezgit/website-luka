@@ -1,0 +1,34 @@
+.container {
+    padding: 0 35px;
+    margin-top: 95px;
+}
+
+.content {
+    background-color: var(--bg-gray);
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.title {
+    color: var(--dark-gray-text);
+    font-weight: 600px !important;
+    margin-bottom: 40px !important;
+}
+
+.subtitle {
+    font-size: 20px !important;
+    color: var(--primary-buttons);
+    font-weight: 600px !important;
+    margin-bottom: 30px !important;
+}
+
+.text {
+    font-size: 16px !important;
+    color: var(--dark-gray-text);
+    font-weight: 600px !important;
+    margin-bottom: 30px !important;
+}
+
+.list { 
+    padding: 0;
+}
