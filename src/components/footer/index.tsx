@@ -48,10 +48,17 @@ const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
           <Box
             component={'figure'}
             sx={{
-              marginBottom: '35px'
+              marginBottom: {
+                xs: '20px',
+                md: '35px'
+              },
+              width: {
+                xs: '80px',
+                md: '120px'
+              }
             }}
           >
-            <img alt="Logo" src={`${config.UrlBaseImg}Logo.svg`} />
+            <img alt="Logo" src={`${config.UrlBaseImg}Logo.svg`} style={{ maxWidth: '100%' }} />
           </Box>
           <Typography
             className={footerStyles.regular}
