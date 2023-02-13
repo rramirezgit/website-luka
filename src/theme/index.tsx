@@ -299,7 +299,7 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
         lg: 1200,
         xl: 1536,
         xxl: 1900,
-        carousel: 1030
+        carousel: 980
       }
     }
   })
