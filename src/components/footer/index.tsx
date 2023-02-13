@@ -22,7 +22,9 @@ const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        position: 'relative',
+        zIndex: '99'
       }}
     >
       <Box
@@ -73,9 +75,21 @@ const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
               marginBottom: '30px'
             }}
           >
-            <IconBox src={instagram} alt="Instagram" url='https://www.instagram.com/lukapay/' />
-            <IconBox src={twitter} alt="Twitter" url='https://twitter.com/Lukapay_' />
-            <IconBox src={linkedin} alt="LinkedIn" url='https://www.linkedin.com/company/lukapay/' />
+            <IconBox
+              src={instagram}
+              alt="Instagram"
+              url="https://www.instagram.com/lukapay/"
+            />
+            <IconBox
+              src={twitter}
+              alt="Twitter"
+              url="https://twitter.com/Lukapay_"
+            />
+            <IconBox
+              src={linkedin}
+              alt="LinkedIn"
+              url="https://www.linkedin.com/company/lukapay/"
+            />
           </Box>
           {/* <Box
             sx={{

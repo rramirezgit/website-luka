@@ -1,8 +1,8 @@
 /* eslint-disable multiline-ternary */
 import { Box, Button } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import linkPhone from 'assets/demoLink/demo-link-phone.svg?as=webp'
-import gatewayPhone from 'assets/demoLink/demo-gateway-phone.svg?as=webp'
+import linkPhone from 'assets/demoLink/demo-link-phone.svg'
+import gatewayPhone from 'assets/demoLink/demo-gateway-phone.svg'
 import placeholder from 'assets/placeholder.svg'
 import { getCssVar } from 'theme'
 import styles from './mobilecontent.module.css'
