@@ -87,25 +87,25 @@
     }
 }
 
-@media screen and (min-height: 841px) and (max-height: 1000px) and (min-width: 901px) {
+@media screen and (min-height: 841px) and (max-height: 909px) and (min-width: 901px) {
     #mobilecontent-container {
         height: 570px !important;
     }
     #mobilecontent-custom-container {
-        bottom: 7% !important;
+        bottom: 6% !important;
     }
     #mobilecontent-button {
         height: 30px !important;
         font-size: 10px !important;
     }
     #mobilecontent-business {
-        font-size: 12px !important;
+        font-size: 11px !important;
     }
     #mobilecontent-receipt {
         font-size: 8px !important;
     }
     #mobilecontent-amount {
-        font-size: 12px !important;
+        font-size: 11px !important;
     }
     #mobilecontent-currency {
         font-size: 8px !important;
@@ -130,15 +130,16 @@
     }
 }
 
-@media screen and (min-height: 1001px) and (min-width: 901px) {
+@media screen and (min-height: 910px) and (max-height: 1000px) and (min-width: 901px) {
     #mobilecontent-container {
         height: 650px !important;
     }
     #mobilecontent-custom-container {
-        bottom: 8% !important;
+        bottom: 6% !important;
     }
     #mobilecontent-button {
         height: 40px !important;
+        font-size: 12px !important;
     }
     #mobilecontent-business {
         font-size: 12px !important;
@@ -154,10 +155,9 @@
     }
     #mobilecontent-text {
         font-size: 10px !important;
-        margin-top: 2px;
     }
     #mobilecontent-close {
-        font-size: 18px !important;
+        font-size: 16px !important;
     }
     #mobilecontent-arrow-box {
         height: 18px;
@@ -169,6 +169,92 @@
     #mobilecontent-logo {
         height: 35px;
         width: 35px;
+        margin-right: 8px;
+    }
+}
+
+@media screen and (min-height: 1001px) and (max-height: 1109px) and (min-width: 901px) {
+    #mobilecontent-container {
+        height: 730px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 7% !important;
+    }
+    #mobilecontent-button {
+        height: 40px !important;
+    }
+    #mobilecontent-business {
+        font-size: 13px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 12px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 13px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 12px !important;
+    }
+    #mobilecontent-text {
+        font-size: 12px !important;
+        margin-top: 2px;
+    }
+    #mobilecontent-close {
+        font-size: 18px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 23px;
+        width: 23px;
+    }
+    #mobilecontent-arrow {
+        font-size: 20px;
+    }
+    #mobilecontent-logo {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-height: 1110px) and (min-width: 901px) {
+    #mobilecontent-container {
+        height: 800px !important;
+    }
+    #mobilecontent-custom-container {
+        bottom: 8% !important;
+    }
+    #mobilecontent-button {
+        height: 40px !important;
+    }
+    #mobilecontent-business {
+        font-size: 14px !important;
+    }
+    #mobilecontent-receipt {
+        font-size: 12px !important;
+    }
+    #mobilecontent-amount {
+        font-size: 14px !important;
+    }
+    #mobilecontent-currency {
+        font-size: 12px !important;
+    }
+    #mobilecontent-text {
+        font-size: 12px !important;
+        margin-top: 2px;
+    }
+    #mobilecontent-close {
+        font-size: 22px !important;
+    }
+    #mobilecontent-arrow-box {
+        height: 25px;
+        width: 25px;
+    }
+    #mobilecontent-arrow {
+        font-size: 25px;
+    }
+    #mobilecontent-logo {
+        height: 40px;
+        width: 40px;
         margin-right: 10px;
     }
 }

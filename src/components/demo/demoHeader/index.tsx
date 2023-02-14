@@ -57,20 +57,20 @@ const DemoHeader = ({
         <Box
           component={'figure'}
           className={styles.figure}
-          onClick={handleDesktop}
+          onClick={handleMobile}
         >
-          <Desktop
-            stroke={desktopState ? '#0878ff' : `${getCssVar('--gray-text')}`}
+          <Mobile
+            stroke={mobileState ? '#0878ff' : `${getCssVar('--gray-text')}`}
             strokeWidth={2}
           />
         </Box>
         <Box
           component={'figure'}
           className={styles.figure}
-          onClick={handleMobile}
+          onClick={handleDesktop}
         >
-          <Mobile
-            stroke={mobileState ? '#0878ff' : `${getCssVar('--gray-text')}`}
+          <Desktop
+            stroke={desktopState ? '#0878ff' : `${getCssVar('--gray-text')}`}
             strokeWidth={2}
           />
         </Box>
