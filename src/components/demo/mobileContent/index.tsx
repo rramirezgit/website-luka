@@ -47,7 +47,7 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
         <Box
           className={styles.close}
           sx={{
-            margin: '10px 8px 8px 8px'
+            margin: '10px 8px 4px 8px'
           }}
         >
           <CloseIcon
@@ -157,7 +157,7 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
             id={'mobilecontent-arrow-box'}
             sx={{
               top: '-10px',
-              left: '48%'
+              left: '46%'
             }}
           >
             <KeyboardArrowUpIcon

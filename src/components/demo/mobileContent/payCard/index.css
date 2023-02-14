@@ -101,7 +101,7 @@
     }
 }
 
-@media screen and (min-height: 841px) and (max-height: 1000px) and (min-width: 901px) {
+@media screen and (min-height: 841px) and (max-height: 909px) and (min-width: 901px) {
     #paycard-container {
         height: 100px !important;
         min-height: 100px !important;
@@ -152,12 +152,63 @@
     }
 }
 
-@media screen and (min-height: 1001px) and (min-width: 901px) {
+@media screen and (min-height: 909px) and (max-height: 1000px) and (min-width: 901px) {
     #paycard-container {
-        height: 120px !important;
-        min-height: 120px !important;
+        height: 125px !important;
+        min-height: 125px !important;
         width: 190px !important;
         min-width: 190px !important;
+    }
+    #paycard-text {
+        font-size: 14px !important;
+        padding-right: 13px;
+    }
+    #check-container {
+        padding: 4px 10px 0px 8px;
+        top: 6px;
+    }
+    #icons-container {
+        padding: 0px 10px 0px 8px;
+        bottom: 6px;
+    }
+    #big-circle {
+        height: 12px;
+        width: 12px;
+    }
+    #medium-circle {
+        height: 11px;
+        width: 11px;
+    }
+    #small-circle {
+        height: 8px;
+        width: 8px;
+    }
+    #small-icon {
+        height: 15px;
+        width: 15px;
+    }
+    #big-icon {
+        height: 20px;
+        width: 38px;
+    }
+    #paypal-icon {
+        height: 28px;
+        width: 28px;
+    }
+    #paypal-title {
+        font-size: 14px;
+    }
+    #paypal-text {
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-height: 1001px) and (max-height: 1109px) and (min-width: 901px) {
+    #paycard-container {
+        height: 140px !important;
+        min-height: 140px !important;
+        width: 220px !important;
+        min-width: 220px !important;
     }
     #paycard-text {
         font-size: 15px !important;
@@ -190,6 +241,57 @@
     #big-icon {
         height: 20px;
         width: 40px;
+    }
+    #paypal-icon {
+        height: 30px;
+        width: 30px;
+    }
+    #paypal-title {
+        font-size: 16px;
+    }
+    #paypal-text {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-height: 1110px) and (min-width: 901px) {
+    #paycard-container {
+        height: 150px !important;
+        min-height: 150px !important;
+        width: 240px !important;
+        min-width: 240px !important;
+    }
+    #paycard-text {
+        font-size: 17px !important;
+        padding-right: 15px;
+    }
+    #check-container {
+        padding: 0px 10px 0px 10px;
+        top: 10px;
+    }
+    #icons-container {
+        padding: 0px 10px 0px 10px;
+        bottom: 10px;
+    }
+    #big-circle {
+        height: 14px;
+        width: 14px;
+    }
+    #medium-circle {
+        height: 13px;
+        width: 13px;
+    }
+    #small-circle {
+        height: 10px;
+        width: 10px;
+    }
+    #small-icon {
+        height: 20px;
+        width: 20px;
+    }
+    #big-icon {
+        height: 25px;
+        width: 45px;
     }
     #paypal-icon {
         height: 30px;
