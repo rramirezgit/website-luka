@@ -50,15 +50,13 @@ const Experience = (): JSX.Element => {
             },
             backgroundSize: 'cover !important',
             top: {
-              xs: '172px',
-              sm: '172px',
-              md: '243px',
+              xs: '71px',
+              sm: '96px',
               lg: '243px'
             },
             left: {
-              xs: '-15px',
-              sm: '-15px',
-              md: '-23px',
+              xs: '-7px',
+              sm: '-9px',
               lg: '-23px'
             }
           }}
@@ -68,9 +66,11 @@ const Experience = (): JSX.Element => {
               <Box className={styles.divTittle}>
                 <Typography className={styles.tittle}>Experience</Typography>
                 <Typography className={styles.text}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  vitae nibh at erat vulputate fringilla. Nulla consequat quam
-                  ac hendrerit pharetra. Suspendisse eget interdum mag
+                  For over 10 years, Luka has been delivering solutions to
+                  support businesses in need to access digital payments. Fit for
+                  local and international use cases, we transact in multiple
+                  currencies and payment methods. Our team has a solid track
+                  record implementing and executing payment solutions.
                 </Typography>
               </Box>
             </Box>
@@ -81,6 +81,10 @@ const Experience = (): JSX.Element => {
                   marginTop: {
                     xs: '72px',
                     lg: '100px'
+                  },
+                  gap: {
+                    xs: '33px',
+                    sm: '94px'
                   }
                 }}
               >

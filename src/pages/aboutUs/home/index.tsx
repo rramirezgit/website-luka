@@ -82,10 +82,10 @@ const Home = (): JSX.Element => {
                 International payments for everyone
               </Typography>
               <Typography className={style.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-                accumsan et viverra justo commodo. Proin sodales pulvinar
-                tempor.
+                We offer local & international payment tech-services for
+                businesses and consumers. We enable simple interfaces, easy to
+                use, and secure for the two to interact. Our focus is to make
+                your business thrive.
               </Typography>
             </Box>
           </Box>
