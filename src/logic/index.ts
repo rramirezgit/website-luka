@@ -14,7 +14,22 @@ export const fonts = [
 
 export const currency = [
   { label: 'Dollars', value: '$' },
-  { label: 'Euros', value: '€' }
+  { label: 'Euros', value: '€' },
+  { label: 'Japanese Yen', value: '¥' },
+  { label: 'Uruguayan Peso', value: '$U' },
+  { label: 'Chilean Peso', value: '$' },
+  { label: 'Pounds', value: '£' },
+  { label: 'Swiss Franc', value: '₣' }
+]
+
+export const currencyValues = [
+  { label: 'Dollars', value: 'USD' },
+  { label: 'Euros', value: 'EUR' },
+  { label: 'Japanese Yen', value: 'JPY' },
+  { label: 'Uruguayan Peso', value: 'UYU' },
+  { label: 'Chilean Peso', value: 'CLP' },
+  { label: 'Pounds', value: 'GBP' },
+  { label: 'Swiss Franc', value: 'Fr' }
 ]
 
 export const subjects = [

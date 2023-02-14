@@ -95,9 +95,6 @@ const Info = (): JSX.Element => {
                   }
                 }
               )
-              .then(response => {
-                console.log(response)
-              })
               .then(() => {
                 actions.resetForm()
               })
@@ -286,7 +283,6 @@ const Info = (): JSX.Element => {
                       value={formik.values.phone}
                       onChange={e => {
                         if (/^[0-9]*$/.test(e.target.value)) {
-                          console.log(e.target.value)
                           formik.handleChange(e)
                         }
                       }}

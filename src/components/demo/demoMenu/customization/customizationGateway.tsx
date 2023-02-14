@@ -43,7 +43,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
         <Box
           className={styles['input-container']}
         >
-          <Color label='Color del Botón' value={demo.button} onChange={(e: string) => { dispatch(changeButton(e)) }} />
+          <Color label='Button Color' value={demo.button} onChange={(e: string) => { dispatch(changeButton(e)) }} />
         </Box>
         <Box
           className={styles['input-container']}
@@ -54,7 +54,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
             disableClearable={true}
             onChange={(e, newValue) => { dispatch(changeFont(newValue === null ? fonts[0] : newValue)) }}
             options={fonts}
-            renderInput={(params) => <TextField {...params} variant='standard' label="Fuente" />}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Fonts" />}
             popupIcon={<KeyboardArrowDownIcon sx={{ fontSize: '15px' }} />}
           />
         </Box>
@@ -67,7 +67,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
             value={demo.language}
             onChange={(e, newValue) => { dispatch(changeLanguage(newValue === null ? languages[0] : newValue)) }}
             options={languages}
-            renderInput={(params) => <TextField {...params} variant='standard' label="Idioma" />}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Language" />}
             popupIcon={<KeyboardArrowDownIcon sx={{ fontSize: '15px' }} />}
           />
         </Box>
@@ -97,7 +97,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
               }
             }
           >
-            Configuración
+            Settings
           </Typography>
         </Box>
         <Box

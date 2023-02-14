@@ -13,7 +13,6 @@ const FooterBox = ({ title, text, id }: FooterBoxProps): JSX.Element => {
       onClick={
         id
           ? () => {
-              console.log(id)
               navigate(`/${id}`)
             }
           : () => {}

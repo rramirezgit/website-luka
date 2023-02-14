@@ -9,6 +9,7 @@ import card from 'assets/demoLink/payment/card.png'
 import './index.css'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
+import { currencyValues } from 'logic'
 
 const DesktopContent = (): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
@@ -16,97 +17,83 @@ const DesktopContent = (): JSX.Element => {
     <Box
       className={styles.container}
       id={'demolink-desktop-container'}
-      sx={
-        {
-          backgroundColor: demo.background ? `#${demo.background}` : getCssVar('--primary-buttons-a')
-        }
-      }
+      sx={{
+        backgroundColor: demo.background
+          ? `#${demo.background}`
+          : getCssVar('--primary-buttons-a')
+      }}
     >
-      <Box
-        className={styles.header}
-      >
-        <Box
-          className={styles['header-flex']}
-        >
+      <Box className={styles.header}>
+        <Box className={styles['header-flex']}>
           <Box
             className={styles.circle}
-            sx={
-              {
-                backgroundColor: 'red'
-              }
-            }
+            sx={{
+              backgroundColor: 'red'
+            }}
           ></Box>
           <Box
             className={styles.circle}
-            sx={
-              {
-                backgroundColor: 'yellow'
-              }
-            }
+            sx={{
+              backgroundColor: 'yellow'
+            }}
           ></Box>
           <Box
             className={styles.circle}
-            sx={
-              {
-                backgroundColor: 'green'
-              }
-            }
+            sx={{
+              backgroundColor: 'green'
+            }}
           ></Box>
         </Box>
       </Box>
-      <Box
-        className={styles.content}
-      >
+      <Box className={styles.content}>
         <Box
           className={styles.product}
-          sx={
-            {
-              padding: {
-                xs: '20px 20px'
-              }
+          sx={{
+            padding: {
+              xs: '20px 20px'
             }
-          }
+          }}
         >
           <Box
             id={'demolink-desktop-logo'}
             className={styles.logo}
-            sx={
-              {
-                height: '55px',
-                width: '55px'
-              }
-            }
+            sx={{
+              height: '55px',
+              width: '55px'
+            }}
           >
-            <img src={demo.imgUrl ? demo.imgUrl : placeholder} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+            <img
+              src={demo.imgUrl ? demo.imgUrl : placeholder}
+              alt="Logo"
+              style={{ maxHeight: '100%', maxWidth: '100%' }}
+            />
           </Box>
-          <Box
-            className={styles['text-box']}
-          >
+          <Box className={styles['text-box']}>
             <Typography
               id={'demolink-desktop-title'}
               className={styles.title}
-              sx={
-                {
-                  fontSize: {
-                    xs: '18px !important',
-                    fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                  }
+              sx={{
+                fontSize: {
+                  xs: '18px !important',
+                  fontFamily: demo.font?.label
+                    ? `${demo.font?.label} !important`
+                    : 'Open Sans'
                 }
-              }
+              }}
             >
               {demo.language?.value === 'EN' ? 'Invoice' : 'Factura'}
             </Typography>
             <Typography
               id={'demolink-desktop-text'}
               className={styles.message}
-              sx={
-                {
-                  fontSize: {
-                    xs: '10px !important',
-                    fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                  }
+              sx={{
+                fontSize: {
+                  xs: '10px !important',
+                  fontFamily: demo.font?.label
+                    ? `${demo.font?.label} !important`
+                    : 'Open Sans'
                 }
-              }
+              }}
             >
               {demo.title}
             </Typography>
@@ -114,47 +101,60 @@ const DesktopContent = (): JSX.Element => {
           <Typography
             id={'demolink-desktop-amount'}
             className={styles.amount}
-            sx={
-              {
-                fontSize: {
-                  xs: '30px !important',
-                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                }
+            sx={{
+              fontSize: {
+                xs: '30px !important',
+                fontFamily: demo.font?.label
+                  ? `${demo.font?.label} !important`
+                  : 'Open Sans'
               }
-            }
+            }}
           >
-            100 <span id={'demolink-desktop-span'} className={styles.span} style={{ fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans' }} >{demo.currency?.value === '$' ? 'USD' : 'EUR'}</span>
+            100{' '}
+            <span
+              id={'demolink-desktop-span'}
+              className={styles.span}
+              style={{
+                fontFamily: demo.font?.label
+                  ? `${demo.font?.label} !important`
+                  : 'Open Sans'
+              }}
+            >
+              {demo.currency?.value ? currencyValues.filter((value) => value.label === demo.currency?.label)[0].value : 'USD'}
+            </span>
           </Typography>
           <Typography
             id={'demolink-desktop-title'}
             className={styles.currency}
-            sx={
-              {
-                fontSize: {
-                  xs: '10px !important',
-                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                }
+            sx={{
+              fontSize: {
+                xs: '10px !important',
+                fontFamily: demo.font?.label
+                  ? `${demo.font?.label} !important`
+                  : 'Open Sans'
               }
-            }
+            }}
           >
-            {demo.language?.value === 'EN' ? 'Pay with another currency' : 'Pagar en otra moneda'}
+            {demo.language?.value === 'EN'
+              ? 'Pay with another currency'
+              : 'Pagar en otra moneda'}
           </Typography>
-          <Box
-            className={styles.payment}
-          >
+          <Box className={styles.payment}>
             <PaymentBox
-              borderColor={demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')}
-              text='Credit'
+              borderColor={
+                demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')
+              }
+              text="Credit"
               img={card}
               borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
             <PaymentBox
-              text='Paypal'
+              text="Paypal"
               img={paypal}
               borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
             <PaymentBox
-              text='Zelle'
+              text="Zelle"
               img={zelle}
               borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
@@ -170,14 +170,18 @@ const DesktopContent = (): JSX.Element => {
           <Button
             id={'demolink-desktop-button'}
             className={styles.button}
-            sx={
-              {
-                backgroundColor: demo.button ? `#${demo.button} !important` : getCssVar('--primary-buttons'),
-                color: `${getCssVar('--white')} !important`,
-                borderRadius: `${typeof demo.border === 'number' ? demo.border : 8}px !important`,
-                fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-              }
-            }
+            sx={{
+              backgroundColor: demo.button
+                ? `#${demo.button} !important`
+                : getCssVar('--primary-buttons'),
+              color: `${getCssVar('--white')} !important`,
+              borderRadius: `${
+                typeof demo.border === 'number' ? demo.border : 8
+              }px !important`,
+              fontFamily: demo.font?.label
+                ? `${demo.font?.label} !important`
+                : 'Open Sans'
+            }}
           >
             {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}
           </Button>

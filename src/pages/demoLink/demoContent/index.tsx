@@ -36,7 +36,7 @@ const DemoContent = ({
               opacity: loading ? 0 : 1
             }}
           >
-            <MobileContent type="gateway" onLoad={handleLoad} />
+            <MobileContent type="link" onLoad={handleLoad} />
           </Box>
           <Box
             sx={{

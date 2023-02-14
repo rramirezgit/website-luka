@@ -12,6 +12,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import './index.css'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
+import { currencyValues } from 'logic'
 
 interface Props {
   type: 'gateway' | 'link'
@@ -131,7 +132,7 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
               }}
             >
               {`${demo.currency?.value ? demo.currency?.value : '$'}55,57 ${
-                demo.currency?.value === '$' ? 'USD' : 'EUR'
+                demo.currency?.value ? currencyValues.filter((value) => value.label === demo.currency?.label)[0].value : 'USD'
               }`}
             </Typography>
             <Typography
