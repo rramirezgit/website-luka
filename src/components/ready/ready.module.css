@@ -8,6 +8,7 @@
   align-items: center;
   gap: 26px;
   text-align: center;
+  justify-content: center;
 }
 .title {
   font-style: normal !important;
