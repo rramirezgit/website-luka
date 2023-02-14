@@ -100,7 +100,7 @@ const PaymentLink = (): JSX.Element => {
               }}
               onClick={handleClick}
             >
-              demo
+              View Demo
             </Button>
           </Box>
         }
