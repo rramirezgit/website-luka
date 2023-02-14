@@ -12,6 +12,7 @@
   height: inherit;
   position: relative;
   left: -19px;
+  bottom: 132px;
 }
 
 .title {
@@ -45,6 +46,8 @@
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+  position: relative;
+  z-index: 99;
 }
 
 .subtitle {

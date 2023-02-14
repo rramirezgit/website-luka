@@ -14,7 +14,8 @@ const World = (): JSX.Element => {
         sx={{
           height: {
             xs: '1102px',
-            md: '1537px'
+            md: '1298px',
+            lg: '1537px'
           },
           padding: {
             xs: '0 0 0 0',
@@ -34,7 +35,7 @@ const World = (): JSX.Element => {
               md: '0px'
             },
             gap: {
-              xs: '0px',
+              xs: '25px',
               md: '40px'
             }
           }}
@@ -81,15 +82,19 @@ const World = (): JSX.Element => {
           sx={{
             backgroundSize: 'contain',
             width: {
-              xs: '691.84px',
-              sm: '910.84px',
-              xl: '1200px'
+              xs: '891.84px',
+              sm: '1200.84px',
+              lg: '1400px'
             },
             height: {
-              xs: '691.84px',
-              sm: '910.84px',
-
-              xl: '1200px'
+              xs: '891.84px',
+              sm: '1200.84px',
+              lg: '1400px'
+            },
+            bottom: {
+              xs: '84px',
+              sm: '111px',
+              md: '132px'
             }
           }}
         >
