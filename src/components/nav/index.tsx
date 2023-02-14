@@ -61,7 +61,10 @@ const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
         {options.map(op => {
           return (
             <ListItem key={op.id} disablePadding>
-              <ListItemButton sx={{ textAlign: 'left' }}>
+              <ListItemButton
+                sx={{ textAlign: 'left' }}
+                onClick={() => navigate(op.id)}
+              >
                 <ListItemText primary={op.name} />
               </ListItemButton>
             </ListItem>

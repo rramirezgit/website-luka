@@ -50,6 +50,7 @@ const BoxInfo = (): JSX.Element => {
             xs: '26px',
             sm: '24px'
           },
+          display: 'none',
           width: {
             xs: '144px'
           },

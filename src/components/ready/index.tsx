@@ -40,7 +40,8 @@ const Ready = ({ aboutUs = false }: aboutUsProps): JSX.Element => {
               width: '198px',
               height: '54px',
               fontSize: '20px',
-              marginTop: '64px'
+              marginTop: '64px',
+              display: 'none'
             }}
           >
             Join us
@@ -96,7 +97,8 @@ const Ready = ({ aboutUs = false }: aboutUsProps): JSX.Element => {
               sx={{
                 width: '144px',
                 height: ' 48px',
-                fontSize: '16px'
+                fontSize: '16px',
+                display: 'none'
               }}
             >
               Contact sales
@@ -111,7 +113,8 @@ const Ready = ({ aboutUs = false }: aboutUsProps): JSX.Element => {
                 border: '2px solid #5AE1E2',
                 fontWeight: '600',
                 fontSize: '16px',
-                letterSpacing: '-0.02em'
+                letterSpacing: '-0.02em',
+                display: 'none'
               }}
             >
               Apply now

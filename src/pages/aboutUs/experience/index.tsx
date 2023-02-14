@@ -52,12 +52,12 @@ const Experience = (): JSX.Element => {
             top: {
               xs: '71px',
               sm: '96px',
-              lg: '243px'
+              lg: '160px'
             },
             left: {
               xs: '-7px',
               sm: '-9px',
-              lg: '-23px'
+              lg: '-14px'
             }
           }}
         >

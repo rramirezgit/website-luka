@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable multiline-ternary */
 import { Box, Button } from '@mui/material'
 import Typography from '@mui/material/Typography'
@@ -9,10 +10,10 @@ import styles from './mobilecontent.module.css'
 import PayCard from './payCard'
 import CloseIcon from '@mui/icons-material/Close'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
-import './index.css'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
 import { currencyValues } from 'logic'
+import './index.css'
 
 interface Props {
   type: 'gateway' | 'link'
@@ -132,7 +133,11 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
               }}
             >
               {`${demo.currency?.value ? demo.currency?.value : '$'}55,57 ${
-                demo.currency?.value ? currencyValues.filter((value) => value.label === demo.currency?.label)[0].value : 'USD'
+                demo.currency?.value
+                  ? currencyValues.filter(
+                      value => value.label === demo.currency?.label
+                    )[0].value
+                  : 'USD'
               }`}
             </Typography>
             <Typography

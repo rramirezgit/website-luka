@@ -56,7 +56,7 @@ const Home = (): JSX.Element => {
               display: 'flex',
               width: '100%',
               justifyContent: 'center',
-              margin: '46px 0 16px 0'
+              margin: '89px 0 16px 0'
             }}
           >
             <Box

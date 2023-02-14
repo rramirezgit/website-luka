@@ -12,6 +12,8 @@
   justify-content: center;
   align-items: center;
   gap: 22px;
+  position: relative;
+  bottom: 72px;
 }
 
 .title {
@@ -39,6 +41,12 @@
 .img {
   width: 754px;
   height: 548px;
-  margin-left: 104px;
+  margin-left: 75px;
   margin-bottom: 102px;
+}
+
+@media (max-width: 500px) {
+  .img {
+    width: 655px;
+  }
 }
