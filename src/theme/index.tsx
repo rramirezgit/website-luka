@@ -64,15 +64,15 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
         styleOverrides: {
           root: {
             [theme.breakpoints.down('sm')]: {
-              padding: '20px 33.10px'
+              padding: '20px 0px 0px 0px'
             },
             [theme.breakpoints.down('md')]: {
-              padding: '30px 33.10px'
+              padding: '30px 0px 0px 0px'
             },
             [theme.breakpoints.up('md')]: {
-              padding: '40px 33.10px'
+              padding: '40px 0px 0px 0px'
             },
-            maxWidth: '1267.09px'
+            maxWidth: '1300px'
           }
         }
       },
@@ -133,7 +133,34 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
       MuiInputBase: {
         styleOverrides: {
           root: {
-            fontSize: '14px'
+            fontSize: '14px',
+            '&:hover:before': {
+              borderColor: `${getCssVar('--primary-buttons')} !important`,
+              transition: 'none'
+            },
+            '&:hover:after': {
+              borderColor: `${getCssVar('--primary-buttons')} !important`,
+              transition: 'none'
+            }
+          }
+        }
+      },
+      MuiOutlinedInput: {
+        styleOverrides: {
+          root: {
+            '&:hover fieldset': {
+              borderColor: `${getCssVar('--primary-buttons')} !important`,
+              transition: 'none',
+              outline: 'none'
+            },
+            '&.Mui-error:hover fieldset': {
+              borderColor: `${getCssVar('--error-state')} !important`,
+              transition: 'none',
+              outline: 'none'
+            },
+            '& fieldset': {
+              borderColor: getCssVar('--light-gray')
+            }
           }
         }
       },
@@ -150,7 +177,8 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
             },
             '&:before': {
               borderColor: getCssVar('--light-gray'),
-              transition: 'none'
+              transition: 'none',
+              outline: 'none'
             },
             '&:after': {
               borderColor: getCssVar('--light-gray'),
@@ -163,6 +191,16 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
             '&:hover:not(.Mui-disabled, .Mui-error):before': {
               borderColor: getCssVar('--primary-buttons'),
               transition: 'none'
+            },
+            '&.Mui-error:hover:before': {
+              borderColor: `${getCssVar('--error-state')} !important`,
+              transition: 'none',
+              outline: 'none'
+            },
+            '&.Mui-error:hover:after': {
+              borderColor: `${getCssVar('--error-state')} !important`,
+              transition: 'none',
+              outline: 'none'
             }
           }
         }
@@ -198,6 +236,15 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
             },
             '&.Mui-focusVisible': {
               boxShadow: 'none'
+            }
+          }
+        }
+      },
+      MuiInputLabel: {
+        styleOverrides: {
+          root: {
+            '&.Mui-error': {
+              color: 'rgba(0, 0, 0, 0.6) !important'
             }
           }
         }
@@ -252,7 +299,7 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
         lg: 1200,
         xl: 1536,
         xxl: 1900,
-        carousel: 1030
+        carousel: 980
       }
     }
   })

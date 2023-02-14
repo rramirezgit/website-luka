@@ -47,29 +47,27 @@ const Info = ({
       >
         <Typography
           classes={{
-            root: style['title-blue']
-          }}
-          sx={{
-            fontSize: {
-              xs: '40px',
-              xl: '54px'
-            }
-          }}
-        >
-          {titleBlue}
-        </Typography>
-        <Typography
-          classes={{
             root: style.title
           }}
           sx={{
             fontSize: {
-              xs: '40px',
-              xl: '54px'
+              xs: '45px'
             }
           }}
         >
           {title}
+        </Typography>
+        <Typography
+          classes={{
+            root: style['title-blue']
+          }}
+          sx={{
+            fontSize: {
+              xs: '45px'
+            }
+          }}
+        >
+          {titleBlue}
         </Typography>
       </Box>
       {subtitle.length > 0 && (

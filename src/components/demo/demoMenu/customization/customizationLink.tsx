@@ -113,7 +113,7 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
             disableClearable={true}
             onChange={(e, newValue) => { dispatch(changeFont(newValue === null ? fonts[0] : newValue)) }}
             options={fonts}
-            renderInput={(params) => <TextField {...params} variant='standard' label="Font" />}
+            renderInput={(params) => <TextField {...params} variant='standard' label="Fonts" />}
             popupIcon={<KeyboardArrowDownIcon sx={{ fontSize: '15px' }} />}
           />
         </Box>
@@ -156,7 +156,7 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
               }
             }
           >
-            Configuración
+            Settings
           </Typography>
         </Box>
         <Box

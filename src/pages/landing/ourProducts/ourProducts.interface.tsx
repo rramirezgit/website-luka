@@ -1,5 +1,6 @@
 export interface CardInterface {
-  key: string
+  id: string
+  idCard: string
   title: string
   text: string
   imageUrl?: string

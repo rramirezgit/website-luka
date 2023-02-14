@@ -5,21 +5,21 @@ import Tags from 'components/tags'
 import PhoneBox from './PhoneBox'
 import Square from 'components/square'
 import ScrollBoxes from './ScrollBoxes'
+import cardsArray from '../ourProducts/ourProductsArray'
 
 const VPOS = (): JSX.Element => {
   return (
     <Box
-      sx={
-        {
-          padding: {
-            xs: '70px 0 70px 0',
-            lg: '150px 0 100px 0'
-          },
-          width: '100%',
-          position: 'relative',
-          cursor: 'default'
-        }
-      }
+      id={cardsArray[2].id}
+      sx={{
+        padding: {
+          xs: '70px 0 70px 0',
+          lg: '150px 0 100px 0'
+        },
+        width: '100%',
+        position: 'relative',
+        cursor: 'default'
+      }}
     >
       <Box
         className={vposStyles.container}
@@ -32,11 +32,8 @@ const VPOS = (): JSX.Element => {
             xs: 'center !important',
             lg: 'space-between !important'
           },
-          maxWidth: '1500px',
-          padding: {
-            xs: '0 50px',
-            md: '0 100px'
-          }
+          maxWidth: '1370px',
+          padding: '0 35px'
         }}
       >
         <Box
@@ -71,7 +68,9 @@ const VPOS = (): JSX.Element => {
             <Typography
               className={vposStyles['title-blue']}
               sx={{
-                fontSize: '40px'
+                fontSize: {
+                  xs: '45px'
+                }
               }}
             >
               VPOS
@@ -79,7 +78,9 @@ const VPOS = (): JSX.Element => {
             <Typography
               className={vposStyles.title}
               sx={{
-                fontSize: '40px'
+                fontSize: {
+                  xs: '45px'
+                }
               }}
             >
               Hardware Free
@@ -148,8 +149,20 @@ const VPOS = (): JSX.Element => {
         </Box>
       </Box>
       <ScrollBoxes />
-      <Square color='#5AE1E230' bottom={'0'} left={'0'} maxHeight={70} maxWidth={130}/>
-      <Square color='#0878FF20' top={'0'} right={'0'} maxHeight={180} maxWidth={130}/>
+      <Square
+        color="#5AE1E230"
+        bottom={'0'}
+        left={'0'}
+        maxHeight={90}
+        maxWidth={130}
+      />
+      <Square
+        color="#0878FF20"
+        top={'0'}
+        right={'0'}
+        maxHeight={180}
+        maxWidth={130}
+      />
     </Box>
   )
 }

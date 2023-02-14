@@ -8,7 +8,6 @@ import animation from 'assets/animation.json'
 import Lottie from 'lottie-react'
 import Nav from 'components/nav'
 import bgRectangles from 'assets/bg-home_rectangles.png'
-import Square from 'components/square'
 
 const BoxInfo = (): JSX.Element => {
   return (
@@ -16,11 +15,16 @@ const BoxInfo = (): JSX.Element => {
       className={home['content-info']}
       sx={{
         padding: {
-          xs: '100px 35.13px 0px;',
-          sm: '100px 0px 0px 33px'
+          xs: '57px 34px 0 34px',
+          sm: '57px 34px 0 34px',
+          md: '57px 0 0 0',
+          lg: '57px 0 0 0'
         },
         width: {
-          xs: '100%'
+          xs: '100%',
+          sm: '100%',
+          md: '100%',
+          lg: '50%'
         }
       }}
     >
@@ -40,24 +44,22 @@ const BoxInfo = (): JSX.Element => {
       </Typography>
       <Button
         variant="contained"
-        color="white"
+        color="primary"
         sx={{
           marginTop: {
             xs: '26px',
             sm: '24px'
           },
           width: {
-            xs: '148px',
-            sm: '126px'
+            xs: '144px'
           },
           height: {
-            xs: '45px',
-            sm: '47.16px'
+            sm: '48px'
           },
           fontSize: {
-            xs: '20px',
-            sm: '14px'
-          }
+            xs: '16px'
+          },
+          fontWeight: '600 !important'
         }}
       >
         Contact us
@@ -72,14 +74,13 @@ const Home = (): JSX.Element => {
       className={home.content}
       sx={{
         height: {
-          xs: '700px',
-          sm: '739px',
-          md: '851px'
-        },
-        position: 'relative'
+          xs: '796px',
+          sm: '831px',
+          md: '884px'
+        }
       }}
     >
-      <Nav />
+      <Nav ButtonColor="white" ButtonVariant="outlined" />
       <Box
         className={home.rentangles}
         sx={{
@@ -99,13 +100,13 @@ const Home = (): JSX.Element => {
           className={home.boxInfo}
           sx={{
             padding: {
-              md: '0px 30px'
+              md: '0px 34px'
             }
           }}
         >
           <Box
             sx={{
-              width: '1267.09px'
+              width: '1300px'
             }}
           >
             <BoxInfo />
@@ -117,7 +118,7 @@ const Home = (): JSX.Element => {
             sx={{
               clipPath: {
                 xs: 'polygon(-34% 48%, 216% 4%, 801% 39%)',
-                sm: 'polygon(-27% 65%, 143% -5%, 801% 67%)',
+                sm: 'polygon(-36% 77%, 143% -5%, 801% 67%)',
                 md: 'polygon(-135% 127%, 124% 3%, 146% 112%)',
                 lg: 'polygon(-78% 99%, 107% 1%, 135% 112%);',
                 xl: 'polygon(-90% 114%, 106% 2%, 138% 100%)'
@@ -131,13 +132,6 @@ const Home = (): JSX.Element => {
           />
         </Box>
       </Box>
-      <Square
-        color="#5AE1E230"
-        bottom={'0'}
-        right={'0'}
-        maxHeight={120}
-        maxWidth={120}
-      />
     </Box>
   )
 }

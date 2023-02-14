@@ -1,0 +1,88 @@
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.divRotate {
+  width: 150vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 889.61px;
+  transform: rotate(-5.13deg);
+  background-color: var(--dark-blue);
+}
+
+.rentangles {
+  width: 100vw;
+  height: 987px;
+  transform: rotate(5.13deg);
+  position: relative;
+  background-position: 0px 85px !important;
+}
+
+.tittle {
+  font-weight: 700 !important;
+  font-size: 45px !important;
+  line-height: 150% !important;
+  color: var(--white) !important;
+}
+
+.text {
+  margin-top: 30px !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 150% !important;
+  color: rgba(246, 247, 251, 0.6) !important;
+  max-width: 482px;
+}
+
+.contentInfo {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: initial;
+}
+
+.layout {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divCards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 94px;
+}
+
+.contentDivCards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .divCards {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+
+  .divCards > div {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .divCards {
+    width: 329.92px;
+    height: 230.11px;
+  }
+}

@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import demoSlice from './slices/demoSlice'
-// import session from 'redux-persist/lib/storage/session'
+// import { persistStore, persistReducer } from 'redux-persist'
+// import storage from 'redux-persist/lib/storage'
 // import autoMergeLevel1 from 'redux-persist/es/stateReconciler/autoMergeLevel1'
-// import persistReducer from 'redux-persist/es/persistReducer'
 
 // const persistSessionConfig = {
-//   key: 'sessionStorage',
-//   storage: session,
+//   key: 'localStorage',
+//   storage: storage,
 //   stateReconciler: autoMergeLevel1,
 // }
 

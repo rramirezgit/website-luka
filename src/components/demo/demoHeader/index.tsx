@@ -15,7 +15,12 @@ interface DemoHeaderProps {
   handleDesktop: () => void
 }
 
-const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: DemoHeaderProps): JSX.Element => {
+const DemoHeader = ({
+  mobileState,
+  desktopState,
+  handleMobile,
+  handleDesktop
+}: DemoHeaderProps): JSX.Element => {
   const navigate = useNavigate()
   const handleClick = (): void => {
     navigate('/')
@@ -23,62 +28,49 @@ const DemoHeader = ({ mobileState, desktopState, handleMobile, handleDesktop }: 
   return (
     <Box
       className={styles.container}
-      sx={
-        {
-          justifyContent: {
-            xs: 'center',
-            md: 'space-between'
-          },
-          width: {
-            xs: '100%',
-            md: 'calc(50% + 110px)'
-          }
+      sx={{
+        justifyContent: {
+          xs: 'center',
+          md: 'space-between'
+        },
+        width: {
+          xs: '100%',
+          md: 'calc(50% + 100px)'
         }
-      }
+      }}
     >
       <Box
-        sx={
-          {
-            alignItems: 'center',
-            display: {
-              xs: 'none',
-              md: 'flex'
-            },
-            cursor: 'pointer'
-          }
-        }
+        sx={{
+          alignItems: 'center',
+          display: {
+            xs: 'none',
+            md: 'flex'
+          },
+          cursor: 'pointer'
+        }}
         onClick={handleClick}
       >
-        <ArrowBackIosIcon
-          className={styles.back}
-        />
-        <Typography
-          className={styles['back-text']}
-        >
-          Back
-        </Typography>
+        <ArrowBackIosIcon className={styles.back} />
+        <Typography className={styles['back-text']}>Back</Typography>
       </Box>
-      <Box
-          className={styles['desktop-mobile']}
-          id={'desktop-mobile-box'}
-      >
-        <Box
-          component={'figure'}
-          className={styles.figure}
-          onClick={handleMobile}
-        >
-          <Mobile
-            stroke={ mobileState ? '#0878ff' : `${getCssVar('--gray-text')}` }
-            strokeWidth={2}
-          />
-        </Box>
+      <Box className={styles['desktop-mobile']} id={'desktop-mobile-box'}>
         <Box
           component={'figure'}
           className={styles.figure}
           onClick={handleDesktop}
         >
           <Desktop
-            stroke={ desktopState ? '#0878ff' : `${getCssVar('--gray-text')}` }
+            stroke={desktopState ? '#0878ff' : `${getCssVar('--gray-text')}`}
+            strokeWidth={2}
+          />
+        </Box>
+        <Box
+          component={'figure'}
+          className={styles.figure}
+          onClick={handleMobile}
+        >
+          <Mobile
+            stroke={mobileState ? '#0878ff' : `${getCssVar('--gray-text')}`}
             strokeWidth={2}
           />
         </Box>

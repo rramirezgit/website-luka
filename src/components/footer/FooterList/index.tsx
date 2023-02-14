@@ -18,7 +18,12 @@ const FooterList = ({ texts }: FooterListProps): JSX.Element => {
     >
       {
         texts.map((text) => (
-          <FooterBox key={text.text} title={text.title} text={text.text} />
+          <FooterBox
+            key={text.text}
+            title={text.title}
+            text={text.text}
+            id={text.id}
+          />
         ))
       }
     </Box>

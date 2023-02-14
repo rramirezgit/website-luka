@@ -7,6 +7,7 @@
   --gray-blue-text: #32435c;
   --gray-text-dark: #616f81;
   --gray-text: #acb9c9;
+  --gray-text-o: #acb9c97e;
   --green-luka: #91e02b;
   --light-blue: #e3f0ff;
   --primary-buttons-a: #0878ff26;
@@ -22,4 +23,5 @@
   --demo-mobile-gray-d: #4A5568;
   --arrow-gray: #D9D9D9;
   --arrow-up-gray: #565656;
+  --error-state: #E02D3C;
 }

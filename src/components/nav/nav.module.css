@@ -1,13 +1,11 @@
 .content {
   width: 100%;
   display: flex;
-  position: absolute !important;
   background-color: transparent !important;
 }
 
 .logo {
   object-fit: cover;
-  height: 100%;
 }
 
 .list {
@@ -34,4 +32,14 @@
 .content-menu {
   width: 60%;
   text-align: end;
+  right: 60px;
+  position: relative;
+  gap: 20;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.menu {
+  fill: aquamarine;
 }

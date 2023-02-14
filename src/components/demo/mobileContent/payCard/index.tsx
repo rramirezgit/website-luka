@@ -20,10 +20,10 @@ const PayCard = ({ type }: Props): JSX.Element => {
       id={'paycard-container'}
       sx={
         {
-          backgroundImage: type === 'card' ? `url(${card})` : 'none',
-          backgroundRepeat: type === 'card' ? 'no-repeat' : 'none',
-          backgroundPosition: type === 'card' ? 'center' : 'none',
-          backgroundSize: type === 'card' ? '100% 100%' : 'none'
+          backgroundImage: type === 'card' ? `url(${card}) !important` : 'none',
+          backgroundRepeat: type === 'card' ? 'no-repeat !important' : 'none',
+          backgroundPosition: type === 'card' ? 'center !important' : 'none',
+          backgroundSize: type === 'card' ? '100% 100% !important' : 'none'
         }
       }
     >

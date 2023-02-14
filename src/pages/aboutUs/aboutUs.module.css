@@ -1,0 +1,59 @@
+.content {
+  overflow: hidden;
+  min-width: 320px;
+}
+
+.ready {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contentReadyFoter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 67px;
+  margin-bottom: 60px;
+}
+
+.layout {
+  position: relative;
+  top: -488px;
+  height: 450px;
+}
+
+@media (max-width: 1210px) {
+  .layout {
+    top: -250px;
+    height: 950px;
+  }
+}
+
+@media (max-width: 900px) {
+  .layout {
+    top: -350px;
+    height: 650px;
+  }
+}
+
+@media (max-width: 860px) {
+  .layout {
+    top: -350px;
+    height: 650px;
+  }
+}
+
+@media (max-width: 810px) {
+  .layout {
+    top: -50px;
+    height: 1000px;
+  }
+}
+
+@media (max-width: 500px) {
+  .layout {
+    top: -50px;
+    height: 1250px;
+  }
+}

@@ -12,7 +12,13 @@ interface CarouselProps {
   buttonsMargin?: number
 }
 
-const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: CarouselProps): JSX.Element => {
+const Carousel = ({
+  children,
+  id,
+  width,
+  height = 'auto',
+  buttonsMargin = 0
+}: CarouselProps): JSX.Element => {
   const checkViewPort = (): void => {
     for (let index = 0; index < children.length; index++) {
       const card = document
@@ -23,10 +29,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
           `selector-${children[index].key ?? ''}`
         )
         if (
-          card.top >= 0 &&
           card.left >= 0 &&
-          card.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
           card.right <=
             (window.innerWidth || document.documentElement.clientWidth)
         ) {
@@ -40,7 +43,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
   const clickLeft = (): void => {
     const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: -(parseInt(width))
+      left: -parseInt(width)
     })
     setTimeout(() => {
       checkViewPort()
@@ -49,7 +52,7 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
   const clickRight = (): void => {
     const carousel = document.getElementById(`carousel-${id}`)
     carousel?.scrollBy({
-      left: (parseInt(width))
+      left: parseInt(width)
     })
     setTimeout(() => {
       checkViewPort()
@@ -60,6 +63,8 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
     <Box>
       <Box
         onScroll={() => checkViewPort()}
+        onMouseEnter={() => checkViewPort()}
+        onMouseLeave={() => checkViewPort()}
         draggable={false}
         id={`carousel-${id}`}
         className={clsx(lukaCSS['flex-row'], carouselCSS.container)}
@@ -70,8 +75,8 @@ const Carousel = ({ children, id, width, height = 'auto', buttonsMargin = 0 }: C
           },
           height: height !== 'auto' ? `${height}px` : height,
           justifyContent: {
-            md: 'space-evenly',
-            lg: 'space-between'
+            xs: 'flex-start',
+            carousel: 'space-between'
           },
           width: {
             xs: '100vw'

@@ -6,6 +6,7 @@ import { Button } from '@mui/material'
 import Square from 'components/square'
 import { Box } from '@mui/system'
 import { useNavigate } from 'react-router-dom'
+import cardsArray from '../ourProducts/ourProductsArray'
 
 const Gateway = (): JSX.Element => {
   const navigate = useNavigate()
@@ -17,6 +18,7 @@ const Gateway = (): JSX.Element => {
       sx={{
         position: 'relative'
       }}
+      id={cardsArray[0].id}
     >
       <TextAndImg
         heightSx={{
@@ -52,9 +54,9 @@ const Gateway = (): JSX.Element => {
                 xs: 'none',
                 lg: 'block'
               },
-              width: '178px',
-              height: '55px',
-              fontSize: '23px'
+              width: '144px',
+              height: '48px',
+              fontSize: '16px'
             }
           }}
           size={{
@@ -86,6 +88,13 @@ const Gateway = (): JSX.Element => {
         left={'0'}
         maxHeight={160}
         maxWidth={130}
+      />
+      <Square
+        color="#0878FF20"
+        top={'0'}
+        right={'0'}
+        maxHeight={140}
+        maxWidth={120}
       />
     </Box>
   )

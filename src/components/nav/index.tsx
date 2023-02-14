@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
@@ -9,23 +10,46 @@ import ListItemText from '@mui/material/ListItemText'
 import Toolbar from '@mui/material/Toolbar'
 import Button from '@mui/material/Button'
 import nav from './nav.module.css'
-import { routes } from 'router'
 import { useState } from 'react'
 import config from 'const'
+import { useLocation, useNavigate } from 'react-router-dom'
+import menuIcon from 'assets/menu.svg'
+import menuIconWhite from 'assets/menu-white.svg'
 
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window?: () => Window
+  window_?: () => Window
+  ButtonVariant?: 'text' | 'outlined' | 'contained'
+  ButtonColor: 'primary' | 'white' | 'secondary'
 }
 
 const drawerWidth = 240
 
-const Nav = (props: Props): JSX.Element => {
-  const { window } = props
+const options = [
+  {
+    id: '/support',
+    name: 'Support'
+  },
+  {
+    id: '/about-us',
+    name: 'About us'
+  }
+]
+
+const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
+
+  const navigate = useNavigate()
+
+  const handleLogo = (): void => {
+    if (location.pathname !== '/') {
+      navigate('/')
+    }
+  }
 
   const handleDrawerToggle = (): void => {
     setMobileOpen(!mobileOpen)
@@ -34,12 +58,11 @@ const Nav = (props: Props): JSX.Element => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left' }}>
       <List className={nav.list}>
-        {routes.map(({ id = '' }) => {
-          if (!id) return null
+        {options.map(op => {
           return (
-            <ListItem key={id} disablePadding>
+            <ListItem key={op.id} disablePadding>
               <ListItemButton sx={{ textAlign: 'left' }}>
-                <ListItemText primary={id} />
+                <ListItemText primary={op.name} />
               </ListItemButton>
             </ListItem>
           )
@@ -54,10 +77,10 @@ const Nav = (props: Props): JSX.Element => {
   )
 
   const container =
-    window !== undefined ? () => window().document.body : undefined
+    window_ !== undefined ? () => window_().document.body : undefined
 
   return (
-    <Box>
+    <Box padding="0px 34px">
       <AppBar
         component="nav"
         color="inherit"
@@ -78,13 +101,23 @@ const Nav = (props: Props): JSX.Element => {
               width: {
                 xs: '100px',
                 sm: '122px'
-              }
+              },
+              cursor: location.pathname !== '/' ? 'pointer' : 'default'
             }}
+            onClick={handleLogo}
           >
             <img
               className={nav.logo}
-              src={`${config.UrlBaseImg}Logo-white.png`}
+              style={{
+                cursor: 'pointer',
+                width: '121.81px',
+                height: '46px'
+              }}
+              src={`${config.UrlBaseImg}${
+                ButtonColor === 'white' ? 'Logo-white.png' : 'Logo.svg'
+              }`}
               alt="Logo-Luka"
+              onClick={() => navigate('/')}
             />
           </Box>
           <IconButton
@@ -94,35 +127,56 @@ const Nav = (props: Props): JSX.Element => {
             onClick={handleDrawerToggle}
             sx={{ display: { md: 'none' } }}
           >
-            <img src={`${config.UrlBaseImg}menu.png`} alt="menu" />
+            <Box
+              component={'img'}
+              src={ButtonColor === 'white' ? menuIconWhite : menuIcon}
+              alt="menu"
+            />
           </IconButton>
           <Box
             className={nav['content-menu']}
-            sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
+            sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}
           >
-            {routes.map(({ id = '' }) => {
-              if (!id) return null
+            {options.map(op => {
               return (
                 <Button
-                  key={id}
-                  sx={{ margin: '0px 10px', color: 'white ', fontSize: '16px' }}
+                  key={op.id}
+                  variant="text"
+                  sx={{
+                    margin: '0px 10px',
+                    color:
+                      location.pathname === '/'
+                        ? 'white '
+                        : location.pathname === op.id
+                        ? 'primary'
+                        : 'black',
+                    fontSize: '16px'
+                  }}
+                  onClick={() => navigate(op.id)}
                 >
-                  {id}
+                  {op.name}
                 </Button>
               )
             })}
           </Box>
           <Button
-            variant="contained"
-            color="white"
+            variant={ButtonVariant}
+            color={ButtonColor}
             className={nav.button}
             sx={{
               display: { xs: 'none', sm: 'none', md: 'block' },
-              width: '196px',
-              height: '46px'
+              width: '148px',
+              height: '48px',
+              fontSize: '16px',
+              fontWeight: '600',
+              border:
+                ButtonVariant === 'outlined' ? '2px solid #FFFFFF' : 'none'
+            }}
+            onClick={() => {
+              window.open('http://login-qa.lukapay.io', '_blank')
             }}
           >
-            {'Sign in'}
+            {'Sign up'}
           </Button>
         </Toolbar>
       </AppBar>

@@ -1,3 +1,4 @@
+/* eslint-disable multiline-ternary */
 import { Box, Button } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import linkPhone from 'assets/demoLink/demo-link-phone.svg'
@@ -11,153 +12,153 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import './index.css'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
+import { currencyValues } from 'logic'
 
 interface Props {
   type: 'gateway' | 'link'
+  onLoad: () => void
 }
 
-const MobileContent = ({ type }: Props): JSX.Element => {
+const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
-      sx={
-        {
-          position: 'relative'
-        }
-      }
+      sx={{
+        position: 'relative'
+      }}
     >
-      <Box
-        id={'mobilecontent-container'}
-      >
-        <img src={ type === 'link' ? linkPhone : gatewayPhone } alt='Phone' style={{ height: '100%' }} />
+      <Box id={'mobilecontent-container'}>
+        <img
+          loading="lazy"
+          src={type === 'link' ? linkPhone : gatewayPhone}
+          alt="Phone"
+          style={{ height: '100%' }}
+          onLoad={() => onLoad()}
+        />
       </Box>
       <Box
         className={styles['custom-view']}
         id={'mobilecontent-custom-container'}
-        sx={
-          {
-            height: '50%',
-            boxShadow: '0px -3.3448px 6.68961px rgba(0, 0, 0, 0.12)'
-          }
-        }
+        sx={{
+          height: '50%',
+          boxShadow: '0px -3.3448px 6.68961px rgba(0, 0, 0, 0.12)'
+        }}
       >
         <Box
           className={styles.close}
-          sx={
-            {
-              margin: '10px 8px 8px 8px'
-            }
-          }
+          sx={{
+            margin: '10px 8px 8px 8px'
+          }}
         >
           <CloseIcon
             id={'mobilecontent-close'}
-            sx={
-              {
-                color: getCssVar('--dark-gray-text')
-              }
-            }
+            sx={{
+              color: getCssVar('--dark-gray-text')
+            }}
           />
         </Box>
-        <Box
-          className={styles['text-box']}
-        >
-          {
-            type === 'link'
-              ? <Box
-                  sx={
-                    {
-                      display: 'flex',
-                      alignItems: 'flex-start'
-                    }
-                  }
+        <Box className={styles['text-box']}>
+          {type === 'link' ? (
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'flex-start'
+              }}
+            >
+              <Box
+                component={'figure'}
+                id={'mobilecontent-logo'}
+                className={styles.logo}
+              >
+                <img
+                  src={demo.imgUrl ? demo.imgUrl : placeholder}
+                  alt="Logo"
+                  style={{ maxWidth: '100%', maxHeight: '100%' }}
+                />
+              </Box>
+              <Box>
+                <Typography
+                  id={'mobilecontent-business'}
+                  sx={{
+                    fontWeigth: '400 !important',
+                    color: getCssVar('--demo-mobile-gray'),
+                    fontFamily: demo.font?.label
+                      ? `${demo.font?.label} !important`
+                      : 'Open Sans'
+                  }}
                 >
-                <Box
-                  component={'figure'}
-                  id={'mobilecontent-logo'}
-                  className={styles.logo}
+                  {demo.language?.value === 'EN' ? 'My business' : 'Mi negocio'}
+                </Typography>
+                <Typography
+                  id={'mobilecontent-receipt'}
+                  sx={{
+                    fontWeigth: '400 !important',
+                    color: getCssVar('--demo-mobile-gray-l'),
+                    fontFamily: demo.font?.label
+                      ? `${demo.font?.label} !important`
+                      : 'Open Sans'
+                  }}
                 >
-                  <img src={demo.imgUrl ? demo.imgUrl : placeholder} alt='Logo' style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                </Box>
-                <Box>
-                  <Typography
-                    id={'mobilecontent-business'}
-                    sx={
-                      {
-                        fontWeigth: '400 !important',
-                        color: getCssVar('--demo-mobile-gray'),
-                        fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                      }
-                    }
-                  >
-                    {demo.language?.value === 'EN' ? 'My business' : 'Mi negocio'}
-                  </Typography>
-                  <Typography
-                    id={'mobilecontent-receipt'}
-                    sx={
-                      {
-                        fontWeigth: '400 !important',
-                        color: getCssVar('--demo-mobile-gray-l'),
-                        fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                      }
-                    }
-                  >
-                    {demo.language?.value === 'EN' ? 'Receipt 123' : 'Recibo 123'}
-                  </Typography>
-                </Box>
-                </Box>
-              : <Box>
-                  <Typography
-                    className={styles.text}
-                    id={'mobilecontent-text'}
-                    sx={
-                      {
-                        fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                      }
-                    }
-                  >
-                    {demo.language?.value === 'EN' ? 'Select a payment method' : 'Seleccione un método'}
-                  </Typography>
-                </Box>
-          }
+                  {demo.language?.value === 'EN' ? 'Receipt 123' : 'Recibo 123'}
+                </Typography>
+              </Box>
+            </Box>
+          ) : (
+            <Box>
+              <Typography
+                className={styles.text}
+                id={'mobilecontent-text'}
+                sx={{
+                  fontFamily: demo.font?.label
+                    ? `${demo.font?.label} !important`
+                    : 'Open Sans'
+                }}
+              >
+                {demo.language?.value === 'EN'
+                  ? 'Select a payment method'
+                  : 'Seleccione un método'}
+              </Typography>
+            </Box>
+          )}
           <Box>
             <Typography
               id={'mobilecontent-amount'}
-              sx={
-                {
-                  fontWeigth: '700 !important',
-                  color: getCssVar('--demo-mobile-gray-d'),
-                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                }
-              }
+              sx={{
+                fontWeigth: '700 !important',
+                color: getCssVar('--demo-mobile-gray-d'),
+                fontFamily: demo.font?.label
+                  ? `${demo.font?.label} !important`
+                  : 'Open Sans'
+              }}
             >
-              {`${demo.currency?.value ? demo.currency?.value : '$'}55,57 ${demo.currency?.value === '$' ? 'USD' : 'EUR'}`}
+              {`${demo.currency?.value ? demo.currency?.value : '$'}55,57 ${
+                demo.currency?.value ? currencyValues.filter((value) => value.label === demo.currency?.label)[0].value : 'USD'
+              }`}
             </Typography>
             <Typography
               id={'mobilecontent-currency'}
-              sx={
-                {
-                  fontWeigth: '400 !important',
-                  color: getCssVar('--primary-buttons'),
-                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                }
-              }
+              sx={{
+                fontWeigth: '400 !important',
+                color: getCssVar('--primary-buttons'),
+                fontFamily: demo.font?.label
+                  ? `${demo.font?.label} !important`
+                  : 'Open Sans'
+              }}
             >
-              {demo.language?.value === 'EN' ? 'Change currency' : 'Cambiar moneda'}
+              {demo.language?.value === 'EN'
+                ? 'Change currency'
+                : 'Cambiar moneda'}
             </Typography>
           </Box>
         </Box>
-        <Box
-          className={styles['custom-payment']}
-        >
+        <Box className={styles['custom-payment']}>
           <Box
             className={styles['arrow-box']}
             id={'mobilecontent-arrow-box'}
-            sx={
-              {
-                top: '-10px',
-                left: '50%'
-              }
-            }
+            sx={{
+              top: '-10px',
+              left: '48%'
+            }}
           >
             <KeyboardArrowUpIcon
               id={'mobilecontent-arrow'}
@@ -165,35 +166,31 @@ const MobileContent = ({ type }: Props): JSX.Element => {
             />
           </Box>
           <Box
-            sx={
-              {
-                width: '100%',
-                display: 'flex',
-                overflow: 'hidden',
-                paddingLeft: '8px'
-              }
-            }
+            sx={{
+              width: '100%',
+              display: 'flex',
+              overflow: 'hidden',
+              paddingLeft: '8px'
+            }}
           >
-            <PayCard type='card' />
-            <PayCard type='paypal' />
+            <PayCard type="card" />
+            <PayCard type="paypal" />
           </Box>
           <Box
-            sx={
-              {
-                padding: '0 10px'
-              }
-            }
+            sx={{
+              padding: '0 10px'
+            }}
           >
             <Button
               className={styles.button}
               id={'mobilecontent-button'}
-              sx={
-                {
-                  backgroundColor: `#${demo.button} !important`,
-                  color: `${getCssVar('--white')} !important`,
-                  fontFamily: demo.font?.label ? `${demo.font?.label} !important` : 'Open Sans'
-                }
-              }
+              sx={{
+                backgroundColor: `#${demo.button} !important`,
+                color: `${getCssVar('--white')} !important`,
+                fontFamily: demo.font?.label
+                  ? `${demo.font?.label} !important`
+                  : 'Open Sans'
+              }}
             >
               {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}
             </Button>
