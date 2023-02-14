@@ -10,8 +10,8 @@ import CustomizationGateway from 'components/demo/demoMenu/customization/customi
 import DemoContent from './demoContent'
 
 const DemoGateway = (): JSX.Element => {
-  const [demoMobile, setDemoMobile] = useState(true)
-  const [demoDesktop, setDemoDesktop] = useState(false)
+  const [demoMobile, setDemoMobile] = useState(false)
+  const [demoDesktop, setDemoDesktop] = useState(true)
   const [openModal, setOpenModal] = useState(false)
   const handleMobile = (): void => {
     setDemoMobile(true)

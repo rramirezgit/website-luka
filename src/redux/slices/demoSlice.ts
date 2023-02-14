@@ -13,7 +13,7 @@ export interface DemoState {
 }
 
 const initialState: DemoState = {
-  background: '0878FF26',
+  background: 'B9D8F8',
   button: '0878FF',
   language: languages[0],
   font: fonts[0],
