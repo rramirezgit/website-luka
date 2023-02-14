@@ -10,8 +10,8 @@ import DescriptionLink from 'components/demo/demoMenu/description/descriptionLin
 import CustomizationLink from 'components/demo/demoMenu/customization/customizationLink'
 
 const DemoLink = (): JSX.Element => {
-  const [demoMobile, setDemoMobile] = useState(true)
-  const [demoDesktop, setDemoDesktop] = useState(false)
+  const [demoMobile, setDemoMobile] = useState(false)
+  const [demoDesktop, setDemoDesktop] = useState(true)
   const [openModal, setOpenModal] = useState(false)
   const handleMobile = (): void => {
     setDemoMobile(true)
