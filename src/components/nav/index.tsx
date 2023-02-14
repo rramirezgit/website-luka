@@ -176,7 +176,7 @@ const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
                 ButtonVariant === 'outlined' ? '2px solid #FFFFFF' : 'none'
             }}
             onClick={() => {
-              window.open('https://business.lukapay.io/', '_blank')
+              window.open('https://business.lukapay.io/', '_self')
             }}
           >
             {'Sign up'}
