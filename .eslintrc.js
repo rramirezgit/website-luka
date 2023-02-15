@@ -18,7 +18,8 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    '@typescript-eslint/strict-boolean-expressions': 'off'
+    '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/promise-function-async': 'off'
   },
   settings: {
     react: {

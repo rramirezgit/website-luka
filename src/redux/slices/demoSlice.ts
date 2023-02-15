@@ -20,7 +20,7 @@ const initialState: DemoState = {
   currency: currency[0],
   border: 0,
   imgUrl: '',
-  title: 'Esto es una prueba'
+  title: 'Your title here'
 }
 
 export const demoSlice = createSlice({
