@@ -85,7 +85,14 @@ const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
         })}
       </List>
       <div className={nav['content-joinButton']}>
-        <Button variant="contained" color="primary_a" className={nav.button}>
+        <Button
+          variant="contained"
+          color="primary_a"
+          className={nav.button}
+          onClick={() => {
+            window.open('https://business.lukapay.io/', '_self')
+          }}
+        >
           Sign up
         </Button>
       </div>
