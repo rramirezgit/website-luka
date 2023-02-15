@@ -10,22 +10,22 @@ const cards = [
   {
     number: '+3M',
     color: 'rgba(111, 222, 246, 1)',
-    text: 'MARKET SIZE'
+    text: 'PAYMENT TRANSACTIONS'
   },
   {
-    number: '30M',
+    number: '60K',
     color: 'rgba(5, 22, 177, 1)',
-    text: 'POPULATION'
+    text: 'CONSUMERS SERVED'
   },
   {
-    number: '100K',
+    number: '27',
     color: 'rgba(8, 120, 255, 1)',
-    text: 'POPULATION SERVED'
+    text: 'CURRENCIES'
   },
   {
     number: '25',
     color: 'rgba(5, 22, 177, 1)',
-    text: 'POPULATION SERVED'
+    text: 'PAYMENT METHODS'
   }
 ]
 
