@@ -39,7 +39,6 @@
   text-align: end;
   right: 60px;
   position: relative;
-  display: flex;
   justify-content: flex-end;
   gap: 40px;
 }

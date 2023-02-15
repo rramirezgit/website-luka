@@ -145,7 +145,7 @@ const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
             aria-label="open drawer"
             edge="end"
             onClick={handleDrawerToggle}
-            sx={{ display: { xs: 'block', md: 'none' } }}
+            sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }}
           >
             <Box
               component={'img'}
