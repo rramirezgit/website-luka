@@ -1,11 +1,24 @@
-import { Box, Typography, TextField, Autocomplete, Button } from '@mui/material'
+import {
+  Box,
+  Typography,
+  TextField,
+  Autocomplete,
+  Button,
+  Snackbar
+} from '@mui/material'
 import styles from './info.module.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import * as yup from 'yup'
-import { Formik, ErrorMessage } from 'formik'
-import { allCountries } from 'logic'
+import { Formik, ErrorMessage, FormikProps } from 'formik'
+import { allCountries, subjects } from 'logic'
 import Flag from 'react-world-flags'
 import axios from 'axios'
+import { useRef, useEffect, useState } from 'react'
+import Slide, { SlideProps } from '@mui/material/Slide'
+import Lottie from 'lottie-react'
+import animationData from 'assets/check.json'
+
+type TransitionProps = Omit<SlideProps, 'direction'>
 
 interface FormProps {
   subject: string
@@ -21,12 +34,9 @@ interface FormProps {
   }
 }
 
-export const subjects = [
-  'Select a subject',
-  'Consulta',
-  'Incidente',
-  'Requerimiento'
-]
+function TransitionLeft (props: TransitionProps): JSX.Element {
+  return <Slide {...props} direction="left" />
+}
 
 const validationSchema = yup.object({
   subject: yup
@@ -55,6 +65,7 @@ const validationSchema = yup.object({
 })
 
 const Info = (): JSX.Element => {
+  const [openSnackbar, setOpenSnackbar] = useState(false)
   const initialValue: FormProps = {
     subject: 'Select a subject',
     name: '',
@@ -62,8 +73,34 @@ const Info = (): JSX.Element => {
     email: '',
     message: '',
     phone: '',
-    country: allCountries[62]
+    country: allCountries[60]
   }
+  const ref = useRef<FormikProps<FormProps> | null>(null)
+  useEffect(() => {
+    fetch('https://api.ipregistry.co/?key=10auylyu4tjkh2xd')
+      .then(function (response) {
+        return response.json()
+      })
+      .then(function (payload) {
+        const country = allCountries.find(
+          c => c.code === payload.location.country.code
+        )
+        if (country) {
+          ref.current?.setFieldValue('country', country)
+          initialValue.country = country
+        }
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }, [])
+  useEffect(() => {
+    if (openSnackbar) {
+      setTimeout(() => {
+        setOpenSnackbar(false)
+      }, 5000)
+    }
+  }, [openSnackbar])
   return (
     <Box className={styles.container}>
       <Typography className={styles.title}>Submit a ticket</Typography>
@@ -71,13 +108,14 @@ const Info = (): JSX.Element => {
         <Formik
           initialValues={initialValue}
           validationSchema={validationSchema}
-          onSubmit={async (values, actions) => {
+          innerRef={formik => (ref.current = formik)}
+          onSubmit={ async (values, actions) => {
             await axios
               .post(
                 'https://bspaycoapi-qa.payco.net.ve/api/v1/email',
                 {
                   From: 'noreply@lukapay.io',
-                  To: 'support@lukapay.io',
+                  To: 'amena@lukapay.io',
                   Subject: `Contacto Landing - Cliente: ${values.name} ${values.lastName}`,
                   Body: `
                     El cliente ${values.name} ${values.lastName} ha enviado un mensaje de soporte con el siguiente contenido:<br/><br/>
@@ -96,9 +134,10 @@ const Info = (): JSX.Element => {
                 }
               )
               .then(() => {
+                setOpenSnackbar(true)
                 actions.resetForm()
               })
-              .catch(error => {
+              .catch((error) => {
                 console.log(error)
               })
           }}
@@ -337,6 +376,24 @@ const Info = (): JSX.Element => {
           )}
         </Formik>
       </Box>
+      <Snackbar
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        open={openSnackbar}
+        TransitionComponent={TransitionLeft}
+      >
+        <Box className={styles.snackbar}>
+          <Box component={'figure'} className={styles.figure}>
+            <Lottie
+              animationData={animationData}
+              loop={false}
+              autoplay={true}
+              className={styles.lottie}
+              initialSegment={[0, 50]}
+            />
+          </Box>
+          <Typography className={styles['snackbar-text']}>Message successfully sent</Typography>
+        </Box>
+      </Snackbar>
     </Box>
   )
 }
