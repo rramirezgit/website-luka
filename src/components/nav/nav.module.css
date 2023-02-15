@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   background-color: transparent !important;
+  z-index: 0 !important;
 }
 
 .logo {
@@ -11,12 +12,12 @@
 .list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 41px;
   list-style: none;
-  padding: 0;
   margin: 0;
-  height: 80vh;
+  padding: 38px !important;
+  height: 85vh;
 }
 
 .content-joinButton {
@@ -26,7 +27,11 @@
 }
 
 .button {
-  width: 158px;
+  width: 198px;
+  height: 45px;
+  font-weight: 600;
+  font-size: 20px !important;
+  line-height: 150%;
 }
 
 .content-menu {
@@ -34,7 +39,6 @@
   text-align: end;
   right: 60px;
   position: relative;
-  gap: 20;
   display: flex;
   justify-content: flex-end;
   gap: 40px;
@@ -42,4 +46,11 @@
 
 .menu {
   fill: aquamarine;
+}
+
+.itemNav span {
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  line-height: 150% !important;
+  letter-spacing: -0.02em !important;
 }

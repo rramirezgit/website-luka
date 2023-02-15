@@ -79,13 +79,14 @@ const Experience = (): JSX.Element => {
                 className={styles.divCards}
                 sx={{
                   marginTop: {
-                    xs: '72px',
+                    xs: '44px',
                     lg: '100px'
                   },
                   gap: {
-                    xs: '33px',
+                    xs: '36px',
                     sm: '94px'
-                  }
+                  },
+                  rowGap: '60px !important'
                 }}
               >
                 {cards.map((card, index) => (

@@ -1,19 +1,10 @@
 .layout {
   background-color: var(--bg-gray);
+  align-items: center !important;
+  padding: 80px 0px !important;
 }
 
-.laptop {
-  position: relative;
-  left: -300px;
-  top: -345px;
-}
-
-.laptopXS {
-  position: absolute;
-  left: -30%;
-}
-
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .laptopXS {
     left: 10%;
     bottom: 15%;
@@ -53,4 +44,4 @@
     left: -200px;
     bottom: 5%;
   }
-}
+} */

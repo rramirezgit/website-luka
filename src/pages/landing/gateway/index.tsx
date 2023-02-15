@@ -14,22 +14,18 @@ const Gateway = (): JSX.Element => {
     navigate('demo-gateway')
   }
   return (
-    <Box
-      sx={{
-        position: 'relative'
-      }}
-      id={cardsArray[0].id}
-    >
+    <Box position={'relative'} id={cardsArray[0].id}>
       <TextAndImg
+        className={style.layout}
         heightSx={{
           xs: 'auto',
-          sm: '1530px',
-          lg: '1000px'
+          lg: '989px'
         }}
+        flDirectionSx="column"
         sxOne={{
           padding: {
-            xs: '99px 0px 0px',
-            lg: '0px 0px 0px 63px'
+            xs: '0px 0px 0px',
+            lg: '0px 30px 0px 0px'
           },
           display: 'flex',
           justifyContent: 'center'
@@ -70,12 +66,14 @@ const Gateway = (): JSX.Element => {
           variant="contained"
           color="secondary"
           sx={{
-            margin: '20px 0px 40px 0px',
+            margin: '20px 0px 0px',
             display: {
               xs: 'block',
               lg: 'none'
             },
-            width: '198px'
+            width: '198px',
+            height: '48px',
+            fontSize: '20px'
           }}
           onClick={handleClick}
         >

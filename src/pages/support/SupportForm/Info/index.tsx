@@ -34,7 +34,7 @@ interface FormProps {
   }
 }
 
-function TransitionLeft (props: TransitionProps): JSX.Element {
+const TransitionLeft = (props: TransitionProps): JSX.Element => {
   return <Slide {...props} direction="left" />
 }
 
@@ -75,7 +75,9 @@ const Info = (): JSX.Element => {
     phone: '',
     country: allCountries[60]
   }
+
   const ref = useRef<FormikProps<FormProps> | null>(null)
+
   useEffect(() => {
     fetch('https://api.ipregistry.co/?key=10auylyu4tjkh2xd')
       .then(function (response) {
@@ -87,13 +89,14 @@ const Info = (): JSX.Element => {
         )
         if (country) {
           ref.current?.setFieldValue('country', country)
-          initialValue.country = country
+          // initialValue.country = country
         }
       })
       .catch(error => {
         console.log(error)
       })
   }, [])
+
   useEffect(() => {
     if (openSnackbar) {
       setTimeout(() => {
@@ -101,6 +104,7 @@ const Info = (): JSX.Element => {
       }, 5000)
     }
   }, [openSnackbar])
+
   return (
     <Box className={styles.container}>
       <Typography className={styles.title}>Submit a ticket</Typography>
@@ -109,7 +113,7 @@ const Info = (): JSX.Element => {
           initialValues={initialValue}
           validationSchema={validationSchema}
           innerRef={formik => (ref.current = formik)}
-          onSubmit={ async (values, actions) => {
+          onSubmit={async (values, actions) => {
             await axios
               .post(
                 'https://bspaycoapi-qa.payco.net.ve/api/v1/email',
@@ -137,7 +141,7 @@ const Info = (): JSX.Element => {
                 setOpenSnackbar(true)
                 actions.resetForm()
               })
-              .catch((error) => {
+              .catch(error => {
                 console.log(error)
               })
           }}
@@ -380,6 +384,7 @@ const Info = (): JSX.Element => {
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         open={openSnackbar}
         TransitionComponent={TransitionLeft}
+        className={styles['snackbar-container']}
       >
         <Box className={styles.snackbar}>
           <Box component={'figure'} className={styles.figure}>
@@ -391,7 +396,9 @@ const Info = (): JSX.Element => {
               initialSegment={[0, 50]}
             />
           </Box>
-          <Typography className={styles['snackbar-text']}>Message successfully sent</Typography>
+          <Typography className={styles['snackbar-text']}>
+            Message successfully sent
+          </Typography>
         </Box>
       </Snackbar>
     </Box>

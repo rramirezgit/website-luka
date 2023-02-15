@@ -1,3 +1,10 @@
 .img {
+  width: 100%;
   max-width: 100%;
+  min-width: 532px;
+}
+
+.layout {
+  align-items: center !important;
+  padding: 80px 0px !important;
 }

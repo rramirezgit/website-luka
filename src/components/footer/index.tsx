@@ -13,7 +13,7 @@ interface FooterProps {
   disablePadding?: boolean
 }
 
-const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
+const Footer = ({ disablePadding = false }: FooterProps): JSX.Element => {
   // const location: string = 'United States'
   return (
     <Box
@@ -38,7 +38,7 @@ const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
             xs: 'column',
             lg: 'row'
           },
-          padding: disablePadding ? '0 35px' : '0'
+          padding: disablePadding ? '0' : '0 35px'
         }}
       >
         <Box
@@ -60,7 +60,11 @@ const Footer = ({ disablePadding }: FooterProps): JSX.Element => {
               }
             }}
           >
-            <img alt="Logo" src={`${config.UrlBaseImg}Logo.svg`} style={{ maxWidth: '100%' }} />
+            <img
+              alt="Logo"
+              src={`${config.UrlBaseImg}Logo.svg`}
+              style={{ maxWidth: '100%' }}
+            />
           </Box>
           <Typography
             className={footerStyles.regular}

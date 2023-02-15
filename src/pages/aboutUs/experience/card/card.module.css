@@ -22,8 +22,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 22px;
-  column-gap: 41px;
+  gap: 23px;
+  justify-content: space-between;
+  height: 160px;
 }
 
 @media (min-width: 400px) {

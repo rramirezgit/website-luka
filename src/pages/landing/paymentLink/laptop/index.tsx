@@ -15,25 +15,10 @@ const Laptop = (): JSX.Element => {
       <Box
         className={style.laptop}
         sx={{
+          position: 'relative',
           left: {
-            xs: '0px',
-            lg: '50%'
-          },
-          transform: {
-            xs: 'none',
-            lg: 'translateX(-50%)'
-          },
-          position: {
-            xs: 'relative',
-            lg: 'absolute'
-          },
-          top: {
-            xs: '0px',
-            lg: '50%'
-          },
-          height: {
-            xs: '468px',
-            lg: '699.72px'
+            xs: '0',
+            lg: '-450px'
           }
         }}
       ></Box>
