@@ -4,7 +4,7 @@ import Footer from 'components/footer'
 import FormView from 'components/formView'
 import Nav from 'components/nav'
 import { useEffect } from 'react'
-import sales from 'assets/sales/sales.png'
+import sales from 'assets/sales/sales.svg'
 
 const Sales = (): JSX.Element => {
   useEffect(() => {

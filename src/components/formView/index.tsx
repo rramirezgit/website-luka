@@ -39,31 +39,17 @@ const FormView = ({ children, image }: Props): JSX.Element => {
               lg: '0'
             },
             maxWidth: {
-              xs: '530px',
+              xs: '400px',
               lg: '600px'
+            },
+            width: {
+              xs: '70%',
+              lg: '55%'
             },
             position: 'relative'
           }
         }
       >
-        <Box
-          sx={{
-            display: {
-              xs: 'none',
-              lg: 'block',
-              position: 'absolute',
-              zIndex: -1
-            }
-          }}
-        >
-          <Square
-            color="#0878FF20"
-            top={'500'}
-            left={'-140'}
-            maxHeight={250}
-            maxWidth={150}
-          />
-        </Box>
         <img className={styles.image} src={image} alt='support' />
       </Box>
       <Box
