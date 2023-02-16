@@ -17,7 +17,7 @@ const FormView = ({ children, image }: Props): JSX.Element => {
           maxWidth: '1254px',
           padding: {
             xs: '0 70px',
-            xl: '0 35px'
+            md: '0 35px'
           },
           flexDirection: {
             xs: 'column',
@@ -26,6 +26,10 @@ const FormView = ({ children, image }: Props): JSX.Element => {
           justifyContent: {
             xs: 'center',
             lg: 'space-between'
+          },
+          alignItems: {
+            xs: 'center',
+            lg: 'flex-start'
           }
         }
       }
