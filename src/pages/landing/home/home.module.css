@@ -22,7 +22,7 @@
 }
 
 .text {
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   line-height: 150%;
   color: var(--white) !important;
   letter-spacing: -0.02em;
