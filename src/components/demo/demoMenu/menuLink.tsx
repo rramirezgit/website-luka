@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material'
-import logoLuka from 'assets/footer/luka.png'
 import CustomizationLink from './customization/customizationLink'
 import styles from './demomenu.module.css'
 import DescriptionLink from './description/descriptionLink'
 import { useNavigate } from 'react-router-dom'
+import config from 'const'
 
 interface Props {
   type: 'mobile' | 'desktop'
@@ -30,7 +30,7 @@ const MenuLink = ({ type }: Props): JSX.Element => {
         }
         onClick={handleLogo}
       >
-        <img src={logoLuka} style={{ maxWidth: '100%' }} alt='Luka' />
+        <img src={`${config.UrlBaseImg}Logo.svg`} style={{ maxWidth: '100%' }} alt='Luka' />
       </Box>
       <Box
         className={styles['overflow-container']}

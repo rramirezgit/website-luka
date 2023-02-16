@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import lukaCSS from 'styles/luka.module.css'
 import carouselCSS from './carousel.module.css'
-import carouselArrow from 'assets/carousel-arrow.svg'
+import carouselArrow from 'assets/carousel/carousel-arrow.svg'
 import { Box } from '@mui/material'
 
 interface CarouselProps {

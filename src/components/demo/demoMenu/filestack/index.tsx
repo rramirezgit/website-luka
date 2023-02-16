@@ -1,7 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import * as filestack from 'filestack-js'
-// import { checkImgSquareSize } from './logic'
-import plusImg from 'assets/demoLink/plus.png'
+import plusImg from 'assets/demoLink/plus.svg'
 import styles from './filestack.module.css'
 import { useDispatch } from 'react-redux'
 import { changeImg } from 'redux/slices/demoSlice'
