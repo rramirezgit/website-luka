@@ -1,6 +1,7 @@
 /* eslint-disable multiline-ternary */
 
 import { Box, Button, Typography } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 import styles from './ready.module.css'
 
 interface aboutUsProps {
@@ -8,6 +9,7 @@ interface aboutUsProps {
 }
 
 const Ready = ({ aboutUs = false }: aboutUsProps): JSX.Element => {
+  const navigate = useNavigate()
   return (
     <Box
       className={styles.content}
@@ -97,9 +99,9 @@ const Ready = ({ aboutUs = false }: aboutUsProps): JSX.Element => {
               sx={{
                 width: '144px',
                 height: ' 48px',
-                fontSize: '16px',
-                display: 'none'
+                fontSize: '16px'
               }}
+              onClick={() => navigate('/sales')}
             >
               Contact sales
             </Button>
