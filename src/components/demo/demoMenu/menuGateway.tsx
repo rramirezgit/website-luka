@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material'
-import logoLuka from 'assets/footer/luka.png'
 import { useNavigate } from 'react-router-dom'
 import CustomizationGateway from './customization/customizationGateway'
 import styles from './demomenu.module.css'
 import DescriptionGateway from './description/descriptionGateway'
+import config from 'const'
 
 interface Props {
   type: 'mobile' | 'desktop'
@@ -30,7 +30,7 @@ const MenuGateway = ({ type }: Props): JSX.Element => {
         }
         onClick={handleLogo}
       >
-        <img src={logoLuka} style={{ maxWidth: '100%' }} alt='Luka' />
+        <img src={`${config.UrlBaseImg}Logo.svg`} style={{ maxWidth: '100%' }} alt='Luka' />
       </Box>
       <Box
         className={styles['overflow-container-gateway']}

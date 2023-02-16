@@ -42,3 +42,9 @@ body::-webkit-scrollbar {
   background: var(--gray-text);
   transition: all 0.8s;
 }
+
+/* Filestack loading */
+#__filestack-picker .fsp-loading--folder,
+#__filestack-picker .fsp-loading--folder.center {
+    display: none !important;
+}
