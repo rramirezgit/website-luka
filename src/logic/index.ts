@@ -388,10 +388,10 @@ export const allCountries = [
     code: 'UY',
     label: 'Uruguay',
     phone: '598'
+  },
+  {
+    code: 'VE',
+    label: 'Venezuela',
+    phone: '58'
   }
-  // {
-  //   code: 'VE',
-  //   label: 'Venezuela',
-  //   phone: '58'
-  // }
 ]
