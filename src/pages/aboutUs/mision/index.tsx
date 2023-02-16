@@ -44,7 +44,18 @@ const Mision = (): JSX.Element => {
         }}
       >
         <Layout className={style.layout}>
-          <Typography className={style.title}>Mision</Typography>
+          <Typography
+            className={style.title}
+            sx={{
+              fontSize: {
+                xs: '32px',
+                md: '40px',
+                lg: '40px'
+              }
+            }}
+          >
+            Mision
+          </Typography>
           <Box
             className={style.divCards}
             sx={{
