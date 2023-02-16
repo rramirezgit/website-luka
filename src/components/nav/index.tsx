@@ -65,15 +65,35 @@ const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
                 sx={{ textAlign: 'left' }}
                 onClick={() => navigate(op.id)}
               >
-                <ListItemText primary={op.name} />
+                <ListItemText
+                  primary={op.name}
+                  className={nav.itemNav}
+                  sx={{
+                    '& span': {
+                      color:
+                        location.pathname === '/'
+                          ? '#2f363e !important'
+                          : location.pathname === op.id
+                          ? '#0878FF !important'
+                          : '#2f363e !important'
+                    }
+                  }}
+                />
               </ListItemButton>
             </ListItem>
           )
         })}
       </List>
       <div className={nav['content-joinButton']}>
-        <Button variant="contained" color="primary_a" className={nav.button}>
-          Join
+        <Button
+          variant="contained"
+          color="primary_a"
+          className={nav.button}
+          onClick={() => {
+            window.open('https://business.lukapay.io/', '_self')
+          }}
+        >
+          Sign up
         </Button>
       </div>
     </Box>
@@ -102,33 +122,37 @@ const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
               flexGrow: 1,
               height: { xs: '29.46px', sm: '56px' },
               width: {
-                xs: '100px',
+                xs: '79.44',
                 sm: '122px'
               },
               cursor: location.pathname !== '/' ? 'pointer' : 'default'
             }}
             onClick={handleLogo}
           >
-            <img
+            <Box
+              component={'img'}
               className={nav.logo}
-              style={{
+              sx={{
                 cursor: 'pointer',
-                width: '121.81px',
-                height: '46px'
+                width: {
+                  xs: '80px',
+                  sm: '122px'
+                },
+                objectFit: 'contain'
               }}
               src={`${config.UrlBaseImg}${
                 ButtonColor === 'white' ? 'Logo-white.png' : 'Logo.svg'
               }`}
               alt="Logo-Luka"
               onClick={() => navigate('/')}
-            />
+            ></Box>
           </Box>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="end"
             onClick={handleDrawerToggle}
-            sx={{ display: { md: 'none' } }}
+            sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }}
           >
             <Box
               component={'img'}

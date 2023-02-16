@@ -31,7 +31,8 @@ const TextAndImg = ({
           flexDirection: {
             xs: flDirectionSx,
             lg: 'row'
-          }
+          },
+          width: '100%'
         }}
       >
         <Box sx={sxOne}>{children[0]}</Box>
