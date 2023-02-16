@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   background-color: transparent !important;
-  z-index: 0 !important;
+  z-index: 5 !important;
 }
 
 .logo {
