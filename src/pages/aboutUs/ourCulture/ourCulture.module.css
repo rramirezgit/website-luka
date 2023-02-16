@@ -80,15 +80,15 @@
 
 @media (max-width: 630px) {
   .divRotate {
-    height: 1220.44px !important;
+    height: 1280.44px !important;
   }
 
   .content {
-    height: 1220.44px !important;
+    height: 1280.44px !important;
   }
 
   .rentangles {
-    top: -157px !important;
-    left: 13px !important;
+    top: -170px !important;
+    left: 15px !important;
   }
 }

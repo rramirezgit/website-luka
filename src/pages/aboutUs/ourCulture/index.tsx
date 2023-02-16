@@ -39,7 +39,7 @@ const OurCulture = (): JSX.Element => {
       className={styles.content}
       sx={{
         height: {
-          xs: '1220.44px',
+          xs: '1280.44px',
           sm: '767.61px',
           md: '800.61px'
         }
@@ -49,7 +49,7 @@ const OurCulture = (): JSX.Element => {
         className={styles.divRotate}
         sx={{
           height: {
-            xs: '1220.44px',
+            xs: '1280.44px',
             sm: '767.61px',
             md: '800.61px'
           }
