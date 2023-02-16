@@ -77,7 +77,7 @@ const Gateway = (): JSX.Element => {
           }}
           onClick={handleClick}
         >
-          view demo
+          View Demo
         </Button>
       </TextAndImg>
       <Square
