@@ -130,6 +130,16 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
           }
         }
       },
+      MuiAutocomplete: {
+        styleOverrides: {
+          inputRoot: {
+            cursor: 'pointer'
+          },
+          input: {
+            cursor: 'pointer'
+          }
+        }
+      },
       MuiInputBase: {
         styleOverrides: {
           root: {
