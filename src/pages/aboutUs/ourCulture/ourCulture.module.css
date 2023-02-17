@@ -17,15 +17,13 @@
 
 .rentangles {
   width: 100vw;
-  height: 987px;
+  height: 767.61px;
   transform: rotate(5.13deg);
   position: relative;
-  background-position: 0px 249px !important;
 }
 
 .tittle {
   font-weight: 700 !important;
-  font-size: 45px !important;
   line-height: 150% !important;
   color: rgba(47, 54, 62, 1) !important;
 }
@@ -82,15 +80,15 @@
 
 @media (max-width: 630px) {
   .divRotate {
-    height: 1405.44px !important;
+    height: 1280.44px !important;
   }
 
   .content {
-    height: 1405.44px !important;
+    height: 1280.44px !important;
   }
 
   .rentangles {
-    top: -47px !important;
-    left: 4px !important;
+    top: -170px !important;
+    left: 15px !important;
   }
 }

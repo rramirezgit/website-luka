@@ -1,8 +1,11 @@
 import { Box } from '@mui/material'
 import Footer from 'components/footer'
+import FormView from 'components/formView'
 import Nav from 'components/nav'
-import SupportForm from './SupportForm'
+// import SupportForm from './SupportForm'
+import support from 'assets/support/support.svg'
 import { useEffect } from 'react'
+import SupportForm from 'components/allForms/support'
 
 const Support = (): JSX.Element => {
   useEffect(() => {
@@ -20,7 +23,11 @@ const Support = (): JSX.Element => {
           marginTop: '110px'
         }}
       >
-        <SupportForm />
+        <FormView
+          image={support}
+        >
+          <SupportForm />
+        </FormView>
       </Box>
       <Box
         sx={{

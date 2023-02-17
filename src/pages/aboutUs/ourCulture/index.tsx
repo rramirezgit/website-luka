@@ -39,8 +39,9 @@ const OurCulture = (): JSX.Element => {
       className={styles.content}
       sx={{
         height: {
-          xs: '1405.44px',
-          sm: '889.61px'
+          xs: '1280.44px',
+          sm: '767.61px',
+          md: '800.61px'
         }
       }}
     >
@@ -48,8 +49,9 @@ const OurCulture = (): JSX.Element => {
         className={styles.divRotate}
         sx={{
           height: {
-            xs: '1405.44px',
-            sm: '889.61px'
+            xs: '1280.44px',
+            sm: '767.61px',
+            md: '800.61px'
           }
         }}
       >
@@ -58,22 +60,33 @@ const OurCulture = (): JSX.Element => {
           sx={{
             top: {
               xs: '30px',
-              sm: '243px',
-              md: '243px',
-              lg: '243px'
+              sm: '93px',
+              md: '95px',
+              lg: '180px'
             },
             left: {
               xs: '-4px',
-              sm: '-23px',
-              md: '-23px',
-              lg: '-23px'
+              sm: '-8px',
+              md: '-8px',
+              lg: '-5px'
             }
           }}
         >
           <Layout className={styles.layout}>
             <Box className={styles.contentInfo}>
               <Box className={styles.divTittle}>
-                <Typography className={styles.tittle}>Our Culture</Typography>
+                <Typography
+                  className={styles.tittle}
+                  sx={{
+                    fontSize: {
+                      xs: '32px',
+                      md: '40px',
+                      lg: '40px'
+                    }
+                  }}
+                >
+                  Our Culture
+                </Typography>
               </Box>
             </Box>
             <Box

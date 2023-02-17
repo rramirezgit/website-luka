@@ -64,7 +64,18 @@ const Experience = (): JSX.Element => {
           <Layout className={styles.layout}>
             <Box className={styles.contentInfo}>
               <Box className={styles.divTittle}>
-                <Typography className={styles.tittle}>Experience</Typography>
+                <Typography
+                  className={styles.tittle}
+                  sx={{
+                    fontSize: {
+                      xs: '32px',
+                      md: '40px',
+                      lg: '40px'
+                    }
+                  }}
+                >
+                  Experience
+                </Typography>
                 <Typography className={styles.text}>
                   For over 10 years, Luka has been delivering solutions to
                   support businesses in need to access digital payments. Fit for

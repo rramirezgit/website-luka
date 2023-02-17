@@ -39,6 +39,15 @@ export const subjects = [
   'Inquiry'
 ]
 
+export const transactions = [
+  'Select an option',
+  'None, getting started',
+  'Less than 500',
+  'Between 500 & 2500',
+  'Between 2500 & 5000',
+  'More than 5000'
+]
+
 export const countries = [
   { name: 'Argentine Peso', currency: 'ARS', code: 'AR' },
   { name: 'Arubian Guilder', currency: 'AWG', code: 'AW' },
