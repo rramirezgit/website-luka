@@ -1,12 +1,16 @@
 import { Box } from '@mui/material'
-import SalesForm from 'components/allForms/sales'
 import Footer from 'components/footer'
 import FormView from 'components/formView'
 import Nav from 'components/nav'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import sales from 'assets/sales/sales.svg'
+import FormLayout from 'components/formView/formLayout'
+import SalesForm from 'components/allForms/salesForm'
 
 const Sales = (): JSX.Element => {
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [failure, setFailure] = useState(false)
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -22,11 +26,22 @@ const Sales = (): JSX.Element => {
           marginTop: '110px'
         }}
       >
-        <FormView
-          image={sales}
+      <FormView image={sales}>
+        <FormLayout
+          title="Contact our support team"
+          loading={loading}
+          success={success}
+          failure={failure}
+          setFailure={setFailure}
         >
-          <SalesForm />
-        </FormView>
+          <SalesForm
+            loading={loading}
+            setLoading={setLoading}
+            setSuccess={setSuccess}
+            setFailure={setFailure}
+          />
+        </FormLayout>
+      </FormView>
       </Box>
       <Box
         sx={{

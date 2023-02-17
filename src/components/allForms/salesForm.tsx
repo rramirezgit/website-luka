@@ -1,33 +1,28 @@
-import {
-  Box,
-  Typography,
-  TextField,
-  Autocomplete,
-  Button,
-  Snackbar
-} from '@mui/material'
+import { Box, Typography, TextField, Autocomplete, Button } from '@mui/material'
 import styles from './allforms.module.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import * as yup from 'yup'
 import { Formik, ErrorMessage, FormikProps } from 'formik'
-import { allCountries, subjects } from 'logic'
+import { allCountries, transactions } from 'logic'
 import Flag from 'react-world-flags'
 import axios from 'axios'
-import { useRef, useEffect, useState } from 'react'
-import Slide, { SlideProps } from '@mui/material/Slide'
-import Lottie from 'lottie-react'
-import animationData from 'assets/check.json'
-import animationErrorData from 'assets/x.json'
+import { useRef, useEffect } from 'react'
 
-type TransitionProps = Omit<SlideProps, 'direction'>
+export interface Props {
+  loading: boolean
+  setLoading: (value: boolean) => void
+  setSuccess: (value: boolean) => void
+  setFailure: (value: boolean) => void
+}
 
 interface FormProps {
-  subject: string
   name: string
   lastName: string
   email: string
-  message: string
+  website: string
+  income: string
   phone: string
+  message: string
   country: {
     label: string
     code: string
@@ -35,25 +30,22 @@ interface FormProps {
   }
 }
 
-const TransitionLeft = (props: TransitionProps): JSX.Element => {
-  return <Slide {...props} direction="left" />
-}
-
 const validationSchema = yup.object({
-  subject: yup
-    .string()
-    .equals(subjects.slice(1), 'Subject must be one of the options')
-    .required('Subject is required'),
   name: yup.string().required('Name is required'),
   lastName: yup.string().required('Last Name is required'),
   email: yup
     .string()
     .email('Enter a valid email')
     .required('Email is required'),
+  website: yup.string().url('Enter a valid website'),
   message: yup
     .string()
     .min(10, 'Invalid length')
     .required('Message is required'),
+  income: yup
+    .string()
+    .equals(transactions.slice(1), 'Expected income must be one of the options')
+    .required('Expected income is required'),
   phone: yup
     .string()
     .matches(/^[0-9]*$/, 'Only numbers allowed')
@@ -65,15 +57,19 @@ const validationSchema = yup.object({
   })
 })
 
-const SupportForm = (): JSX.Element => {
-  const [openSnackbar, setOpenSnackbar] = useState(false)
-  const [openErrorSnackbar, setOpenErrorSnackbar] = useState(false)
+const SalesForm = ({
+  loading,
+  setLoading,
+  setSuccess,
+  setFailure
+}: Props): JSX.Element => {
   const initialValue: FormProps = {
-    subject: 'Select a subject',
     name: '',
     lastName: '',
     email: '',
+    website: '',
     message: '',
+    income: 'Select an option',
     phone: '',
     country: allCountries[60]
   }
@@ -81,49 +77,34 @@ const SupportForm = (): JSX.Element => {
   const ref = useRef<FormikProps<FormProps> | null>(null)
 
   useEffect(() => {
-    fetch('https://api.ipregistry.co/?key=10auylyu4tjkh2xd')
-      .then(function (response) {
-        return response.json()
-      })
-      .then(function (payload) {
-        const country = allCountries.find(
-          c => c.code === payload.location.country.code
-        )
-        if (country) {
-          ref.current?.setFieldValue('country', country)
-          initialValue.country = country
-        }
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }, [])
-
-  useEffect(() => {
-    if (openSnackbar) {
-      setTimeout(() => {
-        setOpenSnackbar(false)
-      }, 5000)
+    if (!loading) {
+      fetch('https://api.ipregistry.co/?key=10auylyu4tjkh2xd')
+        .then(function (response) {
+          return response.json()
+        })
+        .then(function (payload) {
+          const country = allCountries.find(
+            c => c.code === payload.location.country.code
+          )
+          if (country) {
+            ref.current?.setFieldValue('country', country)
+          }
+        })
+        .catch(error => {
+          console.log(error)
+        })
     }
-  }, [openSnackbar])
-
-  useEffect(() => {
-    if (openErrorSnackbar) {
-      setTimeout(() => {
-        setOpenErrorSnackbar(false)
-      }, 5000)
-    }
-  }, [openErrorSnackbar])
+  }, [loading])
 
   return (
-    <Box className={styles.container}>
-      <Typography className={styles.title}>Submit a ticket</Typography>
+    <>
       <Box className={styles['form-container']}>
         <Formik
           initialValues={initialValue}
           validationSchema={validationSchema}
           innerRef={formik => (ref.current = formik)}
           onSubmit={async (values, actions) => {
+            setLoading(true)
             await axios
               .post(
                 'https://bspaycoapi-qa.payco.net.ve/api/v1/email',
@@ -132,13 +113,18 @@ const SupportForm = (): JSX.Element => {
                   To: 'amena@lukapay.io',
                   Subject: `Contacto Landing - Cliente: ${values.name} ${values.lastName}`,
                   Body: `
-                    El cliente ${values.name} ${values.lastName} ha enviado un mensaje de soporte con el siguiente contenido:<br/><br/>
-                    País: ${values.country.label},<br/>
-                    Correo ${values.email},<br/>
-                    Teléfono: ${values.country.phone}${values.phone},<br/>
-                    Titulo: ${values.subject},<br/>
-                    Mensaje: ${values.message}
-                  `
+                      El cliente ${values.name} ${
+                    values.lastName
+                  } ha enviado un mensaje a ventas con el siguiente contenido:<br/><br/>
+                      País: ${values.country.label},<br/>
+                      Correo: ${values.email},<br/>
+                      Teléfono: ${values.country.phone}${values.phone},<br/>
+                      Sitio Web: ${
+                        values.website ? values.website : 'N/A'
+                      },<br/>
+                      Expectativa (# de transacciones): ${values.income},<br/>
+                      Mensaje: ${values.message}
+                    `
                 },
                 {
                   auth: {
@@ -148,47 +134,18 @@ const SupportForm = (): JSX.Element => {
                 }
               )
               .then(() => {
-                setOpenSnackbar(true)
+                setLoading(false)
+                setSuccess(true)
                 actions.resetForm()
               })
               .catch(error => {
+                setFailure(true)
                 console.log(error)
-                setOpenErrorSnackbar(true)
               })
           }}
         >
           {formik => (
             <form onSubmit={formik.handleSubmit}>
-              <Box className={styles['input-container']}>
-                <Autocomplete
-                  disablePortal
-                  disableClearable={true}
-                  value={formik.values.subject}
-                  onChange={(e, newValue) =>
-                    formik.setFieldValue('subject', newValue)
-                  }
-                  options={subjects}
-                  renderInput={params => (
-                    <TextField
-                      {...params}
-                      name={'subject'}
-                      variant="standard"
-                      label="Subject"
-                      error={
-                        formik.touched.subject && Boolean(formik.errors.subject)
-                      }
-                    />
-                  )}
-                  popupIcon={
-                    <KeyboardArrowDownIcon sx={{ fontSize: '15px' }} />
-                  }
-                />
-                <ErrorMessage
-                  name={'subject'}
-                  component={'div'}
-                  className={styles.error}
-                />
-              </Box>
               <Box className={styles['input-container']}>
                 <TextField
                   name={'name'}
@@ -235,6 +192,54 @@ const SupportForm = (): JSX.Element => {
                 />
                 <ErrorMessage
                   name={'email'}
+                  component={'div'}
+                  className={styles.error}
+                />
+              </Box>
+              <Box className={styles['input-container']}>
+                <TextField
+                  name={'website'}
+                  fullWidth
+                  variant="standard"
+                  label={'Website'}
+                  value={formik.values.website}
+                  onChange={formik.handleChange}
+                  error={
+                    formik.touched.website && Boolean(formik.errors.website)
+                  }
+                />
+                <ErrorMessage
+                  name={'website'}
+                  component={'div'}
+                  className={styles.error}
+                />
+              </Box>
+              <Box className={styles['input-container']}>
+                <Autocomplete
+                  disablePortal
+                  disableClearable={true}
+                  value={formik.values.income}
+                  onChange={(e, newValue) =>
+                    formik.setFieldValue('income', newValue)
+                  }
+                  options={transactions}
+                  renderInput={params => (
+                    <TextField
+                      {...params}
+                      name={'income'}
+                      variant="standard"
+                      label="Expected monthly transactions"
+                      error={
+                        formik.touched.income && Boolean(formik.errors.income)
+                      }
+                    />
+                  )}
+                  popupIcon={
+                    <KeyboardArrowDownIcon sx={{ fontSize: '15px' }} />
+                  }
+                />
+                <ErrorMessage
+                  name={'income'}
                   component={'div'}
                   className={styles.error}
                 />
@@ -391,50 +396,8 @@ const SupportForm = (): JSX.Element => {
           )}
         </Formik>
       </Box>
-      <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={openSnackbar}
-        TransitionComponent={TransitionLeft}
-        className={styles['snackbar-container']}
-      >
-        <Box className={styles.snackbar}>
-          <Box component={'figure'} className={styles.figure}>
-            <Lottie
-              animationData={animationData}
-              loop={false}
-              autoplay={true}
-              className={styles.lottie}
-              initialSegment={[0, 50]}
-            />
-          </Box>
-          <Typography className={styles['snackbar-text']}>
-            Message successfully sent
-          </Typography>
-        </Box>
-      </Snackbar>
-      <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={openErrorSnackbar}
-        TransitionComponent={TransitionLeft}
-        className={styles['snackbar-container']}
-      >
-        <Box className={styles.snackbar}>
-          <Box component={'figure'} className={styles.figure}>
-            <Lottie
-              animationData={animationErrorData}
-              loop={false}
-              autoplay={true}
-              className={styles.lottie}
-              initialSegment={[0, 50]}
-            />
-          </Box>
-          <Typography className={styles['snackbar-text']}>
-            Your message wasn&apos;t sent
-          </Typography>
-        </Box>
-      </Snackbar>
-    </Box>
+    </>
   )
 }
 
-export default SupportForm
+export default SalesForm
