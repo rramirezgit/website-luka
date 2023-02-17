@@ -2,12 +2,15 @@ import { Box } from '@mui/material'
 import Footer from 'components/footer'
 import FormView from 'components/formView'
 import Nav from 'components/nav'
-// import SupportForm from './SupportForm'
 import support from 'assets/support/support.svg'
-import { useEffect } from 'react'
-import SupportForm from 'components/allForms/support'
+import { useEffect, useState } from 'react'
+import FormLayout from 'components/formView/formLayout'
+import SupportForm from 'components/allForms/supportForm'
 
 const Support = (): JSX.Element => {
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [failure, setFailure] = useState(false)
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -23,10 +26,21 @@ const Support = (): JSX.Element => {
           marginTop: '110px'
         }}
       >
-        <FormView
-          image={support}
-        >
-          <SupportForm />
+        <FormView image={support}>
+          <FormLayout
+            title="Contact our support team"
+            loading={loading}
+            success={success}
+            failure={failure}
+            setFailure={setFailure}
+          >
+            <SupportForm
+              loading={loading}
+              setLoading={setLoading}
+              setSuccess={setSuccess}
+              setFailure={setFailure}
+            />
+          </FormLayout>
         </FormView>
       </Box>
       <Box

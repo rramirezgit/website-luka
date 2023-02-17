@@ -64,6 +64,10 @@ const FormView = ({ children, image }: Props): JSX.Element => {
               xs: '100%',
               sm: '530px'
             },
+            height: {
+              xs: '750px',
+              sm: '850px'
+            },
             padding: {
               xs: '0',
               sm: '50px'
@@ -74,7 +78,7 @@ const FormView = ({ children, image }: Props): JSX.Element => {
             },
             boxShadow: {
               xs: 'none',
-              sm: '3.6139px 3.6139px 13.5521px 1.80695px rgba(0, 0, 0, 0.04)'
+              sm: '5.6139px 5.6139px 13.5521px 1.80695px rgba(0, 0, 0, 0.04)'
             },
             position: 'relative'
           }
