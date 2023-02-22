@@ -2,11 +2,12 @@ import { Box, Typography, TextField, Autocomplete, Button } from '@mui/material'
 import styles from './allforms.module.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import * as yup from 'yup'
-import { Formik, ErrorMessage, FormikProps } from 'formik'
+// import { Formik, ErrorMessage, FormikProps } from 'formik'
+import { Formik, ErrorMessage } from 'formik'
 import { allCountries, transactions } from 'logic'
 import Flag from 'react-world-flags'
 import axios from 'axios'
-import { useRef, useEffect } from 'react'
+// import { useRef, useEffect } from 'react'
 
 export interface Props {
   loading: boolean
@@ -74,27 +75,27 @@ const SalesForm = ({
     country: allCountries[60]
   }
 
-  const ref = useRef<FormikProps<FormProps> | null>(null)
+  // const ref = useRef<FormikProps<FormProps> | null>(null)
 
-  useEffect(() => {
-    if (!loading) {
-      fetch('https://api.ipregistry.co/?key=10auylyu4tjkh2xd')
-        .then(function (response) {
-          return response.json()
-        })
-        .then(function (payload) {
-          const country = allCountries.find(
-            c => c.code === payload.location.country.code
-          )
-          if (country) {
-            ref.current?.setFieldValue('country', country)
-          }
-        })
-        .catch(error => {
-          console.log(error)
-        })
-    }
-  }, [loading])
+  // useEffect(() => {
+  //   if (!loading) {
+  //     fetch('https://api.ipregistry.co/?key=10auylyu4tjkh2xd')
+  //       .then(function (response) {
+  //         return response.json()
+  //       })
+  //       .then(function (payload) {
+  //         const country = allCountries.find(
+  //           c => c.code === payload.location.country.code
+  //         )
+  //         if (country) {
+  //           ref.current?.setFieldValue('country', country)
+  //         }
+  //       })
+  //       .catch(error => {
+  //         console.log(error)
+  //       })
+  //   }
+  // }, [loading])
 
   return (
     <>
@@ -102,7 +103,7 @@ const SalesForm = ({
         <Formik
           initialValues={initialValue}
           validationSchema={validationSchema}
-          innerRef={formik => (ref.current = formik)}
+          // innerRef={formik => (ref.current = formik)}
           onSubmit={async (values, actions) => {
             setLoading(true)
             await axios
