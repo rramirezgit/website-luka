@@ -29,12 +29,9 @@ const FormLayout = ({
       {!loading && !success && !failure && children}
       {loading && !success && !failure && (
         <Box
+          className={styles.flex}
           sx={{
-            height: 'calc(100% - 80px)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center'
+            height: 'calc(100% - 80px)'
           }}
         >
           <Loading
@@ -44,9 +41,8 @@ const FormLayout = ({
             size={100}
           />
           <Typography
+            className={styles.text}
             sx={{
-              fontSize: '16px !important',
-              fontWeight: '600 !important',
               marginTop: '20px'
             }}
           >
@@ -56,12 +52,9 @@ const FormLayout = ({
       )}
       {success && (
         <Box
+          className={styles.flex}
           sx={{
-            height: 'calc(100% - 120px)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center'
+            height: 'calc(100% - 120px)'
           }}
         >
           <Box component={'figure'} className={styles.figure}>
@@ -74,9 +67,9 @@ const FormLayout = ({
             />
           </Box>
           <Typography
+            className={styles.text}
             sx={{
-              fontSize: '16px !important',
-              fontWeight: '600 !important'
+              marginBottom: '30px'
             }}
           >
             Message successfully sent
@@ -85,12 +78,9 @@ const FormLayout = ({
       )}
       {failure && (
         <Box
+          className={styles.flex}
           sx={{
-            height: 'calc(100% - 120px)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center'
+            height: 'calc(100% - 120px)'
           }}
         >
           <Box component={'figure'} className={styles.figure}>
@@ -103,9 +93,9 @@ const FormLayout = ({
             />
           </Box>
           <Typography
+            className={styles.text}
             sx={{
-              fontSize: '16px !important',
-              fontWeight: '600 !important'
+              marginBottom: '30px'
             }}
             onClick={() => {
               setFailure(false)

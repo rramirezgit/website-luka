@@ -28,7 +28,7 @@ const Sales = (): JSX.Element => {
       >
       <FormView image={sales}>
         <FormLayout
-          title="Contact our support team"
+          title="Contact our sales team"
           loading={loading}
           success={success}
           failure={failure}
