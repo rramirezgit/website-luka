@@ -90,13 +90,10 @@ const Carousel = ({
         {children}
       </Box>
       <Box
-        className={clsx(
-          lukaCSS['flex-row'],
-          lukaCSS['vertical-horizontal-center'],
-          carouselCSS['button-container']
-        )}
+        className={lukaCSS['vertical-horizontal-center']}
         sx={{
           display: {
+            xs: 'flex',
             carousel: 'none'
           },
           marginTop: `${buttonsMargin}px`
