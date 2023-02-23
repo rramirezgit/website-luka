@@ -89,6 +89,10 @@ const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
           variant="contained"
           color="primary_a"
           className={nav.button}
+          sx={{
+            width: '198px',
+            height: '45px'
+          }}
           onClick={() => {
             window.open('https://business.lukapay.io/', '_self')
           }}
