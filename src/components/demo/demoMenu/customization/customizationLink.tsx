@@ -3,15 +3,13 @@ import Color from '../color'
 import styles from './customization.module.css'
 import Filestack from '../filestack'
 import SliderInput from '../sliderInput'
-import gallery from 'assets/demoLink/menu/gallery.svg'
-import brush from 'assets/demoLink/menu/brush.svg'
-import setting from 'assets/demoLink/menu/setting.svg'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'redux/store'
 import { changeBackground, changeBorder, changeButton, changeCurrency, changeFont, changeLanguage, changeTitle } from 'redux/slices/demoSlice'
 import Autocomplete from '@mui/material/Autocomplete'
 import { languages, fonts, currency } from 'logic'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import config from 'const'
 
 interface Props {
   type: 'mobile' | 'desktop'
@@ -37,7 +35,7 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
             component={'figure'}
             className={styles['title-figure']}
           >
-            <img src={gallery} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+            <img src={`${config.UrlBaseImg}demoLink/menu/gallery.svg`} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
           </Box>
           <Typography
             classes={
@@ -61,7 +59,7 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
             component={'figure'}
             className={styles['title-figure']}
           >
-            <img src={brush} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+            <img src={`${config.UrlBaseImg}demoLink/menu/brush.svg`} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
           </Box>
           <Typography
             classes={
@@ -147,7 +145,7 @@ const CustomizationLink = ({ type }: Props): JSX.Element => {
             component={'figure'}
             className={styles['title-figure']}
           >
-            <img src={setting} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+            <img src={`${config.UrlBaseImg}demoLink/menu/setting.svg`} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
           </Box>
           <Typography
             classes={

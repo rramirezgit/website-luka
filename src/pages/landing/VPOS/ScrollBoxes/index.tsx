@@ -2,13 +2,9 @@ import { Box, Typography } from '@mui/material'
 import scrollStyles from './scrollboxes.module.css'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
-import phone3 from 'assets/vpos/vpos-phone-3.svg'
-import phone4 from 'assets/vpos/vpos-phone-4.svg'
-import phone5 from 'assets/vpos/vpos-phone-5.svg'
-import vposFish from 'assets/vpos/vpos-img.svg'
-import checkImg from 'assets/vpos/vpos-img-2.svg'
 import { getCssVar } from 'theme'
 import { useState } from 'react'
+import config from 'const'
 
 const ScrollBoxes = (): JSX.Element => {
   const [displayLeft, setDisplayLeft] = useState(false)
@@ -234,7 +230,7 @@ const ScrollBoxes = (): JSX.Element => {
                 }}
               >
                 <img
-                  src={vposFish}
+                  src={`${config.UrlBaseImg}vpos/vpos-img.svg`}
                   alt="Demo"
                   style={{ maxHeight: '100%', maxWidth: '100%' }}
                 />
@@ -269,7 +265,7 @@ const ScrollBoxes = (): JSX.Element => {
               }}
             >
               <img
-                src={phone4}
+                src={`${config.UrlBaseImg}vpos/vpos-phone-4.svg`}
                 alt="Demo"
                 style={{ height: '100%', maxWidth: '100%' }}
               />
@@ -314,7 +310,7 @@ const ScrollBoxes = (): JSX.Element => {
               }}
             >
               <img
-                src={phone3}
+                src={`${config.UrlBaseImg}vpos/vpos-phone-3.svg`}
                 alt="Demo"
                 style={{ maxWidth: '85%', maxHeight: '100%' }}
               />
@@ -346,7 +342,7 @@ const ScrollBoxes = (): JSX.Element => {
               }}
             >
               <img
-                src={phone5}
+                src={`${config.UrlBaseImg}vpos/vpos-phone-5.svg`}
                 alt="Demo"
                 style={{ maxWidth: '100%', maxHeight: '100%' }}
               />
@@ -395,7 +391,7 @@ const ScrollBoxes = (): JSX.Element => {
               }}
             >
               <img
-                src={checkImg}
+                src={`${config.UrlBaseImg}vpos/vpos-img-2.svg`}
                 alt="Demo"
                 style={{ maxWidth: '100%', maxHeight: '100%' }}
               />

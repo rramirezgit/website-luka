@@ -2,11 +2,9 @@ import { Box, Typography, Button } from '@mui/material'
 import PaymentBox from 'components/demo/paymentBox'
 import { getCssVar } from 'theme'
 import styles from './custom.module.css'
-import zelle from 'assets/demoLink/payment/zelle.svg'
-import paypal from 'assets/demoLink/payment/paypal.svg'
-import card from 'assets/demoLink/payment/card.svg'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
+import config from 'const'
 
 const Custom = (): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
@@ -34,17 +32,17 @@ const Custom = (): JSX.Element => {
             <PaymentBox
               borderColor={demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')}
               text='Credit'
-              img={card}
+              img={`${config.UrlBaseImg}demoLink/payment/card.svg`}
               borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
             <PaymentBox
               text='Paypal'
-              img={paypal}
+              img={`${config.UrlBaseImg}demoLink/payment/paypal.svg`}
               borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
             <PaymentBox
               text='Zelle'
-              img={zelle}
+              img={`${config.UrlBaseImg}demoLink/payment/zelle.svg`}
               borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
           </Box>

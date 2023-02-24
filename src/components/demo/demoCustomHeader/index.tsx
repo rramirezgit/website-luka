@@ -1,11 +1,9 @@
-import brush from 'assets/demoLink/brush.svg'
-import tooltip from 'assets/demoLink/tooltip.svg'
 import { Box, Typography } from '@mui/material'
 import styles from './customheader.module.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
-import './index.css'
 import { useNavigate } from 'react-router-dom'
 import config from 'const'
+import './index.css'
 
 interface Props {
   customization: () => void
@@ -47,12 +45,12 @@ const DemoCustomHeader = ({ customization }: Props): JSX.Element => {
         id={'customheader-custom-box'}
         onClick={customization}
       >
-        <img src={brush} alt='Logo' style={{ width: '100%', height: '100%' }} />
+        <img src={`${config.UrlBaseImg}demoLink/brush.svg`} alt='Logo' style={{ width: '100%', height: '100%' }} />
         <Box
           className={styles['tooltip-box']}
           id={'customheader-tooltip-box'}
         >
-          <img src={tooltip} alt={'Personaliza'} style={{ maxWidth: '100%', maxHeight: '100%' }} />
+          <img src={`${config.UrlBaseImg}demoLink/tooltip.svg`} alt={'Personaliza'} style={{ maxWidth: '100%', maxHeight: '100%' }} />
         </Box>
       </Box>
     </Box>

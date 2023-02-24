@@ -2,9 +2,6 @@
 /* eslint-disable multiline-ternary */
 import { Box, Button } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import linkPhone from 'assets/demoLink/demo-link-phone.svg'
-import gatewayPhone from 'assets/demoLink/demo-gateway-phone.svg'
-import placeholder from 'assets/placeholder.svg'
 import { getCssVar } from 'theme'
 import styles from './mobilecontent.module.css'
 import PayCard from './payCard'
@@ -13,6 +10,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
 import { currencyValues } from 'logic'
+import config from 'const'
 import './index.css'
 
 interface Props {
@@ -31,7 +29,7 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
       <Box id={'mobilecontent-container'}>
         <img
           loading="lazy"
-          src={type === 'link' ? linkPhone : gatewayPhone}
+          src={type === 'link' ? `${config.UrlBaseImg}demoLink/demo-link-phone.svg` : `${config.UrlBaseImg}demoLink/demo-gateway-phone.svg`}
           alt="Phone"
           style={{ height: '100%' }}
           onLoad={() => onLoad()}
@@ -72,7 +70,7 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
                 className={styles.logo}
               >
                 <img
-                  src={demo.imgUrl ? demo.imgUrl : placeholder}
+                  src={demo.imgUrl ? demo.imgUrl : `${config.UrlBaseImg}placeholder.svg`}
                   alt="Logo"
                   style={{ maxWidth: '100%', maxHeight: '100%' }}
                 />

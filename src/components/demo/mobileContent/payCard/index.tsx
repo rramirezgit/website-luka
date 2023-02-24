@@ -1,13 +1,9 @@
 import { Box } from '@mui/material'
 import styles from './paycard.module.css'
-import card from 'assets/demoLink/card/card.svg'
-import wifi from 'assets/demoLink/card/wifi.svg'
-import star from 'assets/demoLink/card/star.svg'
-import visa from 'assets/demoLink/card/visa.svg'
-import paypal from 'assets/demoLink/card/paypal.svg'
-import './index.css'
 import Typography from '@mui/material/Typography'
 import clsx from 'clsx'
+import config from 'const'
+import './index.css'
 
 interface Props {
   type: 'card' | 'paypal'
@@ -20,7 +16,7 @@ const PayCard = ({ type }: Props): JSX.Element => {
       id={'paycard-container'}
       sx={
         {
-          backgroundImage: type === 'card' ? `url(${card}) !important` : 'none',
+          backgroundImage: type === 'card' ? `url(${config.UrlBaseImg}demoLink/card/card.svg) !important` : 'none',
           backgroundRepeat: type === 'card' ? 'no-repeat !important' : 'none',
           backgroundPosition: type === 'card' ? 'center !important' : 'none',
           backgroundSize: type === 'card' ? '100% 100% !important' : 'none'
@@ -46,7 +42,7 @@ const PayCard = ({ type }: Props): JSX.Element => {
                   className={styles.icons}
                   id={'small-icon'}
                 >
-                  <img src={wifi} alt='Wireless' style={{ height: '100%', width: '100%' }} />
+                  <img src={`${config.UrlBaseImg}demoLink/card/wifi.svg`} alt='Wireless' style={{ height: '100%', width: '100%' }} />
                 </Box>
                 <Box
                   className={styles['big-circle']}
@@ -87,14 +83,14 @@ const PayCard = ({ type }: Props): JSX.Element => {
                   className={styles.icons}
                   id={'small-icon'}
                 >
-                  <img src={star} alt='Favorite' style={{ height: '100%', width: '100%' }} />
+                  <img src={`${config.UrlBaseImg}demoLink/card/star.svg`} alt='Favorite' style={{ height: '100%', width: '100%' }} />
                 </Box>
                 <Box
                   component={'figure'}
                   className={styles.icons}
                   id={'big-icon'}
                 >
-                  <img src={visa} alt='Visa' style={{ height: '100%', width: '100%' }} />
+                  <img src={`${config.UrlBaseImg}demoLink/card/visa.svg`} alt='Visa' style={{ height: '100%', width: '100%' }} />
                 </Box>
               </Box>
             </Box>
@@ -113,7 +109,7 @@ const PayCard = ({ type }: Props): JSX.Element => {
                   className={styles.icons}
                   id={'paypal-icon'}
                 >
-                  <img src={paypal} alt='Paypal' style={{ height: '100%', width: '100%' }} />
+                  <img src={`${config.UrlBaseImg}demoLink/card/paypal.svg`} alt='Paypal' style={{ height: '100%', width: '100%' }} />
                 </Box>
                 <Box>
                   <Typography

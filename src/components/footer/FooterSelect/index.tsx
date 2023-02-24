@@ -1,7 +1,7 @@
 import { Box, TextField, MenuItem } from '@mui/material'
 import { FooterSelectProps } from '../footer.interface'
 import InputAdornment from '@mui/material/InputAdornment'
-import Location from 'assets/footer/location.png'
+import config from 'const'
 
 const FooterSelect = ({ options, value }: FooterSelectProps): JSX.Element => {
   return (
@@ -18,7 +18,7 @@ const FooterSelect = ({ options, value }: FooterSelectProps): JSX.Element => {
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <img src={Location} alt="flag" />
+              <img src={`${config.UrlBaseImg}footer/location.png`} alt="flag" />
             </InputAdornment>
           ),
           disableUnderline: true

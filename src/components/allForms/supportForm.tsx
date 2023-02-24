@@ -5,9 +5,9 @@ import * as yup from 'yup'
 // import { Formik, ErrorMessage, FormikProps } from 'formik'
 import { Formik, ErrorMessage } from 'formik'
 import { allCountries, subjects } from 'logic'
-import Flag from 'react-world-flags'
 import axios from 'axios'
 // import { useRef, useEffect } from 'react'
+import config from 'const'
 
 interface Props {
   loading: boolean
@@ -249,16 +249,18 @@ const SupportForm = ({
                           sx={{ '& > img': { mr: 1, flexShrink: 0 } }}
                           {...props}
                         >
-                          <Flag
-                            code={option.code.toLowerCase()}
+                          <img
+                            src={`${config.UrlBaseImg}supportFlags/${option.code.toLocaleUpperCase()}.png`}
                             style={{
                               maxWidth: '25px',
-                              maxHeight: '20px',
+                              maxHeight: '18px',
                               width: '25px',
-                              height: '20px',
+                              height: '18px',
                               objectFit: 'cover',
                               borderRadius: '4px'
                             }}
+                            alt="Flag"
+                            loading="lazy"
                           />
                           <Typography sx={{ fontSize: '11px' }}>
                             +{option.phone}
@@ -279,17 +281,19 @@ const SupportForm = ({
                           InputProps={{
                             ...params.InputProps,
                             startAdornment: (
-                              <Flag
-                                code={formik.values.country.code.toLowerCase()}
+                              <img
+                                src={`${config.UrlBaseImg}supportFlags/${formik.values.country.code.toLocaleUpperCase()}.png`}
                                 style={{
-                                  borderRadius: '8px',
                                   maxWidth: '25px',
-                                  maxHeight: '17px',
-                                  width: '100%',
-                                  height: '100%',
-                                  marginRight: '5px',
-                                  objectFit: 'cover'
+                                  maxHeight: '18px',
+                                  width: '25px',
+                                  height: '18px',
+                                  objectFit: 'cover',
+                                  borderRadius: '4px',
+                                  marginRight: '10px'
                                 }}
+                                loading="lazy"
+                                alt="Flag"
                               />
                             )
                           }}

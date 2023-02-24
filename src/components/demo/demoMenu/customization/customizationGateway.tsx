@@ -5,11 +5,10 @@ import SliderInput from '../sliderInput'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'redux/store'
 import { changeBorder, changeButton, changeCurrency, changeFont, changeLanguage } from 'redux/slices/demoSlice'
-import brush from 'assets/demoLink/menu/brush.svg'
-import setting from 'assets/demoLink/menu/setting.svg'
 import Autocomplete from '@mui/material/Autocomplete'
 import { languages, fonts, currency } from 'logic'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import config from 'const'
 
 interface Props {
   type: 'mobile' | 'desktop'
@@ -28,7 +27,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
             component={'figure'}
             className={styles['title-figure']}
           >
-            <img src={brush} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+            <img src={`${config.UrlBaseImg}demoLink/menu/brush.svg`} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
           </Box>
           <Typography
             classes={
@@ -88,7 +87,7 @@ const CustomizationGateway = ({ type }: Props): JSX.Element => {
             component={'figure'}
             className={styles['title-figure']}
           >
-            <img src={setting} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+            <img src={`${config.UrlBaseImg}demoLink/menu/setting.svg`} alt='Logo' style={{ maxHeight: '100%', maxWidth: '100%' }} />
           </Box>
           <Typography
             classes={

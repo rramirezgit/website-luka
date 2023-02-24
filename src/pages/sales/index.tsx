@@ -3,9 +3,9 @@ import Footer from 'components/footer'
 import FormView from 'components/formView'
 import Nav from 'components/nav'
 import { useEffect, useState } from 'react'
-import sales from 'assets/sales/sales.svg'
 import FormLayout from 'components/formView/formLayout'
 import SalesForm from 'components/allForms/salesForm'
+import config from 'const'
 
 const Sales = (): JSX.Element => {
   const [loading, setLoading] = useState(false)
@@ -26,7 +26,7 @@ const Sales = (): JSX.Element => {
           marginTop: '110px'
         }}
       >
-      <FormView image={sales}>
+      <FormView image={`${config.UrlBaseImg}sales/sales.svg`}>
         <FormLayout
           title="Contact our sales team"
           loading={loading}

@@ -1,6 +1,6 @@
 import { createTheme, ThemeProvider, useTheme } from '@mui/material'
-import inImage from 'assets/demoLink/in.png'
 import { ReactElement } from 'react'
+import config from 'const'
 
 interface ThemeProps {
   children?: ReactElement | ReactElement[]
@@ -120,7 +120,7 @@ const ThemeLuka = ({ children }: ThemeProps): JSX.Element => {
             }
           },
           thumb: {
-            backgroundImage: `url(${inImage})`,
+            backgroundImage: `url(${config.UrlBaseImg}demoLink/in.png)`,
             backgroundColor: getCssVar('--primary-buttons'),
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',

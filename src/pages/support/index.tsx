@@ -2,10 +2,10 @@ import { Box } from '@mui/material'
 import Footer from 'components/footer'
 import FormView from 'components/formView'
 import Nav from 'components/nav'
-import support from 'assets/support/support.svg'
 import { useEffect, useState } from 'react'
 import FormLayout from 'components/formView/formLayout'
 import SupportForm from 'components/allForms/supportForm'
+import config from 'const'
 
 const Support = (): JSX.Element => {
   const [loading, setLoading] = useState(false)
@@ -26,7 +26,7 @@ const Support = (): JSX.Element => {
           marginTop: '110px'
         }}
       >
-        <FormView image={support}>
+        <FormView image={`${config.UrlBaseImg}support/support.svg`}>
           <FormLayout
             title="Contact our support team"
             loading={loading}

@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import lukaCSS from 'styles/luka.module.css'
 import carouselCSS from './carousel.module.css'
-import carouselArrow from 'assets/carousel/carousel-arrow.svg'
+import config from 'const'
 import { Box } from '@mui/material'
 
 interface CarouselProps {
@@ -106,7 +106,7 @@ const Carousel = ({
         >
           <img
             className={clsx(carouselCSS.img, lukaCSS.pointer)}
-            src={carouselArrow}
+            src={`${config.UrlBaseImg}carousel/carousel-arrow.svg`}
             alt={'Back'}
           />
         </Box>
@@ -125,7 +125,7 @@ const Carousel = ({
         <Box component={'figure'} className={carouselCSS.figure}>
           <img
             className={clsx(carouselCSS['img--invert'], lukaCSS.pointer)}
-            src={carouselArrow}
+            src={`${config.UrlBaseImg}carousel/carousel-arrow.svg`}
             alt={'Forward'}
             onClick={() => clickRight()}
           />
