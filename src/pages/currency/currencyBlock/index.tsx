@@ -3,7 +3,7 @@ import styles from './currencyblock.module.css'
 import { countries } from 'logic'
 import { getCssVar } from 'theme'
 import Square from 'components/square'
-import Flag from 'react-world-flags'
+import config from 'const'
 
 const CurrencyBlock = (): JSX.Element => {
   return (
@@ -86,7 +86,7 @@ const CurrencyBlock = (): JSX.Element => {
               <Box
                 sx={{
                   width: {
-                    xs: '35px',
+                    xs: '40px',
                     sm: '55px'
                   },
                   height: {
@@ -94,13 +94,13 @@ const CurrencyBlock = (): JSX.Element => {
                     sm: '35px'
                   },
                   marginRight: {
-                    xs: '20px',
+                    xs: '10px',
                     sm: '30px'
                   }
                 }}
               >
-                <Flag
-                  code={country.code}
+                <img
+                  src={`${config.UrlBaseImg}currencies/${country.code}.svg`}
                   style={{
                     borderRadius: '8px',
                     maxWidth: '100%',
@@ -109,6 +109,8 @@ const CurrencyBlock = (): JSX.Element => {
                     height: '100%',
                     objectFit: 'cover'
                   }}
+                  loading="lazy"
+                  alt='Flag'
                 />
               </Box>
               <Typography

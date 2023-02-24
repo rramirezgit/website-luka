@@ -1,10 +1,10 @@
 import { Typography } from '@mui/material'
-import placeholder from 'assets/placeholder.svg'
 import cardCSS from './card.module.css'
 import clsx from 'clsx'
 import lukaCSS from 'styles/luka.module.css'
 import { Box } from '@mui/system'
 import { useState } from 'react'
+import config from 'const'
 
 interface Props {
   imageUrl?: string
@@ -71,7 +71,7 @@ const Card = ({ text, imageUrl, title, id, idCard }: Props): JSX.Element => {
         <Box component={'figure'} className={cardCSS.figure}>
           <img
             className={cardCSS.img}
-            src={imageUrl ?? placeholder}
+            src={imageUrl ?? `${config.UrlBaseImg}placeholder.svg`}
             alt="Placeholder"
           />
         </Box>

@@ -1,7 +1,4 @@
 import { Box, Typography } from '@mui/material'
-import linkedin from 'assets/footer/linkedin.svg'
-import instagram from 'assets/footer/instagram.svg'
-import twitter from 'assets/footer/twitter.svg'
 import footerStyles from './footer.module.css'
 import IconBox from './IconBox'
 import { aboutUsArray, forDevelopersArray } from './footerArrays'
@@ -87,17 +84,17 @@ const Footer = ({ disablePadding = false }: FooterProps): JSX.Element => {
             }}
           >
             <IconBox
-              src={instagram}
+              src={`${config.UrlBaseImg}footer/instagram.svg`}
               alt="Instagram"
               url="https://www.instagram.com/lukapay/"
             />
             <IconBox
-              src={twitter}
+              src={`${config.UrlBaseImg}footer/twitter.svg`}
               alt="Twitter"
               url="https://twitter.com/Lukapay_"
             />
             <IconBox
-              src={linkedin}
+              src={`${config.UrlBaseImg}footer/linkedin.svg`}
               alt="LinkedIn"
               url="https://www.linkedin.com/company/lukapay/"
             />

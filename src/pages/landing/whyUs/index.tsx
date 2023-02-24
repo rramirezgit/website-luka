@@ -3,52 +3,13 @@ import clsx from 'clsx'
 import lukaCSS from 'styles/luka.module.css'
 import whyUsCSS from './whyUs.module.css'
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
-import whyus1 from 'assets/whyus/whyus-1.svg'
-import whyus2 from 'assets/whyus/whyus-2.svg'
-import whyus3 from 'assets/whyus/whyus-3.svg'
 import Card from './card'
 import Square from 'components/square'
 import { getCssVar } from 'theme'
-
-interface CardInterface {
-  key: string
-  title: string
-  tags: string[]
-  text: string[]
-  imageUrl: string
-}
+import cardsInfo from './whyUsArray'
 
 const WhyUs = (): JSX.Element => {
   const theme = useTheme()
-  const cardsInfo: CardInterface[] = [
-    {
-      key: crypto.randomUUID(),
-      title: 'Embedded solution',
-      tags: ['GATEWAY'],
-      text: [
-        'One integration to empower your access to currencies and payment methods to process your payment transactions'
-      ],
-      imageUrl: whyus1
-    },
-    {
-      key: crypto.randomUUID(),
-      title: 'Plug and play solution',
-      tags: ['PAYMENT LINK', 'VPOS'],
-      text: ['Hassle free payment management web interface'],
-      imageUrl: whyus2
-    },
-    {
-      key: crypto.randomUUID(),
-      title: 'Hardwareless onsite payments',
-      tags: ['VPOS'],
-      text: [
-        'Friendly and simple app',
-        'Scalable solution, from a single VPOS to a bespoke cluster of point of sales',
-        'Device friendly but not required.'
-      ],
-      imageUrl: whyus3
-    }
-  ]
   return (
     <Box
       className={clsx(whyUsCSS['whyus-container'], lukaCSS['flex-column'])}

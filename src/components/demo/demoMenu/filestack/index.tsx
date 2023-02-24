@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import * as filestack from 'filestack-js'
-import plusImg from 'assets/demoLink/plus.svg'
 import styles from './filestack.module.css'
 import { useDispatch } from 'react-redux'
 import { changeImg } from 'redux/slices/demoSlice'
+import config from 'const'
 
 const Filestack = (): JSX.Element => {
   const dispatch = useDispatch()
@@ -38,7 +38,7 @@ const Filestack = (): JSX.Element => {
         component={'figure'}
         className={styles.figure}
       >
-        <img src={plusImg} alt='Add' />
+        <img src={`${config.UrlBaseImg}demoLink/plus.svg`} alt='Add' />
       </Box>
       <Box>
         <Typography

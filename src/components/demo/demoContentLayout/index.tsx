@@ -1,11 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import styles from './contentlayout.module.css'
-import ios from 'assets/demoLink/support/ios.svg'
-import android from 'assets/demoLink/support/android.svg'
-import js from 'assets/demoLink/support/js.svg'
 import { useDispatch } from 'react-redux'
 import './index.css'
 import { resetState } from 'redux/slices/demoSlice'
+import config from 'const'
 
 interface LayoutProps {
   children: JSX.Element
@@ -46,17 +44,17 @@ const DemoContentLayout = ({ children, support }: LayoutProps): JSX.Element => {
         {support === 'mobile' && (
           <>
             <Box component={'figure'}>
-              <img src={android} alt="Android" />
+              <img src={`${config.UrlBaseImg}demoLink/support/android.svg`} alt="Android" />
             </Box>
             <Box component={'figure'}>
-              <img src={ios} alt="IOS" />
+              <img src={`${config.UrlBaseImg}demoLink/support/ios.svg`} alt="IOS" />
             </Box>
           </>
         )}
         {support === 'javascript' && (
           <>
             <Box component={'figure'}>
-              <img src={js} alt="Android" />
+              <img src={`${config.UrlBaseImg}demoLink/support/js.svg`} alt="Javascript" />
             </Box>
           </>
         )}
