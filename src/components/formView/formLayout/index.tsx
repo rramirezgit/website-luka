@@ -1,10 +1,11 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, Button } from '@mui/material'
 import styles from './formlayout.module.css'
 import Loading from 'components/loading'
 import { getCssVar } from 'theme'
 import Lottie from 'lottie-react'
 import animationData from 'assets/check.json'
 import animationErrorData from 'assets/x.json'
+import { useNavigate } from 'react-router-dom'
 
 interface Props {
   title: string
@@ -23,6 +24,7 @@ const FormLayout = ({
   failure,
   setFailure
 }: Props): JSX.Element => {
+  const navigate = useNavigate()
   return (
     <Box className={styles.container}>
       <Typography className={styles.title}>{title}</Typography>
@@ -74,6 +76,18 @@ const FormLayout = ({
           >
             Message successfully sent
           </Typography>
+          <Button
+            variant={'contained'}
+            sx={{
+              width: '148px',
+              height: '48px',
+              fontSize: '16px',
+              marginTop: '20px'
+            }}
+            onClick={() => navigate('/')}
+          >
+            Accept
+          </Button>
         </Box>
       )}
       {failure && (
@@ -103,6 +117,20 @@ const FormLayout = ({
           >
             Failed to send message
           </Typography>
+          <Button
+            variant={'contained'}
+            sx={{
+              width: '148px',
+              height: '48px',
+              fontSize: '16px',
+              marginTop: '20px'
+            }}
+            onClick={() => {
+              setFailure(false)
+            }}
+          >
+            Retry
+          </Button>
         </Box>
       )}
     </Box>
