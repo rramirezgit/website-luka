@@ -108,7 +108,7 @@ const SupportForm = ({
                 'https://bspaycoapi-qa.payco.net.ve/api/v1/email',
                 {
                   From: 'noreply@lukapay.io',
-                  To: 'support@lukapay.io',
+                  To: 'amena@lukapay.io',
                   Subject: `Contacto Landing - Cliente: ${values.name} ${values.lastName}`,
                   Body: `
                         El cliente ${values.name} ${values.lastName} ha enviado un mensaje de soporte con el siguiente contenido:<br/><br/>
@@ -321,7 +321,9 @@ const SupportForm = ({
                       value={formik.values.phone}
                       onChange={e => {
                         if (/^[0-9]*$/.test(e.target.value)) {
-                          formik.handleChange(e)
+                          if (e.target.value.length <= 11) {
+                            formik.handleChange(e)
+                          }
                         }
                       }}
                       error={
