@@ -2,10 +2,8 @@ import { Box, Typography, Button } from '@mui/material'
 import styles from './formlayout.module.css'
 import Loading from 'components/loading'
 import { getCssVar } from 'theme'
-import Lottie from 'lottie-react'
-import animationData from 'assets/check.json'
-import animationErrorData from 'assets/x.json'
 import { useNavigate } from 'react-router-dom'
+import LottiePlayer from 'components/lottiePlayer'
 
 interface Props {
   title: string
@@ -60,8 +58,8 @@ const FormLayout = ({
           }}
         >
           <Box component={'figure'} className={styles.figure}>
-            <Lottie
-              animationData={animationData}
+            <LottiePlayer
+              path="check.json"
               loop={false}
               autoplay={true}
               className={styles.lottie}
@@ -98,8 +96,8 @@ const FormLayout = ({
           }}
         >
           <Box component={'figure'} className={styles.figure}>
-            <Lottie
-              animationData={animationErrorData}
+            <LottiePlayer
+              path="x.json"
               loop={false}
               autoplay={true}
               className={styles.lottie}

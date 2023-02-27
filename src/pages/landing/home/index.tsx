@@ -4,10 +4,9 @@ import clsx from 'clsx'
 import Button from '@mui/material/Button'
 import home from './home.module.css'
 import Box from '@mui/material/Box'
-import animation from 'assets/animation.json'
-import Lottie from 'lottie-react'
 import Nav from 'components/nav'
 import config from 'const'
+import LottiePlayer from 'components/lottiePlayer'
 
 const BoxInfo = (): JSX.Element => {
   return (
@@ -126,9 +125,9 @@ const Home = (): JSX.Element => {
               }
             }}
           ></Box>
-          <Lottie
+          <LottiePlayer
             className={home.animation}
-            animationData={animation}
+            path="animation.json"
             loop={true}
           />
         </Box>
