@@ -41,7 +41,7 @@ const CurrencyBlock = (): JSX.Element => {
             <Typography
               className={styles.title}
               sx={{
-                fontSize: { xs: '20px !important', sm: '24px !important' }
+                fontSize: { xs: '16px !important', sm: '20px !important' }
               }}
             >
               CODE
@@ -64,7 +64,7 @@ const CurrencyBlock = (): JSX.Element => {
             <Typography
               className={styles.title}
               sx={{
-                fontSize: { xs: '20px !important', sm: '24px !important' }
+                fontSize: { xs: '16px !important', sm: '20px !important' }
               }}
             >
               CURRENCY
@@ -117,7 +117,7 @@ const CurrencyBlock = (): JSX.Element => {
                 className={styles.text}
                 sx={{
                   width: '55px',
-                  fontSize: { xs: '18px !important', sm: '24px !important' }
+                  fontSize: { xs: '16px !important', sm: '20px !important' }
                 }}
               >
                 {country.currency}
