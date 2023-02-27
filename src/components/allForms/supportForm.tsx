@@ -108,7 +108,7 @@ const SupportForm = ({
                 'https://bspaycoapi-qa.payco.net.ve/api/v1/email',
                 {
                   From: 'noreply@lukapay.io',
-                  To: 'amena@lukapay.io',
+                  To: 'support@lukapay.io',
                   Subject: `Contacto Landing - Cliente: ${values.name} ${values.lastName}`,
                   Body: `
                         El cliente ${values.name} ${values.lastName} ha enviado un mensaje de soporte con el siguiente contenido:<br/><br/>
