@@ -1,6 +1,4 @@
 .content {
-  background: url(./../../../assets/world/texturaMalla.png) no-repeat
-    var(--dark-blue);
   background-size: cover;
   display: flex;
   flex-direction: column;

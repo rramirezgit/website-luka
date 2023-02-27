@@ -7,7 +7,7 @@ import Box from '@mui/material/Box'
 import animation from 'assets/animation.json'
 import Lottie from 'lottie-react'
 import Nav from 'components/nav'
-import bgRectangles from 'assets/bg-home_rectangles.png'
+import config from 'const'
 
 const BoxInfo = (): JSX.Element => {
   return (
@@ -91,8 +91,8 @@ const Home = (): JSX.Element => {
             md: '851px'
           },
           background: {
-            xs: `url(${bgRectangles}) no-repeat`,
-            xl: `url(${bgRectangles}) no-repeat center`
+            xs: `url(${config.UrlBaseImg}bg-home_rectangles.png) no-repeat`,
+            xl: `url(${config.UrlBaseImg}bg-home_rectangles.png) no-repeat center`
           },
           backgroundSize: 'cover !important'
         }}

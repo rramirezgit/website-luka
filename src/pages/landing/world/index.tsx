@@ -3,7 +3,8 @@ import Ready from 'components/ready'
 import style from './world.module.css'
 import Square from 'components/square'
 import Lottie from 'lottie-react'
-import animation from 'assets/world/world.json'
+import animation from 'assets/world.json'
+import config from 'const'
 
 const World = (): JSX.Element => {
   return (
@@ -24,7 +25,9 @@ const World = (): JSX.Element => {
           gap: {
             xs: '20px',
             md: '80px'
-          }
+          },
+          background: `url(${config.UrlBaseImg}world/texturaMalla.png) no-repeat
+          var(--dark-blue)`
         }}
       >
         <Box

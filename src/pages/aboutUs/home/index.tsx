@@ -1,16 +1,16 @@
 import Layout from 'components/layaouts/abousUs'
 import Nav from 'components/nav'
-import img from 'assets/aboutUs/home/Group.svg'
 import { Box } from '@mui/material'
 import style from './homeAboutUs.module.css'
 import Typography from '@mui/material/Typography'
+import config from 'const'
 
 const ImgHome = (): JSX.Element => {
   return (
     <Box className={style.contentImg}>
       <Box
         component={'img'}
-        src={img}
+        src={`${config.UrlBaseImg}aboutUs/home/Group.svg`}
         alt="About us"
         className={style.img}
         sx={{

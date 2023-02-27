@@ -13,8 +13,6 @@ import nav from './nav.module.css'
 import { useState } from 'react'
 import config from 'const'
 import { useLocation, useNavigate } from 'react-router-dom'
-import menuIcon from 'assets/menu.svg'
-import menuIconWhite from 'assets/menu-white.svg'
 
 interface Props {
   /**
@@ -160,7 +158,11 @@ const Nav = ({ window_, ButtonVariant, ButtonColor }: Props): JSX.Element => {
           >
             <Box
               component={'img'}
-              src={ButtonColor === 'white' ? menuIconWhite : menuIcon}
+              src={
+                ButtonColor === 'white'
+                  ? `${config.UrlBaseImg}menu-white.svg`
+                  : `${config.UrlBaseImg}menu.svg`
+              }
               alt="menu"
             />
           </IconButton>
