@@ -7,7 +7,6 @@ import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
 import { currencyValues } from 'logic'
 import config from 'const'
-import lock from 'assets/demo/lock.svg'
 
 const DesktopContent = (): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
@@ -193,8 +192,7 @@ const DesktopContent = (): JSX.Element => {
             }}
           >
             <img
-              // id="mobilecontent-lock"
-              src={lock}
+              src={`${config.UrlBaseImg}demo/lock.svg`}
               style={{ marginRight: '10px', height: '15px' }}
             />
             {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}{' '}

@@ -12,7 +12,6 @@ import { useSelector } from 'react-redux'
 import { currencyValues } from 'logic'
 import config from 'const'
 import './index.css'
-import lock from 'assets/demo/lock.svg'
 
 interface Props {
   type: 'gateway' | 'link'
@@ -207,7 +206,7 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
                 justifyContent: 'center'
               }}
             >
-              <img id='mobilecontent-lock' src={lock} style={{ marginRight: '10px' }} />
+              <img id='mobilecontent-lock' src={`${config.UrlBaseImg}demo/lock.svg`} style={{ marginRight: '10px' }} />
               {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'} {demo.currency?.value ? demo.currency?.value : '$'}55,57
             </Button>
           </Box>

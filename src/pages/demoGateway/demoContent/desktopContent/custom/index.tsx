@@ -5,7 +5,6 @@ import styles from './custom.module.css'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
 import config from 'const'
-import lock from 'assets/demo/lock.svg'
 
 const Custom = (): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
@@ -78,8 +77,7 @@ const Custom = (): JSX.Element => {
           }}
         >
           <img
-            // id="mobilecontent-lock"
-            src={lock}
+            src={`${config.UrlBaseImg}demo/lock.svg`}
             style={{ marginRight: '10px', height: '15px' }}
           />
           {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}{' '}
