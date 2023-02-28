@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux'
 import { currencyValues } from 'logic'
 import config from 'const'
 import './index.css'
+import lock from 'assets/demo/lock.svg'
 
 interface Props {
   type: 'gateway' | 'link'
@@ -29,7 +30,11 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
       <Box id={'mobilecontent-container'}>
         <img
           loading="lazy"
-          src={type === 'link' ? `${config.UrlBaseImg}demoLink/demo-link-phone.svg` : `${config.UrlBaseImg}demoLink/demo-gateway-phone.svg`}
+          src={
+            type === 'link'
+              ? `${config.UrlBaseImg}demoLink/demo-link-phone.svg`
+              : `${config.UrlBaseImg}demoLink/demo-gateway-phone.svg`
+          }
           alt="Phone"
           style={{ height: '100%' }}
           onLoad={() => onLoad()}
@@ -70,7 +75,11 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
                 className={styles.logo}
               >
                 <img
-                  src={demo.imgUrl ? demo.imgUrl : `${config.UrlBaseImg}placeholder.svg`}
+                  src={
+                    demo.imgUrl
+                      ? demo.imgUrl
+                      : `${config.UrlBaseImg}placeholder.svg`
+                  }
                   alt="Logo"
                   style={{ maxWidth: '100%', maxHeight: '100%' }}
                 />
@@ -192,10 +201,14 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
                 color: `${getCssVar('--white')} !important`,
                 fontFamily: demo.font?.label
                   ? `${demo.font?.label} !important`
-                  : 'Open Sans'
+                  : 'Open Sans',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}
             >
-              {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}
+              <img id='mobilecontent-lock' src={lock} style={{ marginRight: '10px' }} />
+              {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'} {demo.currency?.value ? demo.currency?.value : '$'}55,57
             </Button>
           </Box>
         </Box>
