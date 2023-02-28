@@ -3,32 +3,29 @@ import styles from './ourCulture.module.css'
 import { Box } from '@mui/material'
 import Layout from 'components/layaouts/abousUs'
 import Typography from '@mui/material/Typography'
-import leaf from 'assets/aboutUs/ourCulture/leaf.svg'
-import lovely from 'assets/aboutUs/ourCulture/lovely.svg'
-import people from 'assets/aboutUs/ourCulture/people.svg'
-import mobile from 'assets/aboutUs/ourCulture/mobile.svg'
 import Card from './card'
+import config from 'const'
 // import Card from './card'
 
 const cards = [
   {
     title: 'Purpose-driven',
-    image: people,
+    image: `${config.UrlBaseImg}aboutUs/ourCulture/people.svg`,
     text: 'We focus on taking care of our clients, consumers,  and of course, our team.'
   },
   {
     title: 'Passion for technology',
-    image: lovely,
+    image: `${config.UrlBaseImg}aboutUs/ourCulture/lovely.svg`,
     text: 'We love technology and we are passionate about generating value to people where we are present.'
   },
   {
     title: 'Early adopters',
-    image: mobile,
+    image: `${config.UrlBaseImg}aboutUs/ourCulture/mobile.svg`,
     text: 'We love innovation and we bring solutions built with new and proven technology.'
   },
   {
     title: 'Eco-friendly hands-on',
-    image: leaf,
+    image: `${config.UrlBaseImg}aboutUs/ourCulture/leaf.svg`,
     text: 'We love our planet and we follow sustainability principles in everything we do.  Please do so too ;-).'
   }
 ]

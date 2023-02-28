@@ -1,10 +1,10 @@
 // import Layout from 'components/layaouts/abousUs'
 import styles from './experience.module.css'
 import { Box } from '@mui/material'
-import bgRectangles from 'assets/bg-home_rectangles.png'
 import Layout from 'components/layaouts/abousUs'
 import Typography from '@mui/material/Typography'
 import Card from './card'
+import config from 'const'
 
 const cards = [
   {
@@ -45,8 +45,8 @@ const Experience = (): JSX.Element => {
           className={styles.rentangles}
           sx={{
             background: {
-              xs: `url(${bgRectangles}) no-repeat`,
-              xl: `url(${bgRectangles}) no-repeat botton`
+              xs: `url(${config.UrlBaseImg}bg-home_rectangles.png) no-repeat`,
+              xl: `url(${config.UrlBaseImg}bg-home_rectangles.png) no-repeat botton`
             },
             backgroundSize: 'cover !important',
             top: {

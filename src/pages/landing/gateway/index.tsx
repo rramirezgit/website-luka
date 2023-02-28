@@ -1,5 +1,4 @@
 import TextAndImg from 'components/layaouts/TextAndImg'
-import imgGateway from 'assets/gateway/gateway.svg'
 import Info from 'components/info'
 import style from './gateway.module.css'
 import { Button } from '@mui/material'
@@ -7,6 +6,7 @@ import Square from 'components/square'
 import { Box } from '@mui/system'
 import { useNavigate } from 'react-router-dom'
 import cardsArray from '../ourProducts/ourProductsArray'
+import config from 'const'
 
 const Gateway = (): JSX.Element => {
   const navigate = useNavigate()
@@ -61,7 +61,11 @@ const Gateway = (): JSX.Element => {
             xl: '570px'
           }}
         />
-        <img src={imgGateway} alt="paymentLink" className={style.img} />
+        <img
+          src={`${config.UrlBaseImg}gateway/gateway.svg`}
+          alt="paymentLink"
+          className={style.img}
+        />
         <Button
           variant="contained"
           color="secondary"

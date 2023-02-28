@@ -1,4 +1,5 @@
 import { Box } from '@mui/material'
+import config from 'const'
 import style from './Laptop.module.css'
 
 const Laptop = (): JSX.Element => {
@@ -19,7 +20,8 @@ const Laptop = (): JSX.Element => {
           left: {
             xs: '0',
             lg: '-450px'
-          }
+          },
+          background: `url(${config.UrlBaseImg}paymentLink/laptop.svg) no-repeat`
         }}
       ></Box>
     </Box>

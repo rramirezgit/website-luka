@@ -2,29 +2,32 @@ import { Box } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import Layout from 'components/layaouts/abousUs'
 import style from './mision.module.css'
-import image1 from 'assets/aboutUs/mision/image1.svg'
-import image2 from 'assets/aboutUs/mision/image2.svg'
-import image3 from 'assets/aboutUs/mision/image3.svg'
 import Card from './card'
+import config from 'const'
 
 const cards = [
   {
-    image: image1,
+    image: `${config.UrlBaseImg}aboutUs/mision/image1.svg`,
     text: 'Provide solutions through a Marketplace'
   },
   {
-    image: image2,
+    image: `${config.UrlBaseImg}aboutUs/mision/image2.svg`,
     text: 'Offer international and multi-currency payment methods.'
   },
   {
-    image: image3,
+    image: `${config.UrlBaseImg}aboutUs/mision/image3.svg`,
     text: 'Provide an economical, efficient and highly technological service.'
   }
 ]
 
 const Mision = (): JSX.Element => {
   return (
-    <Box className={style.content}>
+    <Box
+      className={style.content}
+      sx={{
+        background: `url(${config.UrlBaseImg}aboutUs/mision/Rings.svg) no-repeat`
+      }}
+    >
       <Box
         className={style.contentInfo}
         sx={{
