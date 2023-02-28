@@ -7,6 +7,7 @@ import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
 import { currencyValues } from 'logic'
 import config from 'const'
+import lock from 'assets/demo/lock.svg'
 
 const DesktopContent = (): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
@@ -60,7 +61,11 @@ const DesktopContent = (): JSX.Element => {
             }}
           >
             <img
-              src={demo.imgUrl ? demo.imgUrl : `${config.UrlBaseImg}placeholder.svg`}
+              src={
+                demo.imgUrl
+                  ? demo.imgUrl
+                  : `${config.UrlBaseImg}placeholder.svg`
+              }
               alt="Logo"
               style={{ maxHeight: '100%', maxWidth: '100%' }}
             />
@@ -117,7 +122,11 @@ const DesktopContent = (): JSX.Element => {
                   : 'Open Sans'
               }}
             >
-              {demo.currency?.value ? currencyValues.filter((value) => value.label === demo.currency?.label)[0].value : 'USD'}
+              {demo.currency?.value
+                ? currencyValues.filter(
+                  value => value.label === demo.currency?.label
+                )[0].value
+                : 'USD'}
             </span>
           </Typography>
           <Typography
@@ -177,10 +186,19 @@ const DesktopContent = (): JSX.Element => {
               }px !important`,
               fontFamily: demo.font?.label
                 ? `${demo.font?.label} !important`
-                : 'Open Sans'
+                : 'Open Sans',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
           >
-            {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}
+            <img
+              // id="mobilecontent-lock"
+              src={lock}
+              style={{ marginRight: '10px', height: '15px' }}
+            />
+            {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}{' '}
+            {demo.currency?.value ? demo.currency?.value : '$'}55,57
           </Button>
         </Box>
       </Box>

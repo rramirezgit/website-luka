@@ -11,6 +11,9 @@
         height: 25px !important;
         font-size: 8px !important;
     }
+    #mobilecontent-lock {
+        height: 12px !important;
+    }
     #mobilecontent-business {
         font-size: 8px !important;
     }
@@ -55,6 +58,9 @@
         height: 25px !important;
         font-size: 8px !important;
     }
+    #mobilecontent-lock {
+        height: 12px !important;
+    }
     #mobilecontent-business {
         font-size: 9px !important;
     }
@@ -97,6 +103,9 @@
     #mobilecontent-button {
         height: 30px !important;
         font-size: 10px !important;
+    }
+    #mobilecontent-lock {
+        height: 14px !important;
     }
     #mobilecontent-business {
         font-size: 11px !important;
@@ -141,6 +150,9 @@
         height: 40px !important;
         font-size: 12px !important;
     }
+    #mobilecontent-lock {
+        height: 14px !important;
+    }
     #mobilecontent-business {
         font-size: 12px !important;
     }
@@ -182,6 +194,9 @@
     }
     #mobilecontent-button {
         height: 40px !important;
+    }
+    #mobilecontent-lock {
+        height: 16px !important;
     }
     #mobilecontent-business {
         font-size: 13px !important;
@@ -271,6 +286,9 @@
         height: 25px !important;
         font-size: 8px !important;
     }
+    #mobilecontent-lock {
+        height: 12px !important;
+    }
     #mobilecontent-business {
         font-size: 8px !important;
     }
@@ -315,6 +333,9 @@
         height: 25px !important;
         font-size: 8px !important;
     }
+    #mobilecontent-lock {
+        height: 12px !important;
+    }
     #mobilecontent-business {
         font-size: 9px !important;
     }
@@ -358,6 +379,9 @@
         height: 30px !important;
         font-size: 10px !important;
     }
+    #mobilecontent-lock {
+        height: 14px !important;
+    }
     #mobilecontent-business {
         font-size: 10px !important;
     }
@@ -399,6 +423,9 @@
     }
     #mobilecontent-button {
         height: 40px !important;
+    }
+    #mobilecontent-lock {
+        height: 18px !important;
     }
     #mobilecontent-business {
         font-size: 12px !important;
