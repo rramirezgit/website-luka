@@ -206,8 +206,8 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
                 justifyContent: 'center'
               }}
             >
-              <img id='mobilecontent-lock' src={`${config.UrlBaseImg}demo/lock.svg`} style={{ marginRight: '10px' }} />
-              {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'} {demo.currency?.value ? demo.currency?.value : '$'}55,57
+              <img id='mobilecontent-lock' alt='Lock' src={`${config.UrlBaseImg}demo/lock.svg`} style={{ marginRight: '10px' }} />
+              {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'} {demo.currency?.value ? demo.currency?.value : '$'} 55,57
             </Button>
           </Box>
         </Box>

@@ -42,9 +42,13 @@ const FormView = ({ children, image }: Props): JSX.Element => {
               xs: '80px',
               lg: '0'
             },
+            marginLeft: {
+              xs: '0',
+              lg: '60px'
+            },
             maxWidth: {
               xs: '400px',
-              lg: '600px'
+              lg: '480px'
             },
             width: {
               xs: '70%',

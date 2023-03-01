@@ -1,6 +1,5 @@
 .container {
     border-radius: 8px;
-    width: 80%;
 }
 
 .header {
@@ -38,8 +37,8 @@
     background-color: var(--white);
     height: 85%;
     max-height: 540px;
-    width: 35%;
-    min-width: 250px;
+    width: 45%;
+    min-width: 280px;
     box-shadow: 4.19902px 4.19902px 15.7463px 2.09951px rgba(0, 0, 0, 0.04);
     border-radius: 8px;
     display: flex;
@@ -92,6 +91,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow-x: auto;
+    cursor: grab;
+}
+
+.payment::-webkit-scrollbar {
+    display: none;
 }
 
 .gray-box {

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="23" viewBox="0 0 33 23">
+  <g id="pago-tarjetas" transform="translate(0.005 -0.229)">
+    <rect id="Rectángulo_2184" data-name="Rectángulo 2184" width="22" height="15" rx="1" transform="translate(-0.005 0.229)" fill="#b1b7bf"/>
+    <rect id="Rectángulo_3012" data-name="Rectángulo 3012" width="22" height="2" transform="translate(-0.005 4.229)" fill="#34444d"/>
+    <rect id="Rectángulo_2183" data-name="Rectángulo 2183" width="22" height="16" rx="1" transform="translate(10.995 7.229)" fill="#34444d"/>
+    <g id="Rectángulo_2185" data-name="Rectángulo 2185" transform="translate(14.995 11.229)" fill="#f4c500" stroke="#f4c500" stroke-width="1.5">
+      <rect width="5" height="4" rx="1" stroke="none"/>
+      <rect x="0.75" y="0.75" width="3.5" height="2.5" rx="0.25" fill="none"/>
+    </g>
+    <line id="Línea_228" data-name="Línea 228" x2="12.637" transform="translate(14.895 19.351)" fill="none" stroke="#b1b7bf" stroke-linecap="round" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -1,3 +1,30 @@
+import card from 'assets/demoLink/payment/card.svg'
+
+type Coins =
+  | 'Dollars'
+  | 'Chilean Peso'
+  | 'Euros'
+  | 'Japanese Yen'
+  | 'Pounds'
+  | 'Swiss Franc'
+  | 'Uruguayan Peso'
+  | 'Bolívares'
+
+interface CurrencyInterface {
+  label: Coins
+  value: string
+}
+
+interface MethodsInterface {
+  label: string
+  img: string
+}
+
+interface PaymentInterface {
+  label: Coins
+  methods: MethodsInterface[]
+}
+
 export const languages = [
   { label: 'English', value: 'EN' },
   { label: 'Spanish', value: 'ES' }
@@ -12,14 +39,76 @@ export const fonts = [
   { label: 'Times New Roman', value: '234gtdd8547' }
 ]
 
-export const currency = [
+export const currency: CurrencyInterface[] = [
   { label: 'Dollars', value: '$' },
   { label: 'Chilean Peso', value: '$' },
   { label: 'Euros', value: '€' },
   { label: 'Japanese Yen', value: '¥' },
   { label: 'Pounds', value: '£' },
   { label: 'Swiss Franc', value: '₣' },
-  { label: 'Uruguayan Peso', value: '$U' }
+  { label: 'Uruguayan Peso', value: '$U' },
+  { label: 'Bolívares', value: 'Bs.' }
+]
+
+export const paymentMethods: PaymentInterface[] = [
+  {
+    label: 'Dollars',
+    methods: [
+      { label: 'Credit', img: card },
+      { label: 'Paypal', img: card },
+      { label: 'Zelle', img: card }
+    ]
+  },
+  {
+    label: 'Chilean Peso',
+    methods: [
+      { label: 'Transbank', img: card },
+      { label: 'Khipu', img: card }
+    ]
+  },
+  {
+    label: 'Euros',
+    methods: [
+      { label: 'Bluesnap', img: card },
+      { label: 'Paypal', img: card },
+      { label: 'Stripe', img: card }
+    ]
+  },
+  {
+    label: 'Japanese Yen',
+    methods: [
+      { label: 'Credit', img: card },
+      { label: 'Paypal', img: card }
+    ]
+  },
+  {
+    label: 'Pounds',
+    methods: [
+      { label: 'Bluesnap', img: card },
+      { label: 'Paypal', img: card },
+      { label: 'Stripe', img: card }
+    ]
+  },
+  {
+    label: 'Swiss Franc',
+    methods: [
+      { label: 'Credit', img: card }
+    ]
+  },
+  {
+    label: 'Uruguayan Peso',
+    methods: [
+      { label: 'Credit', img: card }
+    ]
+  },
+  {
+    label: 'Bolívares',
+    methods: [
+      { label: 'Credit', img: card },
+      { label: 'Debit', img: card },
+      { label: 'C2P', img: card }
+    ]
+  }
 ]
 
 export const currencyValues = [
@@ -29,7 +118,8 @@ export const currencyValues = [
   { label: 'Japanese Yen', value: 'JPY' },
   { label: 'Pounds', value: 'GBP' },
   { label: 'Swiss Franc', value: 'Fr' },
-  { label: 'Uruguayan Peso', value: 'UYU' }
+  { label: 'Uruguayan Peso', value: 'UYU' },
+  { label: 'Bolívares', value: 'VES' }
 ]
 
 export const subjects = [

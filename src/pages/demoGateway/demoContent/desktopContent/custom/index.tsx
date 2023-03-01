@@ -5,6 +5,7 @@ import styles from './custom.module.css'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
 import config from 'const'
+import { paymentMethods } from 'logic'
 
 const Custom = (): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
@@ -27,24 +28,40 @@ const Custom = (): JSX.Element => {
         className={styles.container}
       >
         <Box className={styles.paybox}>
-          <PaymentBox
-            borderColor={
-              demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')
-            }
-            text="Credit"
-            img={`${config.UrlBaseImg}demoLink/payment/card.svg`}
-            borderRadius={typeof demo.border === 'number' ? demo.border : 8}
-          />
-          <PaymentBox
-            text="Paypal"
-            img={`${config.UrlBaseImg}demoLink/payment/paypal.svg`}
-            borderRadius={typeof demo.border === 'number' ? demo.border : 8}
-          />
-          <PaymentBox
-            text="Zelle"
-            img={`${config.UrlBaseImg}demoLink/payment/zelle.svg`}
-            borderRadius={typeof demo.border === 'number' ? demo.border : 8}
-          />
+          {
+            demo.currency?.value
+              ? paymentMethods.find((method) => method.label === demo.currency?.label)?.methods.map((item, index) => (
+                <PaymentBox
+                  key={index}
+                  borderColor={
+                    demo.button ? index === 0 ? `#${demo.button}` : getCssVar('--box-gray') : getCssVar('--primary-buttons')
+                  }
+                  text={item.label}
+                  img={item.img}
+                  borderRadius={typeof demo.border === 'number' ? demo.border : 8}
+                />
+              ))
+              : <>
+                  <PaymentBox
+                    borderColor={
+                      demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')
+                    }
+                    text="Credit"
+                    img={`${config.UrlBaseImg}demoLink/payment/card.svg`}
+                    borderRadius={typeof demo.border === 'number' ? demo.border : 8}
+                  />
+                  <PaymentBox
+                    text="Paypal"
+                    img={`${config.UrlBaseImg}demoLink/payment/paypal.svg`}
+                    borderRadius={typeof demo.border === 'number' ? demo.border : 8}
+                  />
+                  <PaymentBox
+                    text="Zelle"
+                    img={`${config.UrlBaseImg}demoLink/payment/zelle.svg`}
+                    borderRadius={typeof demo.border === 'number' ? demo.border : 8}
+                  />
+                </>
+          }
         </Box>
         <Box
           id={'demogateway-desktop-graybox-1'}
@@ -79,9 +96,10 @@ const Custom = (): JSX.Element => {
           <img
             src={`${config.UrlBaseImg}demo/lock.svg`}
             style={{ marginRight: '10px', height: '15px' }}
+            alt='Lock'
           />
           {demo.language?.value === 'EN' ? 'Pay' : 'Pagar'}{' '}
-          {demo.currency?.value ? demo.currency?.value : '$'}55,57
+          {demo.currency?.value ? demo.currency?.value : '$'} 55,57
         </Button>
       </Box>
     </Box>

@@ -28,6 +28,6 @@
 
 @media screen and (min-height: 850px) and (max-width: 900px) {
     #demogateway-container {
-        max-height: 550px;
+        max-height: 480px;
     }
 }

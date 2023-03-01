@@ -34,6 +34,10 @@ const options = [
   {
     id: '/about-us',
     name: 'About us'
+  },
+  {
+    id: '/sales',
+    name: 'Sales'
   }
 ]
 

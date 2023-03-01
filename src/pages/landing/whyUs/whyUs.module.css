@@ -13,7 +13,7 @@
 }
 
 .text {
-    color: var(--dark-gray-text) !important;
+    color: var(--gray-text-dark) !important;
     font-weight: 500 !important;
     align-self: flex-start;
     margin-bottom: 40px !important;
