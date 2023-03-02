@@ -26,5 +26,6 @@ module.exports = {
       version: 'detect',
       '@typescript-eslint/explicit-function-return-type': 'warn'
     }
-  }
+  },
+  ignorePatterns: ['node_modules', 'build']
 }

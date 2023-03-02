@@ -1,11 +1,10 @@
 import { Box, Typography, Button } from '@mui/material'
-import PaymentBox from 'components/demo/paymentBox'
 import { getCssVar } from 'theme'
 import styles from './custom.module.css'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
 import config from 'const'
-import { paymentMethods } from 'logic'
+import PaymentSlider from 'components/demo/paymentSlider'
 
 const Custom = (): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
@@ -27,42 +26,7 @@ const Custom = (): JSX.Element => {
         id={'demogateway-desktop-custom-container'}
         className={styles.container}
       >
-        <Box className={styles.paybox}>
-          {
-            demo.currency?.value
-              ? paymentMethods.find((method) => method.label === demo.currency?.label)?.methods.map((item, index) => (
-                <PaymentBox
-                  key={index}
-                  borderColor={
-                    demo.button ? index === 0 ? `#${demo.button}` : getCssVar('--box-gray') : getCssVar('--primary-buttons')
-                  }
-                  text={item.label}
-                  img={item.img}
-                  borderRadius={typeof demo.border === 'number' ? demo.border : 8}
-                />
-              ))
-              : <>
-                  <PaymentBox
-                    borderColor={
-                      demo.button ? `#${demo.button}` : getCssVar('--primary-buttons')
-                    }
-                    text="Credit"
-                    img={`${config.UrlBaseImg}demoLink/payment/card.svg`}
-                    borderRadius={typeof demo.border === 'number' ? demo.border : 8}
-                  />
-                  <PaymentBox
-                    text="Paypal"
-                    img={`${config.UrlBaseImg}demoLink/payment/paypal.svg`}
-                    borderRadius={typeof demo.border === 'number' ? demo.border : 8}
-                  />
-                  <PaymentBox
-                    text="Zelle"
-                    img={`${config.UrlBaseImg}demoLink/payment/zelle.svg`}
-                    borderRadius={typeof demo.border === 'number' ? demo.border : 8}
-                  />
-                </>
-          }
-        </Box>
+        <PaymentSlider />
         <Box
           id={'demogateway-desktop-graybox-1'}
           className={styles['gray-box']}

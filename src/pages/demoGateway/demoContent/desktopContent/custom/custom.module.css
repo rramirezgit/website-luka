@@ -20,6 +20,11 @@
     justify-content: flex-start;
     width: 100%;
     overflow-x: auto;
+    cursor: grab;
+}
+
+.paybox::-webkit-scrollbar {
+    display: none;
 }
 
 .button {
@@ -30,7 +35,7 @@
 }
 
 .gray-box {
-    background-color: var(--light-gray);
+    background-color: var(--box-gray);
     height: 25px;
     width: 100%;
     border-radius: 8px;

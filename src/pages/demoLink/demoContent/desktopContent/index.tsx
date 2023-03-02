@@ -1,44 +1,15 @@
 import { Box, Typography, Button } from '@mui/material'
 import { getCssVar } from 'theme'
-import PaymentBox from '../../../../components/demo/paymentBox'
 import styles from './desktopcontent.module.css'
 import './index.css'
 import { RootState } from 'redux/store'
 import { useSelector } from 'react-redux'
-import { currencyValues, paymentMethods } from 'logic'
+import { currencyValues } from 'logic'
 import config from 'const'
+import PaymentSlider from 'components/demo/paymentSlider'
 
 const DesktopContent = (): JSX.Element => {
   const demo = useSelector((state: RootState) => state.demo)
-  // const ele = document.getElementById('demolink-slider')
-  // let pos = { top: 0, left: 0, x: 0, y: 0 }
-  // const mouseMoveHandler = function (e: MouseEvent): void {
-  //   const dx = e.clientX - pos.x
-  //   const dy = e.clientY - pos.y
-  //   if (ele) {
-  //     ele.scrollTop = pos.top - dy
-  //     ele.scrollLeft = pos.left - dx
-  //   }
-  // }
-  // const mouseUpHandler = function (): void {
-  //   document.removeEventListener('mousemove', mouseMoveHandler)
-  //   document.removeEventListener('mouseup', mouseUpHandler)
-  //   if (ele) {
-  //     ele.style.cursor = 'grab'
-  //   }
-  // }
-  // const mouseDownHandler = function (e: MouseEvent): void {
-  //   if (ele) {
-  //     pos = {
-  //       left: ele.scrollLeft,
-  //       top: ele.scrollTop,
-  //       x: e.clientX,
-  //       y: e.clientY
-  //     }
-  //   }
-  //   document.addEventListener('mousemove', mouseMoveHandler)
-  //   document.addEventListener('mouseup', mouseUpHandler)
-  // }
   return (
     <Box
       className={styles.container}
@@ -85,22 +56,27 @@ const DesktopContent = (): JSX.Element => {
           }}
         >
           <Box
-            id={'demolink-desktop-logo'}
-            className={styles.logo}
-            sx={{
-              height: '55px',
-              width: '55px'
-            }}
+            className={styles['logo-container']}
+            id={'demolink-desktop-logo-container'}
           >
-            <img
-              src={
-                demo.imgUrl
-                  ? demo.imgUrl
-                  : `${config.UrlBaseImg}placeholder.svg`
-              }
-              alt="Logo"
-              style={{ maxHeight: '100%', maxWidth: '100%' }}
-            />
+            <Box
+              id={'demolink-desktop-logo'}
+              className={styles.logo}
+              sx={{
+                height: '55px',
+                width: '55px'
+              }}
+            >
+              <img
+                src={
+                  demo.imgUrl
+                    ? demo.imgUrl
+                    : `${config.UrlBaseImg}placeholder.svg`
+                }
+                alt="Logo"
+                style={{ maxHeight: '100%', maxWidth: '100%' }}
+              />
+            </Box>
           </Box>
           <Box className={styles['text-box']}>
             <Typography
@@ -177,62 +153,7 @@ const DesktopContent = (): JSX.Element => {
               ? 'Pay with another currency'
               : 'Pagar en otra moneda'}
           </Typography>
-          <Box
-            className={styles.payment}
-            id="demolink-slider"
-            // onDrag={mouseDownHandler}
-            draggable={true}
-          >
-            {demo.currency?.value
-              ? (paymentMethods
-                  .find(method => method.label === demo.currency?.label)?.methods.map((item, index) => (
-                  <PaymentBox
-                    key={index}
-                    borderColor={
-                      demo.button
-                        ? index === 0
-                          ? `#${demo.button}`
-                          : getCssVar('--box-gray')
-                        : getCssVar('--primary-buttons')
-                    }
-                    text={item.label}
-                    img={item.img}
-                    borderRadius={
-                      typeof demo.border === 'number' ? demo.border : 8
-                    }
-                  />
-                  ))
-                )
-              : (<>
-                <PaymentBox
-                  borderColor={
-                    demo.button
-                      ? `#${demo.button}`
-                      : getCssVar('--primary-buttons')
-                  }
-                  text="Credit"
-                  img={`${config.UrlBaseImg}demoLink/payment/card.svg`}
-                  borderRadius={
-                    typeof demo.border === 'number' ? demo.border : 8
-                  }
-                />
-                <PaymentBox
-                  text="Paypal"
-                  img={`${config.UrlBaseImg}demoLink/payment/paypal.svg`}
-                  borderRadius={
-                    typeof demo.border === 'number' ? demo.border : 8
-                  }
-                />
-                <PaymentBox
-                  text="Zelle"
-                  img={`${config.UrlBaseImg}demoLink/payment/zelle.svg`}
-                  borderRadius={
-                    typeof demo.border === 'number' ? demo.border : 8
-                  }
-                />
-              </>
-                )}
-          </Box>
+          <PaymentSlider />
           <Box
             className={styles['gray-box']}
             id={'demolink-desktop-gray-1'}

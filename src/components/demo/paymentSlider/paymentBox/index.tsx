@@ -14,14 +14,8 @@ const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text, borderRa
       sx={
         {
           border: `2px solid ${borderColor}`,
-          width: {
-            xs: '90px',
-            sm: '110px'
-          },
-          minWidth: {
-            xs: '90px',
-            sm: '110px'
-          },
+          width: '90px',
+          minWidth: '90px',
           height: '55px',
           display: 'flex',
           flexDirection: 'column',
@@ -36,18 +30,23 @@ const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text, borderRa
         component={'figure'}
         sx={
           {
-            height: '25px'
+            height: '20px',
+            width: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
           }
         }
       >
-        <img src={img} alt={text} style={{ maxHeight: '100%' }} />
+        <img src={img} alt={text} style={{ maxHeight: '100%', maxWidth: '100%' }} />
       </Box>
       <Typography
         sx={
           {
             fontSize: '10px !important',
             fontWeight: '600',
-            color: getCssVar('--gray-text-dark')
+            color: getCssVar('--gray-text-dark'),
+            marginTop: '3px'
           }
         }
       >

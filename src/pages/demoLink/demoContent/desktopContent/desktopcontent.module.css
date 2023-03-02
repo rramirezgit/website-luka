@@ -37,7 +37,7 @@
     background-color: var(--white);
     height: 85%;
     max-height: 540px;
-    width: 45%;
+    width: 50%;
     min-width: 280px;
     box-shadow: 4.19902px 4.19902px 15.7463px 2.09951px rgba(0, 0, 0, 0.04);
     border-radius: 8px;
@@ -45,6 +45,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--box-gray);
 }
 
 .logo {
@@ -103,7 +111,7 @@
     width: 100%;
     height: 32px;
     border-radius: 8px;
-    background-color: var(--light-gray);
+    background-color: var(--box-gray);
 }
 
 .button {

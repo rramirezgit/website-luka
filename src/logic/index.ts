@@ -1,4 +1,4 @@
-import card from 'assets/demoLink/payment/card.svg'
+import config from 'const'
 
 type Coins =
   | 'Dollars'
@@ -54,59 +54,61 @@ export const paymentMethods: PaymentInterface[] = [
   {
     label: 'Dollars',
     methods: [
-      { label: 'Credit', img: card },
-      { label: 'Paypal', img: card },
-      { label: 'Zelle', img: card }
+      { label: 'Credit', img: `${config.UrlBaseImg}payment/card.svg` },
+      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg` },
+      { label: 'Zelle', img: `${config.UrlBaseImg}payment/zelle.svg` },
+      { label: 'USD Transfer', img: `${config.UrlBaseImg}payment/zelle.svg` }
     ]
   },
   {
     label: 'Chilean Peso',
     methods: [
-      { label: 'Transbank', img: card },
-      { label: 'Khipu', img: card }
+      { label: 'Khipu', img: `${config.UrlBaseImg}payment/khipu.svg` },
+      { label: 'Transbank', img: `${config.UrlBaseImg}payment/transbank.svg` }
     ]
   },
   {
     label: 'Euros',
     methods: [
-      { label: 'Bluesnap', img: card },
-      { label: 'Paypal', img: card },
-      { label: 'Stripe', img: card }
+      { label: 'Bluesnap', img: `${config.UrlBaseImg}payment/card.svg` },
+      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg` },
+      { label: 'Stripe', img: `${config.UrlBaseImg}payment/card.svg` }
     ]
   },
   {
     label: 'Japanese Yen',
     methods: [
-      { label: 'Credit', img: card },
-      { label: 'Paypal', img: card }
+      { label: 'Credit', img: `${config.UrlBaseImg}payment/card.svg` },
+      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg` }
     ]
   },
   {
     label: 'Pounds',
     methods: [
-      { label: 'Bluesnap', img: card },
-      { label: 'Paypal', img: card },
-      { label: 'Stripe', img: card }
+      { label: 'Bluesnap', img: `${config.UrlBaseImg}payment/card.svg` },
+      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg` },
+      { label: 'Stripe', img: `${config.UrlBaseImg}payment/card.svg` }
     ]
   },
   {
     label: 'Swiss Franc',
     methods: [
-      { label: 'Credit', img: card }
+      { label: 'Credit', img: `${config.UrlBaseImg}payment/card.svg` }
     ]
   },
   {
     label: 'Uruguayan Peso',
     methods: [
-      { label: 'Credit', img: card }
+      { label: 'Credit', img: `${config.UrlBaseImg}payment/card.svg` }
     ]
   },
   {
     label: 'Bolívares',
     methods: [
-      { label: 'Credit', img: card },
-      { label: 'Debit', img: card },
-      { label: 'C2P', img: card }
+      { label: 'Credit', img: `${config.UrlBaseImg}payment/bnc.svg` },
+      { label: 'Debit', img: `${config.UrlBaseImg}payment/mercantil.svg` },
+      { label: 'C2P', img: `${config.UrlBaseImg}payment/c2p.svg` },
+      { label: 'Pago Móvil', img: `${config.UrlBaseImg}payment/c2p.svg` }
     ]
   }
 ]
