@@ -6,11 +6,16 @@ import { useEffect, useState } from 'react'
 import FormLayout from 'components/formView/formLayout'
 import SalesForm from 'components/allForms/salesForm'
 import config from 'const'
+// import useScript from 'hooks/useScript'
 
 const Sales = (): JSX.Element => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [failure, setFailure] = useState(false)
+  // useScript({
+  //   url: 'https://static.zdassets.com/ekr/snippet.js?key=7ac1d2a1-71dc-4700-87c8-15855cd8663e',
+  //   id: 'ze-snippet'
+  // })
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
