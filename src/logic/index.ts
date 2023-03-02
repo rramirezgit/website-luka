@@ -57,7 +57,7 @@ export const paymentMethods: PaymentInterface[] = [
     label: 'Dollars',
     methods: [
       { label: 'Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 60, height: 50 },
+      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50 },
       { label: 'Zelle', img: `${config.UrlBaseImg}payment/zelle.svg`, width: 35, height: 50 },
       { label: 'USD Transfer', img: `${config.UrlBaseImg}payment/transfer-usd.svg`, width: 23, height: 50 }
     ]
@@ -66,14 +66,14 @@ export const paymentMethods: PaymentInterface[] = [
     label: 'Chilean Peso',
     methods: [
       { label: 'Khipu', img: `${config.UrlBaseImg}payment/khipu.svg`, width: 40, height: 50 },
-      { label: 'Transbank', img: `${config.UrlBaseImg}payment/transbank.svg`, width: 60, height: 50 }
+      { label: 'Transbank', img: `${config.UrlBaseImg}payment/transbank.svg`, width: 20, height: 50 }
     ]
   },
   {
     label: 'Euros',
     methods: [
       { label: 'Bluesnap', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 60, height: 50 },
+      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50 },
       { label: 'Stripe', img: `${config.UrlBaseImg}payment/transfer-eu.svg`, width: 23, height: 50 }
     ]
   },
@@ -81,14 +81,14 @@ export const paymentMethods: PaymentInterface[] = [
     label: 'Japanese Yen',
     methods: [
       { label: 'Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 60, height: 50 }
+      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50 }
     ]
   },
   {
     label: 'Pounds',
     methods: [
       { label: 'Bluesnap', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 60, height: 50 },
+      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50 },
       { label: 'Stripe', img: `${config.UrlBaseImg}payment/transfer-eu.svg`, width: 23, height: 50 }
     ]
   },
@@ -108,7 +108,7 @@ export const paymentMethods: PaymentInterface[] = [
     label: 'Bolívares',
     methods: [
       { label: 'Credit', img: `${config.UrlBaseImg}payment/bnc.svg`, width: 25, height: 50 },
-      { label: 'Debit', img: `${config.UrlBaseImg}payment/mercantil.svg`, width: 60, height: 50 },
+      { label: 'Debit', img: `${config.UrlBaseImg}payment/mercantil.svg`, width: 20, height: 50 },
       { label: 'C2P', img: `${config.UrlBaseImg}payment/c2p.svg`, width: 22, height: 50 },
       { label: 'Pago Móvil', img: `${config.UrlBaseImg}payment/c2p.svg`, width: 22, height: 50 },
       { label: 'Banesco', img: `${config.UrlBaseImg}payment/banesco.svg`, width: 60, height: 50 }
