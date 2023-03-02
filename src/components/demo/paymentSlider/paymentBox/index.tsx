@@ -2,13 +2,15 @@ import { Box, Typography } from '@mui/material'
 import { getCssVar } from 'theme'
 
 interface BoxProps {
-  borderColor?: string
-  img: string
   text: string
+  img: string
+  imgWidth?: number
+  imgHeight?: number
+  borderColor?: string
   borderRadius?: number
 }
 
-const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text, borderRadius = 8 }: BoxProps): JSX.Element => {
+const PaymentBox = ({ text, img, imgWidth = 40, imgHeight = 20, borderColor = getCssVar('--box-gray'), borderRadius = 8 }: BoxProps): JSX.Element => {
   return (
     <Box
       sx={
@@ -30,8 +32,8 @@ const PaymentBox = ({ borderColor = getCssVar('--box-gray'), img, text, borderRa
         component={'figure'}
         sx={
           {
-            height: '20px',
-            width: '40px',
+            height: `${imgHeight}px`,
+            width: `${imgWidth}px`,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'

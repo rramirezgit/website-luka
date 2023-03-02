@@ -44,6 +44,8 @@ const PaymentSlider = (): JSX.Element => {
               }
               text={item.label}
               img={item.img}
+              imgWidth={item.width}
+              imgHeight={item.height}
               borderRadius={typeof demo.border === 'number' ? demo.border : 8}
             />
           ))

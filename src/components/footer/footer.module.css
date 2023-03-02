@@ -1,5 +1,5 @@
 .regular {
-    font-size: 18px;
+    font-size: 18px !important;
     color: var(--black)
 }
 
