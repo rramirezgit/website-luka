@@ -16,8 +16,8 @@ const PaymentBox = ({ text, img, imgWidth = 40, imgHeight = 20, borderColor = ge
       sx={
         {
           border: `2px solid ${borderColor}`,
-          width: '90px',
-          minWidth: '90px',
+          width: '100px',
+          minWidth: '100px',
           height: '55px',
           display: 'flex',
           flexDirection: 'column',
