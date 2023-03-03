@@ -66,7 +66,7 @@ export const paymentMethods: PaymentInterface[] = [
     label: 'Chilean Peso',
     methods: [
       { label: 'Khipu', img: `${config.UrlBaseImg}payment/khipu.svg`, width: 40, height: 50 },
-      { label: 'Transbank', img: `${config.UrlBaseImg}payment/transbank.svg`, width: 20, height: 50 }
+      { label: 'Transbank', img: `${config.UrlBaseImg}payment/transbank.svg`, width: 60, height: 50 }
     ]
   },
   {
