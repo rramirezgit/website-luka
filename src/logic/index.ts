@@ -108,7 +108,7 @@ export const paymentMethods: PaymentInterface[] = [
     label: 'Bolívares',
     methods: [
       { label: 'Credit', img: `${config.UrlBaseImg}payment/bnc.svg`, width: 25, height: 50 },
-      { label: 'Debit', img: `${config.UrlBaseImg}payment/mercantil.svg`, width: 20, height: 50 },
+      { label: 'Debit', img: `${config.UrlBaseImg}payment/mercantil.svg`, width: 60, height: 50 },
       { label: 'C2P', img: `${config.UrlBaseImg}payment/c2p.svg`, width: 22, height: 50 },
       { label: 'Pago Móvil', img: `${config.UrlBaseImg}payment/c2p.svg`, width: 22, height: 50 },
       { label: 'Banesco', img: `${config.UrlBaseImg}payment/banesco.svg`, width: 60, height: 50 }
