@@ -38,15 +38,17 @@ const Ready = ({ aboutUs = false }: aboutUsProps): JSX.Element => {
           </Typography>
           <Button
             variant={'contained'}
+            onClick={() => navigate('/sales')}
             sx={{
-              width: '198px',
-              height: '54px',
-              fontSize: '20px',
+              width: '144px',
+              height: ' 48px',
+              fontSize: '16px',
               marginTop: '64px',
-              display: 'none'
+              position: 'relative',
+              zIndex: 99
             }}
           >
-            Join us
+            Contact sales
           </Button>
         </>
       ) : (
