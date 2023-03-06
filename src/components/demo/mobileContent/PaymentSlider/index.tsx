@@ -3,11 +3,15 @@ import styles from './paymentslider.module.css'
 import PayCard from './payCard'
 import { useDraggable } from 'react-use-draggable-scroll'
 import { useRef } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from 'redux/store'
+import { mobilePaymentMethods } from 'logic'
 
 const PaymentSlider = (): JSX.Element => {
   const ref =
     useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>
   const { events } = useDraggable(ref)
+  const demo = useSelector((state: RootState) => state.demo)
   return (
     <Box
       sx={{
@@ -24,8 +28,25 @@ const PaymentSlider = (): JSX.Element => {
       draggable={true}
       className={styles.scroll}
     >
-      <PayCard type="card" />
-      <PayCard type="paypal" />
+    {demo.currency?.value
+      ? mobilePaymentMethods
+        .find(method => method.label === demo.currency?.label)
+        ?.methods.map((item, index) => (
+          <PayCard
+            type={item.type}
+            key={index}
+            label={item.label ?? ''}
+            img={item.img ?? ''}
+            width={item.width ?? 0}
+            height={item.height ?? 0}
+            shape={item.shape ?? ''}
+          />
+        ))
+      : <>
+        <PayCard type='card'/>
+        <PayCard type='other'/>
+      </>
+    }
     </Box>
   )
 }

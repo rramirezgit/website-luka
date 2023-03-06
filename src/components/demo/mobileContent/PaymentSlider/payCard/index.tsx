@@ -1,16 +1,19 @@
 import { Box } from '@mui/material'
 import styles from './paycard.module.css'
 import Typography from '@mui/material/Typography'
-import clsx from 'clsx'
 import config from 'const'
-import paypalShape from 'assets/card/paypal-card.svg'
 import './index.css'
 
 interface Props {
-  type: 'card' | 'paypal'
+  type: 'card' | 'other'
+  label?: string
+  img?: string
+  width?: number
+  height?: number
+  shape?: string
 }
 
-const PayCard = ({ type }: Props): JSX.Element => {
+const PayCard = ({ type, label, img, shape }: Props): JSX.Element => {
   return (
     <Box
       className={styles.container}
@@ -132,32 +135,36 @@ const PayCard = ({ type }: Props): JSX.Element => {
                   borderRadius: '8px'
                 }}
               >
-                <img alt='Shape' src={paypalShape} style={{ maxHeight: '100%', borderRadius: '8px' }} />
+                <img alt='Shape' src={shape} style={{ maxHeight: '100%', borderRadius: '8px' }} />
               </Box>
               <Box
                 sx={
                   {
-                    padding: '10px 15px'
+                    padding: '10px 15px',
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column'
                   }
                 }
               >
                 <Box
                   component={'figure'}
-                  className={styles.icons}
-                  id={'paypal-icon'}
+                  className={styles.logo}
+                  id={'paycard-icon'}
                 >
-                  <img src={`${config.UrlBaseImg}demoLink/card/paypal.svg`} alt='Paypal' style={{ height: '100%', width: '100%' }} />
+                  <img src={img} alt='Paypal' style={{ maxHeight: '100%', maxWidth: '100%' }} />
                 </Box>
                 <Box>
                   <Typography
-                    className={clsx(styles['paypal-text'], styles['paypal-title'])}
-                    id={'paypal-title'}
+                    className={styles['paypal-title']}
+                    id={'paycard-title'}
                   >
-                    Paypal
+                    {label}
                   </Typography>
                   <Typography
                     className={styles['paypal-text']}
-                    id={'paypal-text'}
+                    id={'paycard-info'}
                   >
                     mail@gmail.com
                   </Typography>

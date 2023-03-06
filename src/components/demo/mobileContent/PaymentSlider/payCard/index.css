@@ -42,15 +42,15 @@
         height: 14px;
         width: 28px;
     }
-    #paypal-icon {
-        height: 20px;
-        width: 20px;
+    #paycard-icon {
+        height: 14.5px;
+        width: 35px;
     }
-    #paypal-title {
+    #paycard-title {
         font-size: 9px;
     }
-    #paypal-text {
-        font-size: 5px;
+    #paycard-info {
+        font-size: 7px;
     }
 }
 
@@ -97,14 +97,14 @@
         height: 15px;
         width: 30px;
     }
-    #paypal-icon {
-        height: 25px;
-        width: 25px;
+    #paycard-icon {
+        height: 18.5px;
+        width: 40px;
     }
-    #paypal-title {
-        font-size: 12px;
+    #paycard-title {
+        font-size: 11px;
     }
-    #paypal-text {
+    #paycard-info {
         font-size: 7px;
     }
 }
@@ -152,15 +152,15 @@
         height: 18px;
         width: 36px;
     }
-    #paypal-icon {
-        height: 28px;
-        width: 28px;
+    #paycard-icon {
+        height: 22px;
+        width: 43px;
     }
-    #paypal-title {
-        font-size: 14px;
+    #paycard-title {
+        font-size: 12px;
     }
-    #paypal-text {
-        font-size: 8px;
+    #paycard-info {
+        font-size: 6px;
     }
 }
 
@@ -207,14 +207,14 @@
         height: 20px;
         width: 38px;
     }
-    #paypal-icon {
+    #paycard-icon {
         height: 28px;
-        width: 28px;
+        width: 43px;
     }
-    #paypal-title {
+    #paycard-title {
         font-size: 14px;
     }
-    #paypal-text {
+    #paycard-info {
         font-size: 8px;
     }
 }
@@ -262,14 +262,14 @@
         height: 20px;
         width: 40px;
     }
-    #paypal-icon {
+    #paycard-icon {
         height: 30px;
-        width: 30px;
+        width: 45px;
     }
-    #paypal-title {
+    #paycard-title {
         font-size: 16px;
     }
-    #paypal-text {
+    #paycard-info {
         font-size: 10px;
     }
 }
@@ -317,14 +317,14 @@
         height: 25px;
         width: 45px;
     }
-    #paypal-icon {
+    #paycard-icon {
         height: 30px;
-        width: 30px;
+        width: 45px;
     }
-    #paypal-title {
+    #paycard-title {
         font-size: 16px;
     }
-    #paypal-text {
+    #paycard-info {
         font-size: 10px;
     }
 }
@@ -340,10 +340,6 @@
     #paycard-shape {
         height: 65px !important;
         min-height: 65px !important;
-    }
-    #paycard-shape {
-        height: 150px !important;
-        min-height: 150px !important;
     }
     #paycard-text {
         font-size: 8px !important;
@@ -377,15 +373,15 @@
         height: 14px;
         width: 28px;
     }
-    #paypal-icon {
-        height: 20px;
-        width: 20px;
+    #paycard-icon {
+        height: 14.5px;
+        width: 35px;
     }
-    #paypal-title {
+    #paycard-title {
         font-size: 9px;
     }
-    #paypal-text {
-        font-size: 5px;
+    #paycard-info {
+        font-size: 7px;
     }
 }
 
@@ -432,14 +428,14 @@
         height: 15px;
         width: 30px;
     }
-    #paypal-icon {
-        height: 25px;
-        width: 25px;
+    #paycard-icon {
+        height: 18.5px;
+        width: 40px;
     }
-    #paypal-title {
-        font-size: 12px;
+    #paycard-title {
+        font-size: 11px;
     }
-    #paypal-text {
+    #paycard-info {
         font-size: 7px;
     }
 }
@@ -487,15 +483,15 @@
         height: 18px;
         width: 36px;
     }
-    #paypal-icon {
-        height: 28px;
-        width: 28px;
+    #paycard-icon {
+        height: 22px;
+        width: 43px;
     }
-    #paypal-title {
-        font-size: 14px;
+    #paycard-title {
+        font-size: 12px;
     }
-    #paypal-text {
-        font-size: 8px;
+    #paycard-info {
+        font-size: 6px;
     }
 }
 
@@ -542,14 +538,14 @@
         height: 20px;
         width: 40px;
     }
-    #paypal-icon {
-        height: 30px;
-        width: 30px;
+    #paycard-icon {
+        height: 28px;
+        width: 43px;
     }
-    #paypal-title {
-        font-size: 16px;
+    #paycard-title {
+        font-size: 14px;
     }
-    #paypal-text {
-        font-size: 10px;
+    #paycard-info {
+        font-size: 8px;
     }
 }
