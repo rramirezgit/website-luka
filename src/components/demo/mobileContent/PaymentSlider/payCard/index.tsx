@@ -11,9 +11,10 @@ interface Props {
   width?: number
   height?: number
   shape?: string
+  check: boolean
 }
 
-const PayCard = ({ type, label, img, shape }: Props): JSX.Element => {
+const PayCard = ({ type, label, img, shape, check }: Props): JSX.Element => {
   return (
     <Box
       className={styles.container}
@@ -59,6 +60,9 @@ const PayCard = ({ type, label, img, shape }: Props): JSX.Element => {
                     <Box
                       className={styles['small-circle']}
                       id={'small-circle'}
+                      sx={{
+                        display: check ? 'block' : 'none'
+                      }}
                     ></Box>
                   </Box>
                 </Box>
@@ -125,6 +129,13 @@ const PayCard = ({ type, label, img, shape }: Props): JSX.Element => {
                     className={styles['medium-circle']}
                     id={'medium-circle'}
                   >
+                    <Box
+                      className={styles['small-circle']}
+                      id={'small-circle'}
+                      sx={{
+                        display: check ? 'block' : 'none'
+                      }}
+                    ></Box>
                   </Box>
                 </Box>
               </Box>

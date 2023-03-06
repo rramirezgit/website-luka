@@ -40,11 +40,12 @@ const PaymentSlider = (): JSX.Element => {
             width={item.width ?? 0}
             height={item.height ?? 0}
             shape={item.shape ?? ''}
+            check={item.check ?? false}
           />
         ))
       : <>
-        <PayCard type='card'/>
-        <PayCard type='other'/>
+        <PayCard type='card' check={true} />
+        <PayCard type='other' check={false} />
       </>
     }
     </Box>
