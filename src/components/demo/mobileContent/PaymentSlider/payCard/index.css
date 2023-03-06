@@ -6,6 +6,10 @@
         width: 100px !important;
         min-width: 100px !important;
     }
+    #paycard-shape {
+        height: 65px !important;
+        min-height: 65px !important;
+    }
     #paycard-text {
         font-size: 8px !important;
         padding-right: 9px;
@@ -56,6 +60,10 @@
         min-height: 80px !important;
         width: 125px !important;
         min-width: 125px !important;
+    }
+    #paycard-shape {
+        height: 80px !important;
+        min-height: 80px !important;
     }
     #paycard-text {
         font-size: 10px !important;
@@ -108,6 +116,10 @@
         width: 150px !important;
         min-width: 150px !important;
     }
+    #paycard-shape {
+        height: 100px !important;
+        min-height: 100px !important;
+    }
     #paycard-text {
         font-size: 12px !important;
         padding-right: 13px;
@@ -156,8 +168,12 @@
     #paycard-container {
         height: 125px !important;
         min-height: 125px !important;
-        width: 190px !important;
-        min-width: 190px !important;
+        width: 197px !important;
+        min-width: 197px !important;
+    }
+    #paycard-shape {
+        height: 125px !important;
+        min-height: 125px !important;
     }
     #paycard-text {
         font-size: 14px !important;
@@ -210,6 +226,10 @@
         width: 220px !important;
         min-width: 220px !important;
     }
+    #paycard-shape {
+        height: 140px !important;
+        min-height: 140px !important;
+    }
     #paycard-text {
         font-size: 15px !important;
         padding-right: 15px;
@@ -260,6 +280,10 @@
         min-height: 150px !important;
         width: 240px !important;
         min-width: 240px !important;
+    }
+    #paycard-shape {
+        height: 150px !important;
+        min-height: 150px !important;
     }
     #paycard-text {
         font-size: 17px !important;
@@ -313,6 +337,14 @@
         width: 100px !important;
         min-width: 100px !important;
     }
+    #paycard-shape {
+        height: 65px !important;
+        min-height: 65px !important;
+    }
+    #paycard-shape {
+        height: 150px !important;
+        min-height: 150px !important;
+    }
     #paycard-text {
         font-size: 8px !important;
         padding-right: 9px;
@@ -363,6 +395,10 @@
         min-height: 80px !important;
         width: 125px !important;
         min-width: 125px !important;
+    }
+    #paycard-shape {
+        height: 80px !important;
+        min-height: 80px !important;
     }
     #paycard-text {
         font-size: 10px !important;
@@ -415,6 +451,10 @@
         width: 150px !important;
         min-width: 150px !important;
     }
+    #paycard-shape {
+        height: 100px !important;
+        min-height: 100px !important;
+    }
     #paycard-text {
         font-size: 12px !important;
         padding-right: 13px;
@@ -465,6 +505,10 @@
         min-height: 120px !important;
         width: 190px !important;
         min-width: 190px !important;
+    }
+    #paycard-shape {
+        height: 120px !important;
+        min-height: 120px !important;
     }
     #paycard-text {
         font-size: 15px !important;

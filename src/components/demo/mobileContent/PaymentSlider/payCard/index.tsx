@@ -3,6 +3,7 @@ import styles from './paycard.module.css'
 import Typography from '@mui/material/Typography'
 import clsx from 'clsx'
 import config from 'const'
+import paypalShape from 'assets/card/paypal-card.svg'
 import './index.css'
 
 interface Props {
@@ -96,7 +97,43 @@ const PayCard = ({ type }: Props): JSX.Element => {
             </Box>
           : <Box
               id={'paycard-container'}
+              sx={
+                {
+                  position: 'relative'
+                }
+              }
             >
+              <Box
+                className={styles['float-container']}
+                id={'check-container'}
+              >
+                <Box
+                  component={'figure'}
+                  className={styles.icons}
+                  id={'small-icon'}
+                >
+                  <img src={`${config.UrlBaseImg}demoLink/card/wifi.svg`} alt='Wireless' style={{ height: '100%', width: '100%' }} />
+                </Box>
+                <Box
+                  className={styles['big-circle']}
+                  id={'big-circle'}
+                >
+                  <Box
+                    className={styles['medium-circle']}
+                    id={'medium-circle'}
+                  >
+                  </Box>
+                </Box>
+              </Box>
+              <Box
+                className={styles['float-shape']}
+                id={'paycard-shape'}
+                sx={{
+                  borderRadius: '8px'
+                }}
+              >
+                <img alt='Shape' src={paypalShape} style={{ maxHeight: '100%', borderRadius: '8px' }} />
+              </Box>
               <Box
                 sx={
                   {
@@ -122,7 +159,7 @@ const PayCard = ({ type }: Props): JSX.Element => {
                     className={styles['paypal-text']}
                     id={'paypal-text'}
                   >
-                    Add User
+                    mail@gmail.com
                   </Typography>
                 </Box>
               </Box>
