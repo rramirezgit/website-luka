@@ -1,9 +1,4 @@
 import config from 'const'
-import paypalShape from 'assets/card/paypal-card.svg'
-import banescoShape from 'assets/card/banesco-card.svg'
-import c2pShape from 'assets/card/c2p-card.svg'
-import transbankShape from 'assets/card/transbank-card.svg'
-import zelleShape from 'assets/card/zelle-card.svg'
 
 type Coins =
   | 'Dollars'
@@ -262,7 +257,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/paypal.svg`,
         width: 20,
         height: 50,
-        shape: paypalShape,
+        shape: `${config.UrlBaseImg}card/paypal-card.svg`,
         type: 'other',
         check: false,
         text: 'mail@gmail.com'
@@ -272,7 +267,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/zelle.svg`,
         width: 35,
         height: 50,
-        shape: zelleShape,
+        shape: `${config.UrlBaseImg}card/zelle-card.svg`,
         type: 'other',
         check: false,
         text: 'mail@gmail.com'
@@ -282,7 +277,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/transfer-usd.svg`,
         width: 23,
         height: 50,
-        shape: paypalShape,
+        shape: `${config.UrlBaseImg}card/transfer-card.svg`,
         type: 'other',
         check: false,
         text: '**** 4852'
@@ -297,7 +292,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/khipu.svg`,
         width: 40,
         height: 50,
-        shape: paypalShape,
+        shape: `${config.UrlBaseImg}card/zelle-card.svg`,
         type: 'other',
         check: true,
         text: '**** 4852'
@@ -307,7 +302,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/transbank.svg`,
         width: 60,
         height: 50,
-        shape: transbankShape,
+        shape: `${config.UrlBaseImg}card/transbank-card.svg`,
         type: 'other',
         check: false,
         text: '**** 4852'
@@ -331,7 +326,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/paypal.svg`,
         width: 20,
         height: 50,
-        shape: paypalShape,
+        shape: `${config.UrlBaseImg}card/paypal-card.svg`,
         type: 'other',
         check: false,
         text: 'mail@gmail.com'
@@ -341,7 +336,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/transfer-eu.svg`,
         width: 23,
         height: 50,
-        shape: paypalShape,
+        shape: `${config.UrlBaseImg}card/transfer-card.svg`,
         type: 'other',
         check: false,
         text: '**** 4852'
@@ -365,7 +360,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/paypal.svg`,
         width: 20,
         height: 50,
-        shape: paypalShape,
+        shape: `${config.UrlBaseImg}card/paypal-card.svg`,
         type: 'other',
         check: false,
         text: 'mail@gmail.com'
@@ -389,7 +384,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/paypal.svg`,
         width: 20,
         height: 50,
-        shape: paypalShape,
+        shape: `${config.UrlBaseImg}card/paypal-card.svg`,
         type: 'other',
         check: false,
         text: 'mail@gmail.com'
@@ -399,7 +394,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/transfer-eu.svg`,
         width: 23,
         height: 50,
-        shape: paypalShape,
+        shape: `${config.UrlBaseImg}card/transfer-card.svg`,
         type: 'other',
         check: false,
         text: '**** 4852'
@@ -451,7 +446,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/c2p.svg`,
         width: 22,
         height: 50,
-        shape: c2pShape,
+        shape: `${config.UrlBaseImg}card/c2p-card.svg`,
         type: 'other',
         check: false,
         text: '**** 4852'
@@ -461,7 +456,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/banesco.svg`,
         width: 60,
         height: 50,
-        shape: banescoShape,
+        shape: `${config.UrlBaseImg}card/banesco-card.svg`,
         type: 'other',
         check: false,
         text: '**** 4852'
@@ -471,7 +466,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         img: `${config.UrlBaseImg}payment/c2p.svg`,
         width: 22,
         height: 50,
-        shape: c2pShape,
+        shape: `${config.UrlBaseImg}card/c2p-card.svg`,
         type: 'other',
         check: false,
         text: '555 5555'
