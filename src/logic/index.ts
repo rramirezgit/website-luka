@@ -1,5 +1,9 @@
 import config from 'const'
 import paypalShape from 'assets/card/paypal-card.svg'
+import banescoShape from 'assets/card/banesco-card.svg'
+import c2pShape from 'assets/card/c2p-card.svg'
+import transbankShape from 'assets/card/transbank-card.svg'
+import zelleShape from 'assets/card/zelle-card.svg'
 
 type Coins =
   | 'Dollars'
@@ -32,6 +36,7 @@ interface PaymentInterface {
 
 interface MobileMethodsInterface {
   label: string
+  text: string
   img: string
   width?: number
   height?: number
@@ -74,62 +79,167 @@ export const paymentMethods: PaymentInterface[] = [
   {
     label: 'Dollars',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50 },
-      { label: 'Zelle', img: `${config.UrlBaseImg}payment/zelle.svg`, width: 35, height: 50 },
-      { label: 'Online transfer', img: `${config.UrlBaseImg}payment/transfer-usd.svg`, width: 23, height: 50 }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50
+      },
+      {
+        label: 'Paypal',
+        img: `${config.UrlBaseImg}payment/paypal.svg`,
+        width: 20,
+        height: 50
+      },
+      {
+        label: 'Zelle',
+        img: `${config.UrlBaseImg}payment/zelle.svg`,
+        width: 35,
+        height: 50
+      },
+      {
+        label: 'Online transfer',
+        img: `${config.UrlBaseImg}payment/transfer-usd.svg`,
+        width: 23,
+        height: 50
+      }
     ]
   },
   {
     label: 'Chilean Peso',
     methods: [
-      { label: 'Khipu', img: `${config.UrlBaseImg}payment/khipu.svg`, width: 40, height: 50 },
-      { label: 'Transbank', img: `${config.UrlBaseImg}payment/transbank.svg`, width: 60, height: 50 }
+      {
+        label: 'Khipu',
+        img: `${config.UrlBaseImg}payment/khipu.svg`,
+        width: 40,
+        height: 50
+      },
+      {
+        label: 'Transbank',
+        img: `${config.UrlBaseImg}payment/transbank.svg`,
+        width: 60,
+        height: 50
+      }
     ]
   },
   {
     label: 'Euros',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50 },
-      { label: 'Online Transfer', img: `${config.UrlBaseImg}payment/transfer-eu.svg`, width: 23, height: 50 }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50
+      },
+      {
+        label: 'Paypal',
+        img: `${config.UrlBaseImg}payment/paypal.svg`,
+        width: 20,
+        height: 50
+      },
+      {
+        label: 'Online Transfer',
+        img: `${config.UrlBaseImg}payment/transfer-eu.svg`,
+        width: 23,
+        height: 50
+      }
     ]
   },
   {
     label: 'Japanese Yen',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50 }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50
+      },
+      {
+        label: 'Paypal',
+        img: `${config.UrlBaseImg}payment/paypal.svg`,
+        width: 20,
+        height: 50
+      }
     ]
   },
   {
     label: 'Pounds',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50 },
-      { label: 'Online Transfer', img: `${config.UrlBaseImg}payment/transfer-eu.svg`, width: 23, height: 50 }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50
+      },
+      {
+        label: 'Paypal',
+        img: `${config.UrlBaseImg}payment/paypal.svg`,
+        width: 20,
+        height: 50
+      },
+      {
+        label: 'Online Transfer',
+        img: `${config.UrlBaseImg}payment/transfer-eu.svg`,
+        width: 23,
+        height: 50
+      }
     ]
   },
   {
     label: 'Swiss Franc',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50
+      }
     ]
   },
   {
     label: 'Uruguayan Peso',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50 }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50
+      }
     ]
   },
   {
     label: 'Bolívares',
     methods: [
-      { label: 'Débito/Crédito', img: `${config.UrlBaseImg}payment/bnc.svg`, width: 25, height: 50 },
-      { label: 'Débito/Crédito', img: `${config.UrlBaseImg}payment/mercantil.svg`, width: 60, height: 50 },
-      { label: 'C2P', img: `${config.UrlBaseImg}payment/c2p.svg`, width: 22, height: 50 },
-      { label: 'Pago Móvil', img: `${config.UrlBaseImg}payment/c2p.svg`, width: 22, height: 50 },
-      { label: 'Banesco', img: `${config.UrlBaseImg}payment/banesco.svg`, width: 60, height: 50 }
+      {
+        label: 'Débito/Crédito',
+        img: `${config.UrlBaseImg}payment/bnc.svg`,
+        width: 25,
+        height: 50
+      },
+      {
+        label: 'Débito/Crédito',
+        img: `${config.UrlBaseImg}payment/mercantil.svg`,
+        width: 60,
+        height: 50
+      },
+      {
+        label: 'C2P',
+        img: `${config.UrlBaseImg}payment/c2p.svg`,
+        width: 22,
+        height: 50
+      },
+      {
+        label: 'Pago Móvil',
+        img: `${config.UrlBaseImg}payment/c2p.svg`,
+        width: 22,
+        height: 50
+      },
+      {
+        label: 'Banesco',
+        img: `${config.UrlBaseImg}payment/banesco.svg`,
+        width: 60,
+        height: 50
+      }
     ]
   }
 ]
@@ -138,61 +248,234 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
   {
     label: 'Dollars',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50, type: 'card', check: true },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50, shape: paypalShape, type: 'other', check: false },
-      { label: 'Zelle', img: `${config.UrlBaseImg}payment/zelle.svg`, width: 35, height: 50, shape: paypalShape, type: 'other', check: false },
-      { label: 'Online transfer', img: `${config.UrlBaseImg}payment/transfer-usd.svg`, width: 23, height: 50, shape: paypalShape, type: 'other', check: false }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50,
+        type: 'card',
+        check: true,
+        text: '**** 3507'
+      },
+      {
+        label: 'Paypal',
+        img: `${config.UrlBaseImg}payment/paypal.svg`,
+        width: 20,
+        height: 50,
+        shape: paypalShape,
+        type: 'other',
+        check: false,
+        text: 'mail@gmail.com'
+      },
+      {
+        label: 'Zelle',
+        img: `${config.UrlBaseImg}payment/zelle.svg`,
+        width: 35,
+        height: 50,
+        shape: zelleShape,
+        type: 'other',
+        check: false,
+        text: 'mail@gmail.com'
+      },
+      {
+        label: 'Online transfer',
+        img: `${config.UrlBaseImg}payment/transfer-usd.svg`,
+        width: 23,
+        height: 50,
+        shape: paypalShape,
+        type: 'other',
+        check: false,
+        text: '**** 4852'
+      }
     ]
   },
   {
     label: 'Chilean Peso',
     methods: [
-      { label: 'Khipu', img: `${config.UrlBaseImg}payment/khipu.svg`, width: 40, height: 50, shape: paypalShape, type: 'other', check: true },
-      { label: 'Transbank', img: `${config.UrlBaseImg}payment/transbank.svg`, width: 60, height: 50, shape: paypalShape, type: 'other', check: false }
+      {
+        label: 'Khipu',
+        img: `${config.UrlBaseImg}payment/khipu.svg`,
+        width: 40,
+        height: 50,
+        shape: paypalShape,
+        type: 'other',
+        check: true,
+        text: '**** 4852'
+      },
+      {
+        label: 'Transbank',
+        img: `${config.UrlBaseImg}payment/transbank.svg`,
+        width: 60,
+        height: 50,
+        shape: transbankShape,
+        type: 'other',
+        check: false,
+        text: '**** 4852'
+      }
     ]
   },
   {
     label: 'Euros',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50, type: 'card', check: true },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50, shape: paypalShape, type: 'other', check: false },
-      { label: 'Online Transfer', img: `${config.UrlBaseImg}payment/transfer-eu.svg`, width: 23, height: 50, shape: paypalShape, type: 'other', check: false }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50,
+        type: 'card',
+        check: true,
+        text: '**** 3507'
+      },
+      {
+        label: 'Paypal',
+        img: `${config.UrlBaseImg}payment/paypal.svg`,
+        width: 20,
+        height: 50,
+        shape: paypalShape,
+        type: 'other',
+        check: false,
+        text: 'mail@gmail.com'
+      },
+      {
+        label: 'Online Transfer',
+        img: `${config.UrlBaseImg}payment/transfer-eu.svg`,
+        width: 23,
+        height: 50,
+        shape: paypalShape,
+        type: 'other',
+        check: false,
+        text: '**** 4852'
+      }
     ]
   },
   {
     label: 'Japanese Yen',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50, type: 'card', check: true },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50, shape: paypalShape, type: 'other', check: false }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50,
+        type: 'card',
+        check: true,
+        text: '**** 3507'
+      },
+      {
+        label: 'Paypal',
+        img: `${config.UrlBaseImg}payment/paypal.svg`,
+        width: 20,
+        height: 50,
+        shape: paypalShape,
+        type: 'other',
+        check: false,
+        text: 'mail@gmail.com'
+      }
     ]
   },
   {
     label: 'Pounds',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50, type: 'card', check: true },
-      { label: 'Paypal', img: `${config.UrlBaseImg}payment/paypal.svg`, width: 20, height: 50, shape: paypalShape, type: 'other', check: false },
-      { label: 'Online Transfer', img: `${config.UrlBaseImg}payment/transfer-eu.svg`, width: 23, height: 50, shape: paypalShape, type: 'other', check: false }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50,
+        type: 'card',
+        check: true,
+        text: '**** 3507'
+      },
+      {
+        label: 'Paypal',
+        img: `${config.UrlBaseImg}payment/paypal.svg`,
+        width: 20,
+        height: 50,
+        shape: paypalShape,
+        type: 'other',
+        check: false,
+        text: 'mail@gmail.com'
+      },
+      {
+        label: 'Online Transfer',
+        img: `${config.UrlBaseImg}payment/transfer-eu.svg`,
+        width: 23,
+        height: 50,
+        shape: paypalShape,
+        type: 'other',
+        check: false,
+        text: '**** 4852'
+      }
     ]
   },
   {
     label: 'Swiss Franc',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50, type: 'card', check: true }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50,
+        type: 'card',
+        check: true,
+        text: '**** 3507'
+      }
     ]
   },
   {
     label: 'Uruguayan Peso',
     methods: [
-      { label: 'Debit/Credit', img: `${config.UrlBaseImg}payment/card.svg`, width: 35, height: 50, type: 'card', check: true }
+      {
+        label: 'Debit/Credit',
+        img: `${config.UrlBaseImg}payment/card.svg`,
+        width: 35,
+        height: 50,
+        type: 'card',
+        check: true,
+        text: '**** 3507'
+      }
     ]
   },
   {
     label: 'Bolívares',
     methods: [
-      { label: 'Débito/Crédito', img: `${config.UrlBaseImg}payment/bnc.svg`, width: 25, height: 50, type: 'card', check: true },
-      { label: 'C2P', img: `${config.UrlBaseImg}payment/c2p.svg`, width: 22, height: 50, shape: paypalShape, type: 'other', check: false },
-      { label: 'Pago Móvil', img: `${config.UrlBaseImg}payment/c2p.svg`, width: 22, height: 50, shape: paypalShape, type: 'other', check: false },
-      { label: 'Banesco', img: `${config.UrlBaseImg}payment/banesco.svg`, width: 60, height: 50, shape: paypalShape, type: 'other', check: false }
+      {
+        label: 'Débito/Crédito',
+        img: `${config.UrlBaseImg}payment/bnc.svg`,
+        width: 25,
+        height: 50,
+        type: 'card',
+        check: true,
+        text: '**** 3507'
+      },
+      {
+        label: 'C2P',
+        img: `${config.UrlBaseImg}payment/c2p.svg`,
+        width: 22,
+        height: 50,
+        shape: c2pShape,
+        type: 'other',
+        check: false,
+        text: '**** 4852'
+      },
+      {
+        label: 'Banesco',
+        img: `${config.UrlBaseImg}payment/banesco.svg`,
+        width: 60,
+        height: 50,
+        shape: banescoShape,
+        type: 'other',
+        check: false,
+        text: '**** 4852'
+      },
+      {
+        label: 'Pago Móvil',
+        img: `${config.UrlBaseImg}payment/c2p.svg`,
+        width: 22,
+        height: 50,
+        shape: c2pShape,
+        type: 'other',
+        check: false,
+        text: '555 5555'
+      }
     ]
   }
 ]

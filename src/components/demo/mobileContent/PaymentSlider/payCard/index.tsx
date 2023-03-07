@@ -118,6 +118,9 @@ const PayCard = ({ type, label, img, shape, check }: Props): JSX.Element => {
                   component={'figure'}
                   className={styles.icons}
                   id={'small-icon'}
+                  sx={{
+                    opacity: 0
+                  }}
                 >
                   <img src={`${config.UrlBaseImg}demoLink/card/wifi.svg`} alt='Wireless' style={{ height: '100%', width: '100%' }} />
                 </Box>
