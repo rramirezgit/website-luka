@@ -6,6 +6,7 @@ import './index.css'
 
 interface Props {
   type: 'card' | 'other'
+  text?: string
   label?: string
   img?: string
   width?: number
@@ -14,7 +15,7 @@ interface Props {
   check: boolean
 }
 
-const PayCard = ({ type, label, img, shape, check }: Props): JSX.Element => {
+const PayCard = ({ type, label, img, shape, check, text }: Props): JSX.Element => {
   return (
     <Box
       className={styles.container}
@@ -180,7 +181,7 @@ const PayCard = ({ type, label, img, shape, check }: Props): JSX.Element => {
                     className={styles['paypal-text']}
                     id={'paycard-info'}
                   >
-                    mail@gmail.com
+                    {text}
                   </Typography>
                 </Box>
               </Box>

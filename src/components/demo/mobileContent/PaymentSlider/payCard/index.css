@@ -47,7 +47,7 @@
         width: 35px;
     }
     #paycard-title {
-        font-size: 9px;
+        font-size: 7px;
     }
     #paycard-info {
         font-size: 7px;
@@ -102,14 +102,14 @@
         width: 40px;
     }
     #paycard-title {
-        font-size: 11px;
+        font-size: 9px;
     }
     #paycard-info {
         font-size: 7px;
     }
 }
 
-@media screen and (min-height: 841px) and (max-height: 909px) and (min-width: 901px) {
+@media screen and (min-height: 841px) and (max-height: 908px) and (min-width: 901px) {
     #paycard-container {
         height: 100px !important;
         min-height: 100px !important;
@@ -157,10 +157,10 @@
         width: 43px;
     }
     #paycard-title {
-        font-size: 12px;
+        font-size: 11px;
     }
     #paycard-info {
-        font-size: 6px;
+        font-size: 8px;
     }
 }
 
@@ -378,7 +378,7 @@
         width: 35px;
     }
     #paycard-title {
-        font-size: 9px;
+        font-size: 7px;
     }
     #paycard-info {
         font-size: 7px;
@@ -433,7 +433,7 @@
         width: 40px;
     }
     #paycard-title {
-        font-size: 11px;
+        font-size: 9px;
     }
     #paycard-info {
         font-size: 7px;
@@ -488,10 +488,10 @@
         width: 43px;
     }
     #paycard-title {
-        font-size: 12px;
+        font-size: 11px;
     }
     #paycard-info {
-        font-size: 6px;
+        font-size: 9px;
     }
 }
 

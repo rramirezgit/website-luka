@@ -273,14 +273,14 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         text: 'mail@gmail.com'
       },
       {
-        label: 'Online transfer',
+        label: 'USD Transfer',
         img: `${config.UrlBaseImg}payment/transfer-usd.svg`,
         width: 23,
         height: 50,
         shape: `${config.UrlBaseImg}card/transfer-card.svg`,
         type: 'other',
         check: false,
-        text: '**** 4852'
+        text: '**** **** 1234'
       }
     ]
   },
@@ -295,7 +295,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         shape: `${config.UrlBaseImg}card/zelle-card.svg`,
         type: 'other',
         check: true,
-        text: '**** 4852'
+        text: '**** **** 1234'
       },
       {
         label: 'Transbank',
@@ -305,7 +305,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         shape: `${config.UrlBaseImg}card/transbank-card.svg`,
         type: 'other',
         check: false,
-        text: '**** 4852'
+        text: '**** 3507'
       }
     ]
   },
@@ -332,14 +332,14 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         text: 'mail@gmail.com'
       },
       {
-        label: 'Online Transfer',
+        label: 'EUR Transfer',
         img: `${config.UrlBaseImg}payment/transfer-eu.svg`,
         width: 23,
         height: 50,
         shape: `${config.UrlBaseImg}card/transfer-card.svg`,
         type: 'other',
         check: false,
-        text: '**** 4852'
+        text: '**** **** 1234'
       }
     ]
   },
@@ -390,14 +390,14 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         text: 'mail@gmail.com'
       },
       {
-        label: 'Online Transfer',
+        label: 'GBP Transfer',
         img: `${config.UrlBaseImg}payment/transfer-eu.svg`,
         width: 23,
         height: 50,
         shape: `${config.UrlBaseImg}card/transfer-card.svg`,
         type: 'other',
         check: false,
-        text: '**** 4852'
+        text: '**** **** 1234'
       }
     ]
   },
@@ -449,7 +449,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         shape: `${config.UrlBaseImg}card/c2p-card.svg`,
         type: 'other',
         check: false,
-        text: '**** 4852'
+        text: '555 5555'
       },
       {
         label: 'Banesco',
@@ -459,7 +459,7 @@ export const mobilePaymentMethods: MobilePaymentInterface[] = [
         shape: `${config.UrlBaseImg}card/banesco-card.svg`,
         type: 'other',
         check: false,
-        text: '**** 4852'
+        text: '**** **** 1234'
       },
       {
         label: 'Pago Móvil',

@@ -34,6 +34,7 @@ const PaymentSlider = (): JSX.Element => {
         ?.methods.map((item, index) => (
           <PayCard
             type={item.type}
+            text={item.text}
             key={index}
             label={item.label ?? ''}
             img={item.img ?? ''}
@@ -45,7 +46,6 @@ const PaymentSlider = (): JSX.Element => {
         ))
       : <>
         <PayCard type='card' check={true} />
-        <PayCard type='other' check={false} />
       </>
     }
     </Box>
