@@ -4,7 +4,6 @@ import { Box, Button } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import { getCssVar } from 'theme'
 import styles from './mobilecontent.module.css'
-import PayCard from './payCard'
 import CloseIcon from '@mui/icons-material/Close'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import { RootState } from 'redux/store'
@@ -12,6 +11,7 @@ import { useSelector } from 'react-redux'
 import { currencyValues } from 'logic'
 import config from 'const'
 import './index.css'
+import PaymentSlider from './PaymentSlider'
 
 interface Props {
   type: 'gateway' | 'link'
@@ -176,17 +176,7 @@ const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
               className={styles.arrow}
             />
           </Box>
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              overflow: 'hidden',
-              paddingLeft: '8px'
-            }}
-          >
-            <PayCard type="card" />
-            <PayCard type="paypal" />
-          </Box>
+          <PaymentSlider />
           <Box
             sx={{
               padding: '0 10px'

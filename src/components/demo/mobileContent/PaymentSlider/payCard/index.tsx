@@ -1,15 +1,21 @@
 import { Box } from '@mui/material'
 import styles from './paycard.module.css'
 import Typography from '@mui/material/Typography'
-import clsx from 'clsx'
 import config from 'const'
 import './index.css'
 
 interface Props {
-  type: 'card' | 'paypal'
+  type: 'card' | 'other'
+  text?: string
+  label?: string
+  img?: string
+  width?: number
+  height?: number
+  shape?: string
+  check: boolean
 }
 
-const PayCard = ({ type }: Props): JSX.Element => {
+const PayCard = ({ type, label, img, shape, check, text }: Props): JSX.Element => {
   return (
     <Box
       className={styles.container}
@@ -55,6 +61,9 @@ const PayCard = ({ type }: Props): JSX.Element => {
                     <Box
                       className={styles['small-circle']}
                       id={'small-circle'}
+                      sx={{
+                        display: check ? 'block' : 'none'
+                      }}
                     ></Box>
                   </Box>
                 </Box>
@@ -96,33 +105,83 @@ const PayCard = ({ type }: Props): JSX.Element => {
             </Box>
           : <Box
               id={'paycard-container'}
+              sx={
+                {
+                  position: 'relative'
+                }
+              }
             >
+              <Box
+                className={styles['float-container']}
+                id={'check-container'}
+              >
+                <Box
+                  component={'figure'}
+                  className={styles.icons}
+                  id={'small-icon'}
+                  sx={{
+                    opacity: 0
+                  }}
+                >
+                  <img src={`${config.UrlBaseImg}demoLink/card/wifi.svg`} alt='Wireless' style={{ height: '100%', width: '100%' }} />
+                </Box>
+                <Box
+                  className={styles['big-circle']}
+                  id={'big-circle'}
+                >
+                  <Box
+                    className={styles['medium-circle']}
+                    id={'medium-circle'}
+                  >
+                    <Box
+                      className={styles['small-circle']}
+                      id={'small-circle'}
+                      sx={{
+                        display: check ? 'block' : 'none'
+                      }}
+                    ></Box>
+                  </Box>
+                </Box>
+              </Box>
+              <Box
+                className={styles['float-shape']}
+                id={'paycard-shape'}
+                sx={{
+                  borderRadius: '8px'
+                }}
+              >
+                <img alt='Shape' src={shape} style={{ maxHeight: '100%', borderRadius: '8px' }} />
+              </Box>
               <Box
                 sx={
                   {
-                    padding: '10px 15px'
+                    padding: '10px 15px',
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column'
                   }
                 }
               >
                 <Box
                   component={'figure'}
-                  className={styles.icons}
-                  id={'paypal-icon'}
+                  className={styles.logo}
+                  id={'paycard-icon'}
                 >
-                  <img src={`${config.UrlBaseImg}demoLink/card/paypal.svg`} alt='Paypal' style={{ height: '100%', width: '100%' }} />
+                  <img src={img} alt='Paypal' style={{ maxHeight: '100%', maxWidth: '100%' }} />
                 </Box>
                 <Box>
                   <Typography
-                    className={clsx(styles['paypal-text'], styles['paypal-title'])}
-                    id={'paypal-title'}
+                    className={styles['paypal-title']}
+                    id={'paycard-title'}
                   >
-                    Paypal
+                    {label}
                   </Typography>
                   <Typography
                     className={styles['paypal-text']}
-                    id={'paypal-text'}
+                    id={'paycard-info'}
                   >
-                    Add User
+                    {text}
                   </Typography>
                 </Box>
               </Box>
