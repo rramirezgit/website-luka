@@ -18,7 +18,8 @@ const ImgHome = (): JSX.Element => {
           width: '754px',
           height: '548px',
           top: '-97px',
-          left: '-25px'
+          minWidth: '754px',
+          minHeight: '548px'
         }}
       />
     </Box>
