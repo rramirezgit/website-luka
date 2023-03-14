@@ -8,12 +8,12 @@ import config from 'const'
 
 const cards = [
   {
-    number: '+3M',
+    number: '+6M',
     color: 'rgba(111, 222, 246, 1)',
     text: 'PAYMENT TRANSACTIONS'
   },
   {
-    number: '60K',
+    number: '600K',
     color: 'rgba(5, 22, 177, 1)',
     text: 'CONSUMERS SERVED'
   },

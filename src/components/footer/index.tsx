@@ -73,8 +73,7 @@ const Footer = ({ disablePadding = false }: FooterProps): JSX.Element => {
               marginBottom: '30px'
             }}
           >
-            High level experience in web design and development knowledge,
-            producing quality work
+            Simplifying payments through the use of technology to empower both businesses and consumers alike.
           </Typography>
           <Box
             sx={{

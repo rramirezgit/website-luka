@@ -3,7 +3,7 @@ import styles from './currencyblock.module.css'
 import { countries } from 'logic'
 import { getCssVar } from 'theme'
 import Square from 'components/square'
-import config from 'const'
+// import config from 'const'
 
 const CurrencyBlock = (): JSX.Element => {
   return (
@@ -100,7 +100,7 @@ const CurrencyBlock = (): JSX.Element => {
                 }}
               >
                 <img
-                  src={`${config.UrlBaseImg}currencies/${country.code}.svg`}
+                  src={`assets/currencies/${country.code}.svg`}
                   style={{
                     borderRadius: '8px',
                     maxWidth: '100%',
