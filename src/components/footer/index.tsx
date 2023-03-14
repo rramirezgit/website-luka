@@ -70,7 +70,11 @@ const Footer = ({ disablePadding = false }: FooterProps): JSX.Element => {
                 xs: '100%',
                 lg: '350px'
               },
-              marginBottom: '30px'
+              marginBottom: '30px',
+              fontSize: {
+                xs: '14px !important',
+                md: '18px !important'
+              }
             }}
           >
             Simplifying payments through the use of technology to empower both businesses and consumers alike.

@@ -16,7 +16,7 @@ const LottiePlayer = ({ path, ...props }: LottiePlayerProps): JSX.Element => {
       .then(data => {
         setAnimation(data)
       })
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return <Lottie animationData={animation} {...props} />
 }

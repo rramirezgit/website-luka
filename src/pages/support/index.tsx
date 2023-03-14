@@ -15,44 +15,46 @@ const Support = (): JSX.Element => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <Box
-      sx={{
-        overflowX: 'hidden'
-      }}
-    >
-      <Nav ButtonColor="primary" ButtonVariant="contained" />
+    <>
       <Box
         sx={{
-          marginTop: '110px'
+          overflowX: 'hidden'
         }}
       >
-        <FormView image={`${config.UrlBaseImg}support/support.svg`}>
-          <FormLayout
-            title="Contact our support team"
-            loading={loading}
-            success={success}
-            failure={failure}
-            setFailure={setFailure}
-          >
-            <SupportForm
+        <Nav ButtonColor="primary" ButtonVariant="contained" />
+        <Box
+          sx={{
+            marginTop: '110px'
+          }}
+        >
+          <FormView image={`${config.UrlBaseImg}support/support.svg`}>
+            <FormLayout
+              title="Contact our support team"
               loading={loading}
-              setLoading={setLoading}
-              setSuccess={setSuccess}
+              success={success}
+              failure={failure}
               setFailure={setFailure}
-            />
-          </FormLayout>
-        </FormView>
+            >
+              <SupportForm
+                loading={loading}
+                setLoading={setLoading}
+                setSuccess={setSuccess}
+                setFailure={setFailure}
+              />
+            </FormLayout>
+          </FormView>
+        </Box>
+        <Box
+          sx={{
+            marginTop: '160px',
+            padding: '0 35px',
+            paddingBottom: '50px'
+          }}
+        >
+          <Footer />
+        </Box>
       </Box>
-      <Box
-        sx={{
-          marginTop: '160px',
-          padding: '0 35px',
-          paddingBottom: '50px'
-        }}
-      >
-        <Footer />
-      </Box>
-    </Box>
+    </>
   )
 }
 
