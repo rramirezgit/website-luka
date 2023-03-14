@@ -250,7 +250,7 @@ const SupportForm = ({
                           {...props}
                         >
                           <img
-                            src={`${config.UrlBaseImg}supportFlags/${option.code.toLocaleUpperCase()}.png`}
+                            src={`${config.UrlBaseImg}supportFlagsSVG/${option.code.toLocaleUpperCase()}.svg`}
                             style={{
                               maxWidth: '25px',
                               maxHeight: '18px',
@@ -282,7 +282,7 @@ const SupportForm = ({
                             ...params.InputProps,
                             startAdornment: (
                               <img
-                                src={`${config.UrlBaseImg}supportFlags/${formik.values.country.code.toLocaleUpperCase()}.png`}
+                                src={`${config.UrlBaseImg}supportFlagsSVG/${formik.values.country.code.toLocaleUpperCase()}.svg`}
                                 style={{
                                   maxWidth: '25px',
                                   maxHeight: '18px',
