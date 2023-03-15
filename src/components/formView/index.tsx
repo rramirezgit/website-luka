@@ -55,14 +55,22 @@ const FormView = ({
             lg: '480px'
           },
           width: {
-            xs: '70%',
             lg: '55%'
+          },
+          minWidth: {
+            xs: '250px',
+            lg: '400px'
           },
           position: 'relative'
         }}
       >
         {pathAnimation ? (
-          <LottiePlayer path={pathAnimation} autoplay loop style={{}} />
+          <LottiePlayer
+            path={pathAnimation}
+            autoplay
+            loop
+            style={{ width: '100%', height: '100%' }}
+          />
         ) : (
           <img className={styles.image} src={image} alt="support" />
         )}
