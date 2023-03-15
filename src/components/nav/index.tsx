@@ -32,12 +32,12 @@ const options = [
     name: 'About us'
   },
   {
-    id: '/support',
-    name: 'Support'
-  },
-  {
     id: '/sales',
     name: 'Sales'
+  },
+  {
+    id: '/support',
+    name: 'Support'
   }
 ]
 
