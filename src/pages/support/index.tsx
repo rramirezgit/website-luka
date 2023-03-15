@@ -5,7 +5,6 @@ import Nav from 'components/nav'
 import { useEffect, useState } from 'react'
 import FormLayout from 'components/formView/formLayout'
 import SupportForm from 'components/allForms/supportForm'
-import config from 'const'
 
 const Support = (): JSX.Element => {
   const [loading, setLoading] = useState(false)
@@ -27,7 +26,7 @@ const Support = (): JSX.Element => {
             marginTop: '110px'
           }}
         >
-          <FormView image={`${config.UrlBaseImg}support/support.svg`}>
+          <FormView pathAnimation={'Support_animacion.json'}>
             <FormLayout
               title="Contact our support team"
               loading={loading}
