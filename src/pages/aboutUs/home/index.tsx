@@ -16,10 +16,11 @@ const ImgHome = (): JSX.Element => {
           position: 'relative',
           zIndex: 1,
           width: '754px',
-          height: '548px',
-          top: '-97px',
-          minWidth: '754px',
-          minHeight: '548px'
+          minWidth: '541.34px',
+          minHeight: '407px',
+          height: '100%',
+          top: '-49px',
+          left: '4px'
         }}
       />
     </Box>
