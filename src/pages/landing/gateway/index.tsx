@@ -8,6 +8,23 @@ import { useNavigate } from 'react-router-dom'
 import cardsArray from '../ourProducts/ourProductsArray'
 import config from 'const'
 
+const Animation = (): JSX.Element => {
+  return (
+    <Box
+      className={style.contentImg}
+      sx={{
+        background: `url(${config.UrlBaseImg}gateway/bgGateway.svg) no-repeat center center`
+      }}
+    >
+      <img
+        src={`${config.UrlBaseImg}gateway/gateway_animacion.svg`}
+        alt="paymentLink"
+        className={style.img}
+      />
+    </Box>
+  )
+}
+
 const Gateway = (): JSX.Element => {
   const navigate = useNavigate()
   const handleClick = (): void => {
@@ -61,11 +78,12 @@ const Gateway = (): JSX.Element => {
             xl: '570px'
           }}
         />
-        <img
+        {/* <img
           src={`${config.UrlBaseImg}gateway/gateway.svg`}
           alt="paymentLink"
           className={style.img}
-        />
+        /> */}
+        <Animation />
         <Button
           variant="contained"
           color="secondary"
