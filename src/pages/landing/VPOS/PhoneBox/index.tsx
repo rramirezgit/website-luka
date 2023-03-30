@@ -21,9 +21,14 @@ const PhoneBox = (): JSX.Element => {
         }}
       >
         <img
-          src={`${config.UrlBaseImg}vpos/vpos-phone.svg`}
+          src={`${config.UrlBaseImg}vpos/animation.svg`}
           alt={'Demo'}
-          style={{ maxWidth: '100%' }}
+          style={{
+            maxWidth: '640px',
+            width: '100%',
+            height: '100%',
+            maxHeight: '645px'
+          }}
         />
       </Box>
       <Box
@@ -31,7 +36,7 @@ const PhoneBox = (): JSX.Element => {
         sx={{
           position: 'absolute',
           right: '43%',
-          top: '-7%',
+          top: '-12%',
           width: '15%'
         }}
       >
