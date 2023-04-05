@@ -134,7 +134,7 @@ const Footer = ({ disablePadding = false }: FooterProps): JSX.Element => {
           </Box>
         </Box>
       </Box>
-      <Typography>&copy; 2022 Luka Inc.</Typography>
+      <Typography>&copy; 2022 Lukapay Holdings LLC.</Typography>
     </Box>
   )
 }
