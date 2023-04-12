@@ -5,7 +5,7 @@ import * as yup from 'yup'
 // import { Formik, ErrorMessage, FormikProps } from 'formik'
 import { Formik, ErrorMessage } from 'formik'
 import { allCountries, transactions } from 'logic'
-import axios from 'axios'
+// import axios from 'axios'
 // import { useRef, useEffect } from 'react'
 import config from 'const'
 
@@ -106,43 +106,11 @@ const SalesForm = ({
           // innerRef={formik => (ref.current = formik)}
           onSubmit={async (values, actions) => {
             setLoading(true)
-            await axios
-              .post(
-                'https://bspaycoapi-qa.payco.net.ve/api/v1/email',
-                {
-                  From: 'noreply@lukapay.io',
-                  To: 'sales@lukapay.io',
-                  Subject: `Contacto Landing - Cliente: ${values.name} ${values.lastName}`,
-                  Body: `
-                      El cliente ${values.name} ${
-                    values.lastName
-                  } ha enviado un mensaje a ventas con el siguiente contenido:<br/><br/>
-                      País: ${values.country.label},<br/>
-                      Correo: ${values.email},<br/>
-                      Teléfono: ${values.country.phone}${values.phone},<br/>
-                      Sitio Web: ${
-                        values.website ? values.website : 'N/A'
-                      },<br/>
-                      Expectativa (# de transacciones): ${values.income},<br/>
-                      Mensaje: ${values.message}
-                    `
-                },
-                {
-                  auth: {
-                    username: 'admin',
-                    password: '12345678'
-                  }
-                }
-              )
-              .then(() => {
-                setLoading(false)
-                setSuccess(true)
-                actions.resetForm()
-              })
-              .catch(error => {
-                setFailure(true)
-                console.log(error)
-              })
+            setTimeout(() => {
+              setLoading(false)
+              setSuccess(true)
+              actions.resetForm()
+            }, 2000)
           }}
         >
           {formik => (
