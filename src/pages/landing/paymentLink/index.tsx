@@ -89,7 +89,7 @@ const PaymentLink = (): JSX.Element => {
         color="#0878FF20"
         bottom={'0'}
         right={'0'}
-        maxHeight={180}
+        maxHeight={140}
         maxWidth={130}
       />
       <Square
